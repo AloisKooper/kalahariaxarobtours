@@ -19,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'serif': ['"Source Serif 4"', 'Georgia', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -71,7 +74,7 @@ export default {
 					gravel: '#C8C8C9',
 					darkgravel: '#8E9196',
 					sand: '#FEF7CD',
-					accent: '#FEC6A1',
+					accent: '#E2C9A1', // Changed from pink-ish to a more neutral sand tone
 					charcoal: '#403E43'
 				}
 			},
