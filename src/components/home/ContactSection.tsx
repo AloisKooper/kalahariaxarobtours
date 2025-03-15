@@ -30,7 +30,7 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
 
-        <button className="mt-8 group bg-kalahari-accent hover:bg-kalahari-brown transition-colors inline-flex items-center gap-2 text-white font-medium px-6 py-3 rounded-full">
+        <button className="mt-8 group bg-kalahari-brown hover:bg-kalahari-darkbrown transition-colors inline-flex items-center gap-2 text-white font-medium px-6 py-3 rounded-full">
           <span>Contact Now</span>
           <svg 
             width="20" 

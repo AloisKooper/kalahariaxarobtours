@@ -47,7 +47,7 @@ const TourTypes: React.FC = () => {
         <div className="w-full max-w-6xl mx-auto mt-16 max-md:mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col">
-              <div className="bg-kalahari-accent/30 h-[400px] rounded-lg shadow-md overflow-hidden">
+              <div className="bg-kalahari-sand h-[400px] rounded-lg shadow-md overflow-hidden">
                 <img 
                   src={slides[currentSlide].image} 
                   alt={slides[currentSlide].title}
@@ -107,20 +107,6 @@ const TourTypes: React.FC = () => {
                         Our guide will collect you as you disembark on the Walvis Bay Harbor, 
                         pick you up and drive to the first location to spot flamingos at the Lagoon(Walvis Bay) 
                         and heads to Dune7 for sightseeing.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-5 p-4 bg-white rounded-lg shadow-sm border border-kalahari-gravel/30">
-                    <div className="bg-kalahari-gravel/30 flex w-12 h-12 shrink-0 rounded-lg items-center justify-center">
-                      <span className="text-kalahari-brown font-bold">2</span>
-                    </div>
-                    <div className="flex flex-col">
-                      <h3 className="text-xl font-semibold text-kalahari-brown tracking-wide">
-                        What's Included
-                      </h3>
-                      <p className="text-base font-normal leading-7 mt-2 text-kalahari-charcoal">
-                        English speaking Local Guide, Transportation, Lunch, Non-Alcoholic beverages.
                       </p>
                     </div>
                   </div>

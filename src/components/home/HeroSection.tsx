@@ -58,40 +58,20 @@ const HeroSection: React.FC = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-kalahari-accent/40 rounded-[32px] shadow-lg overflow-hidden h-full">
-              <img
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
-                alt="Tour Overview"
-                className="w-full h-80 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-kalahari-brown font-semibold text-xl mb-4">What's Included</h3>
-                <ul className="space-y-3 text-kalahari-charcoal">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-kalahari-brown mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    English speaking Local Guide
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-kalahari-brown mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    Transportation
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-kalahari-brown mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    Lunch
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-kalahari-brown mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    Non-Alcoholic beverages
-                  </li>
-                </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-kalahari-brown/20 rounded-lg shadow-md overflow-hidden h-64">
+                <img
+                  src="https://images.unsplash.com/photo-1504432842672-1a79f78e4084?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Tour Guide"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="bg-kalahari-brown/20 rounded-lg shadow-md overflow-hidden h-64">
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                  alt="Tour Destination"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
