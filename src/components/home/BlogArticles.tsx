@@ -1,64 +1,117 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { ArrowRight, Calendar, User } from "lucide-react";
 
 const BlogArticles: React.FC = () => {
   const articles = [
     {
       id: 1,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/d65dcfbabd9245a5ac68b0712fd94192/693cbd4724483aac2646ff041bd8088483bbb691d0da8f97faeb7e0b4a68e9a6?placeholderIfAbsent=true",
+      title: "The History of Swakopmund's German Architecture",
+      excerpt: "Explore the unique architectural heritage of Swakopmund and how it reflects Namibia's colonial past.",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      author: "Alois Kooper",
+      date: "May 15, 2023",
+      category: "History"
     },
     {
       id: 2,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/d65dcfbabd9245a5ac68b0712fd94192/a023ad979330d2b28fe80332ce13b89aa2fa067715075c35abccca2833d14f4a?placeholderIfAbsent=true",
+      title: "Understanding the Nama and Ovaherero Genocide",
+      excerpt: "An in-depth look at the historical events of 1904-1908 and their lasting impact on Namibia.",
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80",
+      author: "Maria Nakale",
+      date: "April 22, 2023",
+      category: "History"
     },
     {
       id: 3,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/d65dcfbabd9245a5ac68b0712fd94192/392907dc3097e8f95b4801a5b98b734e2da89bd14a237c9b51d7c762fdad0118?placeholderIfAbsent=true",
+      title: "Top 5 Historical Sites to Visit in Swakopmund",
+      excerpt: "Discover the must-see historical attractions that tell the story of Swakopmund's rich past.",
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80",
+      author: "Thomas Shilongo",
+      date: "March 10, 2023",
+      category: "Travel"
     },
     {
       id: 4,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/d65dcfbabd9245a5ac68b0712fd94192/3fe8be36e8c9adfc244dfd08dc78acd3f975525c5d7dd372d3c292e666f32290?placeholderIfAbsent=true",
+      title: "Life in Mondesa Township: Then and Now",
+      excerpt: "A comparative look at how Mondesa Township has evolved while preserving its cultural heritage.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+      author: "John Muafangejo",
+      date: "February 28, 2023",
+      category: "Culture"
     },
   ];
 
   return (
     <section className="w-full flex flex-col items-center py-20 bg-kalahari-sand/20 px-6">
-      <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl font-medium text-center">
-        Blog Articles
-      </h2>
+      <div className="container mx-auto">
+        <div className="flex flex-col items-center mb-12">
+          <h3 className="text-kalahari-gravel uppercase tracking-wider text-sm mb-2">Our Blog</h3>
+          <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl font-serif text-center">
+            Historical Insights & Stories
+          </h2>
+          <div className="w-20 h-1 bg-kalahari-brown rounded-full mt-4"></div>
+          <p className="text-kalahari-charcoal/80 text-center max-w-2xl mt-4">
+            Explore articles about Namibia's fascinating history, cultural heritage, and the stories behind the sites you'll visit on our tours.
+          </p>
+        </div>
 
-      <div className="w-full max-w-5xl mt-12 max-md:mt-8">
-        <div className="gap-6 flex flex-wrap justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {articles.map((article) => (
-            <div key={article.id} className="w-64 mb-6">
-              <div className="bg-kalahari-charcoal flex flex-col items-center overflow-hidden rounded-t-lg shadow-md">
-                <div className="py-10">
-                  <img
-                    src={article.image}
-                    alt={`Blog article ${article.id}`}
-                    className="w-14 h-14 object-contain"
-                  />
-                </div>
-                <div className="bg-kalahari-gravel/10 w-full py-4 px-4 text-center">
-                  <h3 className="text-kalahari-darkbrown font-medium">Historic Info of Scene</h3>
-                </div>
+            <Card key={article.id} className="overflow-hidden hover:shadow-md transition-shadow border-kalahari-gravel/20">
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                />
               </div>
-            </div>
+              <CardContent className="p-5">
+                <div className="flex items-center mb-3 text-xs text-kalahari-charcoal/70">
+                  <span className="bg-kalahari-lightbrown/30 text-kalahari-darkbrown px-2 py-0.5 rounded">
+                    {article.category}
+                  </span>
+                  <span className="mx-2">•</span>
+                  <div className="flex items-center">
+                    <Calendar size={12} className="mr-1" />
+                    {article.date}
+                  </div>
+                </div>
+                <h3 className="font-serif text-lg text-kalahari-brown mb-2 line-clamp-2">
+                  {article.title}
+                </h3>
+                <p className="text-kalahari-charcoal/80 text-sm line-clamp-3">
+                  {article.excerpt}
+                </p>
+              </CardContent>
+              <CardFooter className="px-5 py-4 border-t border-kalahari-gravel/10 flex justify-between items-center">
+                <div className="flex items-center text-sm text-kalahari-charcoal/70">
+                  <User size={14} className="mr-1" />
+                  <span>{article.author}</span>
+                </div>
+                <Link
+                  to={`/blog/${article.id}`}
+                  className="text-kalahari-brown hover:text-kalahari-darkbrown transition-colors text-sm flex items-center"
+                >
+                  Read More <ArrowRight size={14} className="ml-1" />
+                </Link>
+              </CardFooter>
+            </Card>
           ))}
         </div>
-      </div>
 
-      <Link
-        to="/blog"
-        className="mt-12 inline-flex items-center justify-center bg-kalahari-darkbrown hover:bg-kalahari-brown text-white font-medium transition-colors rounded-full py-3 px-8"
-      >
-        Read More
-      </Link>
+        <div className="mt-12 text-center">
+          <Link
+            to="/blog"
+            className="inline-flex items-center justify-center bg-kalahari-darkbrown hover:bg-kalahari-brown text-white font-medium transition-colors rounded-full py-3 px-8 group"
+          >
+            <span>View All Articles</span>
+            <ArrowRight size={16} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      </div>
     </section>
   );
 };
