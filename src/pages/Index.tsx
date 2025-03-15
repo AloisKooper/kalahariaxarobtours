@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/home/HeroSection";
+import TourAgenda from "@/components/home/TourAgenda";
+import Gallery from "@/components/home/Gallery";
+import TourTypes from "@/components/home/TourTypes";
+import AboutGuide from "@/components/home/AboutGuide";
+import Testimonials from "@/components/home/Testimonials";
+import BlogArticles from "@/components/home/BlogArticles";
+import ContactSection from "@/components/home/ContactSection";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="bg-white flex flex-col overflow-hidden items-center">
+      <Navbar />
+      <HeroSection />
+      <TourAgenda />
+      <Gallery />
+      <TourTypes />
+      <AboutGuide />
+      <Testimonials />
+      <BlogArticles />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
