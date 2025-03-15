@@ -1,3 +1,4 @@
+
 import React from "react";
 
 interface TestimonialCardProps {
@@ -14,22 +15,25 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   testimonial,
 }) => {
   return (
-    <div className="bg-[rgba(211,220,231,1)] flex w-full flex-col text-[rgba(72,98,132,1)] mx-auto pt-[30px] pb-[72px] px-[30px] rounded-[10px] max-md:mt-10 max-md:px-5">
-      <div className="flex w-full items-stretch gap-5 justify-between ml-[11px] max-md:ml-2.5">
-        <div className="flex gap-[21px] text-center">
-          <div className="bg-[rgba(221,224,228,1)] flex w-10 shrink-0 h-10 rounded-[50%]" />
-          <div className="flex flex-col items-stretch mt-[9px]">
-            <div className="text-lg font-medium leading-loose">{name}</div>
-            <div className="text-sm font-normal leading-loose mt-[7px]">
-              {location}
-            </div>
+    <div className="bg-kalahari-gravel/10 flex w-full flex-col text-kalahari-charcoal rounded-lg shadow-sm p-6 h-full hover:shadow-md transition-shadow">
+      <div className="flex w-full items-center gap-4 justify-between">
+        <div className="flex gap-4 items-center">
+          <div className="bg-kalahari-gravel/40 flex w-10 h-10 shrink-0 rounded-full items-center justify-center">
+            <span className="text-kalahari-darkbrown text-sm font-semibold">{name.charAt(0)}</span>
+          </div>
+          <div className="flex flex-col">
+            <div className="text-lg font-medium text-kalahari-darkbrown">{name}</div>
+            <div className="text-sm text-kalahari-charcoal/80">{location}</div>
           </div>
         </div>
-        <div className="text-base font-normal leading-loose my-auto">
+        <div className="flex items-center text-kalahari-brown font-medium">
+          <svg className="w-4 h-4 fill-current mr-1" viewBox="0 0 24 24">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+          </svg>
           {rating}
         </div>
       </div>
-      <div className="text-base font-normal leading-loose mt-[71px] max-md:mt-10">
+      <div className="text-base leading-7 mt-8 text-kalahari-charcoal/90">
         {testimonial}
       </div>
     </div>

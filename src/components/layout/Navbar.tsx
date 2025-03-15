@@ -1,40 +1,48 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-[rgba(255,255,255,0)] flex w-full items-stretch gap-5 overflow-hidden font-medium flex-wrap justify-between pr-[33px] border-[rgba(72,98,132,1)] border-solid border-2 max-md:max-w-full max-md:pr-5">
-      <div className="flex items-center gap-[40px_56px] text-base text-[rgba(72,98,132,1)] tracking-[-0.48px] max-md:max-w-full">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/d65dcfbabd9245a5ac68b0712fd94192/25b2cb22e0503745dedfc5e45b14184635e3ec7981ceb90c5bcaa2bff58529ba?placeholderIfAbsent=true"
-          alt="Kalahari Axarob Tours Logo"
-          className="aspect-[2.53] object-contain w-full self-stretch"
-        />
-        <div className="self-stretch flex items-stretch gap-[40px_55px] flex-wrap my-auto max-md:max-w-full">
-          <Link to="/" className="text-[#1A202C] font-semibold">
+    <nav className="bg-kalahari-lightbrown/90 flex w-full items-center gap-5 overflow-hidden font-medium flex-wrap justify-between px-6 py-3 border-kalahari-brown border-solid border-b-2 max-md:max-w-full">
+      <div className="flex items-center gap-8 text-base text-kalahari-darkbrown tracking-[-0.48px] max-md:max-w-full">
+        <div className="flex items-center">
+          <img
+            src="/lovable-uploads/773b47dd-fd0f-4abc-9958-2fde4f920189.png"
+            alt="Kalahari Axarob Tours Logo"
+            className="h-16 object-contain"
+          />
+        </div>
+        <div className="hidden md:flex items-center gap-8 my-auto">
+          <Link to="/" className="text-kalahari-darkbrown font-semibold hover:text-kalahari-brown transition-colors">
             Home
           </Link>
-          <Link to="/tours" className="text-center">
+          <Link to="/tours" className="text-kalahari-charcoal hover:text-kalahari-brown transition-colors">
             Tours
           </Link>
-          <Link to="/about" className="text-center">
+          <Link to="/about" className="text-kalahari-charcoal hover:text-kalahari-brown transition-colors">
             About Us
           </Link>
-          <Link to="/gallery" className="text-center">
+          <Link to="/gallery" className="text-kalahari-charcoal hover:text-kalahari-brown transition-colors">
             Gallery
           </Link>
-          <Link to="/testimonials" className="text-center">
+          <Link to="/testimonials" className="text-kalahari-charcoal hover:text-kalahari-brown transition-colors">
             Testimonial
           </Link>
         </div>
-        <div className="self-stretch flex items-stretch gap-5 underline my-auto">
-          <div className="border w-px shrink-0 h-6 border-[rgba(72,98,132,1)] border-solid" />
-          <Link to="/tour-guide">Tour Guide</Link>
-        </div>
       </div>
-      <button className="bg-[rgba(170,181,195,1)] text-sm text-white tracking-[-0.42px] my-auto px-[31px] py-3.5 rounded-[50px] max-md:px-5">
-        BOOK TOUR
-      </button>
+      <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-2">
+          <div className="border-l h-6 border-kalahari-darkbrown/50"></div>
+          <Link to="/tour-guide" className="text-kalahari-charcoal hover:text-kalahari-brown transition-colors">
+            Tour Guide
+          </Link>
+        </div>
+        <Button className="bg-kalahari-brown hover:bg-kalahari-darkbrown text-white font-medium rounded-full">
+          BOOK TOUR
+        </Button>
+      </div>
     </nav>
   );
 };

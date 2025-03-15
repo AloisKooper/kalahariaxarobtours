@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -26,23 +27,25 @@ const BlogArticles: React.FC = () => {
   ];
 
   return (
-    <section className="w-full flex flex-col items-center">
-      <h2 className="text-[rgba(51,51,51,1)] text-[42px] font-medium text-center">
+    <section className="w-full flex flex-col items-center py-20 bg-kalahari-sand/20 px-6">
+      <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl font-medium text-center">
         Blog Articles
       </h2>
 
-      <div className="self-center w-full max-w-[1013px] mt-[54px] max-md:max-w-full max-md:mt-10">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+      <div className="w-full max-w-5xl mt-12 max-md:mt-8">
+        <div className="gap-6 flex flex-wrap justify-center">
           {articles.map((article) => (
-            <div key={article.id} className="w-3/12 max-md:w-full max-md:ml-0">
-              <div className="bg-[rgba(51,51,51,1)] flex flex-col items-stretch text-[23px] text-[rgba(81,80,80,1)] font-medium text-center w-full pt-[57px] max-md:mt-[19px]">
-                <img
-                  src={article.image}
-                  alt={`Blog article ${article.id}`}
-                  className="aspect-[0.75] object-contain w-[61px] self-center"
-                />
-                <div className="bg-[rgba(241,241,241,1)] mt-[38px] pt-[18px] pb-7 px-2.5">
-                  Historic Info of Scene
+            <div key={article.id} className="w-64 mb-6">
+              <div className="bg-kalahari-charcoal flex flex-col items-center overflow-hidden rounded-t-lg shadow-md">
+                <div className="py-10">
+                  <img
+                    src={article.image}
+                    alt={`Blog article ${article.id}`}
+                    className="w-14 h-14 object-contain"
+                  />
+                </div>
+                <div className="bg-kalahari-gravel/10 w-full py-4 px-4 text-center">
+                  <h3 className="text-kalahari-darkbrown font-medium">Historic Info of Scene</h3>
                 </div>
               </div>
             </div>
@@ -52,7 +55,7 @@ const BlogArticles: React.FC = () => {
 
       <Link
         to="/blog"
-        className="bg-[rgba(51,51,51,1)] w-[193px] max-w-full text-[13px] text-white font-medium ml-36 mt-16 px-[49px] py-[17px] rounded-[22px] max-md:ml-2.5 max-md:mt-10 max-md:px-5 inline-block text-center"
+        className="mt-12 inline-flex items-center justify-center bg-kalahari-darkbrown hover:bg-kalahari-brown text-white font-medium transition-colors rounded-full py-3 px-8"
       >
         Read More
       </Link>

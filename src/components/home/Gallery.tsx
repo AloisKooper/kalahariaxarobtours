@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import GalleryCard from "../ui/GalleryCard";
 
@@ -12,71 +13,67 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[rgba(250,251,253,1)] self-stretch flex w-full flex-col overflow-hidden items-center pb-[204px] max-md:max-w-full max-md:pb-[100px]">
-      <h2 className="text-[#486284] text-center text-[53px] font-medium tracking-[2.12px] uppercase max-md:max-w-full max-md:text-[40px]">
+    <section className="bg-gradient-to-b from-white to-kalahari-sand/20 self-stretch flex w-full flex-col overflow-hidden items-center py-20 max-md:max-w-full max-md:py-16">
+      <h2 className="text-kalahari-brown text-center text-4xl md:text-5xl font-medium tracking-wide uppercase max-md:max-w-full max-md:text-3xl">
         kalahari axarob's gallery
       </h2>
-      <p className="text-[#1A202C] text-center text-lg font-normal leading-[27px] mt-[7px] max-md:max-w-full">
+      <p className="text-kalahari-charcoal text-center text-lg font-normal leading-7 mt-4 max-w-3xl mx-auto px-6 max-md:max-w-full">
         Explore the diverse scenery of the historical events that took place in
         Swakopmund from around 1904-1908
       </p>
 
-      <div className="self-stretch flex mb-[-41px] w-full flex-col items-stretch mt-[72px] px-[72px] max-md:max-w-full max-md:mt-10 max-md:mb-2.5 max-md:px-5">
-        <div className="z-10 flex w-full max-w-[1264px] gap-[40px_100px] text-[22px] text-[#1A202C] font-medium text-center tracking-[-0.44px] max-md:max-w-full">
+      <div className="self-stretch flex w-full flex-col items-stretch mt-16 px-6 max-md:max-w-full max-md:mt-10">
+        <div className="z-10 flex w-full max-w-[1264px] mx-auto gap-8 text-lg text-kalahari-charcoal font-medium text-center max-md:max-w-full overflow-x-auto pb-2">
           {tabs.map((tab) => (
             <div
               key={tab}
               className={`${
                 activeTab === tab
-                  ? "self-stretch flex flex-col items-stretch font-semibold"
-                  : "opacity-60 grow shrink"
+                  ? "self-stretch flex flex-col items-stretch font-semibold text-kalahari-brown"
+                  : "opacity-70 transition-opacity hover:opacity-100 cursor-pointer"
               }`}
               onClick={() => setActiveTab(tab)}
               style={{ cursor: "pointer" }}
             >
-              <div className="self-center">{tab}</div>
+              <div className="whitespace-nowrap px-2">{tab}</div>
               {activeTab === tab && (
-                <div className="bg-[#1A202C] shrink-0 h-1 mt-[31px] border-[rgba(26,32,44,1)] border-solid border-4" />
+                <div className="bg-kalahari-brown h-1 mt-3 rounded-full" />
               )}
             </div>
           ))}
         </div>
 
-        <div className="border bg-[#90A3BF] shrink-0 h-px border-[rgba(144,163,191,1)] border-solid max-md:max-w-full" />
+        <div className="border-b border-kalahari-gravel/40 w-full max-w-[1264px] mx-auto" />
 
         {/* First row of gallery cards */}
-        <div className="mt-12 max-md:max-w-full max-md:mt-10">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+        <div className="mt-12 max-w-6xl mx-auto max-md:mt-8">
+          <div className="gap-5 flex flex-wrap justify-center">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
-                <div className="grow max-md:mt-[31px]">
-                  <GalleryCard
-                    title="To be Filled In"
-                    price="To be Filled In"
-                  />
-                </div>
+              <div key={i} className="w-64 sm:w-72 mb-6">
+                <GalleryCard
+                  title="To be Filled In"
+                  price="To be Filled In"
+                />
               </div>
             ))}
           </div>
         </div>
 
         {/* Second row of gallery cards */}
-        <div className="mt-8 max-md:max-w-full">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+        <div className="mt-6 max-w-6xl mx-auto">
+          <div className="gap-5 flex flex-wrap justify-center">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="w-3/12 max-md:w-full max-md:ml-0">
-                <div className="grow max-md:mt-[31px]">
-                  <GalleryCard
-                    title="To be Filled In"
-                    price="To be Filled In"
-                  />
-                </div>
+              <div key={i} className="w-64 sm:w-72 mb-6">
+                <GalleryCard
+                  title="To be Filled In"
+                  price="To be Filled In"
+                />
               </div>
             ))}
           </div>
         </div>
 
-        <button className="self-center flex w-[156px] max-w-full items-center text-base text-[#486284] font-semibold text-center tracking-[-0.32px] mt-[65px] max-md:mt-10 rounded bg-white min-h-11 gap-2 px-5">
+        <button className="self-center mt-10 bg-white hover:bg-kalahari-sand/50 text-kalahari-brown font-semibold py-3 px-6 rounded-lg transition-colors border border-kalahari-brown/20">
           Show more
         </button>
       </div>

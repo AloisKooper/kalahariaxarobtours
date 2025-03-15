@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// New custom colors for Kalahari theme
+				kalahari: {
+					lightbrown: '#E2D1C3',
+					brown: '#A67C52',
+					darkbrown: '#7D5A3C',
+					gravel: '#C8C8C9',
+					darkgravel: '#8E9196',
+					sand: '#FEF7CD',
+					accent: '#FEC6A1',
+					charcoal: '#403E43'
 				}
 			},
 			borderRadius: {
