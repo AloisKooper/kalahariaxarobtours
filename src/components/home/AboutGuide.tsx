@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -68,28 +67,31 @@ const AboutGuide: React.FC = () => {
           </div>
           
           <div className="bg-white rounded-lg shadow-md overflow-hidden h-[400px] relative">
-            <video
-              className="w-full h-full object-cover"
-              poster="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80"
-              controls
-            >
-              <source
-                src="https://example.com/tour-guide-video.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="bg-kalahari-brown/20 backdrop-blur-sm rounded-full p-4 hover:bg-kalahari-brown/30 transition-colors">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+            <div className="w-full h-full bg-kalahari-lightbrown/20 flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="bg-kalahari-brown/20 backdrop-blur-sm rounded-full p-4 mx-auto mb-4 w-16 h-16 flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="36"
+                    height="36"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-kalahari-brown"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-kalahari-brown mb-2">Tour Guide Introduction</h3>
+                <p className="text-kalahari-charcoal/80 mb-4">
+                  Watch a video introduction from Mr. Rooi about his tours and experience.
+                </p>
+                <button className="bg-kalahari-brown hover:bg-kalahari-darkbrown text-white font-medium py-2 px-4 rounded transition-colors">
+                  Play Video
+                </button>
               </div>
             </div>
           </div>

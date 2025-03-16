@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import GalleryCard from "../ui/GalleryCard";
 
@@ -17,88 +16,88 @@ const Gallery: React.FC = () => {
       {
         title: "Memorial Site",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Historical Monument",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Mass Graves",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Old Military Barracks",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
     ],
     "DRC Township": [
       {
         title: "Township Tour",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Local Living",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Cultural Exchange",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Community Projects",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
     ],
     "COSDEF Arts & Crafts": [
       {
         title: "Local Artwork",
         price: "Optional",
-        imageSrc: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Craft Market",
         price: "Optional",
-        imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Art Workshops",
         price: "Optional",
-        imageSrc: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Souvenir Shop",
         price: "Optional",
-        imageSrc: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
     ],
     "Mondesa Township": [
       {
         title: "Township Visit",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Cultural Tour",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Local Homes",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
       {
         title: "Community Center",
         price: "Included",
-        imageSrc: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80"
+        imageSrc: null
       },
     ],
   };
@@ -106,7 +105,7 @@ const Gallery: React.FC = () => {
   return (
     <section className="bg-gradient-to-b from-white to-kalahari-sand/20 self-stretch flex w-full flex-col overflow-hidden items-center py-20 max-md:max-w-full max-md:py-16">
       <div className="container mx-auto px-6">
-        <h2 className="text-kalahari-brown text-center text-4xl md:text-5xl font-medium tracking-wide uppercase max-md:max-w-full max-md:text-3xl">
+        <h2 className="text-kalahari-brown text-center text-4xl md:text-5xl font-normal tracking-wide uppercase z-10 max-md:text-3xl">
           kalahari axarob's gallery
         </h2>
         <p className="text-kalahari-charcoal text-center text-lg font-normal leading-7 mt-4 max-w-3xl mx-auto">
@@ -127,7 +126,7 @@ const Gallery: React.FC = () => {
                 onClick={() => setActiveTab(tab)}
                 style={{ cursor: "pointer" }}
               >
-                <div className="whitespace-nowrap px-2">{tab}</div>
+                <div className="whitespace-nowrap px-4">{tab}</div>
                 {activeTab === tab && (
                   <div className="bg-kalahari-brown h-1 mt-3 rounded-full" />
                 )}
@@ -139,13 +138,13 @@ const Gallery: React.FC = () => {
 
           {/* Gallery cards */}
           <div className="mt-12 max-md:mt-8">
-            <div className="gap-6 flex flex-wrap justify-center">
+            <div className="gap-8 flex flex-wrap justify-center">
               {galleryImages[activeTab as keyof typeof galleryImages].map((item, index) => (
-                <div key={index} className="mb-6">
+                <div key={index} className="mb-8">
                   <GalleryCard
                     title={item.title}
                     price={item.price}
-                    imageSrc={item.imageSrc}
+                    imageSrc={null}
                   />
                 </div>
               ))}
@@ -153,7 +152,7 @@ const Gallery: React.FC = () => {
           </div>
 
           <div className="flex justify-center mt-10">
-            <button className="bg-white hover:bg-kalahari-sand/50 text-kalahari-brown font-semibold py-3 px-6 rounded-lg transition-colors border border-kalahari-brown/20">
+            <button className="bg-white hover:bg-kalahari-sand/50 text-kalahari-brown font-semibold py-3 px-8 rounded-lg transition-colors border border-kalahari-brown/20">
               Show more
             </button>
           </div>

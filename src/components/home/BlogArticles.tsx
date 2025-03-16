@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -10,7 +9,7 @@ const BlogArticles: React.FC = () => {
       id: 1,
       title: "The History of Swakopmund's German Architecture",
       excerpt: "Explore the unique architectural heritage of Swakopmund and how it reflects Namibia's colonial past.",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      image: null,
       author: "Alois Kooper",
       date: "May 15, 2023",
       category: "History"
@@ -19,7 +18,7 @@ const BlogArticles: React.FC = () => {
       id: 2,
       title: "Understanding the Nama and Ovaherero Genocide",
       excerpt: "An in-depth look at the historical events of 1904-1908 and their lasting impact on Namibia.",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80",
+      image: null,
       author: "Maria Nakale",
       date: "April 22, 2023",
       category: "History"
@@ -28,7 +27,7 @@ const BlogArticles: React.FC = () => {
       id: 3,
       title: "Top 5 Historical Sites to Visit in Swakopmund",
       excerpt: "Discover the must-see historical attractions that tell the story of Swakopmund's rich past.",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80",
+      image: null,
       author: "Thomas Shilongo",
       date: "March 10, 2023",
       category: "Travel"
@@ -37,7 +36,7 @@ const BlogArticles: React.FC = () => {
       id: 4,
       title: "Life in Mondesa Township: Then and Now",
       excerpt: "A comparative look at how Mondesa Township has evolved while preserving its cultural heritage.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+      image: null,
       author: "John Muafangejo",
       date: "February 28, 2023",
       category: "Culture"
@@ -49,7 +48,7 @@ const BlogArticles: React.FC = () => {
       <div className="container mx-auto">
         <div className="flex flex-col items-center mb-12">
           <h3 className="text-kalahari-gravel uppercase tracking-wider text-sm mb-2">Our Blog</h3>
-          <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl font-serif text-center">
+          <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl text-center">
             Historical Insights & Stories
           </h2>
           <div className="w-20 h-1 bg-kalahari-brown rounded-full mt-4"></div>
@@ -58,15 +57,39 @@ const BlogArticles: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {articles.map((article) => (
             <Card key={article.id} className="overflow-hidden hover:shadow-md transition-shadow border-kalahari-gravel/20">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
-                />
+              <div className="h-48 overflow-hidden bg-kalahari-sand/30">
+                {article.image ? (
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-kalahari-brown/30 flex flex-col items-center justify-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="48"
+                        height="48"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <line x1="10" y1="9" x2="8" y2="9"></line>
+                      </svg>
+                    </div>
+                  </div>
+                )}
               </div>
               <CardContent className="p-5">
                 <div className="flex items-center mb-3 text-xs text-kalahari-charcoal/70">
