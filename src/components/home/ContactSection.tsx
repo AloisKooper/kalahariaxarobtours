@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { Phone, Mail, MapPin, Clock, CheckCircle, ArrowRight, Info } from "lucide-react";
+import TourMap from "@/components/maps/TourMap";
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -14,10 +15,12 @@ const ContactSection: React.FC = () => {
     message: "",
     travelers: "",
     hasChildren: "",
-    preferredDates: ""
+    preferredDates: "",
+    tourType: ""
   });
   const [loading, setLoading] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
+  const [selectedTourType, setSelectedTourType] = useState<"half-day" | "full-day">("full-day");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -42,7 +45,8 @@ const ContactSection: React.FC = () => {
         message: "",
         travelers: "",
         hasChildren: "",
-        preferredDates: "" 
+        preferredDates: "",
+        tourType: ""
       });
       setLoading(false);
     }, 1500);
@@ -54,79 +58,99 @@ const ContactSection: React.FC = () => {
       id: "port",
       name: "Walvis Bay Harbor (Start/End)",
       coords: { lat: -22.9575, lng: 14.5054 },
-      description: "Our meeting point where the tour begins and ends"
+      description: "Our meeting point where the tour begins and ends",
+      tourTypes: ["full-day"]
     },
     {
       id: "lagoon",
       name: "Walvis Bay Lagoon",
       coords: { lat: -22.9876, lng: 14.4892 },
-      description: "Spot flamingos at this beautiful lagoon"
+      description: "Spot flamingos at this beautiful lagoon",
+      tourTypes: ["full-day"]
     },
     {
       id: "dune7",
       name: "Dune 7",
       coords: { lat: -23.1098, lng: 14.5906 },
-      description: "One of the highest dunes in the Namib Desert"
+      description: "One of the highest dunes in the Namib Desert",
+      tourTypes: ["full-day"]
     },
     {
       id: "swakopmund",
       name: "Swakopmund (Lunch)",
       coords: { lat: -22.6783, lng: 14.5259 },
-      description: "Little piece of Germany under African skies, where we'll have lunch"
+      description: "Little piece of Germany under African skies, where we'll have lunch",
+      tourTypes: ["full-day"]
     },
     {
       id: "graves",
       name: "Concentration Camp Mass Graves",
       coords: { lat: -22.6741, lng: 14.5311 },
-      description: "Historical site related to the 1904-1908 genocide"
+      description: "Historical site related to the 1904-1908 genocide",
+      tourTypes: ["half-day", "full-day"]
     },
     {
       id: "barracks",
       name: "Old Military Barracks",
       coords: { lat: -22.6789, lng: 14.5324 },
-      description: "Historical German colonial military structure"
+      description: "Historical German colonial military structure",
+      tourTypes: ["half-day", "full-day"]
     },
     {
       id: "hospital",
       name: "Old Hospital",
       coords: { lat: -22.6771, lng: 14.5287 },
-      description: "Historical medical facility from colonial era"
+      description: "Historical medical facility from colonial era",
+      tourTypes: ["half-day", "full-day"]
     },
     {
       id: "jetty",
       name: "Jetty",
       coords: { lat: -22.6825, lng: 14.5176 },
-      description: "Historic wooden pier extending into the Atlantic Ocean"
+      description: "Historic wooden pier extending into the Atlantic Ocean",
+      tourTypes: ["half-day", "full-day"]
     },
     {
       id: "woermann",
       name: "Woermann House",
       coords: { lat: -22.6776, lng: 14.5262 },
-      description: "Iconic colonial-era building with distinctive architecture"
+      description: "Iconic colonial-era building with distinctive architecture",
+      tourTypes: ["half-day", "full-day"]
     },
     {
       id: "memorial",
       name: "German War Memorial",
       coords: { lat: -22.6763, lng: 14.5292 },
-      description: "Monument commemorating historical events"
+      description: "Monument commemorating historical events",
+      tourTypes: ["half-day", "full-day"]
     },
     {
       id: "bahnhof",
       name: "Old Bahnhof (Train Station)",
       coords: { lat: -22.6751, lng: 14.5319 },
-      description: "Historic German railway station"
+      description: "Historic German railway station",
+      tourTypes: ["half-day", "full-day"]
     }
   ];
+
+  const filteredLocations = tourLocations.filter(
+    loc => loc.tourTypes.includes(selectedTourType)
+  );
 
   const handleLocationClick = (locationId: string) => {
     setSelectedLocation(selectedLocation === locationId ? null : locationId);
   };
+  
+  const handleTourTypeChange = (type: "half-day" | "full-day") => {
+    setSelectedTourType(type);
+    setSelectedLocation(null);
+  };
 
   return (
-    <section id="contact" className="bg-gradient-to-b from-white to-kalahari-sand/30 w-full py-24 px-6">
+    <section id="contact" className="bg-gradient-to-b from-gray-50 to-kalahari-sand/40 w-full py-24 px-6">
       <div className="container mx-auto">
         <div className="flex flex-col items-center mb-12">
-          <h3 className="text-kalahari-gravel text-sm uppercase tracking-widest mb-2">Contact Us</h3>
+          <h3 className="text-gravel text-sm uppercase tracking-widest mb-2">Contact Us</h3>
           <h2 className="text-kalahari-darkbrown text-4xl md:text-5xl font-normal mb-4 text-center">
             Schedule Your Historical Tour
           </h2>
@@ -139,7 +163,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
-          <Card className="lg:col-span-3 bg-white border-kalahari-gravel/20 shadow-md overflow-hidden">
+          <Card className="lg:col-span-3 bg-white border-gravel-medium shadow-md overflow-hidden">
             <CardContent className="p-0">
               <div className="p-8">
                 <h3 className="text-kalahari-brown text-2xl mb-6">Get In Touch</h3>
@@ -155,7 +179,7 @@ const ContactSection: React.FC = () => {
                         type="text"
                         placeholder="Enter your full name"
                         required
-                        className="border-kalahari-gravel/20 focus-visible:ring-kalahari-brown"
+                        className="border-gravel-medium focus-visible:ring-kalahari-brown"
                       />
                     </div>
                     <div className="space-y-2">
@@ -168,7 +192,7 @@ const ContactSection: React.FC = () => {
                         type="email"
                         placeholder="Enter your email address"
                         required
-                        className="border-kalahari-gravel/20 focus-visible:ring-kalahari-brown"
+                        className="border-gravel-medium focus-visible:ring-kalahari-brown"
                       />
                     </div>
                   </div>
@@ -184,7 +208,7 @@ const ContactSection: React.FC = () => {
                         type="number"
                         min="1"
                         placeholder="How many people in your group?"
-                        className="border-kalahari-gravel/20 focus-visible:ring-kalahari-brown"
+                        className="border-gravel-medium focus-visible:ring-kalahari-brown"
                       />
                     </div>
                     <div className="space-y-2">
@@ -194,7 +218,7 @@ const ContactSection: React.FC = () => {
                         name="hasChildren"
                         value={formData.hasChildren}
                         onChange={handleChange}
-                        className="w-full rounded-md border border-kalahari-gravel/20 bg-transparent px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kalahari-brown"
+                        className="w-full rounded-md border border-gravel-medium bg-transparent px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kalahari-brown"
                       >
                         <option value="">Select an option</option>
                         <option value="yes">Yes, with children</option>
@@ -212,8 +236,23 @@ const ContactSection: React.FC = () => {
                       onChange={handleChange}
                       type="date"
                       placeholder="When would you like to travel?"
-                      className="border-kalahari-gravel/20 focus-visible:ring-kalahari-brown"
+                      className="border-gravel-medium focus-visible:ring-kalahari-brown"
                     />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="tourType" className="text-sm font-medium text-kalahari-charcoal">Preferred Tour</label>
+                    <select
+                      id="tourType"
+                      name="tourType"
+                      value={formData.tourType}
+                      onChange={handleChange}
+                      className="w-full rounded-md border border-gravel-medium bg-transparent px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kalahari-brown"
+                    >
+                      <option value="">Select a tour</option>
+                      <option value="half-day">Half Day Tour (Local Tour) - 4 hours</option>
+                      <option value="full-day">Passenger Liner Shore Excursion (Full Day) - 8 hours</option>
+                    </select>
                   </div>
                   
                   <div className="space-y-2">
@@ -226,7 +265,7 @@ const ContactSection: React.FC = () => {
                       type="text"
                       placeholder="What is your inquiry about?"
                       required
-                      className="border-kalahari-gravel/20 focus-visible:ring-kalahari-brown"
+                      className="border-gravel-medium focus-visible:ring-kalahari-brown"
                     />
                   </div>
                   <div className="space-y-2">
@@ -238,7 +277,7 @@ const ContactSection: React.FC = () => {
                       onChange={handleChange}
                       placeholder="Please provide details about your inquiry or booking request"
                       required
-                      className="min-h-[120px] border-kalahari-gravel/20 focus-visible:ring-kalahari-brown"
+                      className="min-h-[120px] border-gravel-medium focus-visible:ring-kalahari-brown"
                     />
                   </div>
                   <Button 
@@ -258,7 +297,7 @@ const ContactSection: React.FC = () => {
           </Card>
 
           <div className="lg:col-span-2 flex flex-col gap-6">
-            <div className="bg-kalahari-sand/30 p-8 rounded-lg border border-kalahari-brown/20">
+            <div className="bg-sand-custom p-8 rounded-lg border border-kalahari-brown/20">
               <h3 className="text-kalahari-brown text-2xl mb-6">Contact Information</h3>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
@@ -267,7 +306,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-kalahari-darkbrown">Phone</h4>
-                    <p className="text-kalahari-charcoal mt-1">+264 123 456 789</p>
+                    <p className="text-kalahari-charcoal mt-1">+264 81 258 3089</p>
                     <p className="text-kalahari-charcoal/70 text-sm">Available Mon-Fri, 9am-6pm</p>
                   </div>
                 </div>
@@ -330,41 +369,62 @@ const ContactSection: React.FC = () => {
         
         {/* Tour Route Map Section */}
         <div className="mt-16">
-          <h3 className="text-kalahari-gravel text-sm uppercase tracking-widest mb-2 text-center">Tour Itinerary</h3>
+          <h3 className="text-gravel text-sm uppercase tracking-widest mb-2 text-center">Tour Itinerary</h3>
           <h2 className="text-kalahari-darkbrown text-4xl md:text-5xl font-normal mb-4 text-center">
             Our Tour Route
           </h2>
           <div className="w-20 h-1 bg-kalahari-brown rounded-full mb-6 mx-auto"></div>
-          <p className="text-kalahari-charcoal text-center max-w-2xl mx-auto mb-8">
+          <p className="text-kalahari-charcoal text-center max-w-2xl mx-auto mb-4">
             Explore the fascinating locations you'll visit on our historical tour, from Walvis Bay Harbor to Swakopmund and back.
           </p>
+          
+          {/* Tour Type Selector */}
+          <div className="flex justify-center gap-4 mb-6">
+            <button 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedTourType === "half-day" 
+                  ? 'bg-kalahari-brown text-white' 
+                  : 'bg-sand-custom text-kalahari-brown hover:bg-kalahari-sand'
+              }`}
+              onClick={() => handleTourTypeChange("half-day")}
+            >
+              Half Day Tour (4 hours)
+            </button>
+            <button 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedTourType === "full-day" 
+                  ? 'bg-kalahari-brown text-white' 
+                  : 'bg-sand-custom text-kalahari-brown hover:bg-kalahari-sand'
+              }`}
+              onClick={() => handleTourTypeChange("full-day")}
+            >
+              Full Day Tour (8 hours)
+            </button>
+          </div>
           
           <div className="relative rounded-lg overflow-hidden shadow-md">
             {/* Map Section */}
             <div className="h-[400px] bg-white">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212968.0112171975!2d14.386106529945831!3d-22.82752774230846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c76a3c1254322d9%3A0x58fc7006ee1e550a!2sSwakopmund%2C%20Namibia!5e0!3m2!1sen!2sus!4v1652452289252!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Tour Route Map"
-              ></iframe>
+              <TourMap 
+                locations={filteredLocations}
+                selectedLocation={selectedLocation}
+                onLocationSelect={handleLocationClick}
+              />
             </div>
             
-            {/* Tour Locations Panel */}
-            <div className="absolute top-0 right-0 w-full md:w-72 bg-white/90 backdrop-blur-sm h-full overflow-y-auto border-l border-kalahari-sand/40 shadow-lg p-4">
-              <h4 className="text-kalahari-brown text-lg font-medium mb-4">Tour Stops</h4>
+            {/* Tour Locations Panel - Desktop and Tablet Only */}
+            <div className="absolute top-0 right-0 hidden md:block w-72 bg-white/90 backdrop-blur-sm h-full overflow-y-auto border-l border-kalahari-sand/40 shadow-lg p-4">
+              <h4 className="text-kalahari-brown text-lg font-medium mb-4">
+                {selectedTourType === "half-day" ? "Half Day Tour Stops" : "Full Day Tour Stops"}
+              </h4>
               <div className="space-y-2">
-                {tourLocations.map((location, index) => (
+                {filteredLocations.map((location, index) => (
                   <div 
                     key={location.id}
                     className={`p-2 rounded-md cursor-pointer transition-colors ${
                       selectedLocation === location.id 
                         ? 'bg-kalahari-brown text-white' 
-                        : 'bg-white/80 hover:bg-kalahari-sand/30'
+                        : 'bg-sand-custom hover:bg-kalahari-sand/30'
                     }`}
                     onClick={() => handleLocationClick(location.id)}
                   >
@@ -400,13 +460,68 @@ const ContactSection: React.FC = () => {
             </div>
           </div>
           
+          {/* Mobile Tour Stops - Simple Horizontal Scroll */}
+          <div className="md:hidden mt-4 mb-6">
+            <h4 className="text-kalahari-brown text-lg font-medium mb-3 text-center">
+              {selectedTourType === "half-day" ? "Half Day Tour Stops" : "Full Day Tour Stops"}
+            </h4>
+            
+            {/* Clean horizontal scrollable container */}
+            <div className="overflow-x-auto pb-2">
+              <div className="flex gap-2 min-w-max">
+                {filteredLocations.map((location, index) => (
+                  <div 
+                    key={location.id}
+                    className={`p-2 rounded-md cursor-pointer transition-colors shrink-0 ${
+                      selectedLocation === location.id 
+                        ? 'bg-kalahari-brown text-white' 
+                        : 'bg-sand-custom hover:bg-kalahari-sand/30'
+                    }`}
+                    style={{ minWidth: '140px' }}
+                    onClick={() => handleLocationClick(location.id)}
+                  >
+                    <div className="flex items-center gap-1">
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
+                        selectedLocation === location.id 
+                          ? 'bg-white text-kalahari-brown' 
+                          : 'bg-kalahari-brown/10 text-kalahari-brown'
+                      }`}>
+                        {index + 1}
+                      </div>
+                      <span className="font-medium text-sm whitespace-nowrap">{location.name.split('(')[0]}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Mobile Selected Location Description */}
+            {selectedLocation && (
+              <div className="bg-white p-3 rounded-md shadow-sm mt-4">
+                <h5 className="font-medium text-kalahari-brown">
+                  {tourLocations.find(loc => loc.id === selectedLocation)?.name}
+                </h5>
+                <p className="text-sm text-kalahari-charcoal mt-1">
+                  {tourLocations.find(loc => loc.id === selectedLocation)?.description}
+                </p>
+              </div>
+            )}
+          </div>
+          
           {/* Tour Route Path */}
           <div className="mt-6 bg-white/80 rounded-lg p-4 shadow-sm">
             <h4 className="text-kalahari-brown text-lg font-medium mb-2">Tour Route</h4>
-            <p className="text-kalahari-charcoal text-sm">
-              Port - Lagoon - Dune 7 - Swakopmund (lunch) - Concentration camp mass graves - Old Military barracks - 
-              Old Hospital - Jetty - Woermann House - German War Memorial - Free time - Old Bahnhof - Back to the port
-            </p>
+            {selectedTourType === "half-day" ? (
+              <p className="text-kalahari-charcoal text-sm">
+                <strong>Half Day Tour:</strong> Concentration camp mass graves - Old Military barracks - 
+                Old Hospital - Jetty - Woermann House - German War Memorial - Old Bahnhof
+              </p>
+            ) : (
+              <p className="text-kalahari-charcoal text-sm">
+                <strong>Full Day Tour:</strong> Port - Lagoon - Dune 7 - Swakopmund (lunch) - Concentration camp mass graves - Old Military barracks - 
+                Old Hospital - Jetty - Woermann House - German War Memorial - Free time - Old Bahnhof - Back to the port
+              </p>
+            )}
           </div>
         </div>
       </div>

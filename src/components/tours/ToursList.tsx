@@ -1,79 +1,131 @@
-
 import React, { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Users, Calendar, ChevronRight } from "lucide-react";
+import { MapPin, Clock, Users, Calendar, ChevronRight, ThumbsUp, Check } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const ToursList: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState("historical");
+
+  // Get the current year and calculate future months dynamically
+  const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().getMonth();
+  
+  // Create tour dates for next 3 months
+  const getNextMonthsFormatted = (startMonth = currentMonth) => {
+    const dates = [];
+    for (let i = 0; i < 3; i++) {
+      const date = new Date(currentYear, startMonth + i, 15);
+      const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      dates.push(formattedDate);
+    }
+    return dates;
+  };
 
   const tours = {
     historical: [
       {
         id: 1,
-        title: "Swakopmund Heritage Tour",
-        image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80",
+        title: "Passenger Liner Shore Excursion",
+        image: "/Home Images/Cruise Liner Shore Excursion.jpg",
         price: "$120",
         duration: "8 hours",
         maxParticipants: 20,
-        locations: ["Walvis Bay Harbor", "Swakopmund", "Genocide Memorial"],
-        description: "Explore the historical sites commemorating the 1904-1908 Nama and Ovaherero Genocide, regarded as the first genocide of the 20th century.",
-        dates: ["Jun 15, 2023", "Jul 10, 2023", "Aug 5, 2023"],
+        locations: ["Walvis Bay Harbor", "Swakopmund"],
+        description: "An eye-opening guided tour filled with historical and cultural information, uniquely designed for cruise ship passengers. Led by Mr. Rooi, a descendant of the native Namaqua tribe, exploring Swakopmund 'The little piece of Germany under the African skies'.",
+        dates: getNextMonthsFormatted(),
         featured: true,
+        routeDetails: "Port - Lagoon - Dune 7 - Swakopmund (lunch) - Historical sites - Free time - Back to port",
+        includedItems: ["Guide", "Transportation", "Lunch", "Beverages"],
+        meetingPoint: "Walvis Bay Harbor",
+        pickupIncluded: false,
       },
       {
         id: 2,
-        title: "Colonial Architecture Tour",
-        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-        price: "$95",
-        duration: "6 hours",
-        maxParticipants: 15,
-        locations: ["Swakopmund Town", "Old Military Barracks", "Woermann House"],
-        description: "Discover the unique German colonial architecture that makes Swakopmund 'The little piece of Germany under African skies'.",
-        dates: ["Jun 20, 2023", "Jul 15, 2023", "Aug 10, 2023"],
+        title: "Half Day Local Tour",
+        image: "/Home Images/Half Day Tour.jpg",
+        price: "$75",
+        duration: "4 hours",
+        maxParticipants: 6,
+        locations: ["Swakopmund", "Historical Sites"],
+        description: "An eye-opening guided tour exploring significant historical sites in Swakopmund related to the 1904/1908 Nama and Ovaherero Genocide. Led by Mr. Rooi, a descendant of the native Namaqua tribe.",
+        dates: getNextMonthsFormatted(currentMonth + 1),
         featured: false,
+        routeDetails: "Concentration camp mass graves - Military barracks - Historic buildings - Monuments",
+        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
+        meetingPoint: "Your accommodation in Swakopmund",
+        pickupIncluded: true,
+      },
+      {
+        id: 6,
+        title: "Historical Genocide Sites",
+        subtitle: "Part of our Half Day Tour",
+        image: "/Home Images/Nama and Ovaherero Genocide.jpg",
+        price: "$75",
+        duration: "4 hours",
+        maxParticipants: 6,
+        locations: ["Swakopmund", "Concentration Camp Graves"],
+        description: "Focus specifically on the sites related to the 1904-1908 Nama and Ovaherero Genocide, regarded as the first genocide of the 20th century. Learn about this important historical period and its impact on Namibia today.",
+        dates: getNextMonthsFormatted(currentMonth + 1),
+        featured: false,
+        routeDetails: "Concentration camp mass graves - Military barracks - Old Hospital - Commemorative sites",
+        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
+        meetingPoint: "Your accommodation in Swakopmund",
+        pickupIncluded: true,
       },
     ],
     cultural: [
       {
         id: 3,
-        title: "Mondesa Township Experience",
-        image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80",
-        price: "$85",
-        duration: "5 hours",
-        maxParticipants: 12,
-        locations: ["Mondesa Township", "Local Community Center"],
-        description: "Experience the vibrant culture of Mondesa Township, interact with locals, and learn about daily life in this community.",
-        dates: ["Jun 18, 2023", "Jul 12, 2023", "Aug 8, 2023"],
-        featured: true,
-      },
-      {
-        id: 4,
-        title: "DRC Township Tour",
-        image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+        title: "Cultural & Historical Tour Experience",
+        subtitle: "Part of our Half Day Tour",
+        image: "/Home Images/Cultural Tour.png",
         price: "$75",
         duration: "4 hours",
-        maxParticipants: 10,
-        locations: ["Democratic Resettlement Community"],
-        description: "Discover the Democratic Resettlement Community (DRC) Township, an informal settlement where you'll gain insight into the challenges and resilience of the community members.",
-        dates: ["Jun 22, 2023", "Jul 17, 2023", "Aug 12, 2023"],
+        maxParticipants: 6,
+        locations: ["Swakopmund", "Cultural & Historical Sites"],
+        description: "Explore the rich cultural heritage of Swakopmund with our local guide. This tour combines historical sites with cultural insights, focusing on the history of the Nama and Ovaherero peoples.",
+        dates: getNextMonthsFormatted(),
+        featured: true,
+        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
+        meetingPoint: "Your accommodation in Swakopmund",
+        pickupIncluded: true,
+      },
+      {
+        id: 7,
+        title: "German Colonial Architecture",
+        subtitle: "Part of our Shore Excursion",
+        image: "/Home Images/German Architecture.jpg",
+        price: "$120",
+        duration: "8 hours",
+        maxParticipants: 20,
+        locations: ["Swakopmund", "Colonial District"],
+        description: "Discover Swakopmund's unique German colonial architecture on this cultural exploration. See well-preserved buildings from the early 1900s while learning about the colonial influence on Namibian history and culture.",
+        dates: getNextMonthsFormatted(),
         featured: false,
+        includedItems: ["Guide", "Transportation", "Lunch", "Beverages"],
+        meetingPoint: "Walvis Bay Harbor",
+        pickupIncluded: false,
       },
     ],
     nature: [
       {
         id: 5,
         title: "Walvis Bay Lagoon & Dune 7",
-        image: "https://images.unsplash.com/photo-1504432842672-1a79f78e4084?auto=format&fit=crop&w=800&q=80",
-        price: "$110",
-        duration: "7 hours",
-        maxParticipants: 18,
-        locations: ["Walvis Bay Lagoon", "Dune 7", "Sandwich Harbor"],
-        description: "Witness the flamingos at Walvis Bay Lagoon and climb the famous Dune 7, the highest dune in Namibia.",
-        dates: ["Jun 25, 2023", "Jul 20, 2023", "Aug 15, 2023"],
+        subtitle: "Included in Shore Excursion",
+        image: "/Home Images/Flamingo.jpg",
+        price: "$120",
+        duration: "8 hours",
+        maxParticipants: 20,
+        locations: ["Walvis Bay Lagoon", "Dune 7", "Swakopmund"],
+        description: "Witness thousands of flamingos at Walvis Bay Lagoon and climb famous Dune 7. This natural experience is included as part of our full-day Shore Excursion tour.",
+        dates: getNextMonthsFormatted(),
         featured: true,
+        includedItems: ["Guide", "Transportation", "Lunch", "Beverages"],
+        meetingPoint: "Walvis Bay Harbor",
+        pickupIncluded: false,
       },
     ],
   };
@@ -81,7 +133,7 @@ const ToursList: React.FC = () => {
   return (
     <div className="space-y-8">
       <Tabs defaultValue="historical" onValueChange={setSelectedTab}>
-        <TabsList className="bg-kalahari-sand/30 border border-kalahari-brown/20 w-full justify-start mb-6">
+        <TabsList className="bg-sand-custom border border-brown-light w-full justify-start mb-6">
           <TabsTrigger value="historical" className="font-serif text-base">Historical</TabsTrigger>
           <TabsTrigger value="cultural" className="font-serif text-base">Cultural</TabsTrigger>
           <TabsTrigger value="nature" className="font-serif text-base">Nature</TabsTrigger>
@@ -90,53 +142,100 @@ const ToursList: React.FC = () => {
         {Object.entries(tours).map(([category, tourList]) => (
           <TabsContent key={category} value={category} className="space-y-6">
             {tourList.map((tour) => (
-              <Card key={tour.id} className={`overflow-hidden transition-all ${tour.featured ? 'border-kalahari-brown/30 shadow-md' : 'border-kalahari-gravel/20'}`}>
+              <Card key={tour.id} className={`overflow-hidden transition-all ${tour.featured ? 'border-brown-custom shadow-md' : 'border-gravel-medium'}`}>
                 <div className="grid grid-cols-1 md:grid-cols-3">
-                  <div className="h-64 md:h-auto overflow-hidden">
+                  <div className="relative h-64 md:h-auto overflow-hidden">
                     <img 
                       src={tour.image} 
                       alt={tour.title} 
                       className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
                     />
+                    {tour.featured && (
+                      <div className="absolute top-4 left-0 bg-kalahari-sun text-white py-1 px-3 font-medium flex items-center gap-1 shadow-md">
+                        <ThumbsUp size={16} />
+                        <span>Recommended</span>
+                      </div>
+                    )}
                   </div>
-                  <div className="md:col-span-2 p-6">
+                  <div className="md:col-span-2 p-4 sm:p-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-serif text-2xl text-kalahari-brown">{tour.title}</h3>
+                      <div>
+                        <h3 className="font-serif text-xl sm:text-2xl text-brown-custom">{tour.title}</h3>
+                        {tour.subtitle && (
+                          <p className="text-sm text-kalahari-charcoal/70 mt-1">{tour.subtitle}</p>
+                        )}
+                      </div>
                       {tour.featured && (
-                        <Badge className="bg-kalahari-accent text-kalahari-charcoal">Featured</Badge>
+                        <Badge className="bg-kalahari-brown text-white text-[10px] sm:text-xs px-1.5 py-0.5 sm:px-2 sm:py-1 whitespace-nowrap">Popular Choice</Badge>
                       )}
                     </div>
-                    <p className="text-kalahari-charcoal/80 mb-4">{tour.description}</p>
+                    <p className="text-charcoal-custom mb-4 text-sm sm:text-base">{tour.description}</p>
                     
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div className="flex items-center text-sm text-kalahari-charcoal/80">
-                        <Clock size={16} className="mr-2 text-kalahari-brown" />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-4">
+                      <div className="flex items-center text-sm text-charcoal-custom">
+                        <Clock size={16} className="mr-2 text-brown-custom" />
                         <span>{tour.duration}</span>
                       </div>
-                      <div className="flex items-center text-sm text-kalahari-charcoal/80">
-                        <Users size={16} className="mr-2 text-kalahari-brown" />
+                      <div className="flex items-center text-sm text-charcoal-custom">
+                        <Users size={16} className="mr-2 text-brown-custom" />
                         <span>Max {tour.maxParticipants} people</span>
                       </div>
-                      <div className="flex items-center text-sm text-kalahari-charcoal/80 col-span-2">
-                        <MapPin size={16} className="mr-2 text-kalahari-brown flex-shrink-0" />
+                      <div className="flex items-center text-sm text-charcoal-custom col-span-1 sm:col-span-2">
+                        <MapPin size={16} className="mr-2 text-brown-custom flex-shrink-0" />
                         <span className="truncate">{tour.locations.join(", ")}</span>
                       </div>
                     </div>
                     
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {tour.dates.map((date, index) => (
-                        <div key={index} className="flex items-center text-xs bg-kalahari-lightbrown/20 text-kalahari-darkbrown px-2 py-1 rounded">
-                          <Calendar size={12} className="mr-1" />
-                          {date}
+                    <div className="bg-sand-light/30 p-2 sm:p-3 rounded-md mb-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                          <h4 className="text-xs sm:text-sm font-medium text-brown-custom mb-1 sm:mb-2">What's Included:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {tour.includedItems?.map((item, idx) => (
+                              <div key={idx} className="flex items-center text-xs text-charcoal-custom">
+                                <Check size={12} className="mr-1 text-green-600" />
+                                {item}
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      ))}
+                        <div>
+                          <h4 className="text-xs sm:text-sm font-medium text-brown-custom mb-1 sm:mb-2">Meeting Point:</h4>
+                          <p className="text-xs text-charcoal-custom">
+                            {tour.meetingPoint}
+                            {tour.pickupIncluded && " (Pickup included)"}
+                          </p>
+                          {tour.routeDetails && (
+                            <>
+                              <h4 className="text-xs sm:text-sm font-medium text-brown-custom mt-2 mb-1">Route:</h4>
+                              <p className="text-xs text-charcoal-custom">{tour.routeDetails}</p>
+                            </>
+                          )}
+                        </div>
+                      </div>
                     </div>
                     
-                    <div className="flex justify-between items-center mt-4">
-                      <div className="text-2xl font-serif text-kalahari-brown">{tour.price}<span className="text-sm text-kalahari-charcoal/60 ml-1">per person</span></div>
-                      <Button className="bg-kalahari-darkbrown hover:bg-kalahari-brown text-white flex items-center gap-1">
-                        Book Now <ChevronRight size={16} />
-                      </Button>
+                    <Separator className="my-3 sm:my-4" />
+                    
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-4">
+                      <div>
+                        <p className="text-xs sm:text-sm text-charcoal-custom mb-1">Next available:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {tour.dates.slice(0, 2).map((date, index) => (
+                            <div key={index} className="flex items-center text-xs bg-lightbrown-custom text-darkbrown-custom px-2 py-1 rounded">
+                              <Calendar size={12} className="mr-1" />
+                              {date}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4 mt-3 sm:mt-0">
+                        <div className="text-xl sm:text-2xl font-serif text-brown-custom">{tour.price}</div>
+                        <Button className="bg-darkbrown-custom hover:bg-brown-custom text-white text-sm sm:text-base">
+                          Book Now
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>

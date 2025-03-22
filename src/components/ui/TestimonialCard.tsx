@@ -60,10 +60,10 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   const profileImageUrl = getProfileImageUrl(name, type);
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-4 md:p-6 h-full flex flex-col">
+    <div className="bg-white rounded-xl shadow-md p-4 md:p-6 h-full flex flex-col border border-gray-100 hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-start gap-3 md:gap-4">
         {/* Profile picture */}
-        <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden shadow-sm ${avatarBgColor} flex items-center justify-center text-lg font-medium flex-shrink-0`}>
+        <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden shadow-sm ${avatarBgColor} flex items-center justify-center text-lg font-medium flex-shrink-0 border border-white/80`}>
           <img 
             src={profileImageUrl}
             alt={name}
@@ -82,7 +82,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
         {/* Name and location */}
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-gray-900 text-sm md:text-base truncate">{name}</h3>
+          <h3 className="font-semibold text-kalahari-charcoal text-sm md:text-base truncate">{name}</h3>
           <p className="text-xs md:text-sm text-gray-500 truncate">{location}</p>
         </div>
 
@@ -135,10 +135,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         <span className="ml-1 text-xs md:text-sm font-medium text-gray-700">{rating}</span>
       </div>
 
-      {/* Testimonial */}
-      <p className="mt-3 md:mt-4 text-gray-700 italic text-xs md:text-sm flex-1 line-clamp-6 md:line-clamp-none">
-        {testimonial}
-      </p>
+      {/* Testimonial - Fixed clipping issues */}
+      <div className="mt-3 md:mt-4 flex-1 overflow-hidden">
+        <p className="text-kalahari-charcoal italic text-xs md:text-sm">
+          {testimonial}
+        </p>
+      </div>
     </div>
   );
 };

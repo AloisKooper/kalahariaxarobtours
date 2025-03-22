@@ -125,11 +125,14 @@ const Testimonials: React.FC = () => {
     setCurrentSlide(0);
   }, [activeTab]);
 
-  // Calculate visible cards based on screen width
+  // Calculate visible cards based on screen width - strictly following the 3 breakpoints rule
   const getVisibleCardCount = () => {
     if (typeof window === 'undefined') return 1;
+    // Mobile: 0px - 767px
     if (window.innerWidth < 768) return 1;
+    // Tablet: 768px - 1023px
     if (window.innerWidth < 1024) return 2;
+    // Desktop: 1024px and above
     return 3;
   };
 
@@ -165,27 +168,33 @@ const Testimonials: React.FC = () => {
   const dots = Array.from({ length: maxSlide + 1 });
 
   return (
-    <section className="w-full flex flex-col items-center py-12 md:py-20 bg-white px-4 md:px-6">
-      <h2 className="text-kalahari-brown text-3xl md:text-4xl leading-tight text-center">
-        Trusted by Hundreds of <br />
-        Happy Customers
-      </h2>
-      <p className="text-kalahari-charcoal text-center text-lg font-normal mt-4 md:mt-8 max-w-2xl px-4">
-        Read what previous tour participants have to say about their experience with Kalahari Axarob Tours
-      </p>
+    <section className="w-full flex flex-col items-center py-16 md:py-20 lg:py-24 bg-gray-50 px-4 md:px-6 lg:px-8">
+      {/* Enhanced heading with decorative element */}
+      <div className="text-center mb-12 md:mb-16 relative">
+        <div className="flex justify-center mb-3">
+          <div className="w-16 h-1 bg-kalahari-brown rounded-full"></div>
+        </div>
+        <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl lg:text-5xl font-normal leading-tight text-center">
+          Trusted by Hundreds of <br className="hidden sm:block" />
+          <span className="text-kalahari-brown">Happy Customers</span>
+        </h2>
+        <p className="text-kalahari-charcoal text-center text-base md:text-lg font-normal mt-4 md:mt-6 max-w-2xl mx-auto">
+          Read what previous tour participants have to say about their experience with Kalahari Axarob Tours
+        </p>
+      </div>
 
-      {/* Review Type Tabs */}
-      <div className="flex justify-center gap-4 md:gap-8 mt-8 md:mt-10 border-b border-gray-200 w-full max-w-lg overflow-x-auto pb-1">
+      {/* Review Type Tabs - Enhanced for better visibility */}
+      <div className="flex justify-center gap-4 md:gap-8 mt-0 border-b border-gray-200 w-full max-w-lg overflow-x-auto pb-1 mb-8 md:mb-10">
         <button 
           className={`pb-2 px-4 text-sm md:text-base font-medium transition-colors relative whitespace-nowrap ${
             activeTab === 'google' 
-              ? 'text-blue-600' 
+              ? 'text-blue-600 font-semibold' 
               : 'text-gray-500 hover:text-gray-700'
           }`}
           onClick={() => handleTabChange('google')}
         >
           <div className="flex items-center gap-2">
-            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
@@ -198,13 +207,13 @@ const Testimonials: React.FC = () => {
         <button 
           className={`pb-2 px-4 text-sm md:text-base font-medium transition-colors relative whitespace-nowrap ${
             activeTab === 'trustpilot' 
-              ? 'text-[#00B67A]' 
+              ? 'text-[#00B67A] font-semibold' 
               : 'text-gray-500 hover:text-gray-700'
           }`}
           onClick={() => handleTabChange('trustpilot')}
         >
           <div className="flex items-center gap-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="#00B67A"/>
             </svg>
             Trustpilot Reviews
@@ -213,22 +222,23 @@ const Testimonials: React.FC = () => {
         </button>
       </div>
 
-      <div className="w-full max-w-6xl mt-8 md:mt-10 relative">
-        {/* Carousel Navigation - Left */}
+      <div className="w-full max-w-6xl mt-4 md:mt-6 relative">
+        {/* Carousel Navigation - Enhanced for better visibility */}
         <button 
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md rounded-full p-2 md:p-3 hover:bg-gray-50 transition-colors -ml-2 md:-ml-6"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2.5 md:p-3.5 hover:bg-gray-50 transition-colors -ml-3 md:-ml-6 focus:outline-none focus:ring-2 focus:ring-kalahari-brown focus:ring-opacity-50"
           onClick={handlePrev}
           aria-label="Previous slide"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18L9 12L15 6" stroke="#7D5A3C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="#7D5A3C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
 
-        {/* Cards Container with proper height management */}
+        {/* Cards Container - Fixed height issues */}
         <div 
           ref={carouselRef}
           className="overflow-hidden relative"
+          style={{ minHeight: "320px" }} // Ensure minimum height to prevent collapse
         >
           <div 
             className="flex transition-transform duration-500 ease-in-out"
@@ -239,20 +249,23 @@ const Testimonials: React.FC = () => {
             {activeReviews.map((review, index) => (
               <div 
                 key={`${activeTab}-${index}`} 
-                className="px-3"
+                className="px-3 md:px-4 pb-4" // Added bottom padding to prevent clipping
                 style={{ 
                   width: `${100 / visibleCards}%`,
                   minWidth: `${100 / visibleCards}%`,
-                  flex: `0 0 ${100 / visibleCards}%`
+                  flex: `0 0 ${100 / visibleCards}%`,
+                  height: "100%", // Ensure full height
                 }}
               >
-                <TestimonialCard 
-                  name={review.name}
-                  location={review.location}
-                  rating={review.rating}
-                  testimonial={review.testimonial}
-                  type={review.type as 'google' | 'trustpilot'}
-                />
+                <div className="h-full"> {/* Added wrapper to maintain full height */}
+                  <TestimonialCard 
+                    name={review.name}
+                    location={review.location}
+                    rating={review.rating}
+                    testimonial={review.testimonial}
+                    type={review.type as 'google' | 'trustpilot'}
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -260,25 +273,25 @@ const Testimonials: React.FC = () => {
 
         {/* Carousel Navigation - Right */}
         <button 
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md rounded-full p-2 md:p-3 hover:bg-gray-50 transition-colors -mr-2 md:-mr-6"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2.5 md:p-3.5 hover:bg-gray-50 transition-colors -mr-3 md:-mr-6 focus:outline-none focus:ring-2 focus:ring-kalahari-brown focus:ring-opacity-50"
           onClick={handleNext}
           aria-label="Next slide"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 18L15 12L9 6" stroke="#7D5A3C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="#7D5A3C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
 
-        {/* Dots Navigation */}
-        <div className="flex justify-center items-center mt-6 space-x-2">
+        {/* Dots Navigation - Enhanced */}
+        <div className="flex justify-center items-center mt-8 space-x-2">
           {dots.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              className={`transition-all duration-300 rounded-full ${
                 currentSlide === index 
-                  ? 'bg-kalahari-brown scale-125 w-3 h-3' 
-                  : 'bg-kalahari-sand hover:bg-kalahari-brown/50'
+                  ? 'bg-kalahari-brown w-3 h-3 scale-110' 
+                  : 'bg-gray-300 hover:bg-kalahari-brown/50 w-2 h-2'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -286,11 +299,11 @@ const Testimonials: React.FC = () => {
         </div>
       </div>
 
-      {/* View All Reviews Link */}
-      <div className="mt-8 md:mt-10">
+      {/* View All Reviews Link - Enhanced */}
+      <div className="mt-10 md:mt-12">
         <a 
-          href="/" 
-          className="text-kalahari-brown hover:text-kalahari-darkbrown transition-colors flex items-center gap-2 font-medium"
+          href="/testimonials" 
+          className="inline-flex items-center gap-2 bg-white border border-kalahari-brown/20 text-kalahari-brown px-5 py-2.5 rounded-lg font-medium hover:bg-kalahari-brown hover:text-white transition-colors shadow-sm"
         >
           <span>View all {activeTab === 'google' ? 'Google' : 'Trustpilot'} reviews</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

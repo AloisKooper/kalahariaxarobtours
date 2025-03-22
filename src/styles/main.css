@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F5F0E6;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background extension to cover any gaps */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Taller than navbar to ensure complete coverage */
+  background: linear-gradient(to bottom, rgba(166, 124, 82, 0.9) 0%, rgba(166, 124, 82, 0) 100%);
+  z-index: 1; /* Higher than page bg but lower than navbar */
+  pointer-events: none; /* Allow interaction with elements below */
+}
+
+/* Ensure the global background gradient sits below our filler */
+[class*="bg-gradient-to"][class*="-z-10"] {
+  z-index: -10 !important;
+}
+
+/* Make sure content always starts immediately below navbar */
+.navbar-container + div, 
+main, 
+.hero-section {
+  margin-top: var(--nav-height, 80px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Standard z-index layers */
+:root {
+  --z-background: -10;
+  --z-filler: -5;
+  --z-content: 1;
+  --z-navbar: 9999;
+}
+
+/* Mobile optimization */
+@media (max-width: 767px) {
+  :root {
+    --nav-height: 60px;
+  }
+}
+
+/* Tablet optimization */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --nav-height: 70px;
+  }
+}
+
+/* Desktop defaults */
+@media (min-width: 1024px) {
+  :root {
+    --nav-height: 80px;
+  }
+}
+
+/* Prevent layout shifts */
+html {
+  scroll-padding-top: var(--nav-height, 80px);
+}
+
+/* Framer Motion specific adjustments */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+/* Prevent page content from jumping when navbar animates */
+body {
+  padding-top: var(--nav-height, 80px);
+}
+
+/* Legacy style - can be removed if not used */
+.nav-placeholder {
+  height: 0;
+} 

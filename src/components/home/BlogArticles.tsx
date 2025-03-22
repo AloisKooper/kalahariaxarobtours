@@ -9,7 +9,7 @@ const BlogArticles: React.FC = () => {
       id: 1,
       title: "The History of Swakopmund's German Architecture",
       excerpt: "Explore the unique architectural heritage of Swakopmund and how it reflects Namibia's colonial past.",
-      image: null,
+      image: "/Home Images/German Architecture.jpg",
       author: "Alois Kooper",
       date: "May 15, 2023",
       category: "History"
@@ -18,7 +18,7 @@ const BlogArticles: React.FC = () => {
       id: 2,
       title: "Understanding the Nama and Ovaherero Genocide",
       excerpt: "An in-depth look at the historical events of 1904-1908 and their lasting impact on Namibia.",
-      image: null,
+      image: "/Home Images/Nama and Ovaherero Genocide.jpg",
       author: "Maria Nakale",
       date: "April 22, 2023",
       category: "History"
@@ -27,7 +27,7 @@ const BlogArticles: React.FC = () => {
       id: 3,
       title: "Top 5 Historical Sites to Visit in Swakopmund",
       excerpt: "Discover the must-see historical attractions that tell the story of Swakopmund's rich past.",
-      image: null,
+      image: "/Home Images/Top 5 Historical.jpg",
       author: "Thomas Shilongo",
       date: "March 10, 2023",
       category: "Travel"
@@ -36,7 +36,7 @@ const BlogArticles: React.FC = () => {
       id: 4,
       title: "Life in Mondesa Township: Then and Now",
       excerpt: "A comparative look at how Mondesa Township has evolved while preserving its cultural heritage.",
-      image: null,
+      image: "/Home Images/Mondesa Township.jpg",
       author: "John Muafangejo",
       date: "February 28, 2023",
       category: "Culture"
@@ -44,10 +44,10 @@ const BlogArticles: React.FC = () => {
   ];
 
   return (
-    <section className="w-full flex flex-col items-center py-20 bg-kalahari-sand/20 px-6">
+    <section className="w-full flex flex-col items-center py-20 bg-sand-custom px-6">
       <div className="container mx-auto">
         <div className="flex flex-col items-center mb-12">
-          <h3 className="text-kalahari-gravel uppercase tracking-wider text-sm mb-2">Our Blog</h3>
+          <h3 className="text-gravel uppercase tracking-wider text-sm mb-2">Our Blog</h3>
           <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl text-center">
             Historical Insights & Stories
           </h2>
@@ -59,8 +59,8 @@ const BlogArticles: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {articles.map((article) => (
-            <Card key={article.id} className="overflow-hidden hover:shadow-md transition-shadow border-kalahari-gravel/20">
-              <div className="h-48 overflow-hidden bg-kalahari-sand/30">
+            <Card key={article.id} className="overflow-hidden hover:shadow-md transition-shadow border-gravel-medium">
+              <div className="h-48 overflow-hidden bg-sand-custom">
                 {article.image ? (
                   <img
                     src={article.image}
@@ -93,7 +93,7 @@ const BlogArticles: React.FC = () => {
               </div>
               <CardContent className="p-5">
                 <div className="flex items-center mb-3 text-xs text-kalahari-charcoal/70">
-                  <span className="bg-kalahari-lightbrown/30 text-kalahari-darkbrown px-2 py-0.5 rounded">
+                  <span className="bg-lightbrown-accent text-kalahari-darkbrown px-2 py-0.5 rounded">
                     {article.category}
                   </span>
                   <span className="mx-2">•</span>
@@ -109,7 +109,7 @@ const BlogArticles: React.FC = () => {
                   {article.excerpt}
                 </p>
               </CardContent>
-              <CardFooter className="px-5 py-4 border-t border-kalahari-gravel/10 flex justify-between items-center">
+              <CardFooter className="px-5 py-4 border-t border-gravel-light flex justify-between items-center">
                 <div className="flex items-center text-sm text-kalahari-charcoal/70">
                   <User size={14} className="mr-1" />
                   <span>{article.author}</span>

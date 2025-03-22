@@ -1,36 +1,89 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { CalendarDays, Info, ArrowRight, MapPin, Compass, Star } from "lucide-react"; 
 
 const AboutGuide: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  // Preload the video as soon as the component mounts
+  useEffect(() => {
+    const videoPreload = document.createElement('link');
+    videoPreload.rel = 'preload';
+    videoPreload.href = 'https://res.cloudinary.com/dik2mqn3b/video/upload/q_auto:best,f_auto/scene_video_rozuws.mp4';
+    videoPreload.as = 'video';
+    document.head.appendChild(videoPreload);
+    
+    // Set up intersection observer to detect when video is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            if (videoRef.current) {
+              videoRef.current.play();
+            }
+          } else {
+            setIsInView(false);
+            if (videoRef.current) {
+              videoRef.current.pause();
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      document.head.removeChild(videoPreload);
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="bg-kalahari-sand/20 w-full py-20 px-6 max-md:py-16">
+    <section ref={sectionRef} className="bg-sand-custom w-full py-20 px-6 max-md:py-16">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col">
-            <div className="flex items-center gap-2 text-kalahari-brown">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <span className="text-sm ml-1">Trusted by many</span>
+            {/* Profile image and title */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-kalahari-brown">
+                <img 
+                  src="/Home Images/tour guide.jpg" 
+                  alt="Mr. Rooi - Founder" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "https://ui-avatars.com/api/?name=Mr+Rooi&background=A67C52&color=fff";
+                  }}
+                />
+              </div>
+              <div>
+                <div className="flex items-center gap-1 text-[#FBBC05]">
+                  <Star className="w-4 h-4 fill-[#FBBC05]" />
+                  <Star className="w-4 h-4 fill-[#FBBC05]" />
+                  <Star className="w-4 h-4 fill-[#FBBC05]" />
+                  <Star className="w-4 h-4 fill-[#FBBC05]" />
+                  <Star className="w-4 h-4 fill-[#FBBC05]" />
+                </div>
+                <h3 className="text-kalahari-darkbrown font-medium">Mr. Rooi - Founder & Tour Guide</h3>
+              </div>
             </div>
             
             <h2 className="text-3xl md:text-5xl font-normal leading-tight uppercase text-kalahari-darkbrown mt-3">
               About the tour guide
             </h2>
             
-            <p className="leading-7 tracking-[-0.32px] text-kalahari-charcoal/80 mt-5">
+            <p className="leading-7 tracking-[-0.32px] text-kalahari-charcoal mt-5">
               Mr. Rooi is a licensed Tour Guide with over 15 years of experience 
               in the Tour Field. His extensive knowledge of Namibian history, 
               particularly the Ovaherero/Namaqua genocide, makes him a valuable 
@@ -38,7 +91,10 @@ const AboutGuide: React.FC = () => {
             </p>
             
             <div className="mt-6 bg-white/70 p-4 rounded-lg border border-kalahari-brown/10">
-              <h3 className="text-kalahari-brown font-semibold text-lg mb-2">Cancellation Policy</h3>
+              <h3 className="text-kalahari-brown font-semibold text-lg mb-2 flex items-center">
+                <CalendarDays className="w-5 h-5 mr-2 text-kalahari-brown" />
+                Cancellation Policy
+              </h3>
               <ul className="text-kalahari-charcoal/90 space-y-2 text-sm">
                 <li className="flex items-start">
                   <span className="text-kalahari-brown mr-2">•</span>
@@ -57,41 +113,37 @@ const AboutGuide: React.FC = () => {
             
             <Link
               to="/about"
-              className="mt-8 inline-flex items-center gap-2 bg-white hover:bg-kalahari-sand/50 text-kalahari-brown border border-kalahari-brown/20 rounded-lg py-2.5 px-5 font-semibold transition-colors w-fit"
+              className="mt-8 inline-flex items-center gap-2 bg-kalahari-brown hover:bg-kalahari-darkbrown text-white border border-kalahari-brown/20 rounded-lg py-2.5 px-5 font-semibold transition-colors w-fit shadow-sm"
             >
               About Me
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
           
+          {/* Swakopmund Scenery Video */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden h-[400px] relative">
-            <div className="w-full h-full bg-kalahari-lightbrown/20 flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="bg-kalahari-brown/20 backdrop-blur-sm rounded-full p-4 mx-auto mb-4 w-16 h-16 flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="36"
-                    height="36"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-kalahari-brown"
-                  >
-                    <polygon points="5 3 19 12 5 21 5 3" />
-                  </svg>
+            <div className="absolute inset-0 w-full h-full">
+              <video
+                ref={videoRef}
+                className="w-full h-full object-cover"
+                autoPlay={isInView}
+                muted
+                loop
+                playsInline
+                preload="auto"
+              >
+                <source 
+                  src="https://res.cloudinary.com/dik2mqn3b/video/upload/q_auto:best,f_auto/scene_video_rozuws.mp4" 
+                  type="video/mp4"
+                />
+              </video>
+              <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/60 flex items-end justify-center pb-6 px-2">
+                <div className="flex items-center gap-1.5 bg-black/30 backdrop-blur-sm px-3 py-2 rounded-full border border-white/10 shadow-lg transform transition-transform hover:scale-105 mb-2 max-w-[95%] sm:max-w-[85%] mx-auto">
+                  <Compass className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-kalahari-brown flex-shrink-0" strokeWidth={2.5} />
+                  <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg font-medium text-shadow-sm drop-shadow-md">
+                    Discover the beauty of the Namibian coast
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-kalahari-brown mb-2">Tour Guide Introduction</h3>
-                <p className="text-kalahari-charcoal/80 mb-4">
-                  Watch a video introduction from Mr. Rooi about his tours and experience.
-                </p>
-                <button className="bg-kalahari-brown hover:bg-kalahari-darkbrown text-white font-medium py-2 px-4 rounded transition-colors">
-                  Play Video
-                </button>
               </div>
             </div>
           </div>

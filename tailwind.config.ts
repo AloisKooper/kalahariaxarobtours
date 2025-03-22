@@ -21,6 +21,9 @@ export default {
 			fontFamily: {
 				'serif': ['"Source Serif 4"', 'Georgia', 'serif'],
 			},
+			borderWidth: {
+				'3': '3px',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -74,7 +77,11 @@ export default {
 					darkgravel: '#8E9196',
 					sand: '#FEF7CD',
 					accent: '#E2C9A1', // Changed from pink-ish to a more neutral sand tone
-					charcoal: '#403E43'
+					charcoal: '#403E43',
+					sun: '#FDB813',
+					softpink: '#FFB6C1', // Reverting to original value
+					orange: '#FF7F50',   // Reverting to original value
+					softorange: '#FFA07A' // Reverting to original value
 				}
 			},
 			borderRadius: {

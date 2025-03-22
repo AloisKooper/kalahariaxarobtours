@@ -1,0 +1,120 @@
+/* Fix z-index issues between sections */
+.hero-section {
+  z-index: 5;
+  position: relative;
+}
+
+section[class*="bg-"] {
+  position: relative;
+  z-index: 1;
+} 
+
+/* Custom background classes with standardized opacity */
+.bg-sand-custom {
+  background-color: rgba(254, 247, 205, 0.6); /* kalahari-sand with 60% opacity */
+}
+
+.bg-sand-light {
+  background-color: rgba(254, 247, 205, 0.3); /* kalahari-sand with 30% opacity */
+}
+
+.bg-sand-hover {
+  background-color: rgba(254, 247, 205, 0.5); /* kalahari-sand with 50% opacity for hover states */
+}
+
+.bg-brown-custom {
+  background-color: rgba(166, 124, 82, 0.5); /* kalahari-brown with 50% opacity */
+}
+
+.bg-brown-light {
+  background-color: rgba(166, 124, 82, 0.2); /* kalahari-brown with 20% opacity */
+}
+
+.bg-brown-hover {
+  background-color: rgba(166, 124, 82, 0.5); /* kalahari-brown with 50% opacity for hover */
+}
+
+.bg-brown-overlay {
+  background-color: rgba(166, 124, 82, 0.7); /* kalahari-brown with 70% opacity for overlays */
+}
+
+.bg-brown-nav {
+  background-color: rgba(166, 124, 82, 0.95); /* kalahari-brown with 95% opacity for navbar */
+}
+
+.bg-darkbrown-custom {
+  background-color: rgba(80, 60, 48, 0.9); /* kalahari-darkbrown with 90% opacity */
+}
+
+.bg-darkbrown-light {
+  background-color: rgba(80, 60, 48, 0.1); /* kalahari-darkbrown with 10% opacity */
+}
+
+.bg-darkbrown-hover {
+  background-color: rgba(80, 60, 48, 1); /* solid kalahari-darkbrown for hover */
+}
+
+.bg-lightbrown-custom {
+  background-color: rgba(226, 209, 195, 0.2); /* kalahari-lightbrown with 20% opacity */
+}
+
+.bg-lightbrown-light {
+  background-color: rgba(226, 209, 195, 0.1); /* kalahari-lightbrown with 10% opacity */
+}
+
+.bg-lightbrown-accent {
+  background-color: rgba(226, 209, 195, 0.3); /* kalahari-lightbrown with 30% opacity */
+}
+
+.bg-sun-custom {
+  background-color: rgba(253, 184, 19, 0.1); /* kalahari-sun with 10% opacity */
+}
+
+.bg-sun-light {
+  background-color: rgba(253, 184, 19, 0.05); /* kalahari-sun with 5% opacity */
+}
+
+.bg-sun-accent {
+  background-color: rgba(253, 184, 19, 0.2); /* kalahari-sun with 20% opacity */
+}
+
+.bg-accent-custom {
+  background-color: #FFD27C; /* kalahari-accent color */
+}
+
+.bg-gravel-custom {
+  background-color: rgba(200, 200, 201, 0.3); /* kalahari-gravel with 30% opacity */
+}
+
+.bg-gravel-light {
+  background-color: rgba(200, 200, 201, 0.1); /* kalahari-gravel with 10% opacity */
+}
+
+.bg-gravel-medium {
+  background-color: rgba(200, 200, 201, 0.2); /* kalahari-gravel with 20% opacity */
+}
+
+.bg-darkgravel-custom {
+  background-color: rgba(142, 145, 150, 0.3); /* kalahari-darkgravel with 30% opacity */
+}
+
+.text-gravel {
+  color: #C8C8C9; /* kalahari-gravel text color */
+}
+
+.text-brown-custom {
+  color: #A67C52; /* kalahari-brown text color */
+}
+
+.text-darkbrown-custom {
+  color: #503C30; /* kalahari-darkbrown text color */
+}
+
+.text-charcoal-custom {
+  color: rgba(33, 33, 33, 0.8); /* kalahari-charcoal with 80% opacity */
+}
+
+/* Transition effects */
+.hover-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+} 

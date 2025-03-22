@@ -1,32 +1,50 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Add Google Icon component
+const GoogleIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} xmlns="http://www.w3.org/2000/svg">
+    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+  </svg>
+);
 
 const HeroSection: React.FC = () => {
-  // Define carousel images 
+  // Define carousel images with new photos
   const carouselImages = [
     {
       main: "/Home Images/Swakop Landmarks.jpg",
-      small: "/Home Images/tour guide.jpg",
+      small: "/Home Images/Bahnhof.jpg",
       mainAlt: "Colorful German colonial buildings in Swakopmund",
-      smallAlt: "Friendly Namibian tour guide"
+      smallAlt: "Historic Bahnhof building in Swakopmund"
     },
     {
-      main: "/Home Images/Swakop Beach.jpg", // Make sure to check if this image exists
-      small: "/Home Images/flamingos.jpg", // Make sure to check if this image exists
-      mainAlt: "Swakopmund beach and coastline",
-      smallAlt: "Flamingos at Walvis Bay Lagoon"
+      main: "/Home Images/Genocide.jpg",
+      small: "/Home Images/Hospital.jpg",
+      mainAlt: "Genocide memorial site",
+      smallAlt: "Historic hospital building in Swakopmund"
     },
     {
-      main: "/Home Images/German Memorial.jpg", // Make sure to check if this image exists
-      small: "/Home Images/dune7.jpg", // Make sure to check if this image exists
-      mainAlt: "Historical German memorial in Swakopmund",
-      smallAlt: "Dune 7 near Walvis Bay"
+      main: "/Home Images/dune-7.gif",
+      small: "/Home Images/barracks.jpg",
+      mainAlt: "Dune 7 near Walvis Bay",
+      smallAlt: "Historic military barracks in Swakopmund"
+    },
+    {
+      main: "/Home Images/Flamingo.jpg",
+      small: "/Home Images/soldier.png",
+      mainAlt: "Flamingos at Walvis Bay Lagoon",
+      smallAlt: "Historical soldier memorial"
     }
   ];
 
   // State to track current slide 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
   const totalSlides = carouselImages.length;
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -35,8 +53,8 @@ const HeroSection: React.FC = () => {
   useEffect(() => {
     const startAutoPlay = () => {
       autoPlayRef.current = setInterval(() => {
-        if (!isPaused) {
-          setCurrentSlide(prev => (prev === totalSlides - 1 ? 0 : prev + 1));
+        if (!isPaused && !isAnimating) {
+          changeSlide((currentSlide + 1) % totalSlides);
         }
       }, 5000); // Change slide every 5 seconds
     };
@@ -48,25 +66,43 @@ const HeroSection: React.FC = () => {
         clearInterval(autoPlayRef.current);
       }
     };
-  }, [totalSlides, isPaused]);
+  }, [totalSlides, isPaused, currentSlide, isAnimating]);
+
+  // Handle slide change with Framer Motion animation
+  const changeSlide = (index: number) => {
+    if (isAnimating || index === currentSlide) return;
+    
+    setIsAnimating(true);
+    setCurrentSlide(index);
+    
+    // Reset animation state after transition completes
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+  };
 
   // Handle navigation
   const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+    changeSlide(index);
+    
     // Briefly pause auto-slide after manual navigation
     setIsPaused(true);
     setTimeout(() => setIsPaused(false), 3000);
   };
 
   const goToPrevSlide = () => {
-    setCurrentSlide(prev => (prev === 0 ? totalSlides - 1 : prev - 1));
+    const prevIndex = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
+    changeSlide(prevIndex);
+    
     // Briefly pause auto-slide after manual navigation
     setIsPaused(true);
     setTimeout(() => setIsPaused(false), 3000);
   };
 
   const goToNextSlide = () => {
-    setCurrentSlide(prev => (prev === totalSlides - 1 ? 0 : prev + 1));
+    const nextIndex = currentSlide === totalSlides - 1 ? 0 : currentSlide + 1;
+    changeSlide(nextIndex);
+    
     // Briefly pause auto-slide after manual navigation
     setIsPaused(true);
     setTimeout(() => setIsPaused(false), 3000);
@@ -82,41 +118,43 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-kalahari-lightbrown/50 to-kalahari-sand/30 min-h-screen w-full flex items-center py-12 md:py-16 px-4 md:px-6">
+    <section className="min-h-[calc(100vh-var(--nav-height,80px))] w-full flex items-center py-8 sm:py-10 md:py-16 px-3 sm:px-4 md:px-6 hero-section overflow-hidden relative">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
+          {/* Left Column - Text Content */}
           <div className="flex flex-col">
-            <h2 className="text-sm leading-none text-kalahari-charcoal">
+            <h2 className="text-xs sm:text-sm leading-none text-white">
               The Ultimate Historical Tour Experience
             </h2>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight uppercase mt-4 text-kalahari-brown">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight uppercase mt-3 sm:mt-4 text-[#C4956A]">
               kalahari axarob tours
             </h1>
-            <p className="leading-7 tracking-[-0.32px] text-kalahari-charcoal/80 mt-6">
+            <p className="text-sm sm:text-base leading-6 sm:leading-7 tracking-[-0.32px] text-white mt-4 sm:mt-6">
               Discover Swakopmund's rich history and culture on our signature shore excursion, 
               available in flexible timeframes throughout the day. Perfect for cruise passengers 
               wanting to explore "The little piece of Germany under the African skies"
             </p>
-            <div className="flex flex-wrap items-center gap-4 mt-8">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 sm:mt-8">
               <Link
-                to="/"
-                className="rounded bg-white text-kalahari-darkbrown border border-kalahari-brown/20 hover:bg-kalahari-sand/50 transition-colors py-2.5 px-5 font-semibold"
+                to="/gallery"
+                className="rounded bg-white text-darkbrown-custom border border-brown-light hover:bg-sand-hover transition-colors py-2 sm:py-2.5 px-4 sm:px-5 text-sm sm:text-base font-semibold"
               >
                 Gallery
               </Link>
               <Link
-                to="/"
-                className="text-kalahari-brown hover:text-kalahari-darkbrown transition-colors font-semibold"
+                to="/tours"
+                className="text-white hover:text-sun-custom transition-colors text-sm sm:text-base font-semibold"
               >
                 Book Tour
               </Link>
             </div>
             
-            <div className="mt-10 bg-white/70 p-4 rounded-lg border border-kalahari-brown/10">
-              <div className="flex items-center gap-4">
+            {/* Profile Card - Responsive adjustments */}
+            <div className="mt-8 sm:mt-10 bg-white/70 p-3 sm:p-4 rounded-lg border border-brown-light">
+              <div className="flex items-center gap-3 sm:gap-4">
                 {/* Profile Image */}
                 <div className="relative shrink-0">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-kalahari-brown">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-brown-custom">
                     <img 
                       src="/Home Images/tour guide.jpg" 
                       alt="Mr. Rooi - Founder" 
@@ -131,21 +169,29 @@ const HeroSection: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex-1">
-                  {/* Star Rating */}
-                  <div className="flex items-center gap-1 mb-1">
-                    {[...Array(4)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-kalahari-brown text-kalahari-brown" />
-                    ))}
-                    <Star className="w-4 h-4 text-kalahari-brown" />
-                    <span className="text-xs text-kalahari-charcoal ml-1">4.0</span>
+                <div className="flex-1 min-w-0">
+                  {/* Google Star Rating */}
+                  <div className="flex items-center gap-0.5 sm:gap-1 mb-1">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className="w-3 h-3 sm:w-4 sm:h-4 relative">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill={i < 4 ? "#FBBC05" : "none"} stroke="#FBBC05" strokeWidth="1.5" className="w-full h-full">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                          </svg>
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-xs text-charcoal-custom ml-1">4.0</span>
                   </div>
                   
-                  {/* Founder Label */}
-                  <div className="text-sm font-medium text-kalahari-darkbrown">Mr. Rooi - Founder & Tour Guide</div>
+                  {/* Founder Label with Google Icon */}
+                  <div className="flex items-center gap-1 text-xs sm:text-sm font-medium text-darkbrown-custom truncate">
+                    <GoogleIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <span>Mr. Rooi - Founder & Tour Guide</span>
+                  </div>
                   
                   {/* Short Message */}
-                  <p className="text-xs text-kalahari-charcoal/90 mt-1">
+                  <p className="text-xs text-charcoal-custom mt-1 line-clamp-3 sm:line-clamp-none">
                     "I'm passionate about sharing the rich history of our region. Join me for an authentic 
                     historical tour experience that brings Namibia's past to life."
                   </p>
@@ -154,101 +200,115 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Right column with image carousel - responsive implementation */}
-          <div 
-            className="flex flex-col" 
+          {/* Right column with carousel - Fixed overflow issue and improved for mobile */}
+          <motion.div 
+            className="flex flex-col mt-4 md:mt-0" 
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] mx-auto">
-              {/* Carousel Images */}
+            {/* Added extra padding to prevent clipping */}
+            <div className="relative w-full h-[320px] sm:h-[400px] md:h-[470px] lg:h-[520px] mx-auto" role="region" aria-label="Tour Images">
+              {/* Carousel Images with Framer Motion transitions */}
+              <AnimatePresence initial={false} mode="wait">
               {carouselImages.map((slide, index) => (
-                <div 
-                  key={index}
-                  className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
-                    currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                  }`}
-                >
-                  {/* Main image container with border radius and white border */}
-                  <div className="relative w-full h-full rounded-[30px] md:rounded-[45px] lg:rounded-[60px] overflow-hidden shadow-md border-4 border-white">
-                    <img 
-                      src={slide.main} 
-                      alt={slide.mainAlt} 
-                      className="w-full h-full object-cover"
-                    />
-                    {/* Radial overlay for main image - darker version */}
-                    <div 
-                      className="absolute inset-0 rounded-[26px] md:rounded-[41px] lg:rounded-[56px] z-20"
-                      style={{
-                        background: 'radial-gradient(circle at center, transparent 15%, rgba(0,0,0,0.75) 100%)',
-                        pointerEvents: 'none',
-                        mixBlendMode: 'multiply'
-                      }}
-                    ></div>
-                  </div>
+                  index === currentSlide && (
+                    <motion.div
+                      key={index}
+                      className="absolute top-0 left-0 w-full h-full"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                      aria-hidden={index !== currentSlide}
+                    >
+                      {/* Main image container with border radius and white border */}
+                      <div className="relative w-full h-full rounded-[20px] sm:rounded-[30px] md:rounded-[45px] lg:rounded-[60px] overflow-hidden shadow-md border-3 sm:border-4 border-white">
+                        <img 
+                          src={slide.main} 
+                          alt={slide.mainAlt} 
+                          className="w-full h-full object-cover"
+                        />
+                        {/* Radial overlay for main image */}
+                        <div 
+                          className="absolute inset-0 rounded-[17px] sm:rounded-[26px] md:rounded-[41px] lg:rounded-[56px] z-20"
+                          style={{
+                            background: 'radial-gradient(circle at center, transparent 15%, rgba(0,0,0,0.75) 100%)',
+                            pointerEvents: 'none',
+                            mixBlendMode: 'multiply'
+                          }}
+                        ></div>
+                      </div>
                   
-                  {/* Smaller image with matching border radius */}
-                  <div className="absolute bottom-4 md:bottom-6 lg:bottom-8 left-4 md:left-6 lg:left-8 w-[120px] h-[120px] md:w-[150px] md:h-[150px] lg:w-[180px] lg:h-[180px] rounded-[20px] md:rounded-[30px] lg:rounded-[40px] overflow-hidden border-4 border-white shadow-md z-30">
-                    <img 
-                      src={slide.small} 
-                      alt={slide.smallAlt} 
-                      className="w-full h-full object-cover"
-                    />
-                    {/* Radial overlay for smaller image - darker version */}
-                    <div 
-                      className="absolute inset-0 rounded-[16px] md:rounded-[26px] lg:rounded-[36px] z-20"
-                      style={{
-                        background: 'radial-gradient(circle at center, transparent 25%, rgba(0,0,0,0.7) 100%)',
-                        pointerEvents: 'none',
-                        mixBlendMode: 'multiply'
-                      }}
-                    ></div>
-                  </div>
-                </div>
+                      {/* Smaller image with matching border radius - Adjusted for mobile */}
+                      <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 lg:bottom-8 left-2 sm:left-4 md:left-6 lg:left-8 w-[90px] h-[90px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] lg:w-[180px] lg:h-[180px] rounded-[15px] sm:rounded-[20px] md:rounded-[30px] lg:rounded-[40px] overflow-hidden border-3 sm:border-4 border-white shadow-md z-30">
+                        <img 
+                          src={slide.small} 
+                          alt={slide.smallAlt} 
+                          className="w-full h-full object-cover"
+                        />
+                        {/* Radial overlay for smaller image */}
+                        <div 
+                          className="absolute inset-0 rounded-[12px] sm:rounded-[16px] md:rounded-[26px] lg:rounded-[36px] z-20"
+                          style={{
+                            background: 'radial-gradient(circle at center, transparent 25%, rgba(0,0,0,0.7) 100%)',
+                            pointerEvents: 'none',
+                            mixBlendMode: 'multiply'
+                          }}
+                        ></div>
+                      </div>
+                    </motion.div>
+                  )
               ))}
+              </AnimatePresence>
             </div>
             
-            {/* Carousel Navigation - more responsive and fluid */}
-            <div className="flex justify-center items-center mt-6 space-x-4">
-              {/* Previous Button */}
-              <button 
-                onClick={goToPrevSlide}
-                className="text-kalahari-brown hover:text-kalahari-darkbrown transition-all duration-300 transform hover:scale-110"
-                aria-label="Previous slide"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
+            {/* Improved Carousel Navigation - Mobile optimized */}
+            <div className="flex justify-center items-center mt-4 sm:mt-6 md:mt-8 mb-2">
+              <div className="flex items-center space-x-4 sm:space-x-6">
+                {/* Previous Button */}
+                <button 
+                  onClick={goToPrevSlide}
+                  className="text-brown-custom hover:text-darkbrown-custom transition-colors p-1 sm:p-0"
+                  aria-label="Previous slide"
+                  disabled={isAnimating}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
               
-              {/* Dots - now with smooth transitions */}
-              <div className="flex space-x-3">
-                {Array.from({ length: totalSlides }).map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      currentSlide === index 
-                        ? 'bg-kalahari-brown scale-125' 
-                        : 'bg-kalahari-sand hover:bg-kalahari-brown/50 hover:scale-110'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
+                {/* Improved dot indicators */}
+                <div className="flex space-x-2 sm:space-x-3">
+                  {Array.from({ length: totalSlides }).map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`rounded-full focus:outline-none transition-all duration-300 ${
+                        currentSlide === index 
+                          ? 'bg-brown-custom w-4 sm:w-5 h-2 sm:h-3' 
+                          : 'bg-sand-custom hover:bg-brown-hover w-2 sm:w-3 h-2 sm:h-3'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                      aria-current={currentSlide === index ? "true" : "false"}
+                      disabled={isAnimating}
+                    />
+                  ))}
+                </div>
+              
+                {/* Next Button */}
+                <button 
+                  onClick={goToNextSlide}
+                  className="text-brown-custom hover:text-darkbrown-custom transition-colors p-1 sm:p-0"
+                  aria-label="Next slide"
+                  disabled={isAnimating}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
               </div>
-              
-              {/* Next Button */}
-              <button 
-                onClick={goToNextSlide}
-                className="text-kalahari-brown hover:text-kalahari-darkbrown transition-all duration-300 transform hover:scale-110"
-                aria-label="Next slide"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

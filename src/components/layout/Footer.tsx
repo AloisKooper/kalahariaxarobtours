@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-kalahari-gravel/10 to-kalahari-gravel/30 w-full overflow-hidden pt-16 pb-8 px-8 border-t border-kalahari-sand/50 max-md:px-5">
+    <footer className="bg-gradient-to-b from-gravel-light to-gravel-custom w-full overflow-hidden pt-16 pb-8 px-8 border-t border-kalahari-sand/50 max-md:px-5">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto">
         {/* Top section with logo, about, and newsletter */}
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               <img
                 src="/Home Images/axarob tours.png"
                 alt="Kalahari Axarob Tours Logo"
-                className="h-20 object-contain mb-6"
+                className="h-20 object-contain mb-6 border-b-2 border-kalahari-sun pb-4"
               />
             </Link>
             <p className="text-kalahari-charcoal/80 mb-6 max-w-md">
@@ -47,20 +47,20 @@ const Footer: React.FC = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="bg-kalahari-brown/10 p-2 rounded-full">
-                  <Phone size={16} className="text-kalahari-brown" />
+                <div className="bg-sun-custom p-2 rounded-full">
+                  <Phone size={16} className="text-kalahari-sun" />
                 </div>
-                <span className="text-kalahari-charcoal">+264 123 456 789</span>
+                <span className="text-kalahari-charcoal">+264 81 258 3089</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="bg-kalahari-brown/10 p-2 rounded-full">
-                  <Mail size={16} className="text-kalahari-brown" />
+                <div className="bg-sun-custom p-2 rounded-full">
+                  <Mail size={16} className="text-kalahari-sun" />
                 </div>
                 <span className="text-kalahari-charcoal">Kalahariaxarobtours@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="bg-kalahari-brown/10 p-2 rounded-full">
-                  <MapPin size={16} className="text-kalahari-brown" />
+                <div className="bg-sun-custom p-2 rounded-full">
+                  <MapPin size={16} className="text-kalahari-sun" />
                 </div>
                 <span className="text-kalahari-charcoal">Swakopmund, Namibia</span>
               </div>
