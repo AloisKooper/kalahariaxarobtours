@@ -7,7 +7,7 @@ import { MapPin, Clock, Users, Calendar, ChevronRight, ThumbsUp, Check } from "l
 import { Separator } from "@/components/ui/separator";
 
 const ToursList: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState("historical");
+  const [selectedTab, setSelectedTab] = useState("cruise");
 
   // Get the current year and calculate future months dynamically
   const currentYear = new Date().getFullYear();
@@ -25,118 +25,72 @@ const ToursList: React.FC = () => {
   };
 
   const tours = {
-    historical: [
+    cruise: [
       {
         id: 1,
-        title: "Passenger Liner Shore Excursion",
+        title: "Cruise Liner Shore Excursion",
         image: "/Home Images/Cruise Liner Shore Excursion.jpg",
-        price: "$120",
+        price: "$198",
         duration: "8 hours",
-        maxParticipants: 20,
+        minParticipants: 20,
+        maxParticipants: 40,
         locations: ["Walvis Bay Harbor", "Swakopmund"],
-        description: "An eye-opening guided tour filled with historical and cultural information, uniquely designed for cruise ship passengers. Led by Mr. Rooi, a descendant of the native Namaqua tribe, exploring Swakopmund 'The little piece of Germany under the African skies'.",
+        description: "A thought-provoking guided tour uniquely designed for cruise ship passengers. Led by Mr. Rooi, a descendant of the native Namaqua tribe, exploring Swakopmund 'The little piece of Germany under the African skies'.",
         dates: getNextMonthsFormatted(),
         featured: true,
-        routeDetails: "Port - Lagoon - Dune 7 - Swakopmund (lunch) - Historical sites - Free time - Back to port",
-        includedItems: ["Guide", "Transportation", "Lunch", "Beverages"],
+        routeDetails: "Port - Lagoon - Dune 7 - Swakopmund (light meal) - Historical sites - Free time - Back to port",
+        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
         meetingPoint: "Walvis Bay Harbor",
         pickupIncluded: false,
-      },
+      }
+    ],
+    historical: [
       {
         id: 2,
-        title: "Half Day Local Tour",
+        title: "Guided Historical Tour",
         image: "/Home Images/Half Day Tour.jpg",
-        price: "$75",
-        duration: "4 hours",
+        price: "$139",
+        duration: "5 hours",
+        minParticipants: 4,
         maxParticipants: 6,
         locations: ["Swakopmund", "Historical Sites"],
-        description: "An eye-opening guided tour exploring significant historical sites in Swakopmund related to the 1904/1908 Nama and Ovaherero Genocide. Led by Mr. Rooi, a descendant of the native Namaqua tribe.",
+        description: "A thought-provoking guided tour exploring significant historical sites in Swakopmund related to the 1904/1908 Nama and Ovaherero Genocide. Led by Mr. Rooi, a descendant of the native Namaqua tribe.",
         dates: getNextMonthsFormatted(currentMonth + 1),
         featured: false,
-        routeDetails: "Concentration camp mass graves - Military barracks - Historic buildings - Monuments",
+        routeDetails: "Concentration camp mass graves - Alte Kaserne (Old Military barracks) - Old Hospital - Jetty - Woerman hause - German War Memorial - Old Bahn Hoff",
         includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
         meetingPoint: "Your accommodation in Swakopmund",
         pickupIncluded: true,
-      },
-      {
-        id: 6,
-        title: "Historical Genocide Sites",
-        subtitle: "Part of our Half Day Tour",
-        image: "/Home Images/Nama and Ovaherero Genocide.jpg",
-        price: "$75",
-        duration: "4 hours",
-        maxParticipants: 6,
-        locations: ["Swakopmund", "Concentration Camp Graves"],
-        description: "Focus specifically on the sites related to the 1904-1908 Nama and Ovaherero Genocide, regarded as the first genocide of the 20th century. Learn about this important historical period and its impact on Namibia today.",
-        dates: getNextMonthsFormatted(currentMonth + 1),
-        featured: false,
-        routeDetails: "Concentration camp mass graves - Military barracks - Old Hospital - Commemorative sites",
-        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
-        meetingPoint: "Your accommodation in Swakopmund",
-        pickupIncluded: true,
-      },
+      }
     ],
-    cultural: [
+    township: [
       {
         id: 3,
-        title: "Cultural & Historical Tour Experience",
-        subtitle: "Part of our Half Day Tour",
-        image: "/Home Images/Cultural Tour.png",
-        price: "$75",
+        title: "Guided Township Tour",
+        image: "/Home Images/Township Tour.jpg",
+        price: "$139",
         duration: "4 hours",
+        minParticipants: 4,
         maxParticipants: 6,
-        locations: ["Swakopmund", "Cultural & Historical Sites"],
-        description: "Explore the rich cultural heritage of Swakopmund with our local guide. This tour combines historical sites with cultural insights, focusing on the history of the Nama and Ovaherero peoples.",
-        dates: getNextMonthsFormatted(),
-        featured: true,
+        locations: ["Mondesa Township", "Swakopmund"],
+        description: "Experience the vibrant culture of Mondesa township through a guided tour that includes visits to a Herero lady for cultural insights and a traditional herbalist for knowledge about traditional medicines.",
+        dates: getNextMonthsFormatted(currentMonth + 1),
+        featured: false,
+        routeDetails: "Drive through Mondesa township - Visit Herero cultural experience - Traditional herbalist visit",
         includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
         meetingPoint: "Your accommodation in Swakopmund",
         pickupIncluded: true,
-      },
-      {
-        id: 7,
-        title: "German Colonial Architecture",
-        subtitle: "Part of our Shore Excursion",
-        image: "/Home Images/German Architecture.jpg",
-        price: "$120",
-        duration: "8 hours",
-        maxParticipants: 20,
-        locations: ["Swakopmund", "Colonial District"],
-        description: "Discover Swakopmund's unique German colonial architecture on this cultural exploration. See well-preserved buildings from the early 1900s while learning about the colonial influence on Namibian history and culture.",
-        dates: getNextMonthsFormatted(),
-        featured: false,
-        includedItems: ["Guide", "Transportation", "Lunch", "Beverages"],
-        meetingPoint: "Walvis Bay Harbor",
-        pickupIncluded: false,
-      },
-    ],
-    nature: [
-      {
-        id: 5,
-        title: "Walvis Bay Lagoon & Dune 7",
-        subtitle: "Included in Shore Excursion",
-        image: "/Home Images/Flamingo.jpg",
-        price: "$120",
-        duration: "8 hours",
-        maxParticipants: 20,
-        locations: ["Walvis Bay Lagoon", "Dune 7", "Swakopmund"],
-        description: "Witness thousands of flamingos at Walvis Bay Lagoon and climb famous Dune 7. This natural experience is included as part of our full-day Shore Excursion tour.",
-        dates: getNextMonthsFormatted(),
-        featured: true,
-        includedItems: ["Guide", "Transportation", "Lunch", "Beverages"],
-        meetingPoint: "Walvis Bay Harbor",
-        pickupIncluded: false,
-      },
-    ],
+      }
+    ]
   };
 
   return (
     <div className="space-y-8">
-      <Tabs defaultValue="historical" onValueChange={setSelectedTab}>
+      <Tabs defaultValue="cruise" onValueChange={setSelectedTab}>
         <TabsList className="bg-sand-custom border border-brown-light w-full justify-start mb-6">
+          <TabsTrigger value="cruise" className="font-serif text-base">Cruise Liner</TabsTrigger>
           <TabsTrigger value="historical" className="font-serif text-base">Historical</TabsTrigger>
-          <TabsTrigger value="cultural" className="font-serif text-base">Cultural</TabsTrigger>
-          <TabsTrigger value="nature" className="font-serif text-base">Nature</TabsTrigger>
+          <TabsTrigger value="township" className="font-serif text-base">Township</TabsTrigger>
         </TabsList>
         
         {Object.entries(tours).map(([category, tourList]) => (
@@ -178,7 +132,7 @@ const ToursList: React.FC = () => {
                       </div>
                       <div className="flex items-center text-sm text-charcoal-custom">
                         <Users size={16} className="mr-2 text-brown-custom" />
-                        <span>Max {tour.maxParticipants} people</span>
+                        <span>{tour.minParticipants}-{tour.maxParticipants} people</span>
                       </div>
                       <div className="flex items-center text-sm text-charcoal-custom col-span-1 sm:col-span-2">
                         <MapPin size={16} className="mr-2 text-brown-custom flex-shrink-0" />

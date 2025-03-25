@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://kalahariaxarobtours.com/</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://kalahariaxarobtours.com/about</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/tours</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/contact</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/blog</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Tour Pages -->
+  <url>
+    <loc>https://kalahariaxarobtours.com/tours/shore-excursion</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/tours/township-tour</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/tours/historical-tour</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://kalahariaxarobtours.com/blog/township-tour-update</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/blog/herero-nama-genocide</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/blog/shore-excursion</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/blog/german-architecture</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kalahariaxarobtours.com/blog/township-tour</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset> 

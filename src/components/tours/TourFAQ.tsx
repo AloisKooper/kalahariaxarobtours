@@ -16,20 +16,20 @@ const TourFAQ: React.FC = () => {
       answer: "Our tours require a moderate fitness level as they involve some walking. The tours are not wheelchair accessible. If you have specific mobility concerns, please contact us before booking."
     },
     {
-      question: "How many people will be on the tour?",
-      answer: "Our Half Day Tour accommodates a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 20 travelers. Minimum numbers may apply for tour operation."
+      question: "What is the maximum number of travelers per tour?",
+      answer: "Our Guided Historical Tour and Guided Township Tour accommodate a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
     },
     {
-      question: "What's the difference between the two tour options?",
-      answer: "We offer two distinct tour options: 1) Half Day Tour (4 hours) - focuses on Swakopmund historical sites with pickup/drop-off at your Swakopmund accommodation, includes a light finger meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (8 hours) - includes Walvis Bay Lagoon, Dune 7, and Swakopmund sites with pickup/drop-off at Walvis Bay Harbor, includes lunch, and has a maximum of 20 travelers."
+      question: "What tour options do you offer?",
+      answer: "We offer three distinct tour options: 1) Guided Historical Tour (5 hours) - focuses on Swakopmund historical sites with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (8 hours) - designed for cruise ship passengers, includes lagoon visit, Dune 7, and historical sites, with a light meal, and can accommodate up to 40 travelers. 3) Guided Township Tour (4 hours) - explores Mondesa township culture, includes visits to Herero cultural experience and traditional herbalist, with a light meal, and has a maximum of 6 travelers."
+    },
+    {
+      question: "What meals are included in the tours?",
+      answer: "All tours include a light meal and non-alcoholic beverages. Vegetarian and vegan options are available upon request at the time of booking."
     },
     {
       question: "What happens if my cruise ship's schedule changes?",
       answer: "We monitor cruise ship arrivals closely. If your ship's schedule changes, please contact us as soon as possible, and we will do our best to accommodate your new arrival time or offer alternatives."
-    },
-    {
-      question: "Are meals included in the tour?",
-      answer: "Yes, the Half Day Tour includes a light finger meal and non-alcoholic beverages, while the Cruise Liner Shore Excursion includes a full lunch and non-alcoholic beverages. Vegetarian and vegan options are available upon request when booking."
     },
     {
       question: "Will I be back to my ship on time?",

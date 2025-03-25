@@ -64,7 +64,7 @@ const TourAgenda: React.FC = () => {
                   : 'text-kalahari-charcoal hover:text-kalahari-brown'
               }`}
             >
-              Passenger Liner Shore Excursion
+              Cruise Liner Shore Excursion
             </button>
             <button
               onClick={() => setSelectedTour('local')}
@@ -74,7 +74,7 @@ const TourAgenda: React.FC = () => {
                   : 'text-kalahari-charcoal hover:text-kalahari-brown'
               }`}
             >
-              Half Day Local Tour
+              Guided Historical Tour
             </button>
           </div>
         </div>
@@ -92,7 +92,7 @@ const TourAgenda: React.FC = () => {
                 <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center">
                   <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
                   <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Group Size</h3>
-                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">Max 20 travelers</p>
+                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">Minimum 20, Maximum 40 travelers</p>
                 </div>
                 <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center sm:col-span-2 md:col-span-1">
                   <Calendar className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
@@ -179,8 +179,8 @@ const TourAgenda: React.FC = () => {
                         <p className="text-kalahari-brown/80 text-xs sm:text-sm">Full Day</p>
                       </div>
                     </div>
-                    <p className="text-kalahari-charcoal/90 text-xs sm:text-sm leading-relaxed">
-                      Port - Lagoon - Dune 7 - Swakopmund (lunch) - Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woermann House - German War Memorial - Free time - Old Bahn Hoff - Back to the port.
+                    <p className="text-kalahari-charcoal text-sm sm:text-base">
+                      Port - Lagoon - Dune 7 - Swakopmund (light meal) - Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woermann House - German War Memorial - Free time - Old Bahn Hoff - Back to the port.
                     </p>
                   </div>
                 </div>
@@ -303,12 +303,14 @@ const TourAgenda: React.FC = () => {
                 <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center">
                   <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
                   <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Group Size</h3>
-                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">Max 6 people</p>
+                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">Minimum 4, Maximum 6 travelers</p>
                 </div>
                 <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center sm:col-span-2 md:col-span-1">
                   <MapPin className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
                   <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Location</h3>
-                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">Swakopmund</p>
+                  <p className="text-kalahari-charcoal text-sm sm:text-base">
+                    Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woerman hause - German War Memorial - Old Bahn Hoff
+                  </p>
                 </div>
               </div>
             </div>
@@ -390,7 +392,7 @@ const TourAgenda: React.FC = () => {
                         <p className="text-kalahari-brown/80 text-xs sm:text-sm">Half Day</p>
                       </div>
                     </div>
-                    <p className="text-kalahari-charcoal/90 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-kalahari-charcoal text-sm sm:text-base">
                       Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woerman hause - German War Memorial - Old Bahn Hoff
                     </p>
                   </div>

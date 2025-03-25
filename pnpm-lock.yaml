@@ -98,9 +98,6 @@ importers:
       '@types/leaflet':
         specifier: ^1.9.16
         version: 1.9.16
-      '@types/react-helmet':
-        specifier: ^6.1.11
-        version: 6.1.11
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -192,6 +189,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.5(@types/react@18.3.18)
+      '@types/react-helmet':
+        specifier: ^6.1.11
+        version: 6.1.11
       '@vitejs/plugin-react-swc':
         specifier: ^3.5.0
         version: 3.8.0(vite@5.4.14(@types/node@22.13.4))

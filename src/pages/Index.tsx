@@ -31,14 +31,16 @@ const Index: React.FC = () => {
   
   return (
     <>
-      {/* Background wrapper that goes behind the navbar */}
+      {/* Fixed background that extends behind both navbar and hero */}
       <div className="fixed top-0 left-0 w-full h-[100vh] overflow-hidden -z-10">
         <img 
-          src="/Home Images/HeroImage.jpg" 
+          src="/Home Images/jetty hero.jpg"
           alt="" 
           className="w-full h-full object-cover"
           aria-hidden="true"
         />
+        {/* Semi-dark overlay to improve text visibility */}
+        <div className="absolute inset-0 bg-black/40"></div>
         <div 
           className="absolute inset-0"
           style={{
@@ -53,18 +55,50 @@ const Index: React.FC = () => {
       <div className="flex flex-col overflow-hidden items-center">
         <Navbar />
         <HeroSection />
-        {/* Add solid background for all content below hero */}
-        <div className="w-full bg-white">
-          <TourAgenda />
-          <Gallery />
-          <TourTypes />
-          <TourGuideInfo />
-          <AboutGuide />
+      </div>
+
+      {/* Rest of content positioned over a white background */}
+      <div className="relative bg-white z-10">
+        <TourAgenda />
+        <TourGuideInfo />
+        <AboutGuide />
+        <Gallery />
+        <TourTypes />
+        
+        {/* Testimonials section with heading */}
+        <section className="w-full flex flex-col items-center py-16 md:py-20 lg:py-24 bg-gray-50 px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16 relative">
+            <div className="flex justify-center mb-3">
+              <div className="w-16 h-1 bg-kalahari-brown rounded-full"></div>
+            </div>
+            <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl lg:text-5xl font-normal leading-tight text-center">
+              Trusted by Hundreds of <br className="hidden sm:block" />
+              <span className="text-kalahari-brown">Happy Customers</span>
+            </h2>
+            <p className="text-kalahari-charcoal text-center text-base md:text-lg font-normal mt-4 md:mt-6 max-w-2xl mx-auto">
+              Read what previous tour participants have to say about their experience with Kalahari Axarob Tours
+            </p>
+          </div>
+          
           <Testimonials />
-          <BlogArticles />
-          <ContactSection />
-          <Footer />
-        </div>
+          
+          {/* View All Reviews Link - Enhanced */}
+          <div className="mt-10 md:mt-12">
+            <a 
+              href="/testimonial" 
+              className="inline-flex items-center gap-2 bg-white border border-kalahari-brown/20 text-kalahari-brown px-5 py-2.5 rounded-lg font-medium hover:bg-kalahari-brown hover:text-white transition-colors shadow-sm"
+            >
+              <span>View all reviews</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        
+        <BlogArticles />
+        <ContactSection />
+        <Footer />
       </div>
     </>
   );

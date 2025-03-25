@@ -20,7 +20,7 @@ const ContactSection: React.FC = () => {
   });
   const [loading, setLoading] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
-  const [selectedTourType, setSelectedTourType] = useState<"half-day" | "full-day">("full-day");
+  const [selectedTourType, setSelectedTourType] = useState<"half-day" | "full-day" | "township">("full-day");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -77,9 +77,9 @@ const ContactSection: React.FC = () => {
     },
     {
       id: "swakopmund",
-      name: "Swakopmund (Lunch)",
+      name: "Swakopmund (Light Meal)",
       coords: { lat: -22.6783, lng: 14.5259 },
-      description: "Little piece of Germany under African skies, where we'll have lunch",
+      description: "Little piece of Germany under African skies, where we'll have a light meal",
       tourTypes: ["full-day"]
     },
     {
@@ -118,10 +118,10 @@ const ContactSection: React.FC = () => {
       tourTypes: ["half-day", "full-day"]
     },
     {
-      id: "memorial",
+      id: "warmemorial",
       name: "German War Memorial",
-      coords: { lat: -22.6763, lng: 14.5292 },
-      description: "Monument commemorating historical events",
+      coords: { lat: -22.6778, lng: 14.5275 },
+      description: "Historical German War Memorial site",
       tourTypes: ["half-day", "full-day"]
     },
     {
@@ -130,6 +130,27 @@ const ContactSection: React.FC = () => {
       coords: { lat: -22.6751, lng: 14.5319 },
       description: "Historic German railway station",
       tourTypes: ["half-day", "full-day"]
+    },
+    {
+      id: "mondesa",
+      name: "Mondesa Township",
+      coords: { lat: -22.6741, lng: 14.5311 },
+      description: "Experience the vibrant local culture in Mondesa township",
+      tourTypes: ["township"]
+    },
+    {
+      id: "herero",
+      name: "Herero Cultural Experience",
+      coords: { lat: -22.6741, lng: 14.5311 },
+      description: "Learn about Herero cultural norms and traditions",
+      tourTypes: ["township"]
+    },
+    {
+      id: "herbalist",
+      name: "Traditional Herbalist",
+      coords: { lat: -22.6741, lng: 14.5311 },
+      description: "Visit a local herbalist to learn about traditional medicines",
+      tourTypes: ["township"]
     }
   ];
 
@@ -141,7 +162,7 @@ const ContactSection: React.FC = () => {
     setSelectedLocation(selectedLocation === locationId ? null : locationId);
   };
   
-  const handleTourTypeChange = (type: "half-day" | "full-day") => {
+  const handleTourTypeChange = (type: "half-day" | "full-day" | "township") => {
     setSelectedTourType(type);
     setSelectedLocation(null);
   };
@@ -250,8 +271,9 @@ const ContactSection: React.FC = () => {
                       className="w-full rounded-md border border-gravel-medium bg-transparent px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kalahari-brown"
                     >
                       <option value="">Select a tour</option>
-                      <option value="half-day">Half Day Tour (Local Tour) - 4 hours</option>
-                      <option value="full-day">Passenger Liner Shore Excursion (Full Day) - 8 hours</option>
+                      <option value="half-day">Guided Historical Tour - 5 hours</option>
+                      <option value="full-day">Cruise Liner Shore Excursion (Full Day) - 8 hours</option>
+                      <option value="township">Guided Township Tour - 4 hours</option>
                     </select>
                   </div>
                   
@@ -388,7 +410,7 @@ const ContactSection: React.FC = () => {
               }`}
               onClick={() => handleTourTypeChange("half-day")}
             >
-              Half Day Tour (4 hours)
+              Historical Tour (5 hours)
             </button>
             <button 
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
@@ -398,7 +420,17 @@ const ContactSection: React.FC = () => {
               }`}
               onClick={() => handleTourTypeChange("full-day")}
             >
-              Full Day Tour (8 hours)
+              Shore Excursion (8 hours)
+            </button>
+            <button 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedTourType === "township" 
+                  ? 'bg-kalahari-brown text-white' 
+                  : 'bg-sand-custom text-kalahari-brown hover:bg-kalahari-sand'
+              }`}
+              onClick={() => handleTourTypeChange("township")}
+            >
+              Township Tour (4 hours)
             </button>
           </div>
           
@@ -415,7 +447,7 @@ const ContactSection: React.FC = () => {
             {/* Tour Locations Panel - Desktop and Tablet Only */}
             <div className="absolute top-0 right-0 hidden md:block w-72 bg-white/90 backdrop-blur-sm h-full overflow-y-auto border-l border-kalahari-sand/40 shadow-lg p-4">
               <h4 className="text-kalahari-brown text-lg font-medium mb-4">
-                {selectedTourType === "half-day" ? "Half Day Tour Stops" : "Full Day Tour Stops"}
+                {selectedTourType === "half-day" ? "Half Day Tour Stops" : selectedTourType === "full-day" ? "Full Day Tour Stops" : "Township Tour Stops"}
               </h4>
               <div className="space-y-2">
                 {filteredLocations.map((location, index) => (
@@ -463,7 +495,7 @@ const ContactSection: React.FC = () => {
           {/* Mobile Tour Stops - Simple Horizontal Scroll */}
           <div className="md:hidden mt-4 mb-6">
             <h4 className="text-kalahari-brown text-lg font-medium mb-3 text-center">
-              {selectedTourType === "half-day" ? "Half Day Tour Stops" : "Full Day Tour Stops"}
+              {selectedTourType === "half-day" ? "Half Day Tour Stops" : selectedTourType === "full-day" ? "Full Day Tour Stops" : "Township Tour Stops"}
             </h4>
             
             {/* Clean horizontal scrollable container */}
@@ -511,17 +543,32 @@ const ContactSection: React.FC = () => {
           {/* Tour Route Path */}
           <div className="mt-6 bg-white/80 rounded-lg p-4 shadow-sm">
             <h4 className="text-kalahari-brown text-lg font-medium mb-2">Tour Route</h4>
-            {selectedTourType === "half-day" ? (
-              <p className="text-kalahari-charcoal text-sm">
-                <strong>Half Day Tour:</strong> Concentration camp mass graves - Old Military barracks - 
-                Old Hospital - Jetty - Woermann House - German War Memorial - Old Bahnhof
-              </p>
-            ) : (
-              <p className="text-kalahari-charcoal text-sm">
-                <strong>Full Day Tour:</strong> Port - Lagoon - Dune 7 - Swakopmund (lunch) - Concentration camp mass graves - Old Military barracks - 
-                Old Hospital - Jetty - Woermann House - German War Memorial - Free time - Old Bahnhof - Back to the port
-              </p>
-            )}
+            <div className="text-xs sm:text-sm text-kalahari-charcoal border-t border-gray-200 pt-4 space-y-1">
+              {selectedTourType === "full-day" && (
+                <>
+                  <p className=""><strong>Shore Excursion Route:</strong></p>
+                  <p className="text-kalahari-charcoal text-sm sm:text-base">
+                    Port - Lagoon - Dune 7 - Swakopmund (light meal) - Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woermann House - German War Memorial - Free time - Old Bahnhof - Back to the port
+                  </p>
+                </>
+              )}
+              {selectedTourType === "half-day" && (
+                <>
+                  <p className=""><strong>Historical Tour Route:</strong></p>
+                  <p className="text-kalahari-charcoal text-sm sm:text-base">
+                    Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woermann House - German War Memorial - Old Bahnhof
+                  </p>
+                </>
+              )}
+              {selectedTourType === "township" && (
+                <>
+                  <p className=""><strong>Township Tour Route:</strong></p>
+                  <p className="text-kalahari-charcoal text-sm sm:text-base">
+                    Drive through Mondesa township - Visit Herero cultural experience - Traditional herbalist visit
+                  </p>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>

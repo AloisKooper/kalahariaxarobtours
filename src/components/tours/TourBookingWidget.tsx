@@ -44,11 +44,12 @@ const TourBookingWidget: React.FC = () => {
               <Label htmlFor="tour-type">Select Tour Type</Label>
               <Select value={tourType} onValueChange={setTourType}>
                 <SelectTrigger id="tour-type" className="w-full border-gravel-custom">
-                  <SelectValue placeholder="Select tour type" />
+                  <SelectValue placeholder="Select a tour" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="cruise-liner">Cruise Liner Shore Excursion (8 hours)</SelectItem>
-                  <SelectItem value="half-day">Half Day Tour (4 hours)</SelectItem>
+                  <SelectItem value="cruise">Cruise Liner Shore Excursion (8 hours)</SelectItem>
+                  <SelectItem value="historical">Guided Historical Tour (5 hours)</SelectItem>
+                  <SelectItem value="township">Guided Township Tour (4 hours)</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -152,7 +153,7 @@ const TourBookingWidget: React.FC = () => {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
-                  <span>Maximum 20 travelers</span>
+                  <span>Maximum 40 travelers</span>
                 </li>
               </>
             ) : (
@@ -175,7 +176,7 @@ const TourBookingWidget: React.FC = () => {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
-                  <span>Maximum 6 travelers</span>
+                  <span>Minimum 4, Maximum 6 travelers</span>
                 </li>
               </>
             )}

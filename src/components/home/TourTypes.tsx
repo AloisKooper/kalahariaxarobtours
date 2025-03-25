@@ -14,7 +14,7 @@ const TourTypes: React.FC = () => {
       description: "A full day (8 hours) tour designed for cruise ship passengers, taking you from Walvis Bay Harbor to explore the surrounding areas including the lagoon, Dune 7, and historical sites in Swakopmund.",
       image: "/Home Images/Cruise Liner Shore Excursion.jpg",
       duration: "8 hours",
-      maxParticipants: 20,
+      maxParticipants: 40,
       highlights: [
         {
           title: "Walvis Bay Lagoon",
@@ -28,7 +28,7 @@ const TourTypes: React.FC = () => {
         },
         {
           title: "Historical Sites",
-          description: "Explore significant historical locations including concentration camp mass graves, old Military barracks, and the German War Memorial",
+          description: "Visit significant historical sites including the Concentration camp mass graves, Old Military barracks (Alte Kaserne), and the German War Memorial",
           image: "/Home Images/Genocide.jpg"
         },
         {
@@ -41,12 +41,12 @@ const TourTypes: React.FC = () => {
       included: [
         "English speaking Local Guide (descendant of the native Namaqua tribe)",
         "Transportation",
-        "Lunch",
+        "Light meal",
         "Non-Alcoholic beverages",
         "Pickup and drop-off at Walvis Bay Harbor"
       ],
       additionalInfo: [
-        "Maximum 20 travelers",
+        "Minimum 20, Maximum 40 travelers",
         "Not wheelchair accessible",
         "Vegetarian/vegan options available",
         "Moderate fitness level required",
@@ -55,10 +55,10 @@ const TourTypes: React.FC = () => {
       ]
     },
     {
-      title: "Half Day Tour",
-      description: "A shorter 4-hour tour focused on the historical sites in Swakopmund, perfect for those staying in local accommodations who want to learn about the area's significant history.",
+      title: "Guided Historical Tour",
+      description: "A thought-provoking guided tour exploring significant historical sites in Swakopmund related to the 1904/1908 Nama and Ovaherero Genocide. Led by Mr. Rooi, a descendant of the native Namaqua tribe.",
       image: "/Home Images/Half Day Tour.jpg",
-      duration: "4 hours",
+      duration: "5 hours",
       maxParticipants: 6,
       highlights: [
         {
@@ -68,7 +68,7 @@ const TourTypes: React.FC = () => {
         },
         {
           title: "Old Military Barracks",
-          description: "Explore the historical barracks that played a role during colonial times",
+          description: "Explore the historical barracks (Alte Kaserne) that played a role during colonial times",
           image: "/Home Images/barracks.jpg"
         },
         {
@@ -78,20 +78,20 @@ const TourTypes: React.FC = () => {
         },
         {
           title: "German War Memorial",
-          description: "Visit the memorial commemorating German soldiers",
-          image: "/Home Images/soldier.png"
+          description: "Visit the German War Memorial and learn about its historical significance",
+          image: "/Home Images/German Architecture.jpg"
         }
       ],
-      locations: ["Swakopmund", "Concentration Camp Graves", "Historical Sites"],
+      locations: ["Swakopmund", "Historical Sites"],
       included: [
         "English speaking Local Guide (descendant of the native Namaqua tribe)",
         "Transportation",
-        "Light finger meal",
+        "Light meal",
         "Non-Alcoholic beverages",
         "Pickup and drop-off at your Swakopmund accommodation"
       ],
       additionalInfo: [
-        "Maximum 6 travelers",
+        "Minimum 4, Maximum 6 travelers",
         "Not wheelchair accessible",
         "Vegetarian/vegan options available",
         "Moderate fitness level required",
@@ -100,171 +100,43 @@ const TourTypes: React.FC = () => {
       ]
     },
     {
-      title: "Walvis Bay Lagoon",
-      description: "Our first stop on the Cruise Liner Shore Excursion where you'll witness the beautiful flamingos and diverse birdlife at the lagoon",
-      image: "/Home Images/Flamingo.jpg",
-      duration: "8 hours",
-      maxParticipants: 20,
+      title: "Guided Township Tour",
+      description: "Experience the vibrant culture of Mondesa township through a guided tour that includes visits to a Herero lady for cultural insights and a traditional herbalist for knowledge about traditional medicines.",
+      image: "/Home Images/Township Tour.jpg",
+      duration: "4 hours",
+      maxParticipants: 6,
       highlights: [
         {
-          title: "Walvis Bay Lagoon",
-          description: "Spot flamingos and other birdlife at the beautiful lagoon",
-          image: "/Home Images/Flamingo.jpg"
+          title: "Mondesa Township",
+          description: "Drive through the vibrant Mondesa township and experience local life",
+          image: "/Home Images/Mondesa Township.jpg"
         },
         {
-          title: "Dune 7",
-          description: "Visit the highest dune in Namibia for spectacular views",
-          image: "/Home Images/dune-7.gif"
+          title: "Herero Cultural Experience",
+          description: "Visit a Herero lady who shares insights into their cultural norms and traditions",
+          image: "/Home Images/Local Living.jpg"
         },
         {
-          title: "Historical Sites",
-          description: "Explore significant historical locations including concentration camp mass graves, old Military barracks, and the German War Memorial",
-          image: "/Home Images/Genocide.jpg"
+          title: "Traditional Herbalist",
+          description: "Learn about traditional medicines from a local herbalist",
+          image: "/Home Images/Local Artwork.jpg"
         },
         {
-          title: "Swakopmund City",
-          description: "Discover the unique German colonial architecture and historical landmarks",
-          image: "/Home Images/Swakop Landmarks.jpg"
+          title: "Cultural Exchange",
+          description: "Engage with local community members and learn about their daily life",
+          image: "/Home Images/Cultural Exchange.jpg"
         }
       ],
-      locations: ["Walvis Bay Harbor", "Swakopmund", "Genocide Memorial", "Dune 7"],
+      locations: ["Mondesa Township", "Swakopmund"],
       included: [
         "English speaking Local Guide (descendant of the native Namaqua tribe)",
         "Transportation",
-        "Lunch",
-        "Non-Alcoholic beverages"
+        "Light meal",
+        "Non-Alcoholic beverages",
+        "Pickup and drop-off at your Swakopmund accommodation"
       ],
       additionalInfo: [
-        "Maximum 20 travelers",
-        "Not wheelchair accessible",
-        "Vegetarian/vegan options available",
-        "Moderate fitness level required",
-        "Sunscreen recommended",
-        "Shade hat recommended"
-      ]
-    },
-    {
-      title: "Dune 7",
-      description: "Experience the majesty of Namibia's highest dune, offering breathtaking views of the surrounding landscape",
-      image: "/Home Images/dune-7.gif",
-      duration: "8 hours",
-      maxParticipants: 20,
-      highlights: [
-        {
-          title: "Walvis Bay Lagoon",
-          description: "Spot flamingos and other birdlife at the beautiful lagoon",
-          image: "/Home Images/Flamingo.jpg"
-        },
-        {
-          title: "Dune 7",
-          description: "Visit the highest dune in Namibia for spectacular views",
-          image: "/Home Images/dune-7.gif"
-        },
-        {
-          title: "Historical Sites",
-          description: "Explore significant historical locations including concentration camp mass graves, old Military barracks, and the German War Memorial",
-          image: "/Home Images/Genocide.jpg"
-        },
-        {
-          title: "Swakopmund City",
-          description: "Discover the unique German colonial architecture and historical landmarks",
-          image: "/Home Images/Swakop Landmarks.jpg"
-        }
-      ],
-      locations: ["Walvis Bay Harbor", "Swakopmund", "Genocide Memorial", "Dune 7"],
-      included: [
-        "English speaking Local Guide",
-        "Transportation",
-        "Lunch",
-        "Non-Alcoholic beverages"
-      ],
-      additionalInfo: [
-        "Not wheelchair accessible",
-        "Vegetarian/vegan options available",
-        "Moderate fitness level required",
-        "Sunscreen recommended",
-        "Shade hat recommended"
-      ]
-    },
-    {
-      title: "Swakopmund City",
-      description: "Explore the unique German colonial architecture and historical landmarks of Swakopmund, including the Jetty, Woerman House, and German War Memorial",
-      image: "/Home Images/Swakop Landmarks.jpg",
-      duration: "8 hours",
-      maxParticipants: 20,
-      highlights: [
-        {
-          title: "Walvis Bay Lagoon",
-          description: "Spot flamingos and other birdlife at the beautiful lagoon",
-          image: "/Home Images/Flamingo.jpg"
-        },
-        {
-          title: "Dune 7",
-          description: "Visit the highest dune in Namibia for spectacular views",
-          image: "/Home Images/dune-7.gif"
-        },
-        {
-          title: "Historical Sites",
-          description: "Explore significant historical locations including concentration camp mass graves, old Military barracks, and the German War Memorial",
-          image: "/Home Images/Genocide.jpg"
-        },
-        {
-          title: "Swakopmund City",
-          description: "Discover the unique German colonial architecture and historical landmarks",
-          image: "/Home Images/Swakop Landmarks.jpg"
-        }
-      ],
-      locations: ["Walvis Bay Harbor", "Swakopmund", "Genocide Memorial", "Dune 7"],
-      included: [
-        "English speaking Local Guide",
-        "Transportation",
-        "Lunch",
-        "Non-Alcoholic beverages"
-      ],
-      additionalInfo: [
-        "Not wheelchair accessible",
-        "Vegetarian/vegan options available",
-        "Moderate fitness level required",
-        "Sunscreen recommended",
-        "Shade hat recommended"
-      ]
-    },
-    {
-      title: "Historical Sites",
-      description: "Visit significant historical locations including concentration camp mass graves, old Military barracks, and the German War Memorial, learning about the 1904/1908 Nama and Ovaherero Genocide",
-      image: "/Home Images/Genocide.jpg",
-      duration: "8 hours",
-      maxParticipants: 20,
-      highlights: [
-        {
-          title: "Walvis Bay Lagoon",
-          description: "Spot flamingos and other birdlife at the beautiful lagoon",
-          image: "/Home Images/Flamingo.jpg"
-        },
-        {
-          title: "Dune 7",
-          description: "Visit the highest dune in Namibia for spectacular views",
-          image: "/Home Images/dune-7.gif"
-        },
-        {
-          title: "Historical Sites",
-          description: "Explore significant historical locations including concentration camp mass graves, old Military barracks, and the German War Memorial",
-          image: "/Home Images/Genocide.jpg"
-        },
-        {
-          title: "Swakopmund City",
-          description: "Discover the unique German colonial architecture and historical landmarks",
-          image: "/Home Images/Swakop Landmarks.jpg"
-        }
-      ],
-      locations: ["Walvis Bay Harbor", "Swakopmund", "Genocide Memorial", "Dune 7"],
-      included: [
-        "English speaking Local Guide",
-        "Transportation",
-        "Lunch",
-        "Non-Alcoholic beverages"
-      ],
-      additionalInfo: [
+        "Minimum 4, Maximum 6 travelers",
         "Not wheelchair accessible",
         "Vegetarian/vegan options available",
         "Moderate fitness level required",
@@ -443,11 +315,33 @@ const TourTypes: React.FC = () => {
                     {slides[currentSlide].highlights.map((highlight, index) => (
                       <div key={index} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-sand-custom rounded-lg hover:shadow-md transition-shadow">
                         <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0 rounded-lg overflow-hidden border border-kalahari-brown/20">
-                          <img 
-                            src={highlight.image} 
-                            alt={highlight.title}
-                            className="w-full h-full object-cover"
-                          />
+                          {highlight.image ? (
+                            <img 
+                              src={highlight.image} 
+                              alt={highlight.title}
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <div className="w-full h-full bg-sand-light flex items-center justify-center">
+                              <div className="text-kalahari-brown opacity-60 flex flex-col items-center justify-center">
+                                <svg 
+                                  xmlns="http://www.w3.org/2000/svg" 
+                                  width="24" 
+                                  height="24" 
+                                  viewBox="0 0 24 24" 
+                                  fill="none" 
+                                  stroke="currentColor" 
+                                  strokeWidth="1.5" 
+                                  strokeLinecap="round" 
+                                  strokeLinejoin="round"
+                                >
+                                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                  <circle cx="8.5" cy="8.5" r="1.5" />
+                                  <polyline points="21 15 16 10 5 21" />
+                                </svg>
+                              </div>
+                            </div>
+                          )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <h5 className="text-base sm:text-lg font-medium text-kalahari-brown truncate">{highlight.title}</h5>

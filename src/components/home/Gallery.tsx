@@ -2,103 +2,77 @@ import React, { useState } from "react";
 import GalleryCard from "../ui/GalleryCard";
 
 const Gallery: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("Concentration Camp Mass Graves");
+  const [activeTab, setActiveTab] = useState("Historical Sites");
 
   const tabs = [
-    "Concentration Camp Mass Graves",
-    "DRC Township",
-    "COSDEF Arts & Crafts",
-    "Mondesa Township",
+    "Historical Sites",
+    "Nature & Scenery"
   ];
 
   const galleryImages = {
-    "Concentration Camp Mass Graves": [
+    "Historical Sites": [
       {
-        title: "Memorial Site",
-        price: "Included",
-        imageSrc: "/Home Images/Memorial Site.jpg"
+        title: "Concentration Camp Mass Graves",
+        description: "Historical site commemorating the victims of the 1904-1908 Nama and Ovaherero Genocide",
+        imageSrc: "/Home Images/Genocide.jpg",
+        price: "Included in tour"
       },
       {
-        title: "Historical Monument",
-        price: "Included",
-        imageSrc: "/Home Images/Historical Monument.jpg"
+        title: "Old Military Barracks (Alte Kaserne)",
+        description: "Historical German colonial military structure in Swakopmund",
+        imageSrc: "/Home Images/barracks.jpg",
+        price: "Included in tour"
       },
       {
-        title: "Mass Graves",
-        price: "Included",
-        imageSrc: "/Home Images/Mass Graves.jpg"
+        title: "Old Hospital",
+        description: "Historical medical facility from the colonial era",
+        imageSrc: "/Home Images/Hospital.jpg",
+        price: "Included in tour"
       },
       {
-        title: "Old Military Barracks",
-        price: "Included",
-        imageSrc: "/Home Images/Old Military Barracks.jpg"
+        title: "Swakopmund Jetty",
+        description: "Historic wooden pier extending into the Atlantic Ocean",
+        imageSrc: "/Home Images/Jetty.jpg",
+        price: "Included in tour"
       },
+      {
+        title: "Woermann House",
+        description: "Iconic colonial-era building with distinctive architecture",
+        imageSrc: "/Home Images/Woermann.jpg",
+        price: "Included in tour"
+      },
+      {
+        title: "German War Memorial",
+        description: "Historical German War Memorial site",
+        imageSrc: "/Home Images/Memorial.jpg",
+        price: "Included in tour"
+      },
+      {
+        title: "Old Bahnhof",
+        description: "Historic German railway station",
+        imageSrc: "/Home Images/Bahnhof.jpg",
+        price: "Included in tour"
+      }
     ],
-    "DRC Township": [
+    "Nature & Scenery": [
       {
-        title: "Township Tour",
-        price: "Included",
-        imageSrc: "/Home Images/Township Tour.jpg"
+        title: "Walvis Bay Lagoon",
+        description: "Beautiful lagoon where you can spot flamingos and other birdlife",
+        imageSrc: "/Home Images/Flamingo.jpg",
+        price: "Full Day Tour only"
       },
       {
-        title: "Local Living",
-        price: "Included",
-        imageSrc: "/Home Images/Local Living.jpg"
+        title: "Dune 7",
+        description: "One of the highest dunes in the Namib Desert",
+        imageSrc: "/Home Images/dune-7.gif",
+        price: "Full Day Tour only"
       },
       {
-        title: "Cultural Exchange",
-        price: "Included",
-        imageSrc: "/Home Images/Cultural Exchange.jpg"
-      },
-      {
-        title: "Community Projects",
-        price: "Included",
-        imageSrc: "/Home Images/Community Projects.jpg"
-      },
-    ],
-    "COSDEF Arts & Crafts": [
-      {
-        title: "Local Artwork",
-        price: "Optional",
-        imageSrc: "/Home Images/Local Artwork.jpg"
-      },
-      {
-        title: "Craft Market",
-        price: "Optional",
-        imageSrc: "/Home Images/Craft Market.jpg"
-      },
-      {
-        title: "Art Workshops",
-        price: "Optional",
-        imageSrc: "/Home Images/Art Workshops.jpg"
-      },
-      {
-        title: "Souvenir Shop",
-        price: "Optional",
-        imageSrc: "/Home Images/Souvenir Shop.jpg"
-      },
-    ],
-    "Mondesa Township": [
-      {
-        title: "Township Visit",
-        price: "Included",
-        imageSrc: "/Home Images/Township Visit.png"
-      },
-      {
-        title: "Cultural Tour",
-        price: "Included",
-        imageSrc: "/Home Images/Cultural Tour.png"
-      },
-      {
-        title: "Local Homes",
-        price: "Included",
-        imageSrc: "/Home Images/Local Homes.jpg"
-      },
-      {
-        title: "Community Center",
-        price: "Included",
-        imageSrc: "/Home Images/Community Center.jpg"
-      },
+        title: "Swakopmund Beach",
+        description: "Scenic beach views along the Atlantic coast",
+        imageSrc: "/Home Images/Beach.jpg",
+        price: "Included in tour"
+      }
     ],
   };
 
@@ -109,8 +83,7 @@ const Gallery: React.FC = () => {
           kalahari axarob's gallery
         </h2>
         <p className="text-kalahari-charcoal text-center text-base sm:text-lg font-normal leading-7 mt-4 max-w-3xl mx-auto">
-          Explore the diverse scenery of the historical events that took place in
-          Swakopmund from around 1904-1908
+          Explore the historical sites and natural beauty of Swakopmund
         </p>
 
         {/* Tabs - Improved for mobile with 2x2 grid layout */}

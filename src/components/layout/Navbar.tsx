@@ -270,8 +270,11 @@ const Navbar: React.FC = () => {
             <Link to="/gallery" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide ${isActive('/gallery') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               Gallery
             </Link>
-            <Link to="/testimonials" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide whitespace-nowrap ${isActive('/testimonials') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+            <Link to="/testimonial" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide whitespace-nowrap ${isActive('/testimonial') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               Testimonial
+            </Link>
+            <Link to="/blog" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide ${isActive('/blog') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+              Blog
             </Link>
           </div>
         </div>
@@ -284,21 +287,23 @@ const Navbar: React.FC = () => {
               Tour Guide
             </Link>
           </div>
-          <HoverBorderGradient
-            containerClassName="rounded-full group/book-btn relative overflow-hidden"
-            as="button"
-            className="dark:bg-white bg-white text-black dark:text-black flex items-center space-x-1 md:space-x-2 transition-colors duration-300"
-          >
-            <div className="relative flex items-center space-x-1 md:space-x-2 px-2">
-              <div className="flex items-center space-x-1 md:space-x-2 group-hover/book-btn:translate-x-40 transition-transform duration-500 relative z-10">
-                <CalendarCheck className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="text-xs md:text-sm whitespace-nowrap">BOOK TOUR</span>
+          <Link to="/contact">
+            <HoverBorderGradient
+              containerClassName="rounded-full group/book-btn relative overflow-hidden"
+              as="button"
+              className="dark:bg-white bg-white text-black dark:text-black flex items-center space-x-1 md:space-x-2 transition-colors duration-300"
+            >
+              <div className="relative flex items-center space-x-1 md:space-x-2 px-2">
+                <div className="flex items-center space-x-1 md:space-x-2 group-hover/book-btn:translate-x-40 transition-transform duration-500 relative z-10">
+                  <CalendarCheck className="h-3 w-3 md:h-4 md:w-4" />
+                  <span className="text-xs md:text-sm whitespace-nowrap">BOOK TOUR</span>
+                </div>
+                <div className="absolute inset-0 -translate-x-40 group-hover/book-btn:translate-x-0 flex items-center justify-center transition-transform duration-500 z-10">
+                  ✈️
+                </div>
               </div>
-              <div className="absolute inset-0 -translate-x-40 group-hover/book-btn:translate-x-0 flex items-center justify-center transition-transform duration-500 z-10">
-                ✈️
-              </div>
-            </div>
-          </HoverBorderGradient>
+            </HoverBorderGradient>
+          </Link>
           
           {/* Mobile Menu Toggle */}
           <button 
@@ -399,15 +404,15 @@ const Navbar: React.FC = () => {
                 </Link>
 
                 <Link 
-                  to="/testimonials" 
+                  to="/testimonial" 
                   className={`flex items-center gap-2 p-2 rounded-lg transition-colors ${
-                    isActive('/testimonials') 
+                    isActive('/testimonial') 
                     ? 'bg-kalahari-sun/20 text-kalahari-sun' 
                     : 'text-white hover:bg-white/10'
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <div className={`rounded-full p-1.5 ${isActive('/testimonials') ? 'bg-kalahari-sun text-kalahari-brown' : 'bg-white/10'}`}>
+                  <div className={`rounded-full p-1.5 ${isActive('/testimonial') ? 'bg-kalahari-sun text-kalahari-brown' : 'bg-white/10'}`}>
                     <Star className="w-3.5 h-3.5" />
                   </div>
                   <div>
@@ -429,6 +434,23 @@ const Navbar: React.FC = () => {
                   </div>
                   <div>
                     <span className="font-medium text-sm block">Tour Guide</span>
+                  </div>
+                </Link>
+
+                <Link 
+                  to="/blog" 
+                  className={`flex items-center gap-2 p-2 rounded-lg transition-colors ${
+                    isActive('/blog') 
+                    ? 'bg-kalahari-sun/20 text-kalahari-sun' 
+                    : 'text-white hover:bg-white/10'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <div className={`rounded-full p-1.5 ${isActive('/blog') ? 'bg-kalahari-sun text-kalahari-brown' : 'bg-white/10'}`}>
+                    <BookOpen className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <span className="font-medium text-sm block">Blog</span>
                   </div>
                 </Link>
               </div>
@@ -463,7 +485,7 @@ const Navbar: React.FC = () => {
                 </Link>
                 
                 <Link 
-                  to="/tours" 
+                  to="/contact" 
                   className="flex justify-center items-center gap-1.5 bg-kalahari-sun text-kalahari-brown rounded-lg py-2 transition-colors hover:bg-kalahari-sun/90"
                   onClick={() => setMobileMenuOpen(false)}
                 >

@@ -168,23 +168,9 @@ const Testimonials: React.FC = () => {
   const dots = Array.from({ length: maxSlide + 1 });
 
   return (
-    <section className="w-full flex flex-col items-center py-16 md:py-20 lg:py-24 bg-gray-50 px-4 md:px-6 lg:px-8">
-      {/* Enhanced heading with decorative element */}
-      <div className="text-center mb-12 md:mb-16 relative">
-        <div className="flex justify-center mb-3">
-          <div className="w-16 h-1 bg-kalahari-brown rounded-full"></div>
-        </div>
-        <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl lg:text-5xl font-normal leading-tight text-center">
-          Trusted by Hundreds of <br className="hidden sm:block" />
-          <span className="text-kalahari-brown">Happy Customers</span>
-        </h2>
-        <p className="text-kalahari-charcoal text-center text-base md:text-lg font-normal mt-4 md:mt-6 max-w-2xl mx-auto">
-          Read what previous tour participants have to say about their experience with Kalahari Axarob Tours
-        </p>
-      </div>
-
+    <div className="w-full">
       {/* Review Type Tabs - Enhanced for better visibility */}
-      <div className="flex justify-center gap-4 md:gap-8 mt-0 border-b border-gray-200 w-full max-w-lg overflow-x-auto pb-1 mb-8 md:mb-10">
+      <div className="flex justify-center gap-4 md:gap-8 border-b border-gray-200 w-full max-w-lg mx-auto overflow-x-auto pb-1 mb-8 md:mb-10">
         <button 
           className={`pb-2 px-4 text-sm md:text-base font-medium transition-colors relative whitespace-nowrap ${
             activeTab === 'google' 
@@ -222,7 +208,7 @@ const Testimonials: React.FC = () => {
         </button>
       </div>
 
-      <div className="w-full max-w-6xl mt-4 md:mt-6 relative">
+      <div className="w-full max-w-6xl mx-auto relative">
         {/* Carousel Navigation - Enhanced for better visibility */}
         <button 
           className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2.5 md:p-3.5 hover:bg-gray-50 transition-colors -ml-3 md:-ml-6 focus:outline-none focus:ring-2 focus:ring-kalahari-brown focus:ring-opacity-50"
@@ -298,20 +284,7 @@ const Testimonials: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* View All Reviews Link - Enhanced */}
-      <div className="mt-10 md:mt-12">
-        <a 
-          href="/testimonials" 
-          className="inline-flex items-center gap-2 bg-white border border-kalahari-brown/20 text-kalahari-brown px-5 py-2.5 rounded-lg font-medium hover:bg-kalahari-brown hover:text-white transition-colors shadow-sm"
-        >
-          <span>View all {activeTab === 'google' ? 'Google' : 'Trustpilot'} reviews</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </a>
-      </div>
-    </section>
+    </div>
   );
 };
 

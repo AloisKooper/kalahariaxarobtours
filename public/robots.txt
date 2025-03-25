@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kalahariaxarobtours.com/sitemap.xml 
