@@ -36,8 +36,8 @@ const TourAgenda: React.FC = () => {
   }, []);
   
   return (
-    <section ref={sectionRef} className="w-full flex flex-col items-center py-10 sm:py-12 md:py-16 bg-gray-50 px-4 sm:px-5 md:px-6 relative">
-      <div className="container mx-auto">
+    <section ref={sectionRef} className="w-full flex flex-col items-center py-10 sm:py-12 md:py-16 bg-gray-50 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-5 md:px-6">
         <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-kalahari-brown text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide uppercase">
             Tour Agenda

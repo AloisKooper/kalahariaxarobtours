@@ -30,7 +30,7 @@ const Index: React.FC = () => {
   }, []);
   
   return (
-    <>
+    <div className="overflow-x-hidden">
       {/* Fixed background that extends behind both navbar and hero */}
       <div className="fixed top-0 left-0 w-full h-[100vh] overflow-hidden -z-10">
         <img 
@@ -100,7 +100,7 @@ const Index: React.FC = () => {
         <ContactSection />
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
