@@ -168,7 +168,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-b from-gray-50 to-kalahari-sand/40 w-full py-24 px-6">
+    <section id="contact" className="bg-gradient-to-b from-gray-50 to-kalahari-sand/40 w-full py-24 px-4 overflow-hidden">
       <div className="container mx-auto">
         <div className="flex flex-col items-center mb-12">
           <h3 className="text-gravel text-sm uppercase tracking-widest mb-2">Contact Us</h3>
@@ -319,16 +319,16 @@ const ContactSection: React.FC = () => {
           </Card>
 
           <div className="lg:col-span-2 flex flex-col gap-6">
-            <div className="bg-sand-custom p-8 rounded-lg border border-kalahari-brown/20">
+            <div className="bg-sand-custom p-8 rounded-lg border border-kalahari-brown/20 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
               <h3 className="text-kalahari-brown text-2xl mb-6">Contact Information</h3>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="bg-kalahari-brown/10 p-3 rounded-full flex-shrink-0">
                     <Phone className="text-kalahari-brown h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h4 className="text-kalahari-darkbrown">Phone</h4>
-                    <p className="text-kalahari-charcoal mt-1">+264 81 258 3089</p>
+                    <p className="text-kalahari-charcoal mt-1 break-words">+264 81 258 3089</p>
                     <p className="text-kalahari-charcoal/70 text-sm">Available Mon-Fri, 9am-6pm</p>
                   </div>
                 </div>
@@ -337,9 +337,11 @@ const ContactSection: React.FC = () => {
                   <div className="bg-kalahari-brown/10 p-3 rounded-full flex-shrink-0">
                     <Mail className="text-kalahari-brown h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h4 className="text-kalahari-darkbrown">Email</h4>
-                    <p className="text-kalahari-charcoal mt-1">Kalahariaxarobtours@gmail.com</p>
+                    <p className="text-kalahari-charcoal mt-1 break-all text-sm">
+                      <span className="inline-block">Kalahariaxarobtours@gmail.com</span>
+                    </p>
                     <p className="text-kalahari-charcoal/70 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -348,16 +350,16 @@ const ContactSection: React.FC = () => {
                   <div className="bg-kalahari-brown/10 p-3 rounded-full flex-shrink-0">
                     <MapPin className="text-kalahari-brown h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h4 className="text-kalahari-darkbrown">Location</h4>
-                    <p className="text-kalahari-charcoal mt-1">Swakopmund, Namibia</p>
-                    <p className="text-kalahari-charcoal mt-1">Meeting Point: Walvis Bay Harbor</p>
+                    <p className="text-kalahari-charcoal mt-1 break-words">Swakopmund, Namibia</p>
+                    <p className="text-kalahari-charcoal mt-1 break-words">Meeting Point: Walvis Bay Harbor</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-kalahari-darkbrown text-white p-8 rounded-lg">
+            <div className="bg-kalahari-darkbrown text-white p-8 rounded-lg w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
               <div className="flex items-center gap-3 mb-5">
                 <Clock className="h-5 w-5" />
                 <h3 className="text-2xl">Tour Hours</h3>
@@ -390,7 +392,7 @@ const ContactSection: React.FC = () => {
         </div>
         
         {/* Tour Route Map Section */}
-        <div className="mt-16">
+        <div className="mt-16 max-w-full">
           <h3 className="text-gravel text-sm uppercase tracking-widest mb-2 text-center">Tour Itinerary</h3>
           <h2 className="text-kalahari-darkbrown text-4xl md:text-5xl font-normal mb-4 text-center">
             Our Tour Route
@@ -434,7 +436,7 @@ const ContactSection: React.FC = () => {
             </button>
           </div>
           
-          <div className="relative rounded-lg overflow-hidden shadow-md">
+          <div className="overflow-hidden relative rounded-lg shadow-md">
             {/* Map Section */}
             <div className="h-[400px] bg-white">
               <TourMap 
@@ -493,7 +495,7 @@ const ContactSection: React.FC = () => {
           </div>
           
           {/* Mobile Tour Stops - Simple Horizontal Scroll */}
-          <div className="md:hidden mt-4 mb-6">
+          <div className="md:hidden mt-4 mb-6 max-w-full">
             <h4 className="text-kalahari-brown text-lg font-medium mb-3 text-center">
               {selectedTourType === "half-day" ? "Half Day Tour Stops" : selectedTourType === "full-day" ? "Full Day Tour Stops" : "Township Tour Stops"}
             </h4>

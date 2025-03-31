@@ -71,7 +71,7 @@ const BlogArticles: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogArticles.slice(0, 3).map((article) => (
-            <div key={article.id} className="rounded-lg overflow-hidden shadow-md bg-white">
+            <div key={article.id} className="rounded-lg overflow-hidden shadow-md bg-white w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
               <div className="h-56 overflow-hidden">
                 <img 
                   src={article.image} 

@@ -34,7 +34,7 @@ const TourBookingWidget: React.FC = () => {
 
   return (
     <div className="sticky top-6">
-      <Card className="bg-white border-kalahari-brown/10 shadow-md">
+      <Card className="bg-white border-kalahari-brown/10 shadow-md w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
         <CardHeader className="bg-kalahari-darkbrown text-white">
           <CardTitle className="font-serif text-xl text-center">Book Your Tour</CardTitle>
         </CardHeader>

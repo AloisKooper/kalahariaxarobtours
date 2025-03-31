@@ -133,10 +133,10 @@ const TourAgenda: React.FC = () => {
                 </div>
               </div>
 
-              {/* Tour Details Cards - Improved mobile responsiveness */}
+              {/* Tour Details Cards - Improved for mobile */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 md:gap-8 mt-8 sm:mt-10 md:mt-12">
                 {/* Pickup Card */}
-                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
                     <img 
                       src="/Home Images/Pickup.jpg" 
@@ -161,7 +161,7 @@ const TourAgenda: React.FC = () => {
                 </div>
 
                 {/* Tour Card */}
-                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
                     <img 
                       src="/Home Images/Swakop Landmarks.jpg" 
@@ -186,7 +186,7 @@ const TourAgenda: React.FC = () => {
                 </div>
 
                 {/* Drop-off Card */}
-                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
                     <img 
                       src="/Home Images/DropOff.jpg" 
@@ -216,7 +216,7 @@ const TourAgenda: React.FC = () => {
                 <h3 className="text-xl sm:text-2xl text-kalahari-brown text-center mb-6 sm:mb-8">What to Expect</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   {/* Included Features */}
-                  <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6">
+                  <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                     <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
                       <Info className="w-5 h-5 text-kalahari-brown" />
                       What's Included
@@ -242,7 +242,7 @@ const TourAgenda: React.FC = () => {
                   </div>
 
                   {/* Additional Information */}
-                  <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6">
+                  <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                     <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
                       <Info className="w-5 h-5 text-kalahari-brown" />
                       Additional Information
@@ -270,7 +270,7 @@ const TourAgenda: React.FC = () => {
               </div>
 
               {/* Cancellation Policy - Mobile friendly */}
-              <div className="mt-12 sm:mt-16 md:mt-20 bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6">
+              <div className="mt-12 sm:mt-16 md:mt-20 bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <AlertCircle className="w-5 h-5 sm:w-6 sm:h-6 text-kalahari-brown" />
                   <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">Cancellation Policy</h3>
@@ -349,7 +349,7 @@ const TourAgenda: React.FC = () => {
               {/* Tour Details Cards - Improved for mobile */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 md:gap-8 mt-8 sm:mt-10 md:mt-12">
                 {/* Pickup Card */}
-                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
                     <img 
                       src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -374,7 +374,7 @@ const TourAgenda: React.FC = () => {
                 </div>
 
                 {/* Tour Card */}
-                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
                     <img 
                       src="https://images.unsplash.com/photo-1484318571209-661cf29a69c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -399,7 +399,7 @@ const TourAgenda: React.FC = () => {
                 </div>
 
                 {/* Drop-off Card */}
-                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
                     <img 
                       src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -429,7 +429,7 @@ const TourAgenda: React.FC = () => {
                 <h3 className="text-xl sm:text-2xl text-kalahari-brown text-center mb-6 sm:mb-8">What to Expect</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   {/* Included Features */}
-                  <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6">
+                  <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                     <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
                       <Info className="w-5 h-5 text-kalahari-brown" />
                       What's Included
@@ -455,7 +455,7 @@ const TourAgenda: React.FC = () => {
                   </div>
 
                   {/* Additional Information */}
-                  <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6">
+                  <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                     <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
                       <Info className="w-5 h-5 text-kalahari-brown" />
                       Additional Information
@@ -483,7 +483,7 @@ const TourAgenda: React.FC = () => {
               </div>
 
               {/* Cancellation Policy for Local Tour */}
-              <div className="mt-12 sm:mt-16 md:mt-20 bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6">
+              <div className="mt-12 sm:mt-16 md:mt-20 bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <AlertCircle className="w-5 h-5 sm:w-6 sm:h-6 text-kalahari-brown" />
                   <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">Cancellation Policy</h3>

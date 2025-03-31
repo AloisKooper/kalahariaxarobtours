@@ -323,7 +323,7 @@ const TestimonialPage: React.FC = () => {
       />
       
       {/* White background container for all content below hero INCLUDING footer */}
-      <div className="w-full bg-white relative z-10">
+      <div className="w-full bg-white relative z-10 overflow-hidden">
         <div className="py-12 md:py-16 px-4 md:px-6">
           <div className="container mx-auto max-w-7xl">
             {/* Page heading section */}
@@ -375,7 +375,7 @@ const TestimonialPage: React.FC = () => {
                 {featuredReviews.slice(0, 3).map((review) => (
                   <div 
                     key={review.id}
-                    className="bg-gradient-to-br from-kalahari-sand/50 to-kalahari-sand/30 rounded-xl p-5 md:p-6 shadow-md border border-kalahari-brown/10 flex flex-col"
+                    className="bg-gradient-to-br from-kalahari-sand/50 to-kalahari-sand/30 rounded-xl p-5 md:p-6 shadow-md border border-kalahari-brown/10 flex flex-col w-full max-w-xs mx-auto sm:max-w-none sm:mx-0"
                   >
                     <div className="flex items-start gap-3 mb-3">
                       {/* Profile image */}
@@ -668,7 +668,7 @@ const TestimonialPage: React.FC = () => {
                       {currentReviews.map((review) => (
                         <div 
                           key={review.id}
-                          className="bg-white rounded-xl p-5 md:p-6 shadow-md border border-kalahari-brown/10 flex flex-col transition-shadow hover:shadow-lg"
+                          className="bg-gradient-to-br from-kalahari-sand/50 to-kalahari-sand/30 rounded-xl p-5 md:p-6 shadow-md border border-kalahari-brown/10 flex flex-col w-full max-w-xs mx-auto sm:max-w-none sm:mx-0"
                         >
                           <div className="flex items-start gap-3 mb-4">
                             {/* Profile image */}
@@ -733,8 +733,7 @@ const TestimonialPage: React.FC = () => {
                       ))}
                     </div>
                   ) : (
-                    // No results message
-                    <div className="bg-kalahari-sand/30 rounded-xl p-8 text-center">
+                    <div className="bg-kalahari-sand/30 rounded-xl p-8 text-center w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                       <ThumbsUp className="h-12 w-12 mx-auto mb-4 text-kalahari-brown/50" />
                       <h5 className="text-xl font-medium text-kalahari-darkbrown mb-2">No reviews found</h5>
                       <p className="text-kalahari-charcoal/70 mb-4">
@@ -801,7 +800,7 @@ const TestimonialPage: React.FC = () => {
             
             {/* Leave a review CTA */}
             <div className="mt-16 pt-12 border-t border-kalahari-sand">
-              <div className="bg-gradient-to-br from-kalahari-lightbrown/30 to-kalahari-sand/50 rounded-xl p-8 md:p-10 text-center max-w-3xl mx-auto">
+              <div className="bg-gradient-to-br from-kalahari-lightbrown/30 to-kalahari-sand/50 rounded-xl p-8 md:p-10 text-center w-full max-w-xs mx-auto sm:max-w-none sm:mx-0 md:max-w-3xl md:mx-auto">
                 <h4 className="text-2xl text-kalahari-darkbrown font-normal mb-4">
                   Enjoyed Your Tour With Us?
                 </h4>

@@ -60,7 +60,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   const profileImageUrl = getProfileImageUrl(name, type);
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-4 md:p-6 h-full flex flex-col border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-white rounded-xl shadow-md p-4 md:p-6 h-full flex flex-col border border-gray-100 hover:shadow-lg transition-shadow duration-300 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
       <div className="flex items-start gap-3 md:gap-4">
         {/* Profile picture */}
         <div className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden shadow-sm ${avatarBgColor} flex items-center justify-center text-lg font-medium flex-shrink-0 border border-white/80`}>

@@ -96,7 +96,7 @@ const ToursList: React.FC = () => {
         {Object.entries(tours).map(([category, tourList]) => (
           <TabsContent key={category} value={category} className="space-y-6">
             {tourList.map((tour) => (
-              <Card key={tour.id} className={`overflow-hidden transition-all ${tour.featured ? 'border-brown-custom shadow-md' : 'border-gravel-medium'}`}>
+              <Card key={tour.id} className={`overflow-hidden transition-all ${tour.featured ? 'border-brown-custom shadow-md' : 'border-gravel-medium'} w-full max-w-xs mx-auto sm:max-w-none sm:mx-0`}>
                 <div className="grid grid-cols-1 md:grid-cols-3">
                   <div className="relative h-64 md:h-auto overflow-hidden">
                     <img 
@@ -115,8 +115,8 @@ const ToursList: React.FC = () => {
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <h3 className="font-serif text-xl sm:text-2xl text-brown-custom">{tour.title}</h3>
-                        {tour.subtitle && (
-                          <p className="text-sm text-kalahari-charcoal/70 mt-1">{tour.subtitle}</p>
+                        {'subtitle' in tour && (
+                          <p className="text-sm text-kalahari-charcoal/70 mt-1">{(tour as any).subtitle}</p>
                         )}
                       </div>
                       {tour.featured && (

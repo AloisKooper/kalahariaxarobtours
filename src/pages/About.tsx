@@ -78,13 +78,13 @@ const About: React.FC = () => {
                 The name "Axarob" refers to a small boy in the local language, while "Kalahari" references the desert where the Ovaherero people fled during the war, where many died of starvation, dehydration, and exhaustion. Our company name reflects our dedication to preserving and sharing these important historical narratives with historical accuracy and cultural sensitivity.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 my-6 sm:my-8">
-                <div className="bg-sand-custom/30 p-4 md:p-5 rounded-lg">
+                <div className="bg-sand-custom/30 p-4 md:p-5 rounded-lg w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <h4 className="text-kalahari-darkbrown font-medium text-base md:text-lg mb-2">Our Roots</h4>
                   <p className="text-kalahari-charcoal text-xs sm:text-sm">
                     Based in Swakopmund, our company has its roots in the community. We began as a small family operation with one tour guide and have since grown while maintaining our focus on authentic, educational experiences.
                   </p>
                 </div>
-                <div className="bg-kalahari-brown/20 p-4 md:p-5 rounded-lg border-l-4 border-kalahari-brown">
+                <div className="bg-kalahari-brown/20 p-4 md:p-5 rounded-lg border-l-4 border-kalahari-brown w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <h4 className="text-kalahari-darkbrown font-medium text-base md:text-lg mb-2">Our Motto</h4>
                   <p className="text-kalahari-charcoal text-xs sm:text-sm">
                     <span className="font-semibold italic">"We serve with pride"</span> - This motto encapsulates our commitment to excellence and our deep connection to the history we share. It represents our dedication to preserving Namibia's heritage while delivering authentic, educational tour experiences with dignity and respect.
@@ -118,7 +118,7 @@ const About: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-kalahari-brown/10">
+              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-kalahari-brown/10 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="bg-kalahari-brown/10 p-3 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-3 md:mb-4">
                   <Compass className="w-5 h-5 md:w-6 md:h-6 text-kalahari-brown" />
                 </div>
@@ -128,7 +128,7 @@ const About: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-kalahari-brown/10">
+              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-kalahari-brown/10 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="bg-kalahari-brown/10 p-3 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-3 md:mb-4">
                   <Users className="w-5 h-5 md:w-6 md:h-6 text-kalahari-brown" />
                 </div>
@@ -153,7 +153,7 @@ const About: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-kalahari-brown/10">
+              <div className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-kalahari-brown/10 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="bg-kalahari-brown/10 p-3 rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-3 md:mb-4">
                   <Landmark className="w-5 h-5 md:w-6 md:h-6 text-kalahari-brown" />
                 </div>

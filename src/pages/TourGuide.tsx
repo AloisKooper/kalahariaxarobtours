@@ -178,7 +178,7 @@ const TourGuidePage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="bg-kalahari-sand/30 rounded-xl p-6 md:p-8 relative mb-10">
+                <div className="bg-kalahari-sand/30 rounded-xl p-6 md:p-8 relative mb-10 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <Quote className="absolute text-kalahari-brown/10 w-20 h-20 -top-4 -left-4" />
                   <p className="relative text-kalahari-charcoal z-10 text-lg italic">
                     "Our goal is to share not just the history of Namibia, but the stories of resilience, 
@@ -191,11 +191,11 @@ const TourGuidePage: React.FC = () => {
                 </div>
                 
                 {/* Experience numbers */}
-                <div className="grid grid-cols-3 gap-6 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
                   {experienceData.map((item, index) => (
                     <div 
                       key={index}
-                      className="bg-white rounded-lg border border-kalahari-brown/10 p-5 text-center shadow-sm hover:shadow-md transition-shadow"
+                      className="bg-white rounded-lg border border-kalahari-brown/10 p-5 text-center shadow-sm hover:shadow-md transition-shadow w-full min-w-[100px] max-w-xs mx-auto sm:max-w-none sm:mx-0"
                     >
                       <div className="flex justify-center mb-3">
                         {item.icon}
@@ -243,7 +243,7 @@ const TourGuidePage: React.FC = () => {
               
               {/* Right column: Story tabs */}
               <div className="lg:w-1/2">
-                <div className="bg-white rounded-xl overflow-hidden shadow-md border border-kalahari-brown/10">
+                <div className="bg-white rounded-xl overflow-hidden shadow-md border border-kalahari-brown/10 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   {/* Tab navigation */}
                   <div className="flex border-b border-kalahari-brown/10">
                     {storyTabs.map((tab, index) => (
@@ -289,7 +289,7 @@ const TourGuidePage: React.FC = () => {
                 </div>
                 
                 {/* Video Section */}
-                <div className="mt-10 rounded-xl overflow-hidden shadow-md border border-kalahari-brown/10 relative">
+                <div className="mt-10 rounded-xl overflow-hidden shadow-md border border-kalahari-brown/10 relative w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="h-64 md:h-80 w-full relative overflow-hidden">
                     <video
                       ref={videoRef}
@@ -342,7 +342,7 @@ const TourGuidePage: React.FC = () => {
                 {testimonials.map((testimonial, index) => (
                   <div 
                     key={index}
-                    className="bg-white rounded-xl p-7 shadow-md border border-kalahari-brown/10 flex flex-col"
+                    className="bg-white rounded-xl p-7 shadow-md border border-kalahari-brown/10 flex flex-col w-full max-w-xs mx-auto sm:max-w-none sm:mx-0"
                   >
                     <Quote className="text-kalahari-brown/20 w-10 h-10 mb-4" />
                     <p className="italic text-kalahari-charcoal mb-6 text-base leading-relaxed">
@@ -412,7 +412,7 @@ const TourGuidePage: React.FC = () => {
             </div>
             
             {/* Tour Booking CTA */}
-            <div className="bg-gradient-to-r from-kalahari-sand to-kalahari-brown/20 rounded-xl p-8 md:p-12 relative overflow-hidden mb-16">
+            <div className="bg-gradient-to-r from-kalahari-sand to-kalahari-brown/20 rounded-xl p-8 md:p-12 relative overflow-hidden mb-16 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
               <div className="absolute top-0 right-0 -mr-10 -mt-10 w-60 h-60 opacity-10">
                 <Heart className="w-full h-full text-kalahari-darkbrown" strokeWidth={0.5} />
               </div>
@@ -442,7 +442,7 @@ const TourGuidePage: React.FC = () => {
             </div>
             
             {/* Cancellation policy */}
-            <div className="bg-white rounded-xl shadow-sm border border-kalahari-brown/10 p-8">
+            <div className="bg-white rounded-xl shadow-sm border border-kalahari-brown/10 p-8 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
               <h3 className="text-xl font-medium text-kalahari-darkbrown mb-6 flex items-center gap-2">
                 <Calendar className="w-5 h-5 text-kalahari-brown" />
                 Tour Cancellation Policy

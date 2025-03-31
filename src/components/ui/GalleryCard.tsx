@@ -26,7 +26,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({
   return (
     <>
       <div 
-        className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-xs"
+        className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

@@ -27,7 +27,7 @@ const TourGuideInfo: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Motto Card */}
             <motion.div 
-              className="relative h-[300px] rounded-2xl overflow-hidden group"
+              className="relative h-[300px] rounded-2xl overflow-hidden group w-full max-w-xs mx-auto sm:max-w-none sm:mx-0"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -57,7 +57,7 @@ const TourGuideInfo: React.FC = () => {
 
             {/* Social Responsibility Card */}
             <motion.div 
-              className="relative h-[300px] rounded-2xl overflow-hidden group"
+              className="relative h-[300px] rounded-2xl overflow-hidden group w-full max-w-xs mx-auto sm:max-w-none sm:mx-0"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -87,7 +87,7 @@ const TourGuideInfo: React.FC = () => {
             
             {/* Community Contribution Card */}
             <motion.div 
-              className="relative h-[300px] rounded-2xl overflow-hidden group"
+              className="relative h-[300px] rounded-2xl overflow-hidden group w-full max-w-xs mx-auto sm:max-w-none sm:mx-0"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}

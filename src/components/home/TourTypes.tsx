@@ -313,7 +313,7 @@ const TourTypes: React.FC = () => {
                   <h4 className="text-xl font-semibold text-kalahari-brown mb-3 sm:mb-4 border-b border-kalahari-brown/20 pb-2">Tour Highlights</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {slides[currentSlide].highlights.map((highlight, index) => (
-                      <div key={index} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-sand-custom rounded-lg hover:shadow-md transition-shadow">
+                      <div key={index} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-sand-custom rounded-lg hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                         <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0 rounded-lg overflow-hidden border border-kalahari-brown/20">
                           {highlight.image ? (
                             <img 
@@ -355,7 +355,7 @@ const TourTypes: React.FC = () => {
 
               {/* Right Column - Booking Info */}
               <div className="space-y-4 sm:space-y-6">
-                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 lg:p-6 shadow-sm">
+                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 lg:p-6 shadow-sm w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <h4 className="text-lg sm:text-xl font-semibold text-kalahari-brown mb-3 sm:mb-4 border-b border-kalahari-brown/20 pb-2">What's Included</h4>
                   <ul className="space-y-2 sm:space-y-3">
                     {slides[currentSlide].included.map((item, index) => (
@@ -367,7 +367,7 @@ const TourTypes: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 lg:p-6 shadow-sm">
+                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 lg:p-6 shadow-sm w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <h4 className="text-lg sm:text-xl font-semibold text-kalahari-brown mb-3 sm:mb-4 border-b border-kalahari-brown/20 pb-2">Important Notes</h4>
                   <ul className="space-y-2 sm:space-y-3">
                     {slides[currentSlide].additionalInfo.map((item, index) => (
@@ -379,7 +379,7 @@ const TourTypes: React.FC = () => {
                   </ul>
                 </div>
 
-                <button className="w-full bg-kalahari-brown hover:bg-kalahari-darkbrown text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg flex items-center justify-center gap-2 transition-colors text-base sm:text-lg font-medium shadow-sm hover:shadow-md">
+                <button className="w-full max-w-xs mx-auto sm:max-w-none sm:mx-0 bg-kalahari-brown hover:bg-kalahari-darkbrown text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg flex items-center justify-center gap-2 transition-colors text-base sm:text-lg font-medium shadow-sm hover:shadow-md">
                   Book Now <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
                 </button>
               </div>

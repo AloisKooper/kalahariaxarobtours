@@ -60,7 +60,7 @@ const TourFAQ: React.FC = () => {
             ))}
           </Accordion>
           
-          <div className="mt-10 p-6 bg-sand-custom rounded-lg border border-brown-light text-center">
+          <div className="mt-10 p-6 bg-sand-custom rounded-lg border border-brown-light text-center w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
             <h3 className="font-serif text-brown-custom text-xl mb-3">Still have questions?</h3>
             <p className="text-charcoal-custom mb-4">We're happy to help with any other questions you might have about our tours.</p>
             <a 

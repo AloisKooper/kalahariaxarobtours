@@ -504,7 +504,7 @@ const BlogPage: React.FC = () => {
                         </div>
                       ))
                     ) : (
-                      <div className="bg-kalahari-sand/30 rounded-xl p-8 text-center my-6">
+                      <div className="bg-kalahari-sand/30 rounded-xl p-8 text-center my-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                         <BookOpen className="h-12 w-12 mx-auto mb-4 text-kalahari-brown/50" />
                         <h5 className="text-xl font-medium text-kalahari-darkbrown mb-2">No articles found</h5>
                         <p className="text-kalahari-charcoal/70 mb-4">
@@ -572,7 +572,7 @@ const BlogPage: React.FC = () => {
                 </div>
                 
                 {/* Testimonial quote section */}
-                <div className="mb-12 bg-kalahari-sand/30 rounded-xl p-8 md:p-10">
+                <div className="mb-12 bg-kalahari-sand/30 rounded-xl p-8 md:p-10 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative">
                     <div className="text-6xl text-kalahari-brown/20 font-serif leading-none">"</div>
                     <blockquote className="text-lg md:text-xl italic text-kalahari-darkbrown mb-6 leading-relaxed">
@@ -589,7 +589,7 @@ const BlogPage: React.FC = () => {
               {/* Sidebar */}
               <div className="lg:col-span-4">
                 {/* Popular Topics */}
-                <div className="bg-white border border-kalahari-brown/10 rounded-xl shadow-sm p-6 mb-8">
+                <div className="bg-white border border-kalahari-brown/10 rounded-xl shadow-sm p-6 mb-8 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <h4 className="text-lg font-medium text-kalahari-darkbrown mb-4 flex items-center">
                     <BookOpen className="w-5 h-5 text-kalahari-brown mr-2" />
                     Popular Topics
@@ -608,7 +608,7 @@ const BlogPage: React.FC = () => {
                 </div>
                 
                 {/* Subscribe form */}
-                <div className="bg-gradient-to-br from-kalahari-sand/60 to-kalahari-brown/10 rounded-xl shadow-sm p-6 mb-8">
+                <div className="bg-gradient-to-br from-kalahari-sand/60 to-kalahari-brown/10 rounded-xl shadow-sm p-6 mb-8 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <h4 className="text-lg font-medium text-kalahari-darkbrown mb-2">
                     Newsletter
                   </h4>
@@ -630,7 +630,7 @@ const BlogPage: React.FC = () => {
                 </div>
                 
                 {/* Interactive call-to-action */}
-                <div className="bg-kalahari-darkbrown text-white rounded-xl shadow-md overflow-hidden">
+                <div className="bg-kalahari-darkbrown text-white rounded-xl shadow-md overflow-hidden w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="h-40 relative">
                     <img 
                       src="/Home Images/Top 5 Historical.jpg" 
@@ -665,7 +665,7 @@ const BlogPage: React.FC = () => {
             </div>
             
             {/* Call to action */}
-            <div className="my-16 bg-gradient-to-br from-kalahari-brown/20 to-kalahari-sand/40 rounded-xl p-8 md:p-10 text-center shadow-sm">
+            <div className="my-16 bg-gradient-to-br from-kalahari-brown/20 to-kalahari-sand/40 rounded-xl p-8 md:p-10 text-center shadow-sm w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
               <h3 className="text-2xl md:text-3xl text-kalahari-darkbrown font-medium mb-4">
                 Ready to Experience History Firsthand?
               </h3>
