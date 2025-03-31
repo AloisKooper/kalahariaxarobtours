@@ -49,6 +49,24 @@ const HeroSection: React.FC = () => {
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
+  // Preload all carousel images
+  useEffect(() => {
+    // Preload main hero image immediately
+    const preloadMainImage = new Image();
+    preloadMainImage.src = carouselImages[0].main;
+
+    // Preload rest of the carousel images
+    carouselImages.forEach((image, index) => {
+      if (index === 0) return; // Skip first image as it's already loading
+      
+      const preloadMainImg = new Image();
+      preloadMainImg.src = image.main;
+      
+      const preloadSmallImg = new Image();
+      preloadSmallImg.src = image.small;
+    });
+  }, []);
+
   // Auto-slide functionality
   useEffect(() => {
     const startAutoPlay = () => {
@@ -240,6 +258,8 @@ const HeroSection: React.FC = () => {
                       src="/Home Images/tour guide.jpg" 
                       alt="Mr. Rooi - Founder" 
                       className="w-full h-full object-cover"
+                      loading="eager"
+                      fetchPriority="high"
                       onError={(e) => {
                         // Fallback if image fails to load
                         const target = e.target as HTMLImageElement;
@@ -311,6 +331,9 @@ const HeroSection: React.FC = () => {
                           src={slide.main} 
                           alt={slide.mainAlt} 
                           className="w-full h-full object-cover"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          fetchPriority={index === 0 ? "high" : "auto"}
+                          decoding={index === 0 ? "sync" : "async"}
                         />
                         {/* Radial overlay for main image */}
                         <div 
@@ -329,6 +352,7 @@ const HeroSection: React.FC = () => {
                           src={slide.small} 
                           alt={slide.smallAlt} 
                           className="w-full h-full object-cover"
+                          loading={index === 0 ? "eager" : "lazy"}
                         />
                         {/* Radial overlay for smaller image */}
                         <div 

@@ -40,6 +40,15 @@ const GalleryPage: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Preload first batch of images when component mounts
+  useEffect(() => {
+    // Preload first 4 images (visible on most screens initially)
+    galleryImages.slice(0, 4).forEach(image => {
+      const img = new Image();
+      img.src = image.imageSrc;
+    });
+  }, []);
+
   // Define gallery categories and images
   const categories = [
     { id: "all", name: "All Images" },
@@ -303,7 +312,7 @@ const GalleryPage: React.FC = () => {
             {/* Gallery Grid */}
             {galleryView === 'grid' ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                {filteredImages.map((image) => (
+                {filteredImages.map((image, index) => (
                   <div 
                     key={image.id}
                     className="group relative overflow-hidden rounded-lg shadow-md bg-white transition-all hover:shadow-lg cursor-pointer"
@@ -314,7 +323,9 @@ const GalleryPage: React.FC = () => {
                         src={image.imageSrc} 
                         alt={image.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        loading="lazy"
+                        loading={index < 4 ? "eager" : "lazy"}
+                        fetchPriority={index === 0 ? "high" : "auto"}
+                        decoding="async"
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -330,7 +341,7 @@ const GalleryPage: React.FC = () => {
             ) : (
               // Masonry Layout
               <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6">
-                {filteredImages.map((image) => (
+                {filteredImages.map((image, index) => (
                   <div 
                     key={image.id}
                     className="group relative overflow-hidden rounded-lg shadow-md bg-white transition-all hover:shadow-lg cursor-pointer break-inside-avoid"
@@ -341,7 +352,9 @@ const GalleryPage: React.FC = () => {
                         src={image.imageSrc} 
                         alt={image.title}
                         className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
-                        loading="lazy"
+                        loading={index < 4 ? "eager" : "lazy"}
+                        fetchPriority={index === 0 ? "high" : "auto"}
+                        decoding="async"
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
