@@ -31,19 +31,19 @@ const HerreroNamaGenocide: React.FC = () => {
         <meta name="keywords" content="Herero Nama genocide, Namibian genocide, German colonial history, Swakopmund historical sites, Namibia historical tour, Alte Kaserne, Marine Memorial" />
         <meta property="og:title" content="Namibia's First Genocide: The Herero and Nama Tragedy | Historical Tour Sites" />
         <meta property="og:description" content="Visit key historical sites in Swakopmund that bear witness to the 1904-1908 Herero and Nama Genocide, recognized as the first genocide of the 20th century." />
-        <meta property="og:image" content="/Home Images/Memorial Site.jpg" />
+        <meta property="og:image" content="/Home Images/Marine memorial.jpg" />
         <meta property="og:url" content="https://kalahariaxarobtours.com/blog/herero-nama-genocide" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Namibia's First Genocide: The Herero and Nama Tragedy | Historical Tour Sites" />
         <meta name="twitter:description" content="Visit key historical sites in Swakopmund that bear witness to the 1904-1908 Herero and Nama Genocide, recognized as the first genocide of the 20th century." />
-        <meta name="twitter:image" content="/Home Images/Memorial Site.jpg" />
+        <meta name="twitter:image" content="/Home Images/Marine memorial.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             'headline': 'The Untold Story of Namibia\'s First Genocide',
-            'image': '/Home Images/Memorial Site.jpg',
+            'image': '/Home Images/Marine memorial.jpg',
             'datePublished': '2024-03-15T08:00:00Z',
             'dateModified': '2024-03-25T14:30:00Z',
             'author': {
@@ -73,7 +73,7 @@ const HerreroNamaGenocide: React.FC = () => {
       <PageHero
         title="The Untold Story of Namibia's First Genocide"
         subtitle="Exploring historical sites that commemorate the Herero and Nama Genocide"
-        backgroundImage="/Home Images/Memorial Site.jpg"
+        backgroundImage="/Home Images/Marine memorial.jpg"
         isMobile={isMobile}
       />
       
@@ -85,7 +85,7 @@ const HerreroNamaGenocide: React.FC = () => {
           authorTitle="Historian and Author"
           date="March 15, 2024"
           readTime="6 min"
-          imageUrl="/Home Images/Memorial Site.jpg"
+          imageUrl="/Home Images/Marine memorial.jpg"
           imageAlt="Memorial site commemorating the Herero and Nama genocide in Namibia"
           sourceUrl="https://www.museeholocauste.ca/en/resources-training/herero-genocide-namibia/"
           sourceName="Montreal Holocaust Museum"

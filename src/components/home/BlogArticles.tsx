@@ -30,7 +30,7 @@ const blogArticles: BlogArticle[] = [
     title: "The Untold Story of Namibia's First Genocide",
     summary: "Explore the complex history of the 1904-1908 Nama and Herero Genocide in Namibia and its lasting impact.",
     date: "March 15, 2024",
-    image: "/Home Images/Memorial Site.jpg",
+    image: "/Home Images/Marine memorial.jpg",
     category: "History",
     author: "Dr. Isabel V. Hull"
   },

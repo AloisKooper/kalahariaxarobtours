@@ -50,48 +50,50 @@ const About: React.FC = () => {
                 Preserving Namibia's History & Heritage
               </h3>
               <div className="w-16 md:w-20 h-1 bg-kalahari-brown rounded-full mx-auto"></div>
+              <div className="mt-6 bg-kalahari-brown/10 py-4 px-8 rounded-lg inline-block mx-auto">
+                <h4 className="text-xl sm:text-2xl text-kalahari-brown font-semibold italic">
+                  "We Serve with Pride"
+                </h4>
+              </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-10">
-              <div className="md:col-span-2 order-2 md:order-1">
-                <div className="space-y-4 text-kalahari-charcoal text-sm sm:text-base leading-relaxed">
-                  <p className="text-base text-kalahari-charcoal leading-relaxed mb-6">
-                    Founded in 2013 and fully operational since 2015, Kalahari Axarob Tours started with a simple vision: to share the rich cultural and historical narrative of Namibia with visitors from around the world while preserving our heritage for future generations.
+            <div className="flex flex-col items-center mb-10">
+              <div className="w-full max-w-[300px] h-[300px] mb-8 rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/Home Images/axarob tours.png" 
+                  alt="Kalahari Axarob Tours Headquarters" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+            
+            <div className="space-y-4 text-kalahari-charcoal text-sm sm:text-base leading-relaxed">
+              <p className="text-base text-kalahari-charcoal leading-relaxed mb-6">
+                Founded in 2013 and fully operational since 2015, Kalahari Axarob Tours started with a simple vision: to share the rich cultural and historical narrative of Namibia with visitors from around the world while preserving our heritage for future generations.
+              </p>
+              <p className="text-base text-kalahari-charcoal leading-relaxed mb-6">
+                Our roots in Swakopmund have allowed us to grow from a small family operation to a trusted name in specialized tours that address the significant historical events in our country's past, particularly the German-Herero/Nama war of 1904-1908.
+              </p>
+              <p className="text-base text-kalahari-charcoal leading-relaxed mb-6">
+                The name "Axarob" refers to a small boy in the local language, while "Kalahari" references the desert where the Ovaherero people fled during the war, where many died of starvation, dehydration, and exhaustion. Our company name reflects our dedication to preserving and sharing these important historical narratives with historical accuracy and cultural sensitivity.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 my-6 sm:my-8">
+                <div className="bg-sand-custom/30 p-4 md:p-5 rounded-lg">
+                  <h4 className="text-kalahari-darkbrown font-medium text-base md:text-lg mb-2">Our Roots</h4>
+                  <p className="text-kalahari-charcoal text-xs sm:text-sm">
+                    Based in Swakopmund, our company has its roots in the community. We began as a small family operation with one tour guide and have since grown while maintaining our focus on authentic, educational experiences.
                   </p>
-                  <p className="text-base text-kalahari-charcoal leading-relaxed mb-6">
-                    Our roots in Swakopmund have allowed us to grow from a small family operation to a trusted name in specialized tours that address the significant historical events in our country's past, particularly the German-Herero/Nama war of 1904-1908.
-                  </p>
-                  <p className="text-base text-kalahari-charcoal leading-relaxed mb-6">
-                    The name "Axarob" refers to a small boy in the local language, while "Kalahari" references the desert where the Ovaherero people fled during the war, where many died of starvation, dehydration, and exhaustion. Our company name reflects our dedication to preserving and sharing these important historical narratives with historical accuracy and cultural sensitivity.
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 my-6 sm:my-8">
-                    <div className="bg-sand-custom/30 p-4 md:p-5 rounded-lg">
-                      <h4 className="text-kalahari-darkbrown font-medium text-base md:text-lg mb-2">Our Roots</h4>
-                      <p className="text-kalahari-charcoal text-xs sm:text-sm">
-                        Based in Swakopmund, our company has its roots in the community. We began as a small family operation with one tour guide and have since grown while maintaining our focus on authentic, educational experiences.
-                      </p>
-                    </div>
-                    <div className="bg-sand-custom/30 p-4 md:p-5 rounded-lg">
-                      <h4 className="text-kalahari-darkbrown font-medium text-base md:text-lg mb-2">Our Motto</h4>
-                      <p className="text-kalahari-charcoal text-xs sm:text-sm">
-                        "We serve with pride" - This motto reflects our commitment to excellence and our deep connection to the history we share with our visitors.
-                      </p>
-                    </div>
-                  </div>
-                  <p>
-                    Today, we offer specialized tours focusing on the significant historical events that shaped Namibia, including the 1904-1908 Nama and Ovaherero Genocide, with a commitment to historical accuracy and cultural sensitivity.
+                </div>
+                <div className="bg-kalahari-brown/20 p-4 md:p-5 rounded-lg border-l-4 border-kalahari-brown">
+                  <h4 className="text-kalahari-darkbrown font-medium text-base md:text-lg mb-2">Our Motto</h4>
+                  <p className="text-kalahari-charcoal text-xs sm:text-sm">
+                    <span className="font-semibold italic">"We serve with pride"</span> - This motto encapsulates our commitment to excellence and our deep connection to the history we share. It represents our dedication to preserving Namibia's heritage while delivering authentic, educational tour experiences with dignity and respect.
                   </p>
                 </div>
               </div>
-              <div className="md:col-span-1 order-1 md:order-2 h-[250px] sm:h-[300px] md:h-auto mb-6 md:mb-0">
-                <div className="relative h-full rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src="/Home Images/axarob tours.png" 
-                    alt="Kalahari Axarob Tours Headquarters" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
+              <p>
+                Today, we offer specialized tours focusing on the significant historical events that shaped Namibia, including the 1904-1908 Nama and Ovaherero Genocide, with a commitment to historical accuracy and cultural sensitivity.
+              </p>
             </div>
           </div>
         </section>

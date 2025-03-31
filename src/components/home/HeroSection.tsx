@@ -117,40 +117,121 @@ const HeroSection: React.FC = () => {
     setIsPaused(false);
   };
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    },
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.2 }
+    }
+  };
+  
+  const profileCardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.7, 
+        ease: "easeOut",
+        delay: 0.6
+      }
+    }
+  };
+
   return (
     <section className="min-h-[calc(100vh-var(--nav-height,80px))] w-full flex items-center py-8 sm:py-10 md:py-16 px-3 sm:px-4 md:px-6 hero-section overflow-hidden relative">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
-          {/* Left Column - Text Content */}
-          <div className="flex flex-col">
-            <h2 className="text-xs sm:text-sm leading-none text-white">
+          {/* Left Column - Text Content with animations */}
+          <motion.div 
+            className="flex flex-col"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h2 
+              className="text-xs sm:text-sm leading-none text-white"
+              variants={itemVariants}
+            >
               The Ultimate Historical Tour Experience
-            </h2>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight uppercase mt-3 sm:mt-4 text-[#C4956A]">
+            </motion.h2>
+            
+            <motion.h1 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight uppercase mt-3 sm:mt-4 text-[#C4956A]"
+              variants={itemVariants}
+            >
               kalahari axarob tours
-            </h1>
-            <p className="text-sm sm:text-base leading-6 sm:leading-7 tracking-[-0.32px] text-white mt-4 sm:mt-6">
+            </motion.h1>
+            
+            <motion.p 
+              className="text-sm sm:text-base leading-6 sm:leading-7 tracking-[-0.32px] text-white mt-4 sm:mt-6"
+              variants={itemVariants}
+            >
               Discover Swakopmund's rich history and culture on our signature shore excursion, 
               available in flexible timeframes throughout the day. Perfect for cruise passengers 
               wanting to explore "The little piece of Germany under the African skies"
-            </p>
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 sm:mt-8">
-              <Link
-                to="/gallery"
-                className="rounded bg-white text-darkbrown-custom border border-brown-light hover:bg-sand-hover transition-colors py-2 sm:py-2.5 px-4 sm:px-5 text-sm sm:text-base font-semibold"
-              >
-                Gallery
-              </Link>
-              <Link
-                to="/tours"
-                className="text-white hover:text-sun-custom transition-colors text-sm sm:text-base font-semibold"
-              >
-                Book Tour
-              </Link>
-            </div>
+            </motion.p>
             
-            {/* Profile Card - Responsive adjustments */}
-            <div className="mt-8 sm:mt-10 bg-white/70 p-3 sm:p-4 rounded-lg border border-brown-light">
+            <motion.div 
+              className="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 sm:mt-8"
+              variants={itemVariants}
+            >
+              <motion.div 
+                variants={buttonVariants}
+                whileHover="hover"
+              >
+                <Link
+                  to="/gallery"
+                  className="rounded bg-white text-darkbrown-custom border border-brown-light hover:bg-sand-hover transition-colors py-2 sm:py-2.5 px-4 sm:px-5 text-sm sm:text-base font-semibold"
+                >
+                  Gallery
+                </Link>
+              </motion.div>
+              
+              <motion.div 
+                variants={buttonVariants}
+                whileHover="hover"
+              >
+                <Link
+                  to="/tours"
+                  className="text-white hover:text-sun-custom transition-colors text-sm sm:text-base font-semibold"
+                >
+                  Book Tour
+                </Link>
+              </motion.div>
+            </motion.div>
+            
+            {/* Profile Card with animation */}
+            <motion.div 
+              className="mt-8 sm:mt-10 bg-white/70 p-3 sm:p-4 rounded-lg border border-brown-light"
+              variants={profileCardVariants}
+            >
               <div className="flex items-center gap-3 sm:gap-4">
                 {/* Profile Image */}
                 <div className="relative shrink-0">
@@ -197,14 +278,17 @@ const HeroSection: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           
           {/* Right column with carousel - Fixed overflow issue and improved for mobile */}
           <motion.div 
             className="flex flex-col mt-4 md:mt-0" 
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Added extra padding to prevent clipping */}
             <div className="relative w-full h-[320px] sm:h-[400px] md:h-[470px] lg:h-[520px] mx-auto" role="region" aria-label="Tour Images">

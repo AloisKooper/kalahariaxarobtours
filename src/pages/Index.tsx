@@ -34,7 +34,7 @@ const Index: React.FC = () => {
       {/* Fixed background that extends behind both navbar and hero */}
       <div className="fixed top-0 left-0 w-full h-[100vh] overflow-hidden -z-10">
         <img 
-          src="/Home Images/jetty hero.jpg"
+          src="/Home Images/DunesmeetOcean.png"
           alt="" 
           className="w-full h-full object-cover"
           aria-hidden="true"

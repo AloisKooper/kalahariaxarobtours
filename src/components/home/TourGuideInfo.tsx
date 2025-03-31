@@ -34,8 +34,8 @@ const TourGuideInfo: React.FC = () => {
             >
               <div className="w-full h-full">
                 <img 
-                  src="/Home Images/tour guide.jpg" 
-                  alt="Tour Guide" 
+                  src="/Home Images/testimonial.jpeg" 
+                  alt="Support for Local Soup Kitchens" 
                   className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 />
               </div>
@@ -43,14 +43,14 @@ const TourGuideInfo: React.FC = () => {
               <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-kalahari-brown p-3 rounded-lg">
-                    <Star className="w-6 h-6 text-yellow-400" />
+                    <Soup className="w-6 h-6 text-yellow-400" />
                   </div>
                   <h2 className="text-2xl font-semibold text-white">
-                    We Serve with Pride
+                    Support for Local Soup Kitchens
                   </h2>
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  Our commitment to excellence and authentic local experiences ensures you get the most out of your Swakopmund tour with Mr. Rooi, a descendant of the native Namaqua tribe.
+                  A portion of every tour fee goes directly to supporting two local soup kitchens in Swakopmund, helping to feed those in need.
                 </p>
               </div>
             </motion.div>
@@ -65,7 +65,7 @@ const TourGuideInfo: React.FC = () => {
               <div className="w-full h-full">
                 <img 
                   src="/Home Images/Community Projects.jpg" 
-                  alt="Soup Kitchen Support" 
+                  alt="Educational Initiatives" 
                   className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 />
               </div>
@@ -73,14 +73,14 @@ const TourGuideInfo: React.FC = () => {
               <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-kalahari-brown p-3 rounded-lg">
-                    <Soup className="w-6 h-6 text-yellow-400" />
+                    <Users className="w-6 h-6 text-yellow-400" />
                   </div>
                   <h2 className="text-2xl font-semibold text-white">
-                    Social Responsibility
+                    Educational Initiatives
                   </h2>
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  Mr. Rooi supports two local soup kitchens in Swakopmund, ensuring that a portion of your tour investment goes directly back to feeding and supporting the community.
+                  We work with local schools to provide free historical tours for students, ensuring that the younger generation understands their heritage.
                 </p>
               </div>
             </motion.div>
@@ -94,8 +94,8 @@ const TourGuideInfo: React.FC = () => {
             >
               <div className="w-full h-full">
                 <img 
-                  src="/Home Images/Community Investment.jpg" 
-                  alt="Community Investment" 
+                  src="/Home Images/Craft Market.jpg" 
+                  alt="Supporting Local Artisans" 
                   className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 />
               </div>
@@ -106,11 +106,11 @@ const TourGuideInfo: React.FC = () => {
                     <Heart className="w-6 h-6 text-yellow-400" />
                   </div>
                   <h2 className="text-2xl font-semibold text-white">
-                    Community Investment
+                    Supporting Local Artisans
                   </h2>
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  By choosing our tours, you're helping us invest in Swakopmund's community development, from supporting local food initiatives to preserving historical and cultural heritage.
+                  Our tours visit local craft markets and work with artisans, providing them with a platform to showcase and sell their traditional crafts to visitors.
                 </p>
               </div>
             </motion.div>

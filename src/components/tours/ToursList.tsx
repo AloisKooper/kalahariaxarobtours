@@ -48,7 +48,7 @@ const ToursList: React.FC = () => {
       {
         id: 2,
         title: "Guided Historical Tour",
-        image: "/Home Images/Half Day Tour.jpg",
+        image: "/Home Images/Guided Historical Tour.jpeg",
         price: "$139",
         duration: "5 hours",
         minParticipants: 4,

@@ -237,7 +237,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({
             
             <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-kalahari-sand/30 hover:shadow-md transition-shadow group">
               <div className="h-48 overflow-hidden">
-                <img src="/Home Images/Memorial Site.jpg" alt="Herero and Nama Genocide" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/Home Images/Marine memorial.jpg" alt="Herero and Nama Genocide" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-kalahari-darkbrown mb-2 line-clamp-2 group-hover:text-kalahari-brown transition-colors">The Untold Story of Namibia's First Genocide</h3>

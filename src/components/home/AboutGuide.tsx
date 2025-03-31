@@ -11,7 +11,7 @@ const AboutGuide: React.FC = () => {
   useEffect(() => {
     const videoPreload = document.createElement('link');
     videoPreload.rel = 'preload';
-    videoPreload.href = 'https://res.cloudinary.com/dik2mqn3b/video/upload/q_auto:best,f_auto/scene_video_rozuws.mp4';
+    videoPreload.href = 'https://res.cloudinary.com/dik2mqn3b/video/upload/q_auto:best,f_auto/Untitled_video_-_Made_with_Clipchamp_rskj5s.mp4';
     videoPreload.as = 'video';
     document.head.appendChild(videoPreload);
     
@@ -84,7 +84,7 @@ const AboutGuide: React.FC = () => {
             </h2>
             
             <p className="leading-7 tracking-[-0.32px] text-kalahari-charcoal mt-5">
-              Mr. Rooi is a licensed Tour Guide with over 15 years of experience 
+              Mr. Rooi is a founder and owner with years of experience 
               in the Tour Field. His extensive knowledge of Namibian history, 
               particularly the Ovaherero/Namaqua genocide, makes him a valuable 
               guide for those wanting to understand this important historical period.
@@ -133,7 +133,7 @@ const AboutGuide: React.FC = () => {
                 preload="auto"
               >
                 <source 
-                  src="https://res.cloudinary.com/dik2mqn3b/video/upload/q_auto:best,f_auto/scene_video_rozuws.mp4" 
+                  src="https://res.cloudinary.com/dik2mqn3b/video/upload/q_auto:best,f_auto/Untitled_video_-_Made_with_Clipchamp_rskj5s.mp4" 
                   type="video/mp4"
                 />
               </video>

@@ -32,19 +32,19 @@ const Gallery: React.FC = () => {
       {
         title: "Swakopmund Jetty",
         description: "Historic wooden pier extending into the Atlantic Ocean",
-        imageSrc: "/Home Images/Jetty.jpg",
+        imageSrc: "/Home Images/jetty hero.jpg",
         price: "Included in tour"
       },
       {
         title: "Woermann House",
         description: "Iconic colonial-era building with distinctive architecture",
-        imageSrc: "/Home Images/Woermann.jpg",
+        imageSrc: "/Home Images/Woermann House.jpg",
         price: "Included in tour"
       },
       {
         title: "German War Memorial",
         description: "Historical German War Memorial site",
-        imageSrc: "/Home Images/Memorial.jpg",
+        imageSrc: "/Home Images/German War Memorial.jpg",
         price: "Included in tour"
       },
       {
@@ -70,7 +70,7 @@ const Gallery: React.FC = () => {
       {
         title: "Swakopmund Beach",
         description: "Scenic beach views along the Atlantic coast",
-        imageSrc: "/Home Images/Beach.jpg",
+        imageSrc: "/Home Images/Swakopmund Beach.jpg",
         price: "Included in tour"
       }
     ],
