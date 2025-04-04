@@ -245,7 +245,7 @@ const Navbar: React.FC = () => {
           variants={blurLayerVariants}
         />
         
-        <div className="flex items-center md:w-1/4 text-base text-white tracking-[-0.48px] relative z-10">
+        <div className="flex items-center lg:w-1/4 text-base text-white tracking-[-0.48px] relative z-10">
           <Link to="/" className="flex items-center">
             <img
               src="/Home Images/axarob tours.png"
@@ -256,34 +256,34 @@ const Navbar: React.FC = () => {
         </div>
         
         {/* Desktop and Tablet Navigation - Centered */}
-        <div className="hidden md:flex md:w-2/4 items-center justify-center relative z-10">
-          <div className="flex items-center gap-3 md:gap-4 lg:gap-10 my-auto overflow-x-auto">
-            <Link to="/" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide ${isActive('/') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+        <div className="hidden lg:flex lg:w-2/4 items-center justify-center relative z-10">
+          <div className="flex items-center gap-3 lg:gap-4 xl:gap-10 my-auto overflow-x-auto">
+            <Link to="/" className={`transition-colors font-medium uppercase text-xs lg:text-sm tracking-wide ${isActive('/') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               Home
             </Link>
-            <Link to="/tours" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide ${isActive('/tours') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+            <Link to="/tours" className={`transition-colors font-medium uppercase text-xs lg:text-sm tracking-wide ${isActive('/tours') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               Tours
             </Link>
-            <Link to="/about" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide ${isActive('/about') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+            <Link to="/about" className={`transition-colors font-medium uppercase text-xs lg:text-sm tracking-wide ${isActive('/about') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               About Us
             </Link>
-            <Link to="/gallery" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide ${isActive('/gallery') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+            <Link to="/gallery" className={`transition-colors font-medium uppercase text-xs lg:text-sm tracking-wide ${isActive('/gallery') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               Gallery
             </Link>
-            <Link to="/testimonial" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide whitespace-nowrap ${isActive('/testimonial') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+            <Link to="/testimonial" className={`transition-colors font-medium uppercase text-xs lg:text-sm tracking-wide whitespace-nowrap ${isActive('/testimonial') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               Testimonial
             </Link>
-            <Link to="/blog" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide ${isActive('/blog') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+            <Link to="/blog" className={`transition-colors font-medium uppercase text-xs lg:text-sm tracking-wide ${isActive('/blog') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               Blog
             </Link>
           </div>
         </div>
         
-        {/* Desktop and Tablet Actions */}
-        <div className="flex items-center md:w-1/4 justify-end gap-2 md:gap-3 lg:gap-4 relative z-10">
-          <div className="hidden md:flex items-center gap-2">
+        {/* Desktop Actions */}
+        <div className="flex items-center lg:w-1/4 justify-end gap-2 lg:gap-3 xl:gap-4 relative z-10">
+          <div className="hidden lg:flex items-center gap-2">
             <div className="border-l h-6 border-white/50"></div>
-            <Link to="/tour-guide" className={`transition-colors font-medium uppercase text-xs md:text-sm tracking-wide whitespace-nowrap ${isActive('/tour-guide') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
+            <Link to="/tour-guide" className={`transition-colors font-medium uppercase text-xs lg:text-sm tracking-wide whitespace-nowrap ${isActive('/tour-guide') ? 'text-kalahari-sun' : 'text-white hover:text-kalahari-sun'}`}>
               Tour Guide
             </Link>
           </div>
@@ -307,7 +307,7 @@ const Navbar: React.FC = () => {
           
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden text-white"
+            className="lg:hidden text-white"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
@@ -327,7 +327,7 @@ const Navbar: React.FC = () => {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div 
-              className="fixed top-[var(--nav-height,80px)] left-0 right-0 md:hidden w-full border-t border-kalahari-lightbrown/20 bg-kalahari-brown/95 backdrop-blur-lg py-3 px-4 shadow-lg z-[10000] max-h-[calc(100vh-var(--nav-height,80px))] overflow-hidden"
+              className="fixed top-[var(--nav-height,80px)] left-0 right-0 lg:hidden w-full border-t border-kalahari-lightbrown/20 bg-kalahari-brown/95 backdrop-blur-lg py-3 px-4 shadow-lg z-[10000] max-h-[calc(100vh-var(--nav-height,80px))] overflow-hidden"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -502,4 +502,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-

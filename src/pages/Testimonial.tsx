@@ -103,7 +103,7 @@ const TestimonialPage: React.FC = () => {
       date: "2023-11-02",
       location: "Berlin, Germany",
       rating: "5.0",
-      testimonial: "Mr. Rooi provided an exceptional experience. His personal connection to the history made the tour deeply meaningful and educational. Will definitely book again when I return to Namibia.",
+      testimonial: "Mr. Michael provided an exceptional experience. His personal connection to the history made the tour deeply meaningful and educational. Will definitely book again when I return to Namibia.",
       platform: 'google',
       isFeatured: true,
       tourType: "Shore Excursion"
@@ -114,7 +114,7 @@ const TestimonialPage: React.FC = () => {
       date: "2023-12-05",
       location: "Munich, Germany",
       rating: "4.9",
-      testimonial: "This was the highlight of our Namibia trip. Mr. Rooi's tour gives you a deep understanding of the historical events and their significance. The personal stories made history come alive.",
+      testimonial: "This was the highlight of our Namibia trip. Mr. Michael's tour gives you a deep understanding of the historical events and their significance. The personal stories made history come alive.",
       platform: 'google',
       isFeatured: true,
       tourType: "Shore Excursion"
@@ -127,7 +127,7 @@ const TestimonialPage: React.FC = () => {
       date: "2023-10-20",
       location: "Cape Town, South Africa",
       rating: "5.0",
-      testimonial: "The historical tour with Mr. Rooi was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable.",
+      testimonial: "The historical tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable.",
       platform: 'trustpilot',
       isFeatured: true,
       tourType: "Historical Tour"
@@ -138,7 +138,7 @@ const TestimonialPage: React.FC = () => {
       date: "2023-12-01",
       location: "Paris, France",
       rating: "5.0",
-      testimonial: "Mr. Rooi's personal connections to the history he shares makes this tour particularly moving. A must-do for anyone seeking to understand Namibia's complex past.",
+      testimonial: "Mr. Michael's personal connections to the history he shares makes this tour particularly moving. A must-do for anyone seeking to understand Namibia's complex past.",
       platform: 'trustpilot',
       isFeatured: true,
       tourType: "Historical Tour"

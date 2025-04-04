@@ -27,29 +27,51 @@ const ContactSection: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://formspree.io/f/mjkyaogv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `New Tour Inquiry from ${formData.name}`,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent Successfully",
+          description: "Thank you for your inquiry. We'll get back to you shortly.",
+          variant: "default",
+        });
+        setFormData({ 
+          name: "", 
+          email: "", 
+          subject: "", 
+          message: "",
+          travelers: "",
+          hasChildren: "",
+          preferredDates: "",
+          tourType: ""
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
       toast({
-        title: "Message Sent Successfully",
-        description: "Thank you for your inquiry. We'll get back to you shortly.",
-        variant: "default",
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
       });
-      setFormData({ 
-        name: "", 
-        email: "", 
-        subject: "", 
-        message: "",
-        travelers: "",
-        hasChildren: "",
-        preferredDates: "",
-        tourType: ""
-      });
+    } finally {
       setLoading(false);
-    }, 1500);
+    }
+
   };
 
   // Tour locations with coordinates
@@ -328,7 +350,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-kalahari-darkbrown">Phone</h4>
-                    <p className="text-kalahari-charcoal mt-1 break-words">+264 81 258 3089</p>
+                    <p className="text-kalahari-charcoal mt-1 break-words">+264 81 145 6397</p>
                     <p className="text-kalahari-charcoal/70 text-sm">Available Mon-Fri, 9am-6pm</p>
                   </div>
                 </div>

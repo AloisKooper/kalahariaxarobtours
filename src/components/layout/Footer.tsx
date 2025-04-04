@@ -50,13 +50,13 @@ const Footer: React.FC = () => {
                 <div className="bg-sun-custom p-2 rounded-full">
                   <Phone size={16} className="text-kalahari-sun" />
                 </div>
-                <span className="text-kalahari-charcoal">+264 81 258 3089</span>
+                <span className="text-kalahari-charcoal">+264 81 145 6397</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="bg-sun-custom p-2 rounded-full">
                   <Mail size={16} className="text-kalahari-sun" />
                 </div>
-                <span className="text-kalahari-charcoal">Kalahariaxarobtours@gmail.com</span>
+                <span className="text-kalahari-charcoal">kalahariaxarobtours@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="bg-sun-custom p-2 rounded-full">

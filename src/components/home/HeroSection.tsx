@@ -255,8 +255,8 @@ const HeroSection: React.FC = () => {
                 <div className="relative shrink-0">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-brown-custom">
                     <img 
-                      src="/Home Images/tour guide.jpg" 
-                      alt="Mr. Rooi - Founder" 
+                      src="/Home Images/Mr.Rooi Propic.jpeg" 
+                      alt="Mr. Michael - Founder" 
                       className="w-full h-full object-cover"
                       loading="eager"
                       fetchPriority="high"
@@ -288,7 +288,7 @@ const HeroSection: React.FC = () => {
                   {/* Founder Label with Google Icon */}
                   <div className="flex items-center gap-1 text-xs sm:text-sm font-medium text-darkbrown-custom truncate">
                     <GoogleIcon className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span>Mr. Rooi - Founder & Tour Guide</span>
+                    <span>Mr. Michael - Founder & Tour Guide</span>
                   </div>
                   
                   {/* Short Message */}

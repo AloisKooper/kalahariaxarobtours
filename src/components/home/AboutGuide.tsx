@@ -56,8 +56,8 @@ const AboutGuide: React.FC = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-kalahari-brown">
                 <img 
-                  src="/Home Images/tour guide.jpg" 
-                  alt="Mr. Rooi - Founder" 
+                  src="/Home Images/Mr.Rooi Propic.jpeg" 
+                  alt="Mr. Michael - Founder" 
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     // Fallback if image fails to load
@@ -75,7 +75,7 @@ const AboutGuide: React.FC = () => {
                   <Star className="w-4 h-4 fill-[#FBBC05]" />
                   <Star className="w-4 h-4 fill-[#FBBC05]" />
                 </div>
-                <h3 className="text-kalahari-darkbrown font-medium">Mr. Rooi - Founder & Tour Guide</h3>
+                <h3 className="text-kalahari-darkbrown font-medium">Mr. Michael - Founder & Tour Guide</h3>
               </div>
             </div>
             
@@ -84,7 +84,7 @@ const AboutGuide: React.FC = () => {
             </h2>
             
             <p className="leading-7 tracking-[-0.32px] text-kalahari-charcoal mt-5">
-              Mr. Rooi is a founder and owner with years of experience 
+              Mr. Michael is a founder and owner with years of experience 
               in the Tour Field. His extensive knowledge of Namibian history, 
               particularly the Ovaherero/Namaqua genocide, makes him a valuable 
               guide for those wanting to understand this important historical period.

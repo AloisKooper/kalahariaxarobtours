@@ -37,7 +37,7 @@ const TourFAQ: React.FC = () => {
     },
     {
       question: "Who is the tour guide?",
-      answer: "All tours are led by Mr. Rooi, who is a descendant of the native Namaqua tribe. He is knowledgeable about the local history and culture, particularly regarding the 1904-1908 Nama and Ovaherero Genocide."
+      answer: "All tours are led by Mr. Michael, who is a descendant of the native Namaqua tribe. He is knowledgeable about the local history and culture, particularly regarding the 1904-1908 Nama and Ovaherero Genocide."
     }
   ];
 

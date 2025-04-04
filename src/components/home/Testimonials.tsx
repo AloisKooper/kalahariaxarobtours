@@ -19,28 +19,28 @@ const Testimonials: React.FC = () => {
       name: "Maria Schmidt",
       location: "Berlin, Germany",
       rating: "5.0",
-      testimonial: '"Mr. Rooi provided an exceptional experience. His personal connection to the history made the tour deeply meaningful and educational. Will definitely book again when I return to Namibia."',
+      testimonial: '"Mr. Michael provided an exceptional experience. His personal connection to the history made the tour deeply meaningful and educational. Will definitely book again when I return to Namibia."',
       type: 'google'
     },
     {
       name: "John Mbambo",
       location: "Windhoek, Namibia",
       rating: "4.8",
-      testimonial: '"Even as a local Namibian, I learned so much on this tour. The way Mr. Rooi presents the historical facts while connecting them to present-day context is remarkable. Very professional service."',
+      testimonial: '"Even as a local Namibian, I learned so much on this tour. The way Mr. Michael presents the historical facts while connecting them to present-day context is remarkable. Very professional service."',
       type: 'google'
     },
     {
       name: "Elizabeth Taylor",
       location: "London, UK",
       rating: "4.7",
-      testimonial: '"The tour was very informative and Mr. Rooi is extremely knowledgeable. I appreciated how he explained the complex history in a way that was easy to understand but still respectful of the gravity of events."',
+      testimonial: '"The tour was very informative and Mr. Michael is extremely knowledgeable. I appreciated how he explained the complex history in a way that was easy to understand but still respectful of the gravity of events."',
       type: 'google'
     },
     {
       name: "Thomas Mueller",
       location: "Munich, Germany",
       rating: "4.9",
-      testimonial: '"This was the highlight of our Namibia trip. Mr. Rooi\'s tour gives you a deep understanding of the historical events and their significance. The personal stories made history come alive."',
+      testimonial: '"This was the highlight of our Namibia trip. Mr. Michael\'s tour gives you a deep understanding of the historical events and their significance. The personal stories made history come alive."',
       type: 'google'
     }
   ];
@@ -50,14 +50,14 @@ const Testimonials: React.FC = () => {
       name: "Sophie Johnson",
       location: "Cape Town, South Africa",
       rating: "5.0",
-      testimonial: '"The historical tour with Mr. Rooi was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable."',
+      testimonial: '"The historical tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable."',
       type: 'trustpilot'
     },
     {
       name: "James Wilson",
       location: "Sydney, Australia",
       rating: "4.9",
-      testimonial: '"As a history enthusiast, I found this tour exceptionally well-researched and presented. Mr. Rooi brings the past to life with profound respect and dignity."',
+      testimonial: '"As a history enthusiast, I found this tour exceptionally well-researched and presented. Mr. Michael brings the past to life with profound respect and dignity."',
       type: 'trustpilot'
     },
     {
@@ -71,14 +71,14 @@ const Testimonials: React.FC = () => {
       name: "Olivier Dubois",
       location: "Paris, France",
       rating: "5.0",
-      testimonial: '"Mr. Rooi\'s personal connections to the history he shares makes this tour particularly moving. A must-do for anyone seeking to understand Namibia\'s complex past."',
+      testimonial: '"Mr. Michael\'s personal connections to the history he shares makes this tour particularly moving. A must-do for anyone seeking to understand Namibia\'s complex past."',
       type: 'trustpilot'
     },
     {
       name: "Linda Nakashimba",
       location: "Windhoek, Namibia",
       rating: "4.7",
-      testimonial: '"Even as a local, I learned so much from this tour. Mr. Rooi presents our difficult history with honesty, sensitivity and profound knowledge. Highly recommended."',
+      testimonial: '"Even as a local, I learned so much from this tour. Mr. Michael presents our difficult history with honesty, sensitivity and profound knowledge. Highly recommended."',
       type: 'trustpilot'
     }
   ];

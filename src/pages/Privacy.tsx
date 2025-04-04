@@ -151,7 +151,7 @@ const Privacy: React.FC = () => {
                 </p>
                 <div className="p-4 bg-kalahari-sand/50 rounded-lg mt-4">
                   <p className="text-kalahari-charcoal"><strong>Email:</strong> Kalahariaxarobtours@gmail.com</p>
-                  <p className="text-kalahari-charcoal"><strong>Phone:</strong> +264 81 258 3089</p>
+                  <p className="text-kalahari-charcoal"><strong>Phone:</strong> +264 81 145 6397</p>
                   <p className="text-kalahari-charcoal"><strong>Address:</strong> Swakopmund, Namibia</p>
                 </div>
               </section>

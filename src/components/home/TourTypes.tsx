@@ -56,7 +56,7 @@ const TourTypes: React.FC = () => {
     },
     {
       title: "Guided Historical Tour",
-      description: "A thought-provoking guided tour exploring significant historical sites in Swakopmund related to the 1904/1908 Nama and Ovaherero Genocide. Led by Mr. Rooi, a descendant of the native Namaqua tribe.",
+      description: "A thought-provoking guided tour exploring significant historical sites in Swakopmund related to the 1904/1908 Nama and Ovaherero Genocide. Led by Mr. Michael, a descendant of the native Namaqua tribe.",
       image: "/Home Images/Half Day Tour.jpg",
       duration: "5 hours",
       maxParticipants: 6,

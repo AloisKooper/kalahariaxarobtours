@@ -26,10 +26,10 @@ const GermanArchitecture: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Essential Guide: Swakopmund's German Colonial Architecture | Kalahari Axarob Tours</title>
+        <title>Swakopmund's Colonial Legacy: Historical Buildings and Their Role in the Ovaherero War | Kalahari Axarob Tours</title>
         <meta name="description" content="Discover the most significant historical buildings in Swakopmund with insider knowledge on their colonial legacy and architectural significance." />
         <meta name="keywords" content="German architecture, Swakopmund, colonial buildings, Namibia history, architectural tour, historical buildings" />
-        <meta property="og:title" content="Essential Guide: Swakopmund's German Colonial Architecture" />
+        <meta property="og:title" content="Swakopmund's Colonial Legacy: Historical Buildings and Their Role in the Ovaherero War" />
         <meta property="og:description" content="Discover the most significant historical buildings in Swakopmund with insider knowledge on their colonial legacy and architectural significance." />
         <meta property="og:image" content="/blog-images/german-architecture-main.jpg" />
         <meta property="og:url" content="https://kalahariaxarobtours.com/blog/german-architecture" />
@@ -70,19 +70,19 @@ const GermanArchitecture: React.FC = () => {
       <PageHero
         title="Swakopmund's German Colonial Architecture"
         subtitle="Discover the most significant historical buildings and their colonial legacy"
-        backgroundImage="/Home Images/German Architecture.jpg"
+        backgroundImage="/Home Images/Ovaherero people.jpg"
         isMobile={isMobile}
       />
       
       {/* White background container for all content below hero INCLUDING footer */}
       <div className="w-full bg-white relative z-10">
         <BlogPostTemplate
-          title="Essential Guide: Swakopmund's German Colonial Architecture"
+          title="Swakopmund's Colonial Legacy: Historical Buildings and Their Role in the Ovaherero War"
           authorName="Dr. Walter Peters"
           authorTitle="Architectural Historian"
           date="February 8, 2024"
           readTime="8 min"
-          imageUrl="/Home Images/German Architecture.jpg"
+          imageUrl="/Home Images/Ovaherero people.jpg"
           imageAlt="Historic German colonial architecture in Swakopmund, Namibia"
           sourceUrl="https://www.namibia-accommodation.com/listing/swakopmund-architecture"
           sourceName="Namibia Accommodation"
@@ -144,6 +144,33 @@ const GermanArchitecture: React.FC = () => {
           </p>
           <p>
             The building is named after the German Imperial family and dates back to 1909 when it began as a hotel. In 1912, the municipality took it over after the local magistrate revoked its hotel license when it became known as a gambling den. Later, it was converted into private flats, showing yet another example of how these buildings have adapted to changing times.
+          </p>
+          
+          <h2>Historical Military and Colonial Structures</h2>
+          
+          <h3>Military Barracks</h3>
+          <p>
+            The military barracks, a significant structure during the colonial period, played a crucial role during the German colonial administration's military operations, including the war against the Ovaherero people. These barracks housed German colonial troops and served as a strategic military installation. Today, the building stands as a testament to the complex military history of the region.
+          </p>
+
+          <h3>The Historic Jetty</h3>
+          <p>
+            The Swakopmund Jetty, constructed in 1905, was vital for military and civilian operations during the colonial period. It served as a crucial landing point for military supplies and troops, particularly during the conflicts with the Ovaherero people. The jetty's construction was part of the German colonial administration's efforts to establish Swakopmund as a major port, though the harsh coastal conditions made this challenging.
+          </p>
+
+          <h3>Marine Memorial</h3>
+          <p>
+            The Marine Memorial, erected to commemorate the German Marine presence in Swakopmund, stands as a reminder of the colonial military history. This monument represents the naval aspect of German colonial control and their military operations along the Namibian coast.
+          </p>
+
+          <h3>Prinzessin Rupprecht Heim (Former Military Hospital)</h3>
+          <p>
+            Originally constructed as a military hospital in 1902, the Prinzessin Rupprecht Heim played a significant role during the colonial period, particularly during the conflicts with the Ovaherero people. The building's history reflects both the military presence and the medical services provided during the colonial era. Today, it has been transformed into a hotel, though its architecture and history remain preserved.
+          </p>
+
+          <h3>Woermann House</h3>
+          <p>
+            The Woermann House, with its iconic Damara Tower, was more than just a commercial building - it served as a strategic observation point during the colonial period. The tower was used to monitor both maritime traffic and inland movements, particularly during times of conflict. The building's position and height made it an important military asset during the colonial period.
           </p>
           
           <h2>Architectural Styles and Influences</h2>

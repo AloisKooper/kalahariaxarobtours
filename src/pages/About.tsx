@@ -172,7 +172,7 @@ const About: React.FC = () => {
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-kalahari-brown font-medium text-base md:text-lg mb-3 md:mb-4">Meet Our Lead Guide</h2>
               <h3 className="text-2xl sm:text-3xl md:text-4xl text-kalahari-darkbrown font-normal mb-4 md:mb-6">
-                Mr. Rooi
+                Mr. Michael
               </h3>
               <div className="w-16 md:w-20 h-1 bg-kalahari-brown rounded-full mx-auto"></div>
             </div>
@@ -181,8 +181,8 @@ const About: React.FC = () => {
               <div className="lg:col-span-5 order-2 lg:order-1">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[3/4] max-h-[500px]">
                   <img 
-                    src="/Home Images/tour guide.jpg" 
-                    alt="Mr. Rooi" 
+                    src="/Home Images/Mr.Rooi Propic.jpeg" 
+                    alt="Mr. Michael" 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
@@ -204,14 +204,14 @@ const About: React.FC = () => {
               <div className="lg:col-span-7 order-1 lg:order-2 mb-6 lg:mb-0">
                 <div className="space-y-4 text-kalahari-charcoal">
                   <p className="text-sm sm:text-base leading-relaxed">
-                    As the founder and principal tour guide of Kalahari Axarob Tours, Mr. Rooi brings passion, knowledge, and authenticity to every tour experience. A descendant of the native Namaqua tribe, his personal connection to the history he shares adds a unique and valuable dimension to our tours.
+                    As the founder and principal tour guide of Kalahari Axarob Tours, Mr. Michael brings passion, knowledge, and authenticity to every tour experience. A descendant of the native Namaqua tribe, his personal connection to the history he shares adds a unique and valuable dimension to our tours.
                   </p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4 sm:my-6">
                     <div className="bg-sand-custom/30 p-4 rounded-lg">
                       <h4 className="text-kalahari-darkbrown font-medium mb-2 text-base md:text-lg">Expert Knowledge</h4>
                       <p className="text-kalahari-charcoal text-xs sm:text-sm">
-                        With over 15 years of experience in tourism, Mr. Rooi has developed an engaging storytelling approach that brings history to life.
+                        With over 15 years of experience in tourism, Mr. Michael has developed an engaging storytelling approach that brings history to life.
                       </p>
                     </div>
                     <div className="bg-sand-custom/30 p-4 rounded-lg">

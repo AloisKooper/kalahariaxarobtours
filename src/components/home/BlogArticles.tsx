@@ -45,7 +45,7 @@ const blogArticles: BlogArticle[] = [
   },
   {
     id: "german-architecture",
-    title: "Essential Guide: Swakopmund's German Colonial Architecture",
+    title: "Swakopmund's Colonial Legacy: Historical Buildings and Their Role in the Ovaherero War",
     summary: "Discover the most significant historical buildings in Swakopmund with insider knowledge on their colonial legacy.",
     date: "February 8, 2024",
     image: "/Home Images/German Architecture.jpg",

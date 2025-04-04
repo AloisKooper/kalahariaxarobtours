@@ -97,9 +97,9 @@ const BlogPage: React.FC = () => {
   const editorsPicks = [
     {
       id: "german-architecture",
-      title: "Essential Guide: Swakopmund's German Colonial Architecture",
+      title: "Swakopmund's Colonial Legacy: Historical Buildings and Their Role in the Ovaherero War",
       excerpt: "Discover the most significant historical buildings in Swakopmund with insider knowledge on their historical significance and colonial legacy.",
-      image: "/Home Images/German Architecture.jpg",
+      image: "/Home Images/Ovaherero people.jpg",
       author: "Dr. Walter Peters",
       date: "February 8, 2024",
       readTime: "8 min read",
