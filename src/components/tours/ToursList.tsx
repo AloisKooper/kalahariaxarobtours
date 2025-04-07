@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -49,7 +48,7 @@ const ToursList: React.FC = () => {
       {
         id: 2,
         title: "Guided Historical Tour",
-        image: "/Home Images/Cruise Liner Shore Excursion.jpg",
+        image: "/Home Images/Guided Historical Tour.jpeg",
         price: "N$1300",
         duration: "5 hours",
         minParticipants: 4,
@@ -68,7 +67,7 @@ const ToursList: React.FC = () => {
       {
         id: 3,
         title: "Guided Township Tour",
-        image: "/Home Images/Cruise Liner Shore Excursion.jpg",
+        image: "/Home Images/Township Tour.jpg",
         price: "N$1000",
         duration: "4 hours",
         minParticipants: 4,
@@ -77,8 +76,8 @@ const ToursList: React.FC = () => {
         description: "Experience the vibrant culture of Mondesa township through a guided tour that includes visits to a Herero lady for cultural insights and a traditional herbalist for knowledge about traditional medicines.",
         dates: getNextMonthsFormatted(currentMonth + 1),
         featured: false,
-        routeDetails: "Drive through Mondesa township - Visit Herero cultural experience - Traditional herbalist visit - Local markets and community centers",
-        includedItems: ["Guide", "Transportation", "Local cuisine tasting", "Beverages"],
+        routeDetails: "Drive through Mondesa township - Visit Herero cultural experience - Traditional herbalist visit",
+        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
         meetingPoint: "Your accommodation in Swakopmund",
         pickupIncluded: true,
       }
@@ -187,11 +186,9 @@ const ToursList: React.FC = () => {
                       
                       <div className="flex items-center gap-4 mt-3 sm:mt-0">
                         <div className="text-xl sm:text-2xl font-serif text-brown-custom">{tour.price}</div>
-                        <Link to="/contact">
-                          <Button className="bg-darkbrown-custom hover:bg-brown-custom text-white text-sm sm:text-base">
-                            Book Now
-                          </Button>
-                        </Link>
+                        <Button className="bg-darkbrown-custom hover:bg-brown-custom text-white text-sm sm:text-base">
+                          Book Now
+                        </Button>
                       </div>
                     </div>
                   </div>
