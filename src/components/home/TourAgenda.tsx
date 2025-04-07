@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Clock, MapPin, Car, Flag, Utensils, Users, Sun, Info, DollarSign, Calendar, AlertCircle } from "lucide-react";
+import { Clock, MapPin, Car, Flag, Utensils, Users, Sun, Info, DollarSign, Calendar, AlertCircle, Check } from "lucide-react";
 
 const TourAgenda: React.FC = () => {
-  const [selectedTour, setSelectedTour] = useState<'cruise' | 'local'>('cruise');
+  const [selectedTour, setSelectedTour] = useState<'cruise' | 'local' | 'township'>('cruise');
   const [showTooltip, setShowTooltip] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   
@@ -43,7 +43,7 @@ const TourAgenda: React.FC = () => {
             Tour Agenda
           </h2>
           <p className="text-kalahari-charcoal text-base sm:text-lg font-normal leading-relaxed max-w-xl mt-4 sm:mt-6 mx-auto px-2">
-            Kalahari Axarob Tours offers two tour options to explore the rich history of Swakopmund.
+            Kalahari Axarob Tours offers three unique tour options to explore the rich history and culture of Swakopmund.
           </p>
           
           {/* Tour Type Selector with Tooltip */}
@@ -76,10 +76,115 @@ const TourAgenda: React.FC = () => {
             >
               Guided Historical Tour
             </button>
+            <button
+              onClick={() => setSelectedTour('township')}
+              className={`px-3 sm:px-4 py-2 font-medium text-sm sm:text-base ${
+                selectedTour === 'township'
+                  ? 'text-kalahari-brown border-b-2 border-kalahari-brown'
+                  : 'text-kalahari-charcoal hover:text-kalahari-brown'
+              }`}
+            >
+              Township Tour
+            </button>
           </div>
         </div>
 
         {selectedTour === 'cruise' ? (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              {/* Left Column */}
+              <div className="space-y-6 sm:space-y-8">
+                {/* Tour Overview */}
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <Flag className="w-5 h-5 text-kalahari-brown" />
+                    Tour Overview
+                  </h4>
+                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base leading-relaxed">
+                    A thought-provoking guided tour uniquely designed for cruise ship passengers. Led by Mr. Michael, a descendant of the native Namaqua tribe, exploring Swakopmund 'The little piece of Germany under the African skies'.
+                  </p>
+                </div>
+
+                {/* Tour Highlights */}
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-kalahari-brown" />
+                    Tour Highlights
+                  </h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown mt-1 flex-shrink-0" />
+                      <span className="text-kalahari-charcoal/90 text-sm sm:text-base">Walvis Bay Lagoon</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown mt-1 flex-shrink-0" />
+                      <span className="text-kalahari-charcoal/90 text-sm sm:text-base">Dune 7</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown mt-1 flex-shrink-0" />
+                      <span className="text-kalahari-charcoal/90 text-sm sm:text-base">Swakopmund Historical Sites</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown mt-1 flex-shrink-0" />
+                      <span className="text-kalahari-charcoal/90 text-sm sm:text-base">Free time in Swakopmund</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Right Column */}
+              <div className="space-y-6 sm:space-y-8">
+                {/* Tour Details */}
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-kalahari-brown" />
+                    Tour Details
+                  </h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-kalahari-brown" />
+                      Duration: 8 hours
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Car className="w-4 h-4 text-kalahari-brown" />
+                      Transportation included
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown" />
+                      Meeting point: Walvis Bay Harbor
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-kalahari-brown" />
+                      20-40 participants
+                    </li>
+                  </ul>
+                </div>
+
+                {/* What's Included */}
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <Check className="w-5 h-5 text-kalahari-brown" />
+                    What's Included
+                  </h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2 text-kalahari-charcoal/90 text-sm sm:text-base">
+                      <Car className="w-4 h-4 text-kalahari-brown" />
+                      Transportation
+                    </li>
+                    <li className="flex items-center gap-2 text-kalahari-charcoal/90 text-sm sm:text-base">
+                      <Utensils className="w-4 h-4 text-kalahari-brown" />
+                      Light meal
+                    </li>
+                    <li className="flex items-center gap-2 text-kalahari-charcoal/90 text-sm sm:text-base">
+                      <Info className="w-4 h-4 text-kalahari-brown" />
+                      Non-Alcoholic beverages
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : selectedTour === 'local' ? (
           <>
             {/* Cruise Tour Summary */}
             <div className="max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
@@ -292,6 +397,96 @@ const TourAgenda: React.FC = () => {
           </>
         ) : (
           <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              <div className="space-y-6 sm:space-y-8">
+                {/* Tour Overview */}
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <Flag className="w-5 h-5 text-kalahari-brown" />
+                    Tour Overview
+                  </h4>
+                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base leading-relaxed">
+                    Experience the vibrant culture of Mondesa township through a guided tour that includes visits to a Herero lady for cultural insights and a traditional herbalist for knowledge about traditional medicines.
+                  </p>
+                </div>
+
+                {/* Tour Highlights */}
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-kalahari-brown" />
+                    Tour Highlights
+                  </h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown mt-1 flex-shrink-0" />
+                      <span className="text-kalahari-charcoal/90 text-sm sm:text-base">Visit Herero cultural experience</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown mt-1 flex-shrink-0" />
+                      <span className="text-kalahari-charcoal/90 text-sm sm:text-base">Traditional herbalist visit</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown mt-1 flex-shrink-0" />
+                      <span className="text-kalahari-charcoal/90 text-sm sm:text-base">Local cuisine tasting</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown mt-1 flex-shrink-0" />
+                      <span className="text-kalahari-charcoal/90 text-sm sm:text-base">Visit local markets and community centers</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="space-y-6 sm:space-y-8">
+                {/* Tour Details */}
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-kalahari-brown" />
+                    Tour Details
+                  </h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-kalahari-brown" />
+                      Duration: 4 hours
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Car className="w-4 h-4 text-kalahari-brown" />
+                      Transportation included
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-kalahari-brown" />
+                      Pickup from your accommodation
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-kalahari-brown" />
+                      4-6 participants
+                    </li>
+                  </ul>
+                </div>
+
+                {/* What's Included */}
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <Check className="w-5 h-5 text-kalahari-brown" />
+                    What's Included
+                  </h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-2 text-kalahari-charcoal/90 text-sm sm:text-base">
+                      <Car className="w-4 h-4 text-kalahari-brown" />
+                      Transportation
+                    </li>
+                    <li className="flex items-center gap-2 text-kalahari-charcoal/90 text-sm sm:text-base">
+                      <Utensils className="w-4 h-4 text-kalahari-brown" />
+                      Local cuisine tasting
+                    </li>
+                    <li className="flex items-center gap-2 text-kalahari-charcoal/90 text-sm sm:text-base">
+                      <Info className="w-4 h-4 text-kalahari-brown" />
+                      Non-Alcoholic beverages
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             {/* Local Tour Summary - Same responsive improvements */}
             <div className="max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">

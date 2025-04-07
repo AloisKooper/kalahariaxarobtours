@@ -40,7 +40,7 @@ const GermanArchitecture: React.FC = () => {
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             'headline': 'Essential Guide: Swakopmund\'s German Colonial Architecture',
-            'image': '/blog-images/german-architecture-main.jpg',
+            'image': '/blog-images/colinal war hero.jpeg',
             'datePublished': '2024-02-08T10:00:00Z',
             'dateModified': '2024-03-25T14:30:00Z',
             'author': {
@@ -70,7 +70,7 @@ const GermanArchitecture: React.FC = () => {
       <PageHero
         title="Swakopmund's German Colonial Architecture"
         subtitle="Discover the most significant historical buildings and their colonial legacy"
-        backgroundImage="/Home Images/Ovaherero people.jpg"
+        backgroundImage="/Home Images/colinal war hero.jpeg"
         isMobile={isMobile}
       />
       
@@ -82,7 +82,7 @@ const GermanArchitecture: React.FC = () => {
           authorTitle="Architectural Historian"
           date="February 8, 2024"
           readTime="8 min"
-          imageUrl="/Home Images/Ovaherero people.jpg"
+          imageUrl="/Home Images/colinal war hero.jpeg"
           imageAlt="Historic German colonial architecture in Swakopmund, Namibia"
           sourceUrl="https://www.namibia-accommodation.com/listing/swakopmund-architecture"
           sourceName="Namibia Accommodation"
@@ -112,6 +112,11 @@ const GermanArchitecture: React.FC = () => {
           </p>
           <p>
             The building exemplifies the imposing style of official German colonial architecture, designed to project imperial power and authority in the colony. Its location and design make it one of the most distinctive landmarks in Swakopmund.
+          </p>
+          <p>
+            Among the most significant buildings is the iconic Woermann House, built in 1905 as the headquarters of the Damara and Namaqua Trading Company. Its most striking feature is the 25-meter-high Damara Tower, from which observers would watch for incoming ships. The building, with its distinctive German colonial architecture and prominent tower, later became the headquarters of the Woermann & Brock Trading Company in 1909 and now serves as a public library. This architectural masterpiece represents both the commercial ambitions and the colonial presence that shaped Swakopmund's early development.
+
+          Another notable structure is the Old Military Barracks, which served as the headquarters for German colonial forces during the Herero and Nama genocide. The imposing structure, with its distinctive red and white color scheme, stands as a stark reminder of the military presence that once dominated the town.
           </p>
           
           <h3>Prinzessin Rupprecht Heim</h3>

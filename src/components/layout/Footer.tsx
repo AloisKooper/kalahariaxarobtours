@@ -50,13 +50,13 @@ const Footer: React.FC = () => {
                 <div className="bg-sun-custom p-2 rounded-full">
                   <Phone size={16} className="text-kalahari-sun" />
                 </div>
-                <span className="text-kalahari-charcoal">+264 81 145 6397</span>
+                <a href="tel:+264811456397" className="text-kalahari-charcoal hover:text-kalahari-brown transition-colors">+264 81 145 6397</a>
               </div>
               <div className="flex items-center gap-3">
                 <div className="bg-sun-custom p-2 rounded-full">
                   <Mail size={16} className="text-kalahari-sun" />
                 </div>
-                <span className="text-kalahari-charcoal">kalahariaxarobtours@gmail.com</span>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kalahariaxarobtours@gmail.com&su=Inquiry about Tours" target="_blank" rel="noopener noreferrer" className="text-kalahari-charcoal hover:text-kalahari-brown transition-colors">kalahariaxarobtours@gmail.com</a>
               </div>
               <div className="flex items-center gap-3">
                 <div className="bg-sun-custom p-2 rounded-full">

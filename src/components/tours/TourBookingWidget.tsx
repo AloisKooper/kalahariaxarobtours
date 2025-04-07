@@ -17,19 +17,48 @@ const TourBookingWidget: React.FC = () => {
   const [tourType, setTourType] = useState("cruise-liner");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Booking Request Submitted",
-        description: "We'll contact you shortly to confirm your booking.",
-        variant: "default",
+    try {
+      const response = await fetch('https://formspree.io/f/mjkyaogv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          tourType,
+          date: date ? format(date, 'PPP') : '',
+          numPeople,
+          cruiseShip,
+          _subject: `New Tour Booking Request - ${tourType}`,
+        }),
       });
-    }, 1500);
+
+      if (response.ok) {
+        toast({
+          title: "Booking Request Submitted",
+          description: "We'll contact you shortly to confirm your booking.",
+          variant: "default",
+        });
+        // Reset form
+        setDate(undefined);
+        setNumPeople("2");
+        setCruiseShip("");
+        setTourType("cruise-liner");
+      } else {
+        throw new Error('Failed to submit booking request');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit booking request. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
