@@ -462,13 +462,13 @@ const Navbar: React.FC = () => {
               <div className="mb-3 text-white">
                 <h3 className="text-xs font-medium mb-1.5 text-kalahari-sun">Contact Us</h3>
                 <div className="flex flex-wrap gap-3">
-                  <a href="tel:+26461222942" className="flex items-center gap-1.5 text-xs hover:text-kalahari-sun transition-colors">
+                  <a href="tel:+264811456397" className="flex items-center gap-1.5 text-xs hover:text-kalahari-sun transition-colors">
                     <Phone className="w-3 h-3" />
-                    <span>+264 61 222 942</span>
+                    <span>+264 81 145 6397</span>
                   </a>
-                  <a href="mailto:info@kalaharitours.com" className="flex items-center gap-1.5 text-xs hover:text-kalahari-sun transition-colors">
+                  <a href="mailto:kalahariaxarobtours@gmail.com" className="flex items-center gap-1.5 text-xs hover:text-kalahari-sun transition-colors">
                     <Mail className="w-3 h-3" />
-                    <span>info@kalaharitours.com</span>
+                    <span>kalahariaxarobtours@gmail.com</span>
                   </a>
                 </div>
               </div>

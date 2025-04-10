@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/home/HeroSection";
@@ -31,6 +32,11 @@ const Index: React.FC = () => {
   
   return (
     <div className="overflow-x-hidden">
+      <Helmet>
+        <title>Kalahari Axarob Tours - Historical Tours in Swakopmund</title>
+        <link rel="icon" type="image/png" href="/Kalahari Axarob Tours Icon.png" />
+        <meta name="description" content="Discover Swakopmund's rich history and culture with our signature shore excursions and historical tours." />
+      </Helmet>
       {/* Fixed background that extends behind both navbar and hero */}
       <div className="fixed top-0 left-0 w-full h-[100vh] overflow-hidden -z-10">
         <img 
