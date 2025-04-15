@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import Navbar from "@/components/layout/Navbar";
+
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { Button } from "@/components/ui/button";
@@ -141,7 +141,7 @@ const TourGuidePage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+
       <PageHero
         title="Meet Our Tour Team"
         subtitle="Learn about our experienced local tour guides who bring authentic knowledge and passion to every historical tour experience"

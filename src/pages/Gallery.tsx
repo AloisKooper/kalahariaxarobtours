@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "@/components/layout/Navbar";
+
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -220,7 +220,7 @@ const GalleryPage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+
       <PageHero
         title="Our Tour Gallery"
         subtitle="Explore our collection of photographs showcasing the historical sites, cultural experiences, and memorable moments from our tours in Swakopmund"

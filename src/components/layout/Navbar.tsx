@@ -120,6 +120,18 @@ const Navbar: React.FC = () => {
     return location.pathname.startsWith(path);
   };
 
+  // Synchronize Navbar visibility on route change
+  useEffect(() => {
+    if (window.scrollY <= 5) {
+      setVisible(true);
+    } else if (window.scrollY > SCROLL_THRESHOLD) {
+      setVisible(false);
+    }
+    lastScrollY.current = window.scrollY;
+    consecutiveScrolls.current = 0;
+    lastDirection.current = null;
+  }, [location]);
+
   // Use Framer Motion's useMotionValueEvent to track scroll
   useMotionValueEvent(scrollY, "change", (latest) => {
     // Always show navbar at top of page

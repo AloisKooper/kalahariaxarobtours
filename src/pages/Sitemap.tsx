@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "@/components/layout/Navbar";
+
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { Link } from "react-router-dom";
@@ -68,7 +68,7 @@ const Sitemap: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+
       <PageHero
         title="Sitemap"
         subtitle="Find your way around our website with this comprehensive listing of all our pages and sections"

@@ -1,3 +1,13 @@
+/* Always ensure the fixed navbar is above all content and backgrounds */
+.navbar-container {
+  z-index: 99999 !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: auto;
+}
+
 /* Fix z-index issues between sections */
 .hero-section {
   z-index: 5;

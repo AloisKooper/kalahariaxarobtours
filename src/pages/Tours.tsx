@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "@/components/layout/Navbar";
+
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import ToursList from "@/components/tours/ToursList";
-import TourBookingWidget from "@/components/tours/TourBookingWidget";
+import TourInformationPanel from "@/components/tours/TourInformationPanel";
+
 import TourFAQ from "@/components/tours/TourFAQ";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -26,9 +27,12 @@ const Tours: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // State to track which tab is selected
+  const [selectedTab, setSelectedTab] = useState<"cruise" | "historical" | "township">("cruise");
+
   return (
     <>
-      <Navbar />
+
       <PageHero
         title="Exceptional Tour Experiences"
         subtitle="Discover Swakopmund's rich history and culture through our thoughtfully crafted tours, led by knowledgeable local guides who bring Namibia's complex past to life"
@@ -41,10 +45,10 @@ const Tours: React.FC = () => {
         <div className="py-12 md:py-16 container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="lg:col-span-2">
-              <ToursList />
+              <ToursList selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
             </div>
             <div>
-              <TourBookingWidget />
+              <TourInformationPanel selectedTour={selectedTab} />
             </div>
           </div>
         </div>

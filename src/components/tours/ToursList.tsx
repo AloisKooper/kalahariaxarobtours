@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Users, Calendar, ChevronRight, ThumbsUp, Check } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
-const ToursList: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState("cruise");
+interface ToursListProps {
+  selectedTab: "cruise" | "historical" | "township";
+  setSelectedTab: React.Dispatch<React.SetStateAction<"cruise" | "historical" | "township">>;
+}
+
+const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) => {
 
   // Get the current year and calculate future months dynamically
   const currentYear = new Date().getFullYear();
@@ -30,7 +35,7 @@ const ToursList: React.FC = () => {
         id: 1,
         title: "Cruise Liner Shore Excursion",
         image: "/Home Images/Cruise Liner Shore Excursion.jpg",
-        price: "N$3500",
+        price: "$165",
         duration: "8 hours",
         minParticipants: 20,
         maxParticipants: 40,
@@ -38,8 +43,8 @@ const ToursList: React.FC = () => {
         description: "A thought-provoking guided tour uniquely designed for cruise ship passengers. Led by Mr. Michael, a descendant of the native Namaqua tribe, exploring Swakopmund 'The little piece of Germany under the African skies'.",
         dates: getNextMonthsFormatted(),
         featured: true,
-        routeDetails: "Port - Lagoon - Dune 7 - Swakopmund (light meal) - Historical sites - Free time - Back to port",
-        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
+        routeDetails: "Port - Lagoon - Dune 7 - Swakopmund (full meal) - Historical sites - Free time - Back to port",
+        includedItems: ["Guide", "Transportation", "Full meal", "Beverages"],
         meetingPoint: "Walvis Bay Harbor",
         pickupIncluded: false,
       }
@@ -49,7 +54,7 @@ const ToursList: React.FC = () => {
         id: 2,
         title: "Guided Historical Tour",
         image: "/Home Images/Guided Historical Tour.jpeg",
-        price: "N$1300",
+        price: "$65",
         duration: "5 hours",
         minParticipants: 4,
         maxParticipants: 6,
@@ -58,7 +63,7 @@ const ToursList: React.FC = () => {
         dates: getNextMonthsFormatted(currentMonth + 1),
         featured: false,
         routeDetails: "Concentration camp mass graves - Alte Kaserne (Old Military barracks) - Old Hospital - Jetty - Woerman hause - German War Memorial - Old Bahn Hoff",
-        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
+        includedItems: ["Guide", "Transportation", "Snacks and drinks"],
         meetingPoint: "Your accommodation in Swakopmund",
         pickupIncluded: true,
       }
@@ -68,7 +73,7 @@ const ToursList: React.FC = () => {
         id: 3,
         title: "Guided Township Tour",
         image: "/Home Images/Township Tour.jpg",
-        price: "N$1000",
+        price: "$55",
         duration: "4 hours",
         minParticipants: 4,
         maxParticipants: 6,
@@ -77,7 +82,7 @@ const ToursList: React.FC = () => {
         dates: getNextMonthsFormatted(currentMonth + 1),
         featured: false,
         routeDetails: "Drive through Mondesa township - Visit Herero cultural experience - Traditional herbalist visit",
-        includedItems: ["Guide", "Transportation", "Light meal", "Beverages"],
+        includedItems: ["Guide", "Transportation", "Snacks and drinks"],
         meetingPoint: "Your accommodation in Swakopmund",
         pickupIncluded: true,
       }
@@ -86,7 +91,7 @@ const ToursList: React.FC = () => {
 
   return (
     <div className="space-y-8">
-      <Tabs defaultValue="cruise" onValueChange={setSelectedTab}>
+      <Tabs value={selectedTab} onValueChange={(val) => setSelectedTab(val as "cruise" | "historical" | "township")}>
         <TabsList className="bg-sand-custom border border-brown-light w-full justify-start mb-6">
           <TabsTrigger value="cruise" className="font-serif text-base">Cruise Liner</TabsTrigger>
           <TabsTrigger value="historical" className="font-serif text-base">Historical</TabsTrigger>
@@ -186,9 +191,9 @@ const ToursList: React.FC = () => {
                       
                       <div className="flex items-center gap-4 mt-3 sm:mt-0">
                         <div className="text-xl sm:text-2xl font-serif text-brown-custom">{tour.price}</div>
-                        <Button className="bg-darkbrown-custom hover:bg-brown-custom text-white text-sm sm:text-base">
-                          Book Now
-                        </Button>
+                        <Button asChild className="bg-darkbrown-custom hover:bg-brown-custom text-white text-sm sm:text-base">
+  <Link to="/contact">Book Now</Link>
+</Button>
                       </div>
                     </div>
                   </div>

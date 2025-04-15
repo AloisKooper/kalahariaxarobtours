@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import Navbar from "@/components/layout/Navbar";
+
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -314,7 +314,7 @@ const TestimonialPage: React.FC = () => {
 
   return (
     <>
-      <Navbar />
+
       <PageHero
         title="What Our Guests Say"
         subtitle="Read authentic testimonials from visitors who have experienced our historical tours and discovered the rich heritage of Swakopmund with us"

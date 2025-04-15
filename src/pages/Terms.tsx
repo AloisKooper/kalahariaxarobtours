@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "@/components/layout/Navbar";
+
 import Footer from "@/components/layout/Footer";
 
 const Terms: React.FC = () => {
@@ -9,7 +9,7 @@ const Terms: React.FC = () => {
       <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-kalahari-lightbrown/50 to-kalahari-sand/30 -z-10" />
       
       <div className="flex flex-col min-h-screen">
-        <Navbar />
+
         <main className="flex-grow container mx-auto py-16 px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 text-center">

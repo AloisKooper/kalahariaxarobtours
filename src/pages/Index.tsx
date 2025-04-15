@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import Navbar from "@/components/layout/Navbar";
+
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import TourAgenda from "@/components/home/TourAgenda";
@@ -59,7 +59,7 @@ const Index: React.FC = () => {
       </div>
       
       <div className="flex flex-col overflow-hidden items-center">
-        <Navbar />
+
         <HeroSection />
       </div>
 
