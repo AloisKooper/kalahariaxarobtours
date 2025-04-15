@@ -41,7 +41,7 @@ const TourTypes: React.FC = () => {
       included: [
         "English speaking Local Guide (descendant of the native Namaqua tribe)",
         "Transportation",
-        "Light meal",
+        "Full Meal",
         "Non-Alcoholic beverages",
         "Pickup and drop-off at Walvis Bay Harbor"
       ],
