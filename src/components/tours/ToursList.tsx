@@ -54,7 +54,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
         id: 2,
         title: "Guided Historical Tour",
         image: "/Home Images/Guided Historical Tour.jpeg",
-        price: "$65",
+        price: "$55",
         duration: "5 hours",
         minParticipants: 4,
         maxParticipants: 6,
