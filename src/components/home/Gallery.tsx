@@ -12,12 +12,6 @@ const Gallery: React.FC = () => {
   const galleryImages = {
     "Historical Sites": [
       {
-        title: "Concentration Camp Mass Graves",
-        description: "Historical site commemorating the victims of the 1904-1908 Nama and Ovaherero Genocide",
-        imageSrc: "/Home Images/Genocide.jpg",
-        price: "Included in tour"
-      },
-      {
         title: "Old Military Barracks (Alte Kaserne)",
         description: "Historical German colonial military structure in Swakopmund",
         imageSrc: "/Home Images/barracks.jpg",
@@ -43,14 +37,20 @@ const Gallery: React.FC = () => {
       },
       {
         title: "German War Memorial",
-        description: "Historical German War Memorial site",
-        imageSrc: "/Home Images/German War Memorial.jpg",
+        description: "Commemorating soldiers from World War I.",
+        imageSrc: "/Home Images/Axarob 4.webp",
         price: "Included in tour"
       },
       {
         title: "Old Bahnhof",
         description: "Historic German railway station",
         imageSrc: "/Home Images/Bahnhof.jpg",
+        price: "Included in tour"
+      },
+      {
+        title: "Mondesa Township Experience",
+        description: "Tourists exploring the vibrant Mondesa Township.",
+        imageSrc: "/Home Images/Axarob 7.webp",
         price: "Included in tour"
       }
     ],
@@ -72,6 +72,17 @@ const Gallery: React.FC = () => {
         description: "Scenic beach views along the Atlantic coast",
         imageSrc: "/Home Images/Swakopmund Beach.jpg",
         price: "Included in tour"
+      },
+      {
+        title: "Swakopmund Jetty Scenery",
+        imageSrc: "/Home Images/Axarob 5.webp",
+        price: "Included in tour"
+      },
+      {
+        title: "Walvis Bay Salt Works",
+        description: "Mr. Michaels at the Walvis Bay salt pans.",
+        imageSrc: "/Home Images/Axarob 6.webp",
+        price: "Full Day Tour only"
       }
     ],
   };

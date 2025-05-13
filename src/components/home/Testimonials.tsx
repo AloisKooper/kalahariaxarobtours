@@ -42,6 +42,15 @@ const Testimonials: React.FC = () => {
       rating: "4.9",
       testimonial: '"This was the highlight of our Namibia trip. Mr. Michael\'s tour gives you a deep understanding of the historical events and their significance. The personal stories made history come alive."',
       type: 'google'
+    },
+    {
+      name: "David Chen",
+      location: "New York, USA",
+      rating: 5,
+      testimonial: '"The city tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable."',
+      image: "/Home Images/Erick Avatar.jpg",
+      tourType: "City Tour",
+      platform: "google"
     }
   ];
 

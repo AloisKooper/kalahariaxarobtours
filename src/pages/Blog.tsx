@@ -83,27 +83,27 @@ const BlogPage: React.FC = () => {
 
   // Featured article
   const featuredArticle = {
-    id: "herero-nama-genocide",
-    title: "The Untold Story of Namibia's First Genocide",
-    excerpt: "Explore the complex history of the 1904-1908 Nama and Herero Genocide in Namibia and its lasting impact on the nation's cultural identity through the historical landmarks in Swakopmund.",
-    image: "/Home Images/Marine memorial.jpg",
-    author: "Dr. Isabel V. Hull",
-    date: "March 15, 2024",
-    readTime: "12 min read",
-    category: "History"
+    id: "herero-nama-genocide", // Keep ID
+    title: "Beyond History: Top Experiences in Swakopmund", // New Title
+    excerpt: "From relaxing on the beach and exploring the jetty to adventure activities and charming cafes, discover the best experiences Swakopmund has to offer day-trippers and explorers.", // New Excerpt
+    image: "/Home Images/jetty hero.jpg", // New Image
+    author: "Kalahari Axarob Tours", // New Author
+    date: "July 15, 2024", // New Date
+    readTime: "7 min read", // Placeholder read time
+    category: "Activities" // New Category
   };
 
   // Editor's picks
   const editorsPicks = [
     {
-      id: "german-architecture",
-      title: "Swakopmund's Colonial Legacy: Historical Buildings and Their Role in the Ovaherero War",
-      excerpt: "Discover the most significant historical buildings in Swakopmund with insider knowledge on their historical significance and colonial legacy.",
-      image: "/Home Images/colonial war.jpeg",
-      author: "Dr. Walter Peters",
-      date: "February 8, 2024",
-      readTime: "8 min read",
-      category: "History"
+      id: "german-architecture", // Keep ID
+      title: "Swakopmund's Architectural Gems: A Walk Through Time", // New Title
+      excerpt: "Discover the charming blend of German colonial and modern architecture that gives Swakopmund its unique character. Explore iconic buildings and hidden details.", // New Excerpt
+      image: "/Home Images/Woermann House.jpg", // New Image
+      author: "Kalahari Axarob Tours", // New Author
+      date: "July 10, 2024", // New Date
+      readTime: "6 min read", // Placeholder read time
+      category: "City Guide" // New Category
     },
     {
       id: "township-tour",
@@ -117,9 +117,10 @@ const BlogPage: React.FC = () => {
     }
   ];
 
-  // Recent articles
+  // Recent articles - Ensure no duplicates after replacement
   const recentArticles = [
     {
+      // Keep Shore Excursion
       id: "shore-excursion",
       title: "Walvis Bay to Swakopmund: The Perfect Shore Excursion",
       excerpt: "Discover how cruise liner passengers can maximize their day ashore with a comprehensive historical and natural tour from Walvis Bay to Swakopmund.",
@@ -130,6 +131,33 @@ const BlogPage: React.FC = () => {
       category: "Travel Tips"
     },
     {
+      // Add 'planning-historical-tour' here instead of duplicates
+      id: "planning-historical-tour", 
+      title: "Planning Your Historical Tour of Swakopmund", 
+      excerpt: "Essential tips for making the most of your historical tour experience with insights on when to visit and what sites offer the most profound historical significance.",
+      image: "/Home Images/Swakop Landmarks.jpg",
+      author: "Uwe Goulden",
+      date: "January 30, 2024",
+      readTime: "5 min read",
+      category: "Travel Tips"
+    }
+  ];
+
+  // Latest articles (different layout) - Ensure no duplicates after replacement
+  const latestArticles = [
+    {
+      // Assign unique ID
+      id: "planning-historical-tour", 
+      title: "Planning Your Historical Tour of Swakopmund", 
+      excerpt: "Essential tips for making the most of your historical tour experience with insights on when to visit and what sites offer the most profound historical significance.",
+      image: "/Home Images/Swakop Landmarks.jpg",
+      author: "Uwe Goulden",
+      date: "January 30, 2024",
+      readTime: "5 min read",
+      category: "Travel Tips"
+    },
+    {
+      // Keep Township Tour
       id: "township-tour",
       title: "The Township Experience: Understanding Mondesa's Living Heritage",
       excerpt: "Discover what to expect during a respectful and educational township tour, offering insights into local communities, cultural traditions, and everyday life.",
@@ -140,68 +168,38 @@ const BlogPage: React.FC = () => {
       category: "Culture"
     },
     {
-      id: "herero-nama-genocide",
-      title: "Tracing the Footsteps: Sites of Historical Remembrance",
-      excerpt: "Visit the memorials and historical locations that commemorate the Nama and Herero Genocide, regarded as the first genocide of the 20th century.",
-      image: "/Home Images/nama genocide.png",
-      author: "Dr. David Olusoga",
-      date: "February 20, 2024",
-      readTime: "10 min read",
-      category: "History"
+      // Keep the UPDATED 'Architectural Gems' post here (replaced original 'german-architecture')
+      id: "german-architecture", 
+      title: "Swakopmund's Architectural Gems: A Walk Through Time", 
+      excerpt: "Discover the charming blend of German colonial and modern architecture that gives Swakopmund its unique character. Explore iconic buildings and hidden details.",
+      image: "/Home Images/Woermann House.jpg", 
+      author: "Kalahari Axarob Tours", 
+      date: "July 10, 2024", 
+      readTime: "6 min read", 
+      category: "City Guide" 
+    },
+    {
+       // Bring back the original 4th item ('Township Tour Update') instead of duplicating 'Beyond History'
+       id: "township-tour-update",
+       title: "Exploring Mondesa Township: Cultural Immersion & Traditional Knowledge",
+       excerpt: "Experience an authentic township tour with visits to a Herero cultural expert and traditional herbalist.",
+       date: "March 25, 2024",
+       image: "/Home Images/Mondesa Township.jpg",
+       category: "Culture",
+       author: "Kafamuyeke Erick Mwiya",
+       readTime: "5 min read" // Add placeholder readTime if needed
     }
   ];
 
-  // Latest articles (different layout)
-  const latestArticles = [
-    {
-      id: "shore-excursion",
-      title: "Planning Your Historical Tour of Swakopmund",
-      excerpt: "Essential tips for making the most of your historical tour experience with insights on when to visit and what sites offer the most profound historical significance.",
-      image: "/Home Images/Swakop Landmarks.jpg",
-      author: "Uwe Goulden",
-      date: "January 30, 2024",
-      readTime: "5 min read",
-      category: "Travel Tips"
-    },
-    {
-      id: "township-tour",
-      title: "The Township Experience: Understanding Mondesa's Living Heritage",
-      excerpt: "Discover what to expect during a respectful and educational township tour in Mondesa.",
-      image: "/Home Images/Mondesa Township.jpg",
-      author: "Kafamuyeke Erick Mwiya",
-      date: "January 22, 2024",
-      readTime: "6 min read",
-      category: "Culture"
-    },
-    {
-      id: "german-architecture",
-      title: "Alte Kaserne: The Old Military Barracks and Colonial Power",
-      excerpt: "Explore the history of Swakopmund's impressive Old Military Barracks and its role during German colonial rule and the conflicts that shaped modern Namibia.",
-      image: "/Home Images/Old Military Barracks.jpg",
-      author: "Gottlieb Redecker",
-      date: "January 15, 2024",
-      readTime: "7 min read",
-      category: "History"
-    },
-    {
-      id: "herero-nama-genocide",
-      title: "From Genocide to Independence: Namibia's Journey",
-      excerpt: "Trace Namibia's path from the tragic events of the early 20th century through apartheid to its hard-won independence in 1990, through key historical sites.",
-      image: "/Home Images/Marine memorial.jpg",
-      author: "Dr. Benjamin Madley",
-      date: "January 10, 2024",
-      readTime: "8 min read",
-      category: "History"
-    }
-  ];
-
-  // Popular topics
+  // Popular topics - Update list
   const popularTopics = [
+    "Swakopmund Activities", // Added
+    "City Tour", // Added
     "German Colonial Architecture",
-    "Herero & Nama Genocide",
+    // "Herero & Nama Genocide", // Removed
     "Independence History",
     "Cultural Heritage",
-    "Historical Tour Sites",
+    // "Historical Tour Sites", // Removed
     "Cruise Shore Excursions",
     "Township Experiences",
     "Namibian History"
@@ -576,7 +574,7 @@ const BlogPage: React.FC = () => {
                   <div className="relative">
                     <div className="text-6xl text-kalahari-brown/20 font-serif leading-none">"</div>
                     <blockquote className="text-lg md:text-xl italic text-kalahari-darkbrown mb-6 leading-relaxed">
-                      The historical tour gave us invaluable insights into Namibia's complex past. The guides' personal connection to the events made the experience deeply moving and educational. The tour completely changed our understanding of colonial history.
+                      The Swakopmund City Tour was fantastic! We learned so much about the town's unique history and architecture. Our guide was incredibly knowledgeable and engaging, making the whole experience both fun and educational. A must-do!
                     </blockquote>
                     <div className="flex flex-col mt-4">
                       <p className="font-medium text-kalahari-darkbrown">Maria Schmidt</p>

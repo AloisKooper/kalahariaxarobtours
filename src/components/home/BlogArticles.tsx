@@ -12,10 +12,39 @@ interface BlogArticle {
   image: string;
   category: string;
   author: string;
+  link?: string;
 }
 
 // Sample blog data
 const blogArticles: BlogArticle[] = [
+  {
+    id: "german-architecture",
+    title: "Swakopmund's Architectural Gems: A Walk Through Time",
+    summary: "Discover the charming blend of German colonial and modern architecture that gives Swakopmund its unique character. Explore iconic buildings and hidden details.",
+    date: "July 10, 2024",
+    image: "/Home Images/Woermann House.jpg",
+    category: "City Guide",
+    author: "Kalahari Axarob Tours"
+  },
+  {
+    id: "herero-nama-genocide",
+    title: "Beyond History: Top Experiences in Swakopmund",
+    summary: "From relaxing on the beach and exploring the jetty to adventure activities and charming cafes, discover the best experiences Swakopmund has to offer day-trippers and explorers.",
+    date: "July 15, 2024",
+    image: "/Home Images/jetty hero.jpg",
+    category: "Activities",
+    author: "Kalahari Axarob Tours"
+  },
+  {
+    id: "shore-excursion",
+    title: "Walvis Bay to Swakopmund: The Perfect Shore Excursion",
+    summary: "Discover how cruise liner passengers can maximize their day ashore with a comprehensive city tour and cultural experience.",
+    date: "March 3, 2024",
+    image: "/Home Images/Cruise Liner Shore Excursion.jpg",
+    category: "Travel Tips",
+    author: "Dennis Liebenberg",
+    link: "/blog/shore-excursion"
+  },
   {
     id: "township-tour-update",
     title: "Exploring Mondesa Township: Cultural Immersion & Traditional Knowledge",
@@ -24,33 +53,6 @@ const blogArticles: BlogArticle[] = [
     image: "/Home Images/Mondesa Township.jpg",
     category: "Culture",
     author: "Kafamuyeke Erick Mwiya"
-  },
-  {
-    id: "herero-nama-genocide",
-    title: "The Untold Story of Namibia's First Genocide",
-    summary: "Explore the complex history of the 1904-1908 Nama and Herero Genocide in Namibia and its lasting impact.",
-    date: "March 15, 2024",
-    image: "/Home Images/Marine memorial.jpg",
-    category: "History",
-    author: "Dr. Isabel V. Hull"
-  },
-  {
-    id: "shore-excursion",
-    title: "Walvis Bay to Swakopmund: The Perfect Shore Excursion",
-    summary: "Discover how cruise liner passengers can maximize their day ashore with a comprehensive historical tour.",
-    date: "March 3, 2024",
-    image: "/Home Images/Cruise Liner Shore Excursion.jpg",
-    category: "Travel Tips",
-    author: "Dennis Liebenberg"
-  },
-  {
-    id: "german-architecture",
-    title: "Swakopmund's Colonial Legacy: Historical Buildings and Their Role in the Ovaherero War",
-    summary: "Discover the most significant historical buildings in Swakopmund with insider knowledge on their colonial legacy.",
-    date: "February 8, 2024",
-    image: "/Home Images/German Architecture.jpg",
-    category: "History",
-    author: "Dr. Walter Peters"
   }
 ];
 
@@ -61,11 +63,11 @@ const BlogArticles: React.FC = () => {
         <div className="flex flex-col items-center mb-12">
           <h3 className="text-gravel uppercase tracking-wider text-sm mb-2">Our Blog</h3>
           <h2 className="text-kalahari-darkbrown text-3xl md:text-4xl text-center">
-            Historical Insights & Stories
+            Insights & Stories from Swakopmund
           </h2>
           <div className="w-20 h-1 bg-kalahari-brown rounded-full mt-4"></div>
           <p className="text-kalahari-charcoal/80 text-center max-w-2xl mt-4">
-            Explore articles about Namibia's fascinating history, cultural heritage, and the stories behind the sites you'll visit on our tours.
+            Explore articles about Swakopmund's unique attractions, culture, and the stories behind the sites you'll visit on our tours.
           </p>
         </div>
 
@@ -91,7 +93,7 @@ const BlogArticles: React.FC = () => {
                   <span>{article.author}</span>
                 </div>
                 <Link 
-                  to={`/blog/${article.id}`} 
+                  to={article.link || `/blog/${article.id}`} 
                   className="text-[#e57417] font-medium hover:underline inline-flex items-center"
                 >
                   Read more

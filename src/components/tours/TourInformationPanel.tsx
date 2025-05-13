@@ -17,7 +17,7 @@ const TOUR_INFO: Record<string, { title: string; items: string[] }> = {
     ]
   },
   historical: {
-    title: "Guided Historical Tour Information",
+    title: "City Discovery Tour Information",
     items: [
       "English speaking local guide (descendant of the native Namaqua tribe)",
       "Transportation in air-conditioned vehicle",

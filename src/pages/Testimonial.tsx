@@ -95,7 +95,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Wow... I am very happy with this tour guide. His knowledge about the genocide of 1904-1908 is impressive. Would highly recommend to anyone interested in learning about this important historical event.",
       platform: 'google',
       isFeatured: true,
-      tourType: "Historical Tour"
+      tourType: "City Tour"
     },
     {
       id: 'g2',
@@ -106,7 +106,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Mr. Michael provided an exceptional experience. His personal connection to the history made the tour deeply meaningful and educational. Will definitely book again when I return to Namibia.",
       platform: 'google',
       isFeatured: true,
-      tourType: "Shore Excursion"
+      tourType: "City Tour"
     },
     {
       id: 'g5',
@@ -117,7 +117,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "This was the highlight of our Namibia trip. Mr. Michael's tour gives you a deep understanding of the historical events and their significance. The personal stories made history come alive.",
       platform: 'google',
       isFeatured: true,
-      tourType: "Shore Excursion"
+      tourType: "City Tour"
     },
     
     // Trustpilot Reviews
@@ -127,10 +127,10 @@ const TestimonialPage: React.FC = () => {
       date: "2023-10-20",
       location: "Cape Town, South Africa",
       rating: "5.0",
-      testimonial: "The historical tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable.",
+      testimonial: "The city tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable.",
       platform: 'trustpilot',
       isFeatured: true,
-      tourType: "Historical Tour"
+      tourType: "City Tour"
     },
     {
       id: 't4',
@@ -141,7 +141,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Mr. Michael's personal connections to the history he shares makes this tour particularly moving. A must-do for anyone seeking to understand Namibia's complex past.",
       platform: 'trustpilot',
       isFeatured: true,
-      tourType: "Historical Tour"
+      tourType: "City Tour"
     },
     
     // Direct Email Testimonials
@@ -151,10 +151,10 @@ const TestimonialPage: React.FC = () => {
       date: "2023-10-10",
       location: "Hamburg, Germany",
       rating: "5.0",
-      testimonial: "Thank you for the insightful tour of Swakopmund's colonial history. As a German, it was important for me to learn about this difficult chapter in our shared history. Your tour was educational, respectful and deeply moving.",
+      testimonial: "Perfect day trip from our cruise ship. Covered all the highlights of Swakopmund efficiently. The city tour was well-organized and informative.",
       platform: 'email',
       isFeatured: true,
-      tourType: "Historical Tour"
+      tourType: "City Tour"
     },
     {
       id: 'e5',
@@ -162,10 +162,10 @@ const TestimonialPage: React.FC = () => {
       date: "2023-09-05",
       location: "New York, USA",
       rating: "5.0",
-      testimonial: "The township tour was the highlight of our Namibia trip. Getting to meet locals and learn about both historical and contemporary life in Mondesa was an unforgettable experience.",
+      testimonial: "An excellent introduction to Swakopmund. The city tour provided great context before we explored further on our own. Highly recommended!",
       platform: 'email',
       isFeatured: true,
-      tourType: "Township Tour"
+      tourType: "City Tour"
     }
   ];
 
@@ -317,8 +317,8 @@ const TestimonialPage: React.FC = () => {
 
       <PageHero
         title="What Our Guests Say"
-        subtitle="Read authentic testimonials from visitors who have experienced our historical tours and discovered the rich heritage of Swakopmund with us"
-        backgroundImage="/Home Images/testimonial.jpeg"
+        subtitle="Read authentic testimonials from visitors who have experienced our city tours and discovered the rich heritage of Swakopmund with us"
+        backgroundImage="/Home Images/Hero Images/testimonial.jpg"
         isMobile={isMobile}
       />
       
@@ -806,7 +806,7 @@ const TestimonialPage: React.FC = () => {
                 </h4>
                 <p className="text-kalahari-charcoal max-w-2xl mx-auto mb-6">
                   We value your feedback! If you've taken a tour with us, please consider sharing your experience 
-                  on Google or Trustpilot. Your reviews help other travelers discover our authentic historical tours.
+                  on Google or Trustpilot. Your reviews help other travelers discover our authentic city tours.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 

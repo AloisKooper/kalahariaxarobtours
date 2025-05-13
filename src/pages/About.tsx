@@ -159,7 +159,8 @@ const About: React.FC = () => {
                 </div>
                 <h4 className="text-lg md:text-xl text-kalahari-darkbrown font-semibold mb-2 md:mb-3">Our Vision</h4>
                 <p className="text-kalahari-charcoal text-xs sm:text-sm leading-relaxed">
-                  To be the leading historical tour company in Namibia, recognized for authenticity and educational value. We aim to create a bridge between past and present, ensuring that important historical events are remembered and understood by generations to come.
+                  To be the leading cultural and city tour company in Namibia, recognized for authenticity and educational value. 
+                  We aim to create a bridge between cultures and offer insightful perspectives on Swakopmund's heritage.
                 </p>
               </div>
             </div>
@@ -306,7 +307,9 @@ const About: React.FC = () => {
               </h3>
               <div className="w-16 md:w-20 h-1 bg-kalahari-brown rounded-full mx-auto mb-4 md:mb-6"></div>
               <p className="text-kalahari-charcoal/80 max-w-2xl mx-auto text-sm sm:text-base">
-                Discover how we're making a difference in Swakopmund while delivering exceptional tour experiences.
+                We are committed to giving back to the Swakopmund community. 
+                We work with local schools to provide educational city tours for students, ensuring that the younger generation understands their heritage.
+                We also support local conservation efforts and promote sustainable tourism practices.
               </p>
             </div>
 

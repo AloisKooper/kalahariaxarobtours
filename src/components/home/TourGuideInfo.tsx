@@ -80,7 +80,8 @@ const TourGuideInfo: React.FC = () => {
                   </h2>
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  We work with local schools to provide free historical tours for students, ensuring that the younger generation understands their heritage.
+                  We are committed to giving back to the Swakopmund community. 
+                  We work with local schools to provide educational city tours for students, ensuring that the younger generation understands their heritage.
                 </p>
               </div>
             </motion.div>
@@ -94,7 +95,7 @@ const TourGuideInfo: React.FC = () => {
             >
               <div className="w-full h-full">
                 <img 
-                  src="/Home Images/Craft Market.jpg" 
+                  src="/Home Images/Axarob 3.webp" 
                   alt="Supporting Local Artisans" 
                   className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 />

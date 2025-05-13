@@ -21,9 +21,8 @@ const NotFound: React.FC = () => {
           <h2 className="text-2xl md:text-3xl mb-8">Page Not Found</h2>
           
           <p className="max-w-2xl mx-auto mb-8 text-gray-300">
-            Sorry, the page you are looking for does not exist or has been moved. 
-            Please check the URL or navigate back to our homepage to discover our 
-            historical tours in Namibia.
+            Sorry, the page you are looking for does not exist or has been moved. Please check the URL or 
+            navigate back to our homepage to discover our cultural tours in Namibia.
           </p>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center">

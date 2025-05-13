@@ -105,72 +105,72 @@ const ContactSection: React.FC = () => {
       tourTypes: ["full-day"]
     },
     {
-      id: "graves",
-      name: "Concentration Camp Mass Graves",
-      coords: { lat: -22.6741, lng: 14.5311 },
-      description: "Historical site related to the 1904-1908 genocide",
+      id: "lighthouse",
+      name: "Swakopmund Lighthouse",
+      coords: { lat: -22.6807, lng: 14.5243 },
+      description: "The striking red-and-white lighthouse, a key navigational aid and town symbol.",
       tourTypes: ["half-day", "full-day"]
     },
     {
-      id: "barracks",
-      name: "Old Military Barracks",
-      coords: { lat: -22.6789, lng: 14.5324 },
-      description: "Historical German colonial military structure",
-      tourTypes: ["half-day", "full-day"]
+      id: "livingmuseum",
+      name: "Living Museum (Local Culture)",
+      coords: { lat: -22.6750, lng: 14.5290 },
+      description: "Experience local traditions and crafts at a living museum or cultural center.",
+      tourTypes: ["half-day"]
     },
     {
-      id: "hospital",
-      name: "Old Hospital",
-      coords: { lat: -22.6771, lng: 14.5287 },
-      description: "Historical medical facility from colonial era",
-      tourTypes: ["half-day", "full-day"]
+      id: "localmarkets",
+      name: "Craft Markets",
+      coords: { lat: -22.6780, lng: 14.5280 },
+      description: "Explore vibrant local markets for handmade crafts and souvenirs.",
+      tourTypes: ["half-day"]
     },
     {
       id: "jetty",
-      name: "Jetty",
+      name: "Swakopmund Jetty",
       coords: { lat: -22.6825, lng: 14.5176 },
-      description: "Historic wooden pier extending into the Atlantic Ocean",
+      description: "Iconic pier offering ocean views and a historical landmark.",
       tourTypes: ["half-day", "full-day"]
     },
     {
       id: "woermann",
       name: "Woermann House",
       coords: { lat: -22.6776, lng: 14.5262 },
-      description: "Iconic colonial-era building with distinctive architecture",
+      description: "Historic building showcasing colonial architecture and city views from its tower.",
       tourTypes: ["half-day", "full-day"]
     },
     {
       id: "warmemorial",
       name: "German War Memorial",
       coords: { lat: -22.6778, lng: 14.5275 },
-      description: "Historical German War Memorial site",
-      tourTypes: ["half-day", "full-day"]
+      description: "Historical German War Memorial site, reflecting a part of the town's past.",
+      tourTypes: ["full-day"]
     },
     {
       id: "bahnhof",
-      name: "Old Bahnhof (Train Station)",
+      name: "Old Bahnhof (Station)",
       coords: { lat: -22.6751, lng: 14.5319 },
-      description: "Historic German railway station",
+      description: "The beautifully preserved old railway station, a testament to Swakopmund's transport history.",
       tourTypes: ["half-day", "full-day"]
     },
     {
       id: "mondesa",
       name: "Mondesa Township",
-      coords: { lat: -22.6741, lng: 14.5311 },
+      coords: { lat: -22.658, lng: 14.545 },
       description: "Experience the vibrant local culture in Mondesa township",
       tourTypes: ["township"]
     },
     {
       id: "herero",
       name: "Herero Cultural Experience",
-      coords: { lat: -22.6741, lng: 14.5311 },
+      coords: { lat: -22.659, lng: 14.546 },
       description: "Learn about Herero cultural norms and traditions",
       tourTypes: ["township"]
     },
     {
       id: "herbalist",
       name: "Traditional Herbalist",
-      coords: { lat: -22.6741, lng: 14.5311 },
+      coords: { lat: -22.660, lng: 14.547 },
       description: "Visit a local herbalist to learn about traditional medicines",
       tourTypes: ["township"]
     }
@@ -195,11 +195,11 @@ const ContactSection: React.FC = () => {
         <div className="flex flex-col items-center mb-12">
           <h3 className="text-gravel text-sm uppercase tracking-widest mb-2">Contact Us</h3>
           <h2 className="text-kalahari-darkbrown text-4xl md:text-5xl font-normal mb-4 text-center">
-            Schedule Your Historical Tour
+            Schedule Your City Discovery Tour
           </h2>
           <div className="w-20 h-1 bg-kalahari-brown rounded-full mb-6"></div>
           <p className="text-kalahari-charcoal/80 text-center max-w-2xl">
-            For inquiries about our historic tour experience or to book a reservation, 
+            For inquiries about our city tour experience or to book a reservation, 
             please fill out the form below or contact us directly. We offer custom 
             tours for cruise ship passengers arriving at Walvis Bay Harbor.
           </p>
@@ -293,7 +293,7 @@ const ContactSection: React.FC = () => {
                       className="w-full rounded-md border border-gravel-medium bg-transparent px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kalahari-brown"
                     >
                       <option value="">Select a tour</option>
-                      <option value="half-day">Guided Historical Tour - 5 hours</option>
+                      <option value="half-day">City Discovery Tour - 5 hours</option>
                       <option value="full-day">Cruise Liner Shore Excursion (Full Day) - 8 hours</option>
                       <option value="township">Guided Township Tour - 4 hours</option>
                     </select>
@@ -421,7 +421,7 @@ const ContactSection: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-kalahari-brown rounded-full mb-6 mx-auto"></div>
           <p className="text-kalahari-charcoal text-center max-w-2xl mx-auto mb-4">
-            Explore the fascinating locations you'll visit on our historical tour, from Walvis Bay Harbor to Swakopmund and back.
+            Explore the fascinating locations you'll visit on our city tour, from Walvis Bay Harbor to Swakopmund and back.
           </p>
           
           {/* Tour Type Selector */}
@@ -434,7 +434,7 @@ const ContactSection: React.FC = () => {
               }`}
               onClick={() => handleTourTypeChange("half-day")}
             >
-              Historical Tour (5 hours)
+              City Discovery Tour (5 hours)
             </button>
             <button 
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
@@ -578,9 +578,9 @@ const ContactSection: React.FC = () => {
               )}
               {selectedTourType === "half-day" && (
                 <>
-                  <p className=""><strong>Historical Tour Route:</strong></p>
+                  <p className=""><strong>City Tour Route:</strong></p>
                   <p className="text-kalahari-charcoal text-sm sm:text-base">
-                    Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woermann House - German War Memorial - Old Bahnhof
+                    Swakopmund Jetty - Woermann House - Old Bahnhof (Station) - Swakopmund Lighthouse - Living Museum (Local Culture) - Craft Markets
                   </p>
                 </>
               )}

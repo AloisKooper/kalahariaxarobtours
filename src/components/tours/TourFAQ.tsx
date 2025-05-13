@@ -17,11 +17,11 @@ const TourFAQ: React.FC = () => {
     },
     {
       question: "What is the maximum number of travelers per tour?",
-      answer: "Our Guided Historical Tour and Guided Township Tour accommodate a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
+      answer: "Our Swakopmund City Discovery Tour and Guided Township Tour accommodate a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
     },
     {
-      question: "What tour options do you offer?",
-      answer: "We offer three distinct tour options: 1) Guided Historical Tour (5 hours) - focuses on Swakopmund historical sites with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (8 hours) - designed for cruise ship passengers, includes lagoon visit, Dune 7, and historical sites, with a light meal, and can accommodate up to 40 travelers. 3) Guided Township Tour (4 hours) - explores Mondesa township culture, includes visits to Herero cultural experience and traditional herbalist, with a light meal, and has a maximum of 6 travelers."
+      question: "What tours do you offer?",
+      answer: "We offer three distinct tour options: 1) Swakopmund City Discovery Tour (5 hours) - focuses on Swakopmund landmarks and culture with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (Full Day - 8 hours) - designed for cruise passengers, covering Walvis Bay Lagoon, Dune 7, Swakopmund city highlights, with pickup/drop-off at Walvis Bay Harbor. 3) Guided Township Tour (4 hours) - offers insights into local life in Mondesa township, including cultural experiences."
     },
     {
       question: "What meals are included in the tours?",

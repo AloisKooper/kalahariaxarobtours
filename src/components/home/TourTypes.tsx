@@ -55,31 +55,31 @@ const TourTypes: React.FC = () => {
       ]
     },
     {
-      title: "Guided Historical Tour",
-      description: "A thought-provoking guided tour exploring significant historical sites in Swakopmund related to the 1904/1908 Nama and Ovaherero Genocide. Led by Mr. Michael, a descendant of the native Namaqua tribe.",
-      image: "/Home Images/Half Day Tour.jpg",
+      title: "Swakopmund City Discovery Tour",
+      description: "Explore Swakopmund's charming landmarks, unique architecture, and vibrant culture on this engaging city discovery tour. Perfect for understanding the town's character.",
+      image: "/Home Images/Swakop Landmarks.jpg",
       duration: "5 hours",
       maxParticipants: 6,
       highlights: [
         {
-          title: "Concentration Camp Mass Graves",
-          description: "Visit the site commemorating the victims of the 1904-1908 Nama and Ovaherero Genocide",
-          image: "/Home Images/Genocide.jpg"
+          title: "Historic Jetty",
+          description: "Walk along Swakopmund's iconic pier with stunning ocean views.",
+          image: "/Home Images/jetty hero.jpg"
         },
         {
-          title: "Old Military Barracks",
-          description: "Explore the historical barracks (Alte Kaserne) that played a role during colonial times",
-          image: "/Home Images/barracks.jpg"
+          title: "Woermannhaus & Lighthouse",
+          description: "Admire key colonial-era architectural landmarks.",
+          image: "/Home Images/Woermann House.jpg"
         },
         {
-          title: "Historical Buildings",
-          description: "View the Old Hospital, Jetty, Woermann House, and other colonial structures",
-          image: "/Home Images/Hospital.jpg"
+          title: "Old Train Station (Bahnhof)",
+          description: "Discover the historic railway station and its significance.",
+          image: "/Home Images/Bahnhof.jpg"
         },
         {
-          title: "German War Memorial",
-          description: "Visit the German War Memorial and learn about its historical significance",
-          image: "/Home Images/German Architecture.jpg"
+          title: "Local Culture & Markets",
+          description: "Experience the vibrant local life and browse craft markets (optional stop).",
+          image: "/Home Images/Craft Market.jpg"
         }
       ],
       locations: ["Swakopmund", "Historical Sites"],
@@ -102,7 +102,7 @@ const TourTypes: React.FC = () => {
     {
       title: "Guided Township Tour",
       description: "Experience the vibrant culture of Mondesa township through a guided tour that includes visits to a Herero lady for cultural insights and a traditional herbalist for knowledge about traditional medicines.",
-      image: "/Home Images/Township Tour.jpg",
+      image: "/Home Images/Axarob 8.webp",
       duration: "4 hours",
       maxParticipants: 6,
       highlights: [

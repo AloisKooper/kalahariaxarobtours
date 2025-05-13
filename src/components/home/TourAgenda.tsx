@@ -74,7 +74,7 @@ const TourAgenda: React.FC = () => {
                   : 'text-kalahari-charcoal hover:text-kalahari-brown'
               }`}
             >
-              Guided Historical Tour
+              City Discovery Tour
             </button>
             <button
               onClick={() => setSelectedTour('township')}
@@ -174,7 +174,7 @@ const TourAgenda: React.FC = () => {
                 <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
                     <img 
-                      src="/Home Images/Swakop Landmarks.jpg" 
+                      src="/Home Images/Axarob 2.webp" 
                       alt="Swakopmund Historical Sites" 
                       className="w-full h-full object-cover"
                     />
@@ -331,7 +331,7 @@ const TourAgenda: React.FC = () => {
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
                   <img 
-                    src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    src="/Home Images/Pickup.jpg" 
                     alt="Swakopmund Hotel Pickup" 
                     className="w-full h-full object-cover"
                   />
@@ -356,8 +356,8 @@ const TourAgenda: React.FC = () => {
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
                   <img 
-                    src="/Home Images/Guided Historical Tour.jpeg"
-                    alt="Historical Tour Sites" 
+                    src="/Home Images/Axarob 2.webp" 
+                    alt="Swakopmund City Discovery" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -367,12 +367,12 @@ const TourAgenda: React.FC = () => {
                       <Flag className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">Historical Tour</h3>
+                      <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">City Discovery Tour</h3>
                       <p className="text-kalahari-brown/80 text-xs sm:text-sm">Half Day</p>
                     </div>
                   </div>
                   <p className="text-kalahari-charcoal text-sm sm:text-base">
-                    Concentration camp mass graves - Alte Kaserne (Old Military barracks) - Old Hospital - Jetty - Woermann House - German War Memorial - Old Bahn Hoff
+                    Historic Jetty - Lighthouse - Woermannhaus - Hohenzollern Building - Old Train Station (Bahnhof) - Swakopmund Museum (exterior) - Local Markets (optional stop)
                   </p>
                 </div>
               </div>
@@ -381,7 +381,7 @@ const TourAgenda: React.FC = () => {
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
                   <img 
-                    src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    src="/Home Images/DropOff.jpg" 
                     alt="Swakopmund scenery" 
                     className="w-full h-full object-cover"
                   />
@@ -435,7 +435,7 @@ const TourAgenda: React.FC = () => {
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
                   <img 
-                    src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    src="/Home Images/Pickup.jpg" 
                     alt="Swakopmund Hotel Pickup" 
                     className="w-full h-full object-cover"
                   />
@@ -460,7 +460,7 @@ const TourAgenda: React.FC = () => {
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
                   <img 
-                    src="/Home Images/Township Tour.jpg"
+                    src="/Home Images/Axarob 2.webp" 
                     alt="Township Tour Experience" 
                     className="w-full h-full object-cover"
                   />
@@ -485,7 +485,7 @@ const TourAgenda: React.FC = () => {
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
                   <img 
-                    src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    src="/Home Images/DropOff.jpg" 
                     alt="Swakopmund scenery" 
                     className="w-full h-full object-cover"
                   />

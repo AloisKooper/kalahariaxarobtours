@@ -16,7 +16,8 @@ import {
   Camera,
   Users,
   MessageCircle,
-  ChevronRight
+  ChevronRight,
+  Check
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -69,7 +70,7 @@ const TourGuidePage: React.FC = () => {
   const storyTabs = [
     {
       title: "Background",
-      content: "Our team includes descendants of native Namibian tribes, bringing a personal connection to the historical tours we lead. Our guides' family histories intertwine with Namibia's complex past, giving us a unique perspective that enriches every tour experience.",
+      content: "Our team includes descendants of native Namibian tribes, bringing a personal connection to the city tours we lead. Our guides' family histories intertwine with Namibia's complex past, giving us a unique perspective that enriches every tour experience.",
       image: "/Home Images/Cultural Exchange.jpg"
     },
     {
@@ -143,9 +144,9 @@ const TourGuidePage: React.FC = () => {
     <>
 
       <PageHero
-        title="Meet Our Tour Team"
-        subtitle="Learn about our experienced local tour guides who bring authentic knowledge and passion to every historical tour experience"
-        backgroundImage="/Home Images/Top 5 Historical.jpg"
+        title="Meet Your Guides"
+        subtitle="Learn about our experienced local tour guides who bring authentic knowledge and passion to every city tour experience"
+        backgroundImage="/Home Images/Axarob pro pic.webp"
         isMobile={isMobile}
       />
       
@@ -434,7 +435,7 @@ const TourGuidePage: React.FC = () => {
                     </Button>
                   </Link>
                   <p className="text-sm text-kalahari-charcoal/80 md:max-w-md mt-2 md:mt-0">
-                    <span className="font-medium text-kalahari-darkbrown">Booking options include:</span> Half-day historical tours, 
+                    <span className="font-medium text-kalahari-darkbrown">Booking options include:</span> Half-day city tours, 
                     full-day shore excursions for cruise passengers, and private customized experiences.
                   </p>
                 </div>

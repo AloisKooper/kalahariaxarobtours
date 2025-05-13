@@ -52,17 +52,17 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
     historical: [
       {
         id: 2,
-        title: "Guided Historical Tour",
-        image: "/Home Images/Guided Historical Tour.jpeg",
+        title: "Swakopmund City Discovery Tour",
+        image: "/Home Images/Swakop Landmarks.jpg",
         price: "$55",
         duration: "5 hours",
         minParticipants: 4,
         maxParticipants: 6,
         locations: ["Swakopmund", "Historical Sites"],
-        description: "A thought-provoking guided tour exploring significant historical sites in Swakopmund related to the 1904/1908 Nama and Ovaherero Genocide. Led by Mr. Michael, a descendant of the native Namaqua tribe.",
+        description: "Explore the rich history and charming architecture of Swakopmund, from its colonial past to its vibrant present. Discover iconic landmarks and hidden gems with our knowledgeable local guide, Mr. Michael.",
         dates: getNextMonthsFormatted(currentMonth + 1),
         featured: false,
-        routeDetails: "Concentration camp mass graves - Alte Kaserne (Old Military barracks) - Old Hospital - Jetty - Woerman hause - German War Memorial - Old Bahn Hoff",
+        routeDetails: "Historic Jetty - Lighthouse - Woermannhaus - Hohenzollern Building - Old Train Station (Bahnhof) - Swakopmund Museum (exterior) - Local Markets (optional stop)",
         includedItems: ["Guide", "Transportation", "Snacks and drinks"],
         meetingPoint: "Your accommodation in Swakopmund",
         pickupIncluded: true,
@@ -72,7 +72,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
       {
         id: 3,
         title: "Guided Township Tour",
-        image: "/Home Images/Township Tour.jpg",
+        image: "/Home Images/Axarob 8.webp",
         price: "$55",
         duration: "4 hours",
         minParticipants: 4,
@@ -94,7 +94,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
       <Tabs value={selectedTab} onValueChange={(val) => setSelectedTab(val as "cruise" | "historical" | "township")}>
         <TabsList className="bg-sand-custom border border-brown-light w-full justify-start mb-6">
           <TabsTrigger value="cruise" className="font-serif text-base">Cruise Liner</TabsTrigger>
-          <TabsTrigger value="historical" className="font-serif text-base">Historical</TabsTrigger>
+          <TabsTrigger value="historical" className="font-serif text-base">City Tour</TabsTrigger>
           <TabsTrigger value="township" className="font-serif text-base">Township</TabsTrigger>
         </TabsList>
         

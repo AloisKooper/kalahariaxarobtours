@@ -25,6 +25,7 @@ import GermanArchitecture from "@/pages/BlogPosts/GermanArchitecture";
 import ShoreExcursion from "@/pages/BlogPosts/ShoreExcursion";
 import TownshipTour from "@/pages/BlogPosts/TownshipTour";
 import TownshipTourUpdate from "@/pages/BlogPosts/TownshipTourUpdate";
+import PlanningHistoricalTour from "@/pages/BlogPosts/PlanningHistoricalTour";
 
 // Create a client
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ function App() {
               <Route path="/blog/shore-excursion" element={<ShoreExcursion />} />
               <Route path="/blog/township-tour" element={<TownshipTour />} />
               <Route path="/blog/township-tour-update" element={<TownshipTourUpdate />} />
+              <Route path="/blog/planning-historical-tour" element={<PlanningHistoricalTour />} />
               
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

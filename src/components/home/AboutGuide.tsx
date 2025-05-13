@@ -11,7 +11,7 @@ const AboutGuide: React.FC = () => {
   useEffect(() => {
     const videoPreload = document.createElement('link');
     videoPreload.rel = 'preload';
-    videoPreload.href = 'https://res.cloudinary.com/dik2mqn3b/video/upload/q_auto:best,f_auto/Untitled_video_-_Made_with_Clipchamp_rskj5s.mp4';
+    videoPreload.href = 'https://res.cloudinary.com/dnjnhkyip/video/upload/q_auto:best,f_auto/Untitled_video_-_Made_with_Clipchamp_j0y3hl.mp4';
     videoPreload.as = 'video';
     document.head.appendChild(videoPreload);
     
@@ -133,7 +133,7 @@ const AboutGuide: React.FC = () => {
                 preload="auto"
               >
                 <source 
-                  src="https://res.cloudinary.com/dik2mqn3b/video/upload/q_auto:best,f_auto/Untitled_video_-_Made_with_Clipchamp_rskj5s.mp4" 
+                  src="https://res.cloudinary.com/dnjnhkyip/video/upload/q_auto:best,f_auto/Untitled_video_-_Made_with_Clipchamp_j0y3hl.mp4" 
                   type="video/mp4"
                 />
               </video>

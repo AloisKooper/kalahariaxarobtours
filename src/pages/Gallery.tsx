@@ -124,6 +124,14 @@ const GalleryPage: React.FC = () => {
       imageSrc: "/Home Images/Bahnhof.jpg",
       tags: ["historical", "colonial", "railway"]
     },
+    {
+      id: "swakopmund-architecture",
+      title: "Swakopmund Architecture",
+      description: "Colorful German colonial buildings line the streets of Swakopmund.",
+      category: ["historical"],
+      imageSrc: "/Home Images/Axarob 1.webp",
+      tags: ["historical", "colonial", "architecture", "cityscape"]
+    },
     
     // Nature & Scenery
     {
@@ -149,6 +157,14 @@ const GalleryPage: React.FC = () => {
       category: ["historical", "nature"],
       imageSrc: "/Home Images/Swakop Landmarks.jpg",
       tags: ["historical", "architecture", "cityscape"]
+    },
+    {
+      id: "swakopmund-street",
+      title: "Swakopmund Street Scene",
+      description: "A typical street view in Swakopmund with palm trees.",
+      category: ["nature"],
+      imageSrc: "/Home Images/Axarob 2.webp",
+      tags: ["nature", "cityscape", "street"]
     },
     
     // Township & Cultural
@@ -199,6 +215,22 @@ const GalleryPage: React.FC = () => {
       category: ["township"],
       imageSrc: "/Home Images/Local Artwork.jpg",
       tags: ["cultural", "art", "crafts"]
+    },
+    {
+      id: "artisan-market-detail",
+      title: "Local Artisan Market",
+      description: "Close-up of crafts and goods available at a local market.",
+      category: ["township"],
+      imageSrc: "/Home Images/Axarob 3.webp",
+      tags: ["cultural", "market", "crafts", "artisan"]
+    },
+    {
+      id: "township-interaction",
+      title: "Township Cultural Insight",
+      description: "Tourists engaging with local culture and guides in Mondesa.",
+      category: ["township"],
+      imageSrc: "/Home Images/Axarob 8.webp",
+      tags: ["cultural", "township", "tour", "interaction"]
     }
   ];
 
