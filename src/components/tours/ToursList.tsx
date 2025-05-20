@@ -8,8 +8,8 @@ import { MapPin, Clock, Users, Calendar, ChevronRight, ThumbsUp, Check } from "l
 import { Separator } from "@/components/ui/separator";
 
 interface ToursListProps {
-  selectedTab: "cruise" | "historical" | "township";
-  setSelectedTab: React.Dispatch<React.SetStateAction<"cruise" | "historical" | "township">>;
+  selectedTab: "cruise" | "historical";
+  setSelectedTab: React.Dispatch<React.SetStateAction<"cruise" | "historical">>;
 }
 
 const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) => {
@@ -59,7 +59,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
         minParticipants: 4,
         maxParticipants: 6,
         locations: ["Swakopmund", "Historical Sites"],
-        description: "Explore the rich history and charming architecture of Swakopmund, from its colonial past to its vibrant present. Discover iconic landmarks and hidden gems with our knowledgeable local guide, Mr. Michael.",
+        description: "Explore the rich history and charming architecture of Swakopmund, from its colonial past to its vibrant present. Discover iconic landmarks and hidden gems with our knowledgeable local guides",
         dates: getNextMonthsFormatted(currentMonth + 1),
         featured: false,
         routeDetails: "Historic Jetty - Lighthouse - Woermannhaus - Hohenzollern Building - Old Train Station (Bahnhof) - Swakopmund Museum (exterior) - Local Markets (optional stop)",
@@ -68,34 +68,15 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
         pickupIncluded: true,
       }
     ],
-    township: [
-      {
-        id: 3,
-        title: "Guided Township Tour",
-        image: "/Home Images/Axarob 8.webp",
-        price: "$55",
-        duration: "4 hours",
-        minParticipants: 4,
-        maxParticipants: 6,
-        locations: ["Mondesa Township", "Swakopmund"],
-        description: "Experience the vibrant culture of Mondesa township through a guided tour that includes visits to a Herero lady for cultural insights and a traditional herbalist for knowledge about traditional medicines.",
-        dates: getNextMonthsFormatted(currentMonth + 1),
-        featured: false,
-        routeDetails: "Drive through Mondesa township - Visit Herero cultural experience - Traditional herbalist visit",
-        includedItems: ["Guide", "Transportation", "Snacks and drinks"],
-        meetingPoint: "Your accommodation in Swakopmund",
-        pickupIncluded: true,
-      }
-    ]
+
   };
 
   return (
     <div className="space-y-8">
-      <Tabs value={selectedTab} onValueChange={(val) => setSelectedTab(val as "cruise" | "historical" | "township")}>
+      <Tabs value={selectedTab} onValueChange={(val) => setSelectedTab(val as "cruise" | "historical")}>
         <TabsList className="bg-sand-custom border border-brown-light w-full justify-start mb-6">
           <TabsTrigger value="cruise" className="font-serif text-base">Cruise Liner</TabsTrigger>
-          <TabsTrigger value="historical" className="font-serif text-base">City Tour</TabsTrigger>
-          <TabsTrigger value="township" className="font-serif text-base">Township</TabsTrigger>
+<TabsTrigger value="historical" className="font-serif text-base">City Tour</TabsTrigger>
         </TabsList>
         
         {Object.entries(tours).map(([category, tourList]) => (
@@ -129,6 +110,15 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
                       )}
                     </div>
                     <p className="text-charcoal-custom mb-4 text-sm sm:text-base">{tour.description}</p>
+
+{tour.title === "Swakopmund City Discovery Tour" && (
+  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-md mb-4">
+    <h4 className="text-brown-custom font-semibold mb-1">Includes Township Experience</h4>
+    <p className="text-sm text-kalahari-charcoal">
+      This City Tour includes a drive through the vibrant township areas of Mondesa, offering you a glimpse into local life, culture, and history as part of the broader Swakopmund experience.
+    </p>
+  </div>
+) }
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-4">
                       <div className="flex items-center text-sm text-charcoal-custom">

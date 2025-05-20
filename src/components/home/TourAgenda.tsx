@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Clock, MapPin, Car, Flag, Utensils, Users, Sun, Info, DollarSign, Calendar, AlertCircle } from "lucide-react";
 
 const TourAgenda: React.FC = () => {
-  const [selectedTour, setSelectedTour] = useState<'cruise' | 'local' | 'township'>('cruise');
+  const [selectedTour, setSelectedTour] = useState<'cruise' | 'local'>('cruise');
   const [showTooltip, setShowTooltip] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   
@@ -43,7 +43,7 @@ const TourAgenda: React.FC = () => {
             Tour Agenda
           </h2>
           <p className="text-kalahari-charcoal text-base sm:text-lg font-normal leading-relaxed max-w-xl mt-4 sm:mt-6 mx-auto px-2">
-            Kalahari Axarob Tours offers three unique tour options to explore the rich history and culture of Swakopmund.
+            Kalahari Axarob Tours offers two unique tour options to explore the rich history and culture of Swakopmund.
           </p>
           
           {/* Tour Type Selector with Tooltip */}
@@ -75,16 +75,6 @@ const TourAgenda: React.FC = () => {
               }`}
             >
               City Discovery Tour
-            </button>
-            <button
-              onClick={() => setSelectedTour('township')}
-              className={`px-3 sm:px-4 py-2 font-medium text-sm sm:text-base ${
-                selectedTour === 'township'
-                  ? 'text-kalahari-brown border-b-2 border-kalahari-brown'
-                  : 'text-kalahari-charcoal hover:text-kalahari-brown'
-              }`}
-            >
-              Township Tour
             </button>
           </div>
         </div>
@@ -185,7 +175,7 @@ const TourAgenda: React.FC = () => {
                         <Flag className="w-4 h-4 sm:w-5 sm:h-5" />
                       </div>
                       <div>
-                        <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">Historical Tour</h3>
+                        <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">Cruise Liner</h3>
                         <p className="text-kalahari-brown/80 text-xs sm:text-sm">Full Day</p>
                       </div>
                     </div>
@@ -404,110 +394,6 @@ const TourAgenda: React.FC = () => {
             </div>
 
             {/* Rest of Historical Tour layout stays the same */}
-            {/* ... */}
-          </>
-        ) : selectedTour === 'township' ? (
-          <>
-            {/* Township Tour Summary */}
-            <div className="max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center">
-                  <Clock className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
-                  <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Duration</h3>
-                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">4 Hours</p>
-                </div>
-                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center">
-                  <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
-                  <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Group Size</h3>
-                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">4-6 travelers</p>
-                </div>
-                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center sm:col-span-2 md:col-span-1">
-                  <MapPin className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
-                  <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Location</h3>
-                  <p className="text-kalahari-charcoal text-sm sm:text-base">Mondesa Township, Swakopmund</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Tour Details Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 md:gap-8 mt-8 sm:mt-10 md:mt-12">
-              {/* Pickup Card */}
-              <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
-                <div className="relative h-40 sm:h-32 md:h-48">
-                  <img 
-                    src="/Home Images/Pickup.jpg" 
-                    alt="Swakopmund Hotel Pickup" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="bg-kalahari-brown p-1.5 sm:p-2 rounded-lg text-white">
-                      <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">Pick Up</h3>
-                      <p className="text-kalahari-brown/80 text-xs sm:text-sm">Flexible Time</p>
-                    </div>
-                  </div>
-                  <p className="text-kalahari-charcoal/90 text-xs sm:text-sm leading-relaxed">
-                    Pickup and drop-off at any accommodation in Swakopmund.
-                  </p>
-                </div>
-              </div>
-
-              {/* Tour Card */}
-              <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
-                <div className="relative h-40 sm:h-32 md:h-48">
-                  <img 
-                    src="/Home Images/Axarob 2.webp" 
-                    alt="Township Tour Experience" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="bg-kalahari-brown p-1.5 sm:p-2 rounded-lg text-white">
-                      <Flag className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">Township Tour</h3>
-                      <p className="text-kalahari-brown/80 text-xs sm:text-sm">Half Day</p>
-                    </div>
-                  </div>
-                  <p className="text-kalahari-charcoal text-sm sm:text-base">
-                    Drive through Mondesa township - Visit Herero cultural experience - Traditional herbalist visit
-                  </p>
-                </div>
-              </div>
-
-              {/* Drop-off Card */}
-              <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
-                <div className="relative h-40 sm:h-32 md:h-48">
-                  <img 
-                    src="/Home Images/DropOff.jpg" 
-                    alt="Swakopmund scenery" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <div className="bg-kalahari-brown p-1.5 sm:p-2 rounded-lg text-white">
-                      <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">Drop-off</h3>
-                      <p className="text-kalahari-brown/80 text-xs sm:text-sm">After tour concludes</p>
-                    </div>
-                  </div>
-                  <p className="text-kalahari-charcoal/90 text-xs sm:text-sm leading-relaxed">
-                    Return to your accommodation in Swakopmund after approximately 4 hours of exploring the Mondesa Township.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Rest of Township Tour layout stays the same */}
             {/* ... */}
           </>
         ) : null}

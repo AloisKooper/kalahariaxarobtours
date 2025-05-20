@@ -2,7 +2,7 @@ import React from "react";
 import { CheckCircle } from "lucide-react";
 
 interface TourInformationPanelProps {
-  selectedTour: "cruise" | "historical" | "township";
+  selectedTour: "cruise" | "historical";
 }
 
 const TOUR_INFO: Record<string, { title: string; items: string[] }> = {
@@ -26,16 +26,7 @@ const TOUR_INFO: Record<string, { title: string; items: string[] }> = {
       "Minimum 4, Maximum 6 travelers"
     ]
   },
-  township: {
-    title: "Guided Township Tour Information",
-    items: [
-      "English speaking local guide (descendant of the native Namaqua tribe)",
-      "Transportation in air-conditioned vehicle",
-      "Snacks and drinks",
-      "Pickup and drop-off at your Swakopmund accommodation",
-      "Minimum 4, Maximum 6 travelers"
-    ]
-  }
+
 };
 
 const TourInformationPanel: React.FC<TourInformationPanelProps> = ({ selectedTour }) => {

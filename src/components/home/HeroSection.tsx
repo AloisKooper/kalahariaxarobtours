@@ -288,7 +288,7 @@ const HeroSection: React.FC = () => {
                   {/* Founder Label with Google Icon */}
                   <div className="flex items-center gap-1 text-xs sm:text-sm font-medium text-darkbrown-custom truncate">
                     <GoogleIcon className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span>Mr. Michael - Founder & Tour Guide</span>
+                    <span>Main lead- Founder & Tour Guide</span>
                   </div>
                   
                   {/* Short Message */}

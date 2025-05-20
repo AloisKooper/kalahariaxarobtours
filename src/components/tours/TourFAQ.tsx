@@ -17,15 +17,15 @@ const TourFAQ: React.FC = () => {
     },
     {
       question: "What is the maximum number of travelers per tour?",
-      answer: "Our Swakopmund City Discovery Tour and Guided Township Tour accommodate a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
+      answer: "Our Swakopmund City Discovery Tour accommodates a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
     },
     {
       question: "What tours do you offer?",
-      answer: "We offer three distinct tour options: 1) Swakopmund City Discovery Tour (5 hours) - focuses on Swakopmund landmarks and culture with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (Full Day - 8 hours) - designed for cruise passengers, covering Walvis Bay Lagoon, Dune 7, Swakopmund city highlights, with pickup/drop-off at Walvis Bay Harbor. 3) Guided Township Tour (4 hours) - offers insights into local life in Mondesa township, including cultural experiences."
+      answer: "We offer two distinct tour options: 1) Swakopmund City Discovery Tour (5 hours) - focuses on Swakopmund landmarks and culture with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (Full Day - 8 hours) - designed for cruise passengers, covering Walvis Bay Lagoon, Dune 7, Swakopmund city highlights, with pickup/drop-off at Walvis Bay Harbor."
     },
     {
       question: "What meals are included in the tours?",
-      answer: "All tours include a light meal and non-alcoholic beverages. Vegetarian and vegan options are available upon request at the time of booking."
+      answer: "Our Main Tour (Cruise Liner Shore Excursion) includes a full lunch with vegetarian options available. The City tour includes Snacks and drinks"
     },
     {
       question: "What happens if my cruise ship's schedule changes?",

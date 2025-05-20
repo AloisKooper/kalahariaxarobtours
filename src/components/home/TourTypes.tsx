@@ -98,51 +98,6 @@ const TourTypes: React.FC = () => {
         "Sunscreen recommended",
         "Shade hat recommended"
       ]
-    },
-    {
-      title: "Guided Township Tour",
-      description: "Experience the vibrant culture of Mondesa township through a guided tour that includes visits to a Herero lady for cultural insights and a traditional herbalist for knowledge about traditional medicines.",
-      image: "/Home Images/Axarob 8.webp",
-      duration: "4 hours",
-      maxParticipants: 6,
-      highlights: [
-        {
-          title: "Mondesa Township",
-          description: "Drive through the vibrant Mondesa township and experience local life",
-          image: "/Home Images/Mondesa Township.jpg"
-        },
-        {
-          title: "Herero Cultural Experience",
-          description: "Visit a Herero lady who shares insights into their cultural norms and traditions",
-          image: "/Home Images/Local Living.jpg"
-        },
-        {
-          title: "Traditional Herbalist",
-          description: "Learn about traditional medicines from a local herbalist",
-          image: "/Home Images/Local Artwork.jpg"
-        },
-        {
-          title: "Cultural Exchange",
-          description: "Engage with local community members and learn about their daily life",
-          image: "/Home Images/Cultural Exchange.jpg"
-        }
-      ],
-      locations: ["Mondesa Township", "Swakopmund"],
-      included: [
-        "English speaking Local Guide (descendant of the native Namaqua tribe)",
-        "Transportation",
-        "Light meal",
-        "Non-Alcoholic beverages",
-        "Pickup and drop-off at your Swakopmund accommodation"
-      ],
-      additionalInfo: [
-        "Minimum 4, Maximum 6 travelers",
-        "Not wheelchair accessible",
-        "Vegetarian/vegan options available",
-        "Moderate fitness level required",
-        "Sunscreen recommended",
-        "Shade hat recommended"
-      ]
     }
   ];
 

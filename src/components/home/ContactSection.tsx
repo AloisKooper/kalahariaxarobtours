@@ -20,7 +20,7 @@ const ContactSection: React.FC = () => {
   });
   const [loading, setLoading] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
-  const [selectedTourType, setSelectedTourType] = useState<"half-day" | "full-day" | "township">("full-day");
+  const [selectedTourType, setSelectedTourType] = useState<"half-day" | "full-day">("full-day");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -153,27 +153,7 @@ const ContactSection: React.FC = () => {
       description: "The beautifully preserved old railway station, a testament to Swakopmund's transport history.",
       tourTypes: ["half-day", "full-day"]
     },
-    {
-      id: "mondesa",
-      name: "Mondesa Township",
-      coords: { lat: -22.658, lng: 14.545 },
-      description: "Experience the vibrant local culture in Mondesa township",
-      tourTypes: ["township"]
-    },
-    {
-      id: "herero",
-      name: "Herero Cultural Experience",
-      coords: { lat: -22.659, lng: 14.546 },
-      description: "Learn about Herero cultural norms and traditions",
-      tourTypes: ["township"]
-    },
-    {
-      id: "herbalist",
-      name: "Traditional Herbalist",
-      coords: { lat: -22.660, lng: 14.547 },
-      description: "Visit a local herbalist to learn about traditional medicines",
-      tourTypes: ["township"]
-    }
+
   ];
 
   const filteredLocations = tourLocations.filter(
@@ -184,7 +164,7 @@ const ContactSection: React.FC = () => {
     setSelectedLocation(selectedLocation === locationId ? null : locationId);
   };
   
-  const handleTourTypeChange = (type: "half-day" | "full-day" | "township") => {
+  const handleTourTypeChange = (type: "half-day" | "full-day") => {
     setSelectedTourType(type);
     setSelectedLocation(null);
   };
@@ -295,7 +275,6 @@ const ContactSection: React.FC = () => {
                       <option value="">Select a tour</option>
                       <option value="half-day">City Discovery Tour - 5 hours</option>
                       <option value="full-day">Cruise Liner Shore Excursion (Full Day) - 8 hours</option>
-                      <option value="township">Guided Township Tour - 4 hours</option>
                     </select>
                   </div>
                   
@@ -446,16 +425,7 @@ const ContactSection: React.FC = () => {
             >
               Shore Excursion (8 hours)
             </button>
-            <button 
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                selectedTourType === "township" 
-                  ? 'bg-kalahari-brown text-white' 
-                  : 'bg-sand-custom text-kalahari-brown hover:bg-kalahari-sand'
-              }`}
-              onClick={() => handleTourTypeChange("township")}
-            >
-              Township Tour (4 hours)
-            </button>
+
           </div>
           
           <div className="overflow-hidden relative rounded-lg shadow-md">
@@ -471,7 +441,7 @@ const ContactSection: React.FC = () => {
             {/* Tour Locations Panel - Desktop and Tablet Only */}
             <div className="absolute top-0 right-0 hidden md:block w-72 bg-white/90 backdrop-blur-sm h-full overflow-y-auto border-l border-kalahari-sand/40 shadow-lg p-4">
               <h4 className="text-kalahari-brown text-lg font-medium mb-4">
-                {selectedTourType === "half-day" ? "Half Day Tour Stops" : selectedTourType === "full-day" ? "Full Day Tour Stops" : "Township Tour Stops"}
+                {selectedTourType === "half-day" ? "Half Day Tour Stops" : "Full Day Tour Stops"}
               </h4>
               <div className="space-y-2">
                 {filteredLocations.map((location, index) => (
@@ -519,7 +489,7 @@ const ContactSection: React.FC = () => {
           {/* Mobile Tour Stops - Simple Horizontal Scroll */}
           <div className="md:hidden mt-4 mb-6 max-w-full">
             <h4 className="text-kalahari-brown text-lg font-medium mb-3 text-center">
-              {selectedTourType === "half-day" ? "Half Day Tour Stops" : selectedTourType === "full-day" ? "Full Day Tour Stops" : "Township Tour Stops"}
+              {selectedTourType === "half-day" ? "Half Day Tour Stops" : "Full Day Tour Stops"}
             </h4>
             
             {/* Clean horizontal scrollable container */}
@@ -584,14 +554,7 @@ const ContactSection: React.FC = () => {
                   </p>
                 </>
               )}
-              {selectedTourType === "township" && (
-                <>
-                  <p className=""><strong>Township Tour Route:</strong></p>
-                  <p className="text-kalahari-charcoal text-sm sm:text-base">
-                    Drive through Mondesa township - Visit Herero cultural experience - Traditional herbalist visit
-                  </p>
-                </>
-              )}
+
             </div>
           </div>
         </div>
