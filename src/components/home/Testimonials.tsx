@@ -47,9 +47,9 @@ const Testimonials: React.FC = () => {
       name: "David Chen",
       location: "New York, USA",
       rating: 5,
-      testimonial: '"The city tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable."',
+      testimonial: '"The city & township tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable."',
       image: "/Home Images/Erick Avatar.jpg",
-      tourType: "City Tour",
+      tourType: "City & Township Tour",
       platform: "google"
     }
   ];

@@ -194,7 +194,7 @@ const BlogPage: React.FC = () => {
   // Popular topics - Update list
   const popularTopics = [
     "Swakopmund Activities", // Added
-    "City Tour", // Added
+    "City & Township Tours", // Added
     "German Colonial Architecture",
     // "Herero & Nama Genocide", // Removed
     "Independence History",
@@ -574,7 +574,7 @@ const BlogPage: React.FC = () => {
                   <div className="relative">
                     <div className="text-6xl text-kalahari-brown/20 font-serif leading-none">"</div>
                     <blockquote className="text-lg md:text-xl italic text-kalahari-darkbrown mb-6 leading-relaxed">
-                      The Swakopmund City Tour was fantastic! We learned so much about the town's unique history and architecture. Our guide was incredibly knowledgeable and engaging, making the whole experience both fun and educational. A must-do!
+                      The Swakopmund City & Township Tour was fantastic! We learned so much about the town's unique history and architecture. Our guide was incredibly knowledgeable and engaging, making the whole experience both fun and educational. A must-do!
                     </blockquote>
                     <div className="flex flex-col mt-4">
                       <p className="font-medium text-kalahari-darkbrown">Maria Schmidt</p>

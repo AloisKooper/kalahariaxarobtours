@@ -55,6 +55,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
         title: "Swakopmund City Discovery Tour",
         image: "/Home Images/Swakop Landmarks.jpg",
         price: "$55",
+        ownTransportPrice: "$45",
         duration: "5 hours",
         minParticipants: 4,
         maxParticipants: 6,
@@ -76,7 +77,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
       <Tabs value={selectedTab} onValueChange={(val) => setSelectedTab(val as "cruise" | "historical")}>
         <TabsList className="bg-sand-custom border border-brown-light w-full justify-start mb-6">
           <TabsTrigger value="cruise" className="font-serif text-base">Cruise Liner</TabsTrigger>
-<TabsTrigger value="historical" className="font-serif text-base">City Tour</TabsTrigger>
+<TabsTrigger value="historical" className="font-serif text-base">City & Township Tour</TabsTrigger>
         </TabsList>
         
         {Object.entries(tours).map(([category, tourList]) => (
@@ -115,7 +116,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
   <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-md mb-4">
     <h4 className="text-brown-custom font-semibold mb-1">Includes Township Experience</h4>
     <p className="text-sm text-kalahari-charcoal">
-      This City Tour includes a drive through the vibrant township areas of Mondesa, offering you a glimpse into local life, culture, and history as part of the broader Swakopmund experience.
+      This City & Township Tour includes a drive through the vibrant township areas of Mondesa, offering you a glimpse into local life, culture, and history as part of the broader Swakopmund experience.
     </p>
   </div>
 ) }
@@ -180,7 +181,14 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
                       </div>
                       
                       <div className="flex items-center gap-4 mt-3 sm:mt-0">
-                        <div className="text-xl sm:text-2xl font-serif text-brown-custom">{tour.price}</div>
+                        <div>
+                          <div className="text-xl sm:text-2xl font-serif text-brown-custom">{tour.price}</div>
+                          {'ownTransportPrice' in tour && (
+                            <div className="text-xs sm:text-sm text-charcoal-custom mt-0.5">
+                              Group guided (own transport): {(tour as any).ownTransportPrice} pp
+                            </div>
+                          )}
+                        </div>
                         <Button asChild className="bg-darkbrown-custom hover:bg-brown-custom text-white text-sm sm:text-base">
   <Link to="/contact">Book Now</Link>
 </Button>

@@ -23,7 +23,8 @@ const TOUR_INFO: Record<string, { title: string; items: string[] }> = {
       "Transportation in air-conditioned vehicle",
       "Snacks and drinks",
       "Pickup and drop-off at your Swakopmund accommodation",
-      "Minimum 4, Maximum 6 travelers"
+      "Minimum 4, Maximum 6 travelers",
+      "Group guided option (own transport): $45 per person"
     ]
   },
 

@@ -75,7 +75,7 @@ const AboutGuide: React.FC = () => {
                   <Star className="w-4 h-4 fill-[#FBBC05]" />
                   <Star className="w-4 h-4 fill-[#FBBC05]" />
                 </div>
-                <h3 className="text-kalahari-darkbrown font-medium">Mr. Michael - Founder & Tour Guide</h3>
+                <h3 className="text-kalahari-darkbrown font-medium">Main Lead - Founder & Tour Guide</h3>
               </div>
             </div>
             

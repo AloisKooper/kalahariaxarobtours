@@ -33,9 +33,9 @@ const Index: React.FC = () => {
   return (
     <div className="overflow-x-hidden">
       <Helmet>
-        <title>Kalahari Axarob Tours - City Tours & Shore Excursions in Swakopmund</title>
+        <title>Kalahari Axarob Tours - City & Township Tours & Shore Excursions in Swakopmund</title>
         <link rel="icon" type="image/png" href="/Kalahari Axarob Tours Icon.png" />
-        <meta name="description" content="Discover Swakopmund's unique culture and landmarks with our city tours and shore excursions. Experienced local guides." />
+        <meta name="description" content="Discover Swakopmund's unique culture and landmarks with our city & township tours and shore excursions. Experienced local guides." />
       </Helmet>
       {/* Fixed background that extends behind both navbar and hero */}
       <div className="fixed top-0 left-0 w-full h-[100vh] overflow-hidden -z-10">

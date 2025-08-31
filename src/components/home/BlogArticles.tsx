@@ -38,7 +38,7 @@ const blogArticles: BlogArticle[] = [
   {
     id: "shore-excursion",
     title: "Walvis Bay to Swakopmund: The Perfect Shore Excursion",
-    summary: "Discover how cruise liner passengers can maximize their day ashore with a comprehensive city tour and cultural experience.",
+    summary: "Discover how cruise liner passengers can maximize their day ashore with a comprehensive city & township tour and cultural experience.",
     date: "March 3, 2024",
     image: "/Home Images/Cruise Liner Shore Excursion.jpg",
     category: "Travel Tips",

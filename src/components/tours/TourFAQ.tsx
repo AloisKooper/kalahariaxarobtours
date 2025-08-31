@@ -24,8 +24,12 @@ const TourFAQ: React.FC = () => {
       answer: "We offer two distinct tour options: 1) Swakopmund City Discovery Tour (5 hours) - focuses on Swakopmund landmarks and culture with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (Full Day - 8 hours) - designed for cruise passengers, covering Walvis Bay Lagoon, Dune 7, Swakopmund city highlights, with pickup/drop-off at Walvis Bay Harbor."
     },
     {
+      question: "Do you offer a group-guided option if I use my own transport?",
+      answer: "Yes. For the Swakopmund City Discovery Tour we offer a group-guided option at $45 per person when you use your own transport. Contact us to confirm availability and arrange meeting details."
+    },
+    {
       question: "What meals are included in the tours?",
-      answer: "Our Main Tour (Cruise Liner Shore Excursion) includes a full lunch with vegetarian options available. The City tour includes Snacks and drinks"
+      answer: "Our Main Tour (Cruise Liner Shore Excursion) includes a full lunch with vegetarian options available. The City & Township tour includes Snacks and drinks"
     },
     {
       question: "What happens if my cruise ship's schedule changes?",

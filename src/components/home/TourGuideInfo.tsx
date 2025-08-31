@@ -81,7 +81,7 @@ const TourGuideInfo: React.FC = () => {
                 </div>
                 <p className="text-white/90 leading-relaxed">
                   We are committed to giving back to the Swakopmund community. 
-                  We work with local schools to provide educational city tours for students, ensuring that the younger generation understands their heritage.
+                  We work with local schools to provide educational city & township tours for students, ensuring that the younger generation understands their heritage.
                 </p>
               </div>
             </motion.div>

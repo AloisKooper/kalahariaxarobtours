@@ -179,7 +179,7 @@ const ContactSection: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-kalahari-brown rounded-full mb-6"></div>
           <p className="text-kalahari-charcoal/80 text-center max-w-2xl">
-            For inquiries about our city tour experience or to book a reservation, 
+            For inquiries about our city & township tour experience or to book a reservation, 
             please fill out the form below or contact us directly. We offer custom 
             tours for cruise ship passengers arriving at Walvis Bay Harbor.
           </p>
@@ -400,7 +400,7 @@ const ContactSection: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-kalahari-brown rounded-full mb-6 mx-auto"></div>
           <p className="text-kalahari-charcoal text-center max-w-2xl mx-auto mb-4">
-            Explore the fascinating locations you'll visit on our city tour, from Walvis Bay Harbor to Swakopmund and back.
+            Explore the fascinating locations you'll visit on our city & township tour, from Walvis Bay Harbor to Swakopmund and back.
           </p>
           
           {/* Tour Type Selector */}
@@ -548,7 +548,7 @@ const ContactSection: React.FC = () => {
               )}
               {selectedTourType === "half-day" && (
                 <>
-                  <p className=""><strong>City Tour Route:</strong></p>
+                  <p className=""><strong>City & Township Tour Route:</strong></p>
                   <p className="text-kalahari-charcoal text-sm sm:text-base">
                     Swakopmund Jetty - Woermann House - Old Bahnhof (Station) - Swakopmund Lighthouse - Living Museum (Local Culture) - Craft Markets
                   </p>

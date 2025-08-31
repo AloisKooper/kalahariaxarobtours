@@ -95,7 +95,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Wow... I am very happy with this tour guide. His knowledge about the genocide of 1904-1908 is impressive. Would highly recommend to anyone interested in learning about this important historical event.",
       platform: 'google',
       isFeatured: true,
-      tourType: "City Tour"
+      tourType: "City & Township Tour"
     },
     {
       id: 'g2',
@@ -106,7 +106,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Mr. Michael provided an exceptional experience. His personal connection to the history made the tour deeply meaningful and educational. Will definitely book again when I return to Namibia.",
       platform: 'google',
       isFeatured: true,
-      tourType: "City Tour"
+      tourType: "City & Township Tour"
     },
     {
       id: 'g5',
@@ -117,7 +117,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "This was the highlight of our Namibia trip. Mr. Michael's tour gives you a deep understanding of the historical events and their significance. The personal stories made history come alive.",
       platform: 'google',
       isFeatured: true,
-      tourType: "City Tour"
+      tourType: "City & Township Tour"
     },
     
     // Trustpilot Reviews
@@ -126,11 +126,11 @@ const TestimonialPage: React.FC = () => {
       name: "Sophie Johnson",
       date: "2023-10-20",
       location: "Cape Town, South Africa",
-      rating: "5.0",
-      testimonial: "The city tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable.",
+      rating: "4.8",
+      testimonial: "The city & township tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable.",
       platform: 'trustpilot',
       isFeatured: true,
-      tourType: "City Tour"
+      tourType: "City & Township Tour"
     },
     {
       id: 't4',
@@ -141,7 +141,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Mr. Michael's personal connections to the history he shares makes this tour particularly moving. A must-do for anyone seeking to understand Namibia's complex past.",
       platform: 'trustpilot',
       isFeatured: true,
-      tourType: "City Tour"
+      tourType: "City & Township Tour"
     },
     
     // Direct Email Testimonials
@@ -151,10 +151,10 @@ const TestimonialPage: React.FC = () => {
       date: "2023-10-10",
       location: "Hamburg, Germany",
       rating: "5.0",
-      testimonial: "Perfect day trip from our cruise ship. Covered all the highlights of Swakopmund efficiently. The city tour was well-organized and informative.",
+      testimonial: "Perfect day trip from our cruise ship. Covered all the highlights of Swakopmund efficiently. The city & township tour was well-organized and informative.",
       platform: 'email',
       isFeatured: true,
-      tourType: "City Tour"
+      tourType: "City & Township Tour"
     },
     {
       id: 'e5',
@@ -162,10 +162,10 @@ const TestimonialPage: React.FC = () => {
       date: "2023-09-05",
       location: "New York, USA",
       rating: "5.0",
-      testimonial: "An excellent introduction to Swakopmund. The city tour provided great context before we explored further on our own. Highly recommended!",
+      testimonial: "An excellent introduction to Swakopmund. The city & township tour provided great context before we explored further on our own. Highly recommended!",
       platform: 'email',
       isFeatured: true,
-      tourType: "City Tour"
+      tourType: "City & Township Tour"
     }
   ];
 
@@ -293,7 +293,6 @@ const TestimonialPage: React.FC = () => {
     { label: '4.0 Stars', value: '4.0' },
   ];
   
-  // Handle rating filter changes
   const toggleRatingFilter = (ratingValue: string) => {
     setSelectedRating(prev => 
       prev.includes(ratingValue)
@@ -313,12 +312,11 @@ const TestimonialPage: React.FC = () => {
   };
 
   return (
-    <>
-
+    <React.Fragment>
       <PageHero
         title="What Our Guests Say"
-        subtitle="Read authentic testimonials from visitors who have experienced our city tours and discovered the rich heritage of Swakopmund with us"
-        backgroundImage="/Home Images/Hero Images/testimonial.jpg"
+        subtitle="Read authentic testimonials from visitors who have experienced our city & township tours and discovered the rich heritage of Swakopmund with us"
+        backgroundImage="/Home Images/Axarob 1.webp"
         isMobile={isMobile}
       />
       
@@ -345,11 +343,11 @@ const TestimonialPage: React.FC = () => {
                   <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                   <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
                   <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c .87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                 </svg>
                 <span className="font-medium text-gray-800">Google Business Reviews</span>
                 <a 
-                  href="https://www.google.com/maps?cid=your-google-business-id" 
+                  href="https://www.google.com/maps/place/Kalahari+Axarob+Tours/@-22.6376641,14.4327676,11z/data=!3m1!4b1!4m6!3m5!1s0x4774a8257467712b:0xd95d75b13fae5daf!8m2!3d-22.6377484!4d14.5975792!16s%2Fg%2F11x6b_gw4b?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="ml-2 text-sm text-blue-600 hover:text-blue-800 underline"
@@ -392,25 +390,11 @@ const TestimonialPage: React.FC = () => {
                         <p className="text-xs text-kalahari-charcoal/70">{review.location}</p>
                       </div>
                       
-                      {/* Platform icon */}
+                      {/* Platform label */}
                       <div className="ml-auto">
-                        {review.platform === 'google' ? (
-                          <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                          </svg>
-                        ) : review.platform === 'trustpilot' ? (
-                          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" fill="#00B67A"/>
-                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="white"/>
-                          </svg>
-                        ) : (
-                          <svg className="w-5 h-5 text-kalahari-brown" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                          </svg>
-                        )}
+                        <Badge variant="outline" className="text-xs capitalize">
+                          {review.platform}
+                        </Badge>
                       </div>
                     </div>
                     
@@ -567,32 +551,43 @@ const TestimonialPage: React.FC = () => {
                             value="google"
                             className="text-xs data-[state=active]:bg-white"
                           >
-                            <svg className="w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                            </svg>
+                            Google
                           </TabsTrigger>
                           <TabsTrigger 
                             value="trustpilot"
                             className="text-xs data-[state=active]:bg-white"
                           >
-                            <svg className="w-4 h-4 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <rect width="24" height="24" fill="#00B67A"/>
-                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="white"/>
-                            </svg>
+                            Trustpilot
                           </TabsTrigger>
                           <TabsTrigger 
                             value="email"
                             className="text-xs data-[state=active]:bg-white"
                           >
-                            <svg className="w-4 h-4 mx-auto text-kalahari-brown" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
+                            Email
                           </TabsTrigger>
                         </TabsList>
                       </Tabs>
+                    </div>
+                    
+                    {/* Rating filter */}
+                    <div className="mb-2">
+                      <label className="block text-sm font-medium text-kalahari-charcoal mb-2">
+                        Rating
+                      </label>
+                      <div className="flex flex-wrap gap-2">
+                        {ratingOptions.map((opt) => (
+                          <Button
+                            key={opt.value}
+                            type="button"
+                            variant={selectedRating.includes(opt.value) ? 'default' : 'outline'}
+                            size="sm"
+                            className={selectedRating.includes(opt.value) ? 'bg-kalahari-brown hover:bg-kalahari-darkbrown' : 'border-kalahari-brown/20'}
+                            onClick={() => toggleRatingFilter(opt.value)}
+                          >
+                            {opt.label}
+                          </Button>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -610,23 +605,7 @@ const TestimonialPage: React.FC = () => {
                     <div className="flex gap-2 items-center flex-wrap justify-end">
                       {activePlatform !== 'all' && (
                         <Badge variant="outline" className="bg-kalahari-sand/30 text-xs px-2 py-1 h-6 flex items-center gap-1">
-                          {activePlatform === 'google' ? (
-                            <svg className="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                            </svg>
-                          ) : activePlatform === 'trustpilot' ? (
-                            <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <rect width="24" height="24" fill="#00B67A"/>
-                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="white"/>
-                            </svg>
-                          ) : (
-                            <svg className="w-3 h-3 text-kalahari-brown" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                          )}
+                          {activePlatform}
                           <button 
                             className="ml-1 text-kalahari-charcoal/70 hover:text-kalahari-darkbrown"
                             onClick={() => setActivePlatform('all')}
@@ -650,7 +629,7 @@ const TestimonialPage: React.FC = () => {
                       
                       {searchTerm && (
                         <Badge variant="outline" className="bg-kalahari-sand/30 text-xs">
-                          "{searchTerm.length > 10 ? searchTerm.substring(0, 10) + '...' : searchTerm}"
+                          {searchTerm.length > 10 ? `${searchTerm.substring(0, 10)}...` : searchTerm}
                           <button 
                             className="ml-1 text-kalahari-charcoal/70 hover:text-kalahari-darkbrown"
                             onClick={() => setSearchTerm('')}
@@ -689,25 +668,11 @@ const TestimonialPage: React.FC = () => {
                               </div>
                             </div>
                             
-                            {/* Platform icon */}
+                            {/* Platform label */}
                             <div className="ml-auto">
-                              {review.platform === 'google' ? (
-                                <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                                </svg>
-                              ) : review.platform === 'trustpilot' ? (
-                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <rect width="24" height="24" fill="#00B67A"/>
-                                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="white"/>
-                                </svg>
-                              ) : (
-                                <svg className="w-5 h-5 text-kalahari-brown" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                              )}
+                              <Badge variant="outline" className="text-xs capitalize">
+                                {review.platform}
+                              </Badge>
                             </div>
                           </div>
                           
@@ -800,49 +765,40 @@ const TestimonialPage: React.FC = () => {
             
             {/* Leave a review CTA */}
             <div className="mt-16 pt-12 border-t border-kalahari-sand">
-              <div className="bg-gradient-to-br from-kalahari-lightbrown/30 to-kalahari-sand/50 rounded-xl p-8 md:p-10 text-center w-full max-w-xs mx-auto sm:max-w-none sm:mx-0 md:max-w-3xl md:mx-auto">
-                <h4 className="text-2xl text-kalahari-darkbrown font-normal mb-4">
-                  Enjoyed Your Tour With Us?
-                </h4>
-                <p className="text-kalahari-charcoal max-w-2xl mx-auto mb-6">
-                  We value your feedback! If you've taken a tour with us, please consider sharing your experience 
-                  on Google or Trustpilot. Your reviews help other travelers discover our authentic city tours.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href="https://www.google.com/maps?cid=your-google-business-id" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-[#4285F4] hover:bg-[#3367D6] text-white py-3 px-6 rounded-md flex items-center justify-center gap-2"
-                  >
-                    <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/>
-                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/>
-                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fff"/>
-                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/>
-                    </svg>
-                    Review on Google
-                  </a>
-                  <a 
-                    href="https://www.trustpilot.com/review/yourcompanyname" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-[#00B67A] hover:bg-[#00A060] text-white py-3 px-6 rounded-md flex items-center justify-center gap-2"
-                  >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="white"/>
-                    </svg>
-                    Review on Trustpilot
-                  </a>
-                </div>
+              <div className="bg-gradient-to-br from-kalahari-lightbrown/30 to-kalahari-sand/50 rounded-xl p-8 md:p-10 text-center w-full max-w-xs mx-auto sm:max-w-none sm:mx-0 md:max-w-3xl md:mx-auto grid gap-4 md:gap-6 md:grid-cols-2">
+                <a 
+                  href="https://www.google.com/maps/place/Kalahari+Axarob+Tours/@-22.6376641,14.4327676,11z/data=!3m1!4b1!4m6!3m5!1s0x4774a8257467712b:0xd95d75b13fae5daf!8m2!3d-22.6377484!4d14.5975792!16s%2Fg%2F11x6b_gw4b?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-[#4285F4] hover:bg-[#3367D6] text-white py-3 px-6 rounded-md flex items-center justify-center gap-2"
+                >
+                  <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fff"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c .87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/>
+                  </svg>
+                  Review on Google
+                </a>
+                <a 
+                  href="https://www.trustpilot.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-[#00B67A] hover:bg-[#00A060] text-white py-3 px-6 rounded-md flex items-center justify-center gap-2"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="#fff"/>
+                  </svg>
+                  Review on Trustpilot
+                </a>
               </div>
             </div>
           </div>
         </div>
         <Footer />
       </div>
-    </>
+    </React.Fragment>
   );
-};
+}
 
-export default TestimonialPage; 
+export default TestimonialPage;
