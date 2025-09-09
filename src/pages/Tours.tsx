@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SEO from "@/components/seo/SEO";
 
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
@@ -28,11 +29,54 @@ const Tours: React.FC = () => {
   }, []);
 
   // State to track which tab is selected
-  const [selectedTab, setSelectedTab] = useState<"cruise" | "historical" | "township">("cruise");
+  const [selectedTab, setSelectedTab] = useState<"cruise" | "historical">("cruise");
 
   return (
     <>
-
+      <SEO
+        title="Tours in Swakopmund – City or Township & Cruise Liner | Kalahari Axarob Tours"
+        description="Book authentic tours in Swakopmund: City or Township Tour (N$800 pp, option with transportation N$550 pp) and Cruise Liner Shore Excursion (N$2900 pp). Led by knowledgeable local guides."
+        ogImage="/og-image.png"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Swakopmund City or Township Tour",
+            "description": "Explore Swakopmund's landmarks and township culture with a knowledgeable local guide.",
+            "image": "https://kalahariaxarobtours.com/Home Images/Swakop Landmarks.jpg",
+            "offers": [
+              {
+                "@type": "Offer",
+                "price": "800",
+                "priceCurrency": "NAD",
+                "availability": "https://schema.org/InStock"
+              },
+              {
+                "@type": "Offer",
+                "name": "With transportation",
+                "price": "550",
+                "priceCurrency": "NAD",
+                "availability": "https://schema.org/InStock"
+              }
+            ],
+            "areaServed": "NA"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Cruise Liner Shore Excursion",
+            "description": "Full-day shore excursion from Walvis Bay to Swakopmund including historical highlights and a full meal.",
+            "image": "https://kalahariaxarobtours.com/Home Images/Cruise Liner Shore Excursion.jpg",
+            "offers": {
+              "@type": "Offer",
+              "price": "2900",
+              "priceCurrency": "NAD",
+              "availability": "https://schema.org/InStock"
+            },
+            "areaServed": "NA"
+          }
+        ]}
+      />
       <PageHero
         title="Exceptional Tour Experiences"
         subtitle="Discover Swakopmund's rich history and culture through our thoughtfully crafted tours, led by knowledgeable local guides who bring Namibia's complex past to life"

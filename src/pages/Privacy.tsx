@@ -1,10 +1,16 @@
 import React from "react";
+import SEO from "@/components/seo/SEO";
 
 import Footer from "@/components/layout/Footer";
 
 const Privacy: React.FC = () => {
   return (
     <>
+      <SEO
+        title="Privacy Policy | Kalahari Axarob Tours"
+        description="Read how Kalahari Axarob Tours collects, uses, and protects your personal information."
+        noindex
+      />
       {/* Background wrapper that goes behind the navbar */}
       <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-kalahari-lightbrown/50 to-kalahari-sand/30 -z-10" />
       

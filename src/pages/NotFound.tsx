@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import SEO from '@/components/seo/SEO';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -7,11 +7,11 @@ import Footer from '../components/layout/Footer';
 const NotFound: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Page Not Found | Kalahari Axarob Tours</title>
-        <meta name="description" content="The page you are looking for could not be found. Explore our historical, cultural, and shore excursion tours in Namibia instead." />
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      <SEO
+        title="Page Not Found | Kalahari Axarob Tours"
+        description="The page you are looking for could not be found. Explore our historical, cultural, and shore excursion tours in Namibia instead."
+        noindex
+      />
       
       <Navbar />
       

@@ -1,10 +1,16 @@
 import React from "react";
+import SEO from "@/components/seo/SEO";
 
 import Footer from "@/components/layout/Footer";
 
 const Terms: React.FC = () => {
   return (
     <>
+      <SEO
+        title="Terms & Conditions | Kalahari Axarob Tours"
+        description="Read the terms and conditions for booking tours with Kalahari Axarob Tours in Swakopmund, Namibia."
+        noindex
+      />
       {/* Background wrapper that goes behind the navbar */}
       <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-kalahari-lightbrown/50 to-kalahari-sand/30 -z-10" />
       

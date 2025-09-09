@@ -169,10 +169,10 @@ const TourTypes: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-kalahari-brown text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide uppercase mb-3 md:mb-4">
-            Our Tour
+            Our Tours
           </h2>
           <p className="text-kalahari-charcoal text-base sm:text-lg font-normal leading-7 max-w-3xl mx-auto">
-            A comprehensive historical tour through Swakopmund, a seaside resort town that evokes a Bavarian style village. Experience the unique blend of German colonial architecture and African culture, designed for cruise ship passengers exploring this fascinating destination.
+            Choose between our City or Township Tour and our Cruise Liner Shore Excursion. The City or Township Tour is N$800 per person, with an option with transportation at N$550 per person. The Cruise Liner Shore Excursion is N$2900 per person. Experience Swakopmund’s unique blend of German colonial architecture and African culture with knowledgeable local guides.
           </p>
         </div>
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SEO from "@/components/seo/SEO";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
@@ -26,6 +27,11 @@ const About: React.FC = () => {
   
   return (
     <>
+      <SEO
+        title="About Kalahari Axarob Tours | Our Heritage and Mission"
+        description="Learn about Kalahari Axarob Tours, our heritage, mission, and commitment to authentic, educational tours in Swakopmund, Namibia."
+        ogImage="/og-image.png"
+      />
       <Navbar />
       <PageHero
         title="Our Heritage, Your Journey"
@@ -159,7 +165,7 @@ const About: React.FC = () => {
                 </div>
                 <h4 className="text-lg md:text-xl text-kalahari-darkbrown font-semibold mb-2 md:mb-3">Our Vision</h4>
                 <p className="text-kalahari-charcoal text-xs sm:text-sm leading-relaxed">
-                  To be the leading cultural and city & township tour company in Namibia, recognized for authenticity and educational value. 
+                  To be the leading cultural and city or township tour company in Namibia, recognized for authenticity and educational value. 
                   We aim to create a bridge between cultures and offer insightful perspectives on Swakopmund's heritage.
                 </p>
               </div>
@@ -308,7 +314,7 @@ const About: React.FC = () => {
               <div className="w-16 md:w-20 h-1 bg-kalahari-brown rounded-full mx-auto mb-4 md:mb-6"></div>
               <p className="text-kalahari-charcoal/80 max-w-2xl mx-auto text-sm sm:text-base">
                 We are committed to giving back to the Swakopmund community. 
-                We work with local schools to provide educational city & township tours for students, ensuring that the younger generation understands their heritage.
+                We work with local schools to provide educational city or township tours for students, ensuring that the younger generation understands their heritage.
                 We also support local conservation efforts and promote sustainable tourism practices.
               </p>
             </div>

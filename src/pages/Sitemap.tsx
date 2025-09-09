@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SEO from "@/components/seo/SEO";
 
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
@@ -68,7 +69,11 @@ const Sitemap: React.FC = () => {
 
   return (
     <>
-
+      <SEO
+        title="Sitemap | Kalahari Axarob Tours"
+        description="Browse all pages and sections of Kalahari Axarob Tours."
+        noindex
+      />
       <PageHero
         title="Sitemap"
         subtitle="Find your way around our website with this comprehensive listing of all our pages and sections"

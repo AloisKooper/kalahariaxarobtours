@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
+import SEO from "@/components/seo/SEO";
 
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/home/HeroSection";
@@ -32,11 +32,28 @@ const Index: React.FC = () => {
   
   return (
     <div className="overflow-x-hidden">
-      <Helmet>
-        <title>Kalahari Axarob Tours - City & Township Tours & Shore Excursions in Swakopmund</title>
-        <link rel="icon" type="image/png" href="/Kalahari Axarob Tours Icon.png" />
-        <meta name="description" content="Discover Swakopmund's unique culture and landmarks with our city & township tours and shore excursions. Experienced local guides." />
-      </Helmet>
+      <SEO
+        title="Kalahari Axarob Tours - City or Township Tours & Shore Excursions in Swakopmund"
+        description="Discover Swakopmund's unique culture and landmarks with our city or township tours and shore excursions. Experienced local guides."
+        ogImage="/og-image.png"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Kalahari Axarob Tours",
+            "url": "https://kalahariaxarobtours.com",
+            "logo": "https://kalahariaxarobtours.com/Kalahari Axarob Tours Icon.png",
+            "address": "Swakopmund, Namibia"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Kalahari Axarob Tours",
+            "url": "https://kalahariaxarobtours.com",
+            "inLanguage": "en"
+          }
+        ]}
+      />
       {/* Fixed background that extends behind both navbar and hero */}
       <div className="fixed top-0 left-0 w-full h-[100vh] overflow-hidden -z-10">
         <img 

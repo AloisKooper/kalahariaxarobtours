@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import SEO from "@/components/seo/SEO";
 
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
@@ -95,7 +96,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Wow... I am very happy with this tour guide. His knowledge about the genocide of 1904-1908 is impressive. Would highly recommend to anyone interested in learning about this important historical event.",
       platform: 'google',
       isFeatured: true,
-      tourType: "City & Township Tour"
+      tourType: "City or Township Tour"
     },
     {
       id: 'g2',
@@ -106,7 +107,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Mr. Michael provided an exceptional experience. His personal connection to the history made the tour deeply meaningful and educational. Will definitely book again when I return to Namibia.",
       platform: 'google',
       isFeatured: true,
-      tourType: "City & Township Tour"
+      tourType: "City or Township Tour"
     },
     {
       id: 'g5',
@@ -117,7 +118,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "This was the highlight of our Namibia trip. Mr. Michael's tour gives you a deep understanding of the historical events and their significance. The personal stories made history come alive.",
       platform: 'google',
       isFeatured: true,
-      tourType: "City & Township Tour"
+      tourType: "City or Township Tour"
     },
     
     // Trustpilot Reviews
@@ -127,10 +128,10 @@ const TestimonialPage: React.FC = () => {
       date: "2023-10-20",
       location: "Cape Town, South Africa",
       rating: "4.8",
-      testimonial: "The city & township tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable.",
+      testimonial: "The city or township tour with Mr. Michael was eye-opening and educational. His storytelling abilities and depth of knowledge made the experience unforgettable.",
       platform: 'trustpilot',
       isFeatured: true,
-      tourType: "City & Township Tour"
+      tourType: "City or Township Tour"
     },
     {
       id: 't4',
@@ -141,7 +142,7 @@ const TestimonialPage: React.FC = () => {
       testimonial: "Mr. Michael's personal connections to the history he shares makes this tour particularly moving. A must-do for anyone seeking to understand Namibia's complex past.",
       platform: 'trustpilot',
       isFeatured: true,
-      tourType: "City & Township Tour"
+      tourType: "City or Township Tour"
     },
     
     // Direct Email Testimonials
@@ -151,10 +152,10 @@ const TestimonialPage: React.FC = () => {
       date: "2023-10-10",
       location: "Hamburg, Germany",
       rating: "5.0",
-      testimonial: "Perfect day trip from our cruise ship. Covered all the highlights of Swakopmund efficiently. The city & township tour was well-organized and informative.",
+      testimonial: "Perfect day trip from our cruise ship. Covered all the highlights of Swakopmund efficiently. The city or township tour was well-organized and informative.",
       platform: 'email',
       isFeatured: true,
-      tourType: "City & Township Tour"
+      tourType: "City or Township Tour"
     },
     {
       id: 'e5',
@@ -162,10 +163,10 @@ const TestimonialPage: React.FC = () => {
       date: "2023-09-05",
       location: "New York, USA",
       rating: "5.0",
-      testimonial: "An excellent introduction to Swakopmund. The city & township tour provided great context before we explored further on our own. Highly recommended!",
+      testimonial: "An excellent introduction to Swakopmund. The city or township tour provided great context before we explored further on our own. Highly recommended!",
       platform: 'email',
       isFeatured: true,
-      tourType: "City & Township Tour"
+      tourType: "City or Township Tour"
     }
   ];
 
@@ -313,9 +314,14 @@ const TestimonialPage: React.FC = () => {
 
   return (
     <React.Fragment>
+      <SEO
+        title="Reviews & Testimonials | Kalahari Axarob Tours"
+        description="Read authentic Google, Trustpilot, and email reviews for our City or Township Tours and Cruise Liner Shore Excursions in Swakopmund, Namibia."
+        ogImage="/og-image.png"
+      />
       <PageHero
         title="What Our Guests Say"
-        subtitle="Read authentic testimonials from visitors who have experienced our city & township tours and discovered the rich heritage of Swakopmund with us"
+        subtitle="Read authentic testimonials from visitors who have experienced our city or township tours and discovered the rich heritage of Swakopmund with us"
         backgroundImage="/Home Images/Axarob 1.webp"
         isMobile={isMobile}
       />

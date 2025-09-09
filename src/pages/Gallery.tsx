@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SEO from "@/components/seo/SEO";
 
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
@@ -252,7 +253,11 @@ const GalleryPage: React.FC = () => {
 
   return (
     <>
-
+      <SEO
+        title="Tour Gallery | Swakopmund Sites & Experiences | Kalahari Axarob Tours"
+        description="Browse photos from our City or Township Tours and Cruise Liner Shore Excursions in Swakopmund, Namibia."
+        ogImage="/og-image.png"
+      />
       <PageHero
         title="Our Tour Gallery"
         subtitle="Explore our collection of photographs showcasing the historical sites, cultural experiences, and memorable moments from our tours in Swakopmund"

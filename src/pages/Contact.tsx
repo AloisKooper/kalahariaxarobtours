@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SEO from "@/components/seo/SEO";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
@@ -24,6 +25,11 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
+      <SEO
+        title="Contact Kalahari Axarob Tours | Book a Tour in Swakopmund"
+        description="Get in touch to book the City or Township Tour or the Cruise Liner Shore Excursion in Swakopmund, Namibia."
+        ogImage="/og-image.png"
+      />
       <Navbar />
       <PageHero
         title="Contact Us"
