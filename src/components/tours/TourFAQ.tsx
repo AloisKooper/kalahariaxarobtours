@@ -17,15 +17,15 @@ const TourFAQ: React.FC = () => {
     },
     {
       question: "What is the maximum number of travelers per tour?",
-      answer: "Our Swakopmund City Discovery Tour accommodates a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
+      answer: "Our Swakopmund City or Township Tour accommodates a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
     },
     {
       question: "What tours do you offer?",
-      answer: "We offer two distinct tour options: 1) Swakopmund City Discovery Tour (5 hours) - focuses on Swakopmund landmarks and culture with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (Full Day - 8 hours) - designed for cruise passengers, covering Walvis Bay Lagoon, Dune 7, Swakopmund city highlights, with pickup/drop-off at Walvis Bay Harbor."
+      answer: "We offer two distinct tour options: 1) Swakopmund City or Township Tour (5 hours) - focuses on Swakopmund landmarks and culture with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (Full Day - 8 hours) - designed for cruise passengers, covering Walvis Bay Lagoon, Dune 7, Swakopmund city highlights, with pickup/drop-off at Walvis Bay Harbor."
     },
     {
-      question: "Do you offer an option with transportation?",
-      answer: "Yes. For the Swakopmund City Discovery Tour we offer an option with transportation at N$550 per person. Contact us to confirm availability and arrange meeting details."
+      question: "Do you offer an option with own transportation?",
+      answer: "Yes. For the Swakopmund City or Township Tour we offer an option with own transportation at N$550 per person. Contact us to confirm availability and arrange meeting details."
     },
     {
       question: "What meals are included in the tours?",

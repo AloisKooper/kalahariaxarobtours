@@ -17,14 +17,14 @@ const TOUR_INFO: Record<string, { title: string; items: string[] }> = {
     ]
   },
   historical: {
-    title: "City Discovery Tour Information",
+    title: "City or Township Tour Information",
     items: [
       "English speaking local guide (descendant of the native Namaqua tribe)",
       "Transportation in air-conditioned vehicle",
       "Snacks and drinks",
       "Pickup and drop-off at your Swakopmund accommodation",
       "Minimum 4, Maximum 6 travelers",
-      "With transportation: N$550 per person"
+      "With own transportation: N$550 per person"
     ]
   },
 
@@ -32,6 +32,8 @@ const TOUR_INFO: Record<string, { title: string; items: string[] }> = {
 
 const TourInformationPanel: React.FC<TourInformationPanelProps> = ({ selectedTour }) => {
   const info = TOUR_INFO[selectedTour];
+  const ownTransportItem = info.items.find((i) => i.toLowerCase().startsWith("with own transportation"));
+  const otherItems = info.items.filter((i) => i !== ownTransportItem);
   return (
     <div className="sticky top-6">
       <div className="bg-white border-kalahari-brown/10 shadow-md w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
@@ -40,13 +42,20 @@ const TourInformationPanel: React.FC<TourInformationPanelProps> = ({ selectedTou
         </div>
         <div className="flex flex-col items-start bg-sand-custom px-6 py-4 border-t border-kalahari-brown/10 rounded-b">
           <ul className="space-y-2 text-sm text-kalahari-charcoal">
-            {info.items.map((item, idx) => (
+            {otherItems.map((item, idx) => (
               <li key={idx} className="flex items-start">
                 <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
+          {ownTransportItem && (
+            <div className="mt-3">
+              <span className="inline-block text-xs sm:text-sm bg-kalahari-sun/20 text-kalahari-darkbrown border border-kalahari-sun/30 rounded-full px-3 py-1 font-medium">
+                {ownTransportItem}
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </div>

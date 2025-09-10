@@ -77,7 +77,7 @@ const TourBookingWidget: React.FC = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">Select Tour</SelectItem>
-                  <SelectItem value="local">Swakopmund City Discovery Tour (5 hours)</SelectItem>
+                  <SelectItem value="local">Swakopmund City or Township Tour (5 hours)</SelectItem>
                   <SelectItem value="cruise">Cruise Liner Shore Excursion (8 hours)</SelectItem>
                   <SelectItem value="township">Guided Township Tour (4 hours)</SelectItem>
                 </SelectContent>

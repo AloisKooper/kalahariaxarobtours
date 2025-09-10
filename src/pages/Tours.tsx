@@ -35,7 +35,7 @@ const Tours: React.FC = () => {
     <>
       <SEO
         title="Tours in Swakopmund – City or Township & Cruise Liner | Kalahari Axarob Tours"
-        description="Book authentic tours in Swakopmund: City or Township Tour (N$800 pp, option with transportation N$550 pp) and Cruise Liner Shore Excursion (N$2900 pp). Led by knowledgeable local guides."
+        description="Book authentic tours in Swakopmund: City or Township Tour (N$800 per person; with own transportation N$550 per person) and Cruise Liner Shore Excursion (N$2900 per person). Led by knowledgeable local guides."
         ogImage="/og-image.png"
         jsonLd={[
           {
@@ -49,14 +49,18 @@ const Tours: React.FC = () => {
                 "@type": "Offer",
                 "price": "800",
                 "priceCurrency": "NAD",
-                "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2025-06-01",
+                "priceValidUntil": "2026-06-30"
               },
               {
                 "@type": "Offer",
-                "name": "With transportation",
+                "name": "With own transportation",
                 "price": "550",
                 "priceCurrency": "NAD",
-                "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2025-06-01",
+                "priceValidUntil": "2026-06-30"
               }
             ],
             "areaServed": "NA"
@@ -71,7 +75,9 @@ const Tours: React.FC = () => {
               "@type": "Offer",
               "price": "2900",
               "priceCurrency": "NAD",
-              "availability": "https://schema.org/InStock"
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2025-06-01",
+              "priceValidUntil": "2026-06-30"
             },
             "areaServed": "NA"
           }
@@ -83,6 +89,15 @@ const Tours: React.FC = () => {
         backgroundImage="/Home Images/Tours Swakop.jpg"
         isMobile={isMobile}
       />
+
+      {/* Pricing validity note */}
+      <div className="relative bg-white z-10">
+        <div className="container mx-auto px-4 sm:px-6 pt-4">
+          <p className="text-xs sm:text-sm text-kalahari-charcoal/80 bg-sand-custom/60 border border-kalahari-brown/10 rounded px-3 py-2 inline-block">
+            Prices valid from June 2025 until June 2026.
+          </p>
+        </div>
+      </div>
 
       {/* White background container for all content below hero INCLUDING footer */}
       <div className="relative bg-white z-10">

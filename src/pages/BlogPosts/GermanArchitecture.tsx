@@ -81,7 +81,7 @@ const SwakopmundArchitecture: React.FC = () => {
           </figure>
 
           <p>
-            Exploring Swakopmund's architecture is like reading chapters of its history. Whether you're an architecture buff or simply enjoy soaking up the atmosphere of unique places, a walk through Swakopmund's streets is a rewarding experience. Consider joining our <a href="/tours">Swakopmund City Discovery Tour</a> for expert insights into these historical buildings and more.
+            Exploring Swakopmund's architecture is like reading chapters of its history. Whether you're an architecture buff or simply enjoy soaking up the atmosphere of unique places, a walk through Swakopmund's streets is a rewarding experience. Consider joining our <a href="/tours">Swakopmund City or Township Tour</a> for expert insights into these historical buildings and more.
           </p>
         </BlogPostTemplate>
         <Footer />

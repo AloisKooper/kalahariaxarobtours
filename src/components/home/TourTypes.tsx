@@ -55,7 +55,7 @@ const TourTypes: React.FC = () => {
       ]
     },
     {
-      title: "Swakopmund City Discovery Tour",
+      title: "Swakopmund City or Township Tour",
       description: "Explore Swakopmund's charming landmarks, unique architecture, and vibrant culture on this engaging city discovery tour. Perfect for understanding the town's character.",
       image: "/Home Images/Swakop Landmarks.jpg",
       duration: "5 hours",
@@ -172,8 +172,9 @@ const TourTypes: React.FC = () => {
             Our Tours
           </h2>
           <p className="text-kalahari-charcoal text-base sm:text-lg font-normal leading-7 max-w-3xl mx-auto">
-            Choose between our City or Township Tour and our Cruise Liner Shore Excursion. The City or Township Tour is N$800 per person, with an option with transportation at N$550 per person. The Cruise Liner Shore Excursion is N$2900 per person. Experience Swakopmund’s unique blend of German colonial architecture and African culture with knowledgeable local guides.
+            Choose between our City or Township Tour and our Cruise Liner Shore Excursion. The City or Township Tour is N$800 per person, with an option with own transportation at N$550 per person. The Cruise Liner Shore Excursion is N$2900 per person. Experience Swakopmund’s unique blend of German colonial architecture and African culture with knowledgeable local guides.
           </p>
+          <p className="mt-2 text-sm text-kalahari-charcoal/80">Prices valid from June 2025 until June 2026.</p>
         </div>
 
         {/* Main Tour Card */}

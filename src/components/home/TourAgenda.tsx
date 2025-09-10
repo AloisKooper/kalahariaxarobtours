@@ -74,7 +74,7 @@ const TourAgenda: React.FC = () => {
                   : 'text-kalahari-charcoal hover:text-kalahari-brown'
               }`}
             >
-              City Discovery Tour
+              City or Township Tour
             </button>
           </div>
         </div>
@@ -347,7 +347,7 @@ const TourAgenda: React.FC = () => {
                 <div className="relative h-40 sm:h-32 md:h-48">
                   <img 
                     src="/Home Images/Axarob 2.webp" 
-                    alt="Swakopmund City Discovery" 
+                    alt="Swakopmund City or Township Tour" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -357,7 +357,7 @@ const TourAgenda: React.FC = () => {
                       <Flag className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">City Discovery Tour</h3>
+                      <h3 className="text-lg sm:text-xl text-kalahari-brown font-medium">City or Township Tour</h3>
                       <p className="text-kalahari-brown/80 text-xs sm:text-sm">Half Day</p>
                     </div>
                   </div>

@@ -175,7 +175,7 @@ const ContactSection: React.FC = () => {
         <div className="flex flex-col items-center mb-12">
           <h3 className="text-gravel text-sm uppercase tracking-widest mb-2">Contact Us</h3>
           <h2 className="text-kalahari-darkbrown text-4xl md:text-5xl font-normal mb-4 text-center">
-            Schedule Your City Discovery Tour
+            Schedule Your City or Township Tour
           </h2>
           <div className="w-20 h-1 bg-kalahari-brown rounded-full mb-6"></div>
           <p className="text-kalahari-charcoal/80 text-center max-w-2xl">
@@ -273,7 +273,7 @@ const ContactSection: React.FC = () => {
                       className="w-full rounded-md border border-gravel-medium bg-transparent px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kalahari-brown"
                     >
                       <option value="">Select a tour</option>
-                      <option value="half-day">City Discovery Tour - 5 hours</option>
+                      <option value="half-day">City or Township Tour - 5 hours</option>
                       <option value="full-day">Cruise Liner Shore Excursion (Full Day) - 8 hours</option>
                     </select>
                   </div>
@@ -413,7 +413,7 @@ const ContactSection: React.FC = () => {
               }`}
               onClick={() => handleTourTypeChange("half-day")}
             >
-              City Discovery Tour (5 hours)
+              City or Township Tour (5 hours)
             </button>
             <button 
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${

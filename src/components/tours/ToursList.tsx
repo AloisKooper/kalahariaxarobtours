@@ -52,7 +52,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
     historical: [
       {
         id: 2,
-        title: "Swakopmund City Discovery Tour",
+        title: "Swakopmund City or Township Tour",
         image: "/Home Images/Swakop Landmarks.jpg",
         price: "N$800",
         ownTransportPrice: "N$550",
@@ -101,7 +101,14 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
                   <div className="md:col-span-2 p-4 sm:p-6">
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h3 className="font-serif text-xl sm:text-2xl text-brown-custom">{tour.title}</h3>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="font-serif text-xl sm:text-2xl text-brown-custom">{tour.title}</h3>
+                          {'ownTransportPrice' in tour && (
+                            <span className="text-[10px] sm:text-xs bg-kalahari-brown/10 text-kalahari-brown border border-kalahari-brown/20 rounded-full px-2 py-0.5">
+                              With own transportation: {(tour as any).ownTransportPrice} per person
+                            </span>
+                          )}
+                        </div>
                         {'subtitle' in tour && (
                           <p className="text-sm text-kalahari-charcoal/70 mt-1">{(tour as any).subtitle}</p>
                         )}
@@ -112,7 +119,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
                     </div>
                     <p className="text-charcoal-custom mb-4 text-sm sm:text-base">{tour.description}</p>
 
-{tour.title === "Swakopmund City Discovery Tour" && (
+{tour.title === "Swakopmund City or Township Tour" && (
   <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-md mb-4">
     <h4 className="text-brown-custom font-semibold mb-1">Includes Township Experience</h4>
     <p className="text-sm text-kalahari-charcoal">
@@ -169,24 +176,16 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
                     
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-4">
                       <div>
-                        <p className="text-xs sm:text-sm text-charcoal-custom mb-1">Next available:</p>
-                        <div className="flex flex-wrap gap-2">
-                          {tour.dates.slice(0, 2).map((date, index) => (
-                            <div key={index} className="flex items-center text-xs bg-lightbrown-custom text-darkbrown-custom px-2 py-1 rounded">
-                              <Calendar size={12} className="mr-1" />
-                              {date}
-                            </div>
-                          ))}
-                        </div>
+                        <p className="text-xs sm:text-sm text-charcoal-custom">Prices valid from June 2025 until June 2026.</p>
                       </div>
                       
                       <div className="flex items-center gap-4 mt-3 sm:mt-0">
                         <div>
                           <div className="text-xl sm:text-2xl font-serif text-brown-custom">{tour.price}</div>
                           {'ownTransportPrice' in tour && (
-                            <div className="text-xs sm:text-sm text-charcoal-custom mt-0.5">
-                              With transportation: {(tour as any).ownTransportPrice} pp
-                            </div>
+                            <span className="inline-block mt-1 text-xs sm:text-sm bg-kalahari-sun/20 text-kalahari-darkbrown border border-kalahari-sun/30 rounded-full px-2 py-0.5">
+                              With own transportation: {(tour as any).ownTransportPrice} per person
+                            </span>
                           )}
                         </div>
                         <Button asChild className="bg-darkbrown-custom hover:bg-brown-custom text-white text-sm sm:text-base">

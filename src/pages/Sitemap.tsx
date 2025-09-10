@@ -48,7 +48,7 @@ const Sitemap: React.FC = () => {
     {
       title: "Tour Information",
       links: [
-        { name: "Swakopmund City Discovery Tour", path: "/tours#local" },
+        { name: "Swakopmund City or Township Tour", path: "/tours#local" },
         { name: "Cruise Liner Shore Excursion", path: "/tours#cruise" },
         { name: "Guided Township Tour", path: "/tours#township" }
       ]
