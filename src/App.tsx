@@ -18,6 +18,7 @@ import TourGuidePage from "@/pages/TourGuide";
 import Contact from "@/pages/Contact";
 import BlogPage from "@/pages/Blog";
 import ScrollToTop from "@/components/shared/ScrollToTop";
+import WhatsAppFloatingButton from "@/components/common/WhatsAppFloatingButton";
 
 // Blog Posts
 import HerreroNamaGenocide from "@/pages/BlogPosts/HerreroNamaGenocide";
@@ -37,7 +38,7 @@ function App() {
         <>
           <BrowserRouter>
             <Navbar />
-            <ScrollToTop />
+            <WhatsAppFloatingButton />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/tours" element={<Tours />} />
@@ -50,7 +51,7 @@ function App() {
               <Route path="/tour-guide" element={<TourGuidePage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<BlogPage />} />
-              
+
               {/* Blog Post Routes */}
               <Route path="/blog/herero-nama-genocide" element={<HerreroNamaGenocide />} />
               <Route path="/blog/german-architecture" element={<GermanArchitecture />} />
@@ -58,7 +59,7 @@ function App() {
               <Route path="/blog/township-tour" element={<TownshipTour />} />
               <Route path="/blog/township-tour-update" element={<TownshipTourUpdate />} />
               <Route path="/blog/planning-historical-tour" element={<PlanningHistoricalTour />} />
-              
+
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
