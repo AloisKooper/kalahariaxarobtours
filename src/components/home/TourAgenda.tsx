@@ -5,7 +5,7 @@ const TourAgenda: React.FC = () => {
   const [selectedTour, setSelectedTour] = useState<'cruise' | 'local'>('cruise');
   const [showTooltip, setShowTooltip] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   // Show tooltip when scrolling to the section
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -17,24 +17,24 @@ const TourAgenda: React.FC = () => {
           const timer = setTimeout(() => {
             setShowTooltip(false);
           }, 6000);
-          
+
           return () => clearTimeout(timer);
         }
       },
       { threshold: 0.2 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-  
+
   return (
     <section ref={sectionRef} className="w-full flex flex-col items-center py-10 sm:py-12 md:py-16 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-5 md:px-6">
@@ -45,34 +45,24 @@ const TourAgenda: React.FC = () => {
           <p className="text-kalahari-charcoal text-base sm:text-lg font-normal leading-relaxed max-w-xl mt-4 sm:mt-6 mx-auto px-2">
             Kalahari Axarob Tours offers two unique tour options to explore the rich history and culture of Swakopmund.
           </p>
-          
+
           {/* Tour Type Selector with Tooltip */}
           <div className="flex justify-center mt-6 border-b border-kalahari-brown/20 relative">
-            {/* Mobile-friendly tooltip that appears on scroll */}
-            {showTooltip && (
-              <div className="fixed bottom-4 left-4 right-4 md:absolute md:-top-14 md:left-1/2 md:right-auto md:bottom-auto md:transform md:-translate-x-1/2 bg-kalahari-brown text-white px-4 py-3 md:px-3 md:py-1.5 rounded-lg shadow-lg z-50 text-center md:whitespace-nowrap">
-                <p className="font-medium text-sm md:text-xs">Tap to switch between tour options</p>
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-full h-3 w-3 bg-kalahari-brown rotate-45"></div>
-              </div>
-            )}
-            
             <button
               onClick={() => setSelectedTour('cruise')}
-              className={`px-3 sm:px-4 py-2 font-medium text-sm sm:text-base ${
-                selectedTour === 'cruise' 
+              className={`px-3 sm:px-4 py-2 font-medium text-sm sm:text-base ${selectedTour === 'cruise'
                   ? 'text-kalahari-brown border-b-2 border-kalahari-brown'
                   : 'text-kalahari-charcoal hover:text-kalahari-brown'
-              }`}
+                }`}
             >
               Cruise Liner Shore Excursion
             </button>
             <button
               onClick={() => setSelectedTour('local')}
-              className={`px-3 sm:px-4 py-2 font-medium text-sm sm:text-base ${
-                selectedTour === 'local'
+              className={`px-3 sm:px-4 py-2 font-medium text-sm sm:text-base ${selectedTour === 'local'
                   ? 'text-kalahari-brown border-b-2 border-kalahari-brown'
                   : 'text-kalahari-charcoal hover:text-kalahari-brown'
-              }`}
+                }`}
             >
               City or Township Tour
             </button>
@@ -138,9 +128,9 @@ const TourAgenda: React.FC = () => {
                 {/* Pickup Card */}
                 <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
-                    <img 
-                      src="/Home Images/Pickup.jpg" 
-                      alt="Walvis Bay Harbor" 
+                    <img
+                      src="/Home Images/Pickup.jpg"
+                      alt="Walvis Bay Harbor"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -163,9 +153,9 @@ const TourAgenda: React.FC = () => {
                 {/* Tour Card */}
                 <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
-                    <img 
-                      src="/Home Images/Axarob 2.webp" 
-                      alt="Swakopmund Historical Sites" 
+                    <img
+                      src="/Home Images/Axarob 2.webp"
+                      alt="Swakopmund Historical Sites"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -188,9 +178,9 @@ const TourAgenda: React.FC = () => {
                 {/* Drop-off Card */}
                 <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                   <div className="relative h-40 sm:h-32 md:h-48">
-                    <img 
-                      src="/Home Images/DropOff.jpg" 
-                      alt="Walvis Bay Harbor Drop-off" 
+                    <img
+                      src="/Home Images/DropOff.jpg"
+                      alt="Walvis Bay Harbor Drop-off"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -320,9 +310,9 @@ const TourAgenda: React.FC = () => {
               {/* Pickup Card */}
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
-                  <img 
-                    src="/Home Images/Pickup.jpg" 
-                    alt="Swakopmund Hotel Pickup" 
+                  <img
+                    src="/Home Images/Pickup.jpg"
+                    alt="Swakopmund Hotel Pickup"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -345,9 +335,9 @@ const TourAgenda: React.FC = () => {
               {/* Tour Card */}
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
-                  <img 
-                    src="/Home Images/Axarob 2.webp" 
-                    alt="Swakopmund City or Township Tour" 
+                  <img
+                    src="/Home Images/Axarob 2.webp"
+                    alt="Swakopmund City or Township Tour"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -370,9 +360,9 @@ const TourAgenda: React.FC = () => {
               {/* Drop-off Card */}
               <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 overflow-hidden hover:shadow-md transition-shadow w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
                 <div className="relative h-40 sm:h-32 md:h-48">
-                  <img 
-                    src="/Home Images/DropOff.jpg" 
-                    alt="Swakopmund scenery" 
+                  <img
+                    src="/Home Images/DropOff.jpg"
+                    alt="Swakopmund scenery"
                     className="w-full h-full object-cover"
                   />
                 </div>
