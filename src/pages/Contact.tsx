@@ -27,7 +27,7 @@ const ContactPage: React.FC = () => {
     <>
       <SEO
         title="Contact Kalahari Axarob Tours | Book a Tour in Swakopmund"
-        description="Get in touch to book the City or Township Tour or the Cruise Liner Shore Excursion in Swakopmund, Namibia."
+        description="Get in touch to book the City or Township Tour, Cruise Liner Shore Excursion, or our Half Day Swakopmund Tour for Elderly in Swakopmund, Namibia."
         ogImage="/og-image.png"
       />
       <Navbar />

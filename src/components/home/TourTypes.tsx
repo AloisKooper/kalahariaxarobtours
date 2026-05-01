@@ -98,6 +98,52 @@ const TourTypes: React.FC = () => {
         "Sunscreen recommended",
         "Shade hat recommended"
       ]
+    },
+    {
+      title: "Half Day Swakopmund Tour for Elderly (Sightseeing)",
+      description: "A gentle, relaxed sightseeing tour designed specifically for elderly cruise passengers. Enjoy Walvis Bay Lagoon, a scenic drive past historical buildings in Swakopmund, a craft market visit, and a sit-down lunch with a cultural performance — all at a comfortable pace.",
+      image: "/Home Images/Elderly Tour 1.jpg",
+      duration: "Half Day",
+      maxParticipants: 40,
+      highlights: [
+        {
+          title: "Walvis Bay Lagoon",
+          description: "First stop — spot flamingos at the beautiful lagoon.",
+          image: "/Home Images/Flamingo.jpg"
+        },
+        {
+          title: "Historical Buildings Drive",
+          description: "Slowly drive past Swakopmund's iconic German colonial historical buildings.",
+          image: "/Home Images/Swakop Landmarks.jpg"
+        },
+        {
+          title: "Craft Market Visit",
+          description: "Browse vibrant local crafts and handmade souvenirs at the market.",
+          image: "/Home Images/Craft Market.jpg"
+        },
+        {
+          title: "Lunch & Cultural Performance",
+          description: "Enjoy a sit-down lunch accompanied by a live cultural performance.",
+          image: "/Home Images/Cultural Exchange.jpg"
+        }
+      ],
+      locations: ["Walvis Bay Harbor", "Walvis Bay Lagoon", "Swakopmund"],
+      included: [
+        "English speaking Local Guide (descendant of the native Namaqua tribe)",
+        "Transportation",
+        "Lunch",
+        "Cultural performance",
+        "Non-Alcoholic beverages",
+        "Pickup and drop-off at Walvis Bay Harbor"
+      ],
+      additionalInfo: [
+        "Minimum 20, Maximum 40 travelers",
+        "Designed for elderly passengers — relaxed pace",
+        "N$1,800 per person | N$500 as an add-on to any tour",
+        "Vegetarian/vegan options available",
+        "Sunscreen recommended",
+        "Shade hat recommended"
+      ]
     }
   ];
 

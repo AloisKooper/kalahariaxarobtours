@@ -20,7 +20,7 @@ const ContactSection: React.FC = () => {
   });
   const [loading, setLoading] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
-  const [selectedTourType, setSelectedTourType] = useState<"half-day" | "full-day">("full-day");
+  const [selectedTourType, setSelectedTourType] = useState<"half-day" | "full-day" | "cruise-elderly">("full-day");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -81,14 +81,14 @@ const ContactSection: React.FC = () => {
       name: "Walvis Bay Harbor (Start/End)",
       coords: { lat: -22.9575, lng: 14.5054 },
       description: "Our meeting point where the tour begins and ends",
-      tourTypes: ["full-day"]
+      tourTypes: ["full-day", "cruise-elderly"]
     },
     {
       id: "lagoon",
       name: "Walvis Bay Lagoon",
       coords: { lat: -22.9876, lng: 14.4892 },
       description: "Spot flamingos at this beautiful lagoon",
-      tourTypes: ["full-day"]
+      tourTypes: ["full-day", "cruise-elderly"]
     },
     {
       id: "dune7",
@@ -123,21 +123,28 @@ const ContactSection: React.FC = () => {
       name: "Craft Markets",
       coords: { lat: -22.6780, lng: 14.5280 },
       description: "Explore vibrant local markets for handmade crafts and souvenirs.",
-      tourTypes: ["half-day"]
+      tourTypes: ["half-day", "cruise-elderly"]
     },
     {
       id: "jetty",
       name: "Swakopmund Jetty",
       coords: { lat: -22.6825, lng: 14.5176 },
       description: "Iconic pier offering ocean views and a historical landmark.",
-      tourTypes: ["half-day", "full-day"]
+      tourTypes: ["half-day", "full-day", "cruise-elderly"]
     },
     {
       id: "woermann",
       name: "Woermann House",
       coords: { lat: -22.6776, lng: 14.5262 },
       description: "Historic building showcasing colonial architecture and city views from its tower.",
-      tourTypes: ["half-day", "full-day"]
+      tourTypes: ["half-day", "full-day", "cruise-elderly"]
+    },
+    {
+      id: "elderly-lunch",
+      name: "Swakopmund (Buffet & Cultural Performance)",
+      coords: { lat: -22.6790, lng: 14.5270 },
+      description: "Sit-down buffet lunch with a live cultural performance",
+      tourTypes: ["cruise-elderly"]
     },
     {
       id: "warmemorial",
@@ -164,7 +171,7 @@ const ContactSection: React.FC = () => {
     setSelectedLocation(selectedLocation === locationId ? null : locationId);
   };
   
-  const handleTourTypeChange = (type: "half-day" | "full-day") => {
+  const handleTourTypeChange = (type: "half-day" | "full-day" | "cruise-elderly") => {
     setSelectedTourType(type);
     setSelectedLocation(null);
   };
@@ -275,6 +282,7 @@ const ContactSection: React.FC = () => {
                       <option value="">Select a tour</option>
                       <option value="half-day">City or Township Tour - 5 hours</option>
                       <option value="full-day">Cruise Liner Shore Excursion (Full Day) - 8 hours</option>
+                      <option value="cruise-elderly">Half Day Swakopmund Tour for Elderly (Sightseeing)</option>
                     </select>
                   </div>
                   
@@ -425,7 +433,16 @@ const ContactSection: React.FC = () => {
             >
               Shore Excursion (8 hours)
             </button>
-
+            <button 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                selectedTourType === "cruise-elderly" 
+                  ? 'bg-kalahari-brown text-white' 
+                  : 'bg-sand-custom text-kalahari-brown hover:bg-kalahari-sand'
+              }`}
+              onClick={() => handleTourTypeChange("cruise-elderly")}
+            >
+              Elderly Tour (Half Day)
+            </button>
           </div>
           
           <div className="overflow-hidden relative rounded-lg shadow-md">
@@ -441,7 +458,7 @@ const ContactSection: React.FC = () => {
             {/* Tour Locations Panel - Desktop and Tablet Only */}
             <div className="absolute top-0 right-0 hidden md:block w-72 bg-white/90 backdrop-blur-sm h-full overflow-y-auto border-l border-kalahari-sand/40 shadow-lg p-4">
               <h4 className="text-kalahari-brown text-lg font-medium mb-4">
-                {selectedTourType === "half-day" ? "Half Day Tour Stops" : "Full Day Tour Stops"}
+                {selectedTourType === "half-day" ? "Half Day Tour Stops" : selectedTourType === "full-day" ? "Full Day Tour Stops" : "Elderly Tour Stops"}
               </h4>
               <div className="space-y-2">
                 {filteredLocations.map((location, index) => (
@@ -489,7 +506,7 @@ const ContactSection: React.FC = () => {
           {/* Mobile Tour Stops - Simple Horizontal Scroll */}
           <div className="md:hidden mt-4 mb-6 max-w-full">
             <h4 className="text-kalahari-brown text-lg font-medium mb-3 text-center">
-              {selectedTourType === "half-day" ? "Half Day Tour Stops" : "Full Day Tour Stops"}
+              {selectedTourType === "half-day" ? "Half Day Tour Stops" : selectedTourType === "full-day" ? "Full Day Tour Stops" : "Elderly Tour Stops"}
             </h4>
             
             {/* Clean horizontal scrollable container */}
@@ -551,6 +568,14 @@ const ContactSection: React.FC = () => {
                   <p className=""><strong>City or Township Tour Route:</strong></p>
                   <p className="text-kalahari-charcoal text-sm sm:text-base">
                     Swakopmund Jetty - Woermann House - Old Bahnhof (Station) - Swakopmund Lighthouse - Living Museum (Local Culture) - Craft Markets
+                  </p>
+                </>
+              )}
+              {selectedTourType === "cruise-elderly" && (
+                <>
+                  <p className=""><strong>Elderly Sightseeing Tour Route:</strong></p>
+                  <p className="text-kalahari-charcoal text-sm sm:text-base">
+                    Walvis Bay Harbor - Walvis Bay Lagoon - Swakopmund (historical buildings drive-by) - Craft Market - Buffet Lunch & Cultural Performance - Return to port
                   </p>
                 </>
               )}

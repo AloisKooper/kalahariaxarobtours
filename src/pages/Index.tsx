@@ -34,7 +34,7 @@ const Index: React.FC = () => {
     <div className="overflow-x-hidden">
       <SEO
         title="Kalahari Axarob Tours - City or Township Tours & Shore Excursions in Swakopmund"
-        description="Discover Swakopmund's unique culture and landmarks with our city or township tours and shore excursions. Experienced local guides."
+        description="Discover Swakopmund's unique culture and landmarks with our city or township tours, shore excursions, and the new Half Day Swakopmund Tour for Elderly. Experienced local guides."
         ogImage="/og-image.png"
         jsonLd={[
           {

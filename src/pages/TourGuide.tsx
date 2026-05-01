@@ -145,7 +145,7 @@ const TourGuidePage: React.FC = () => {
     <>
       <SEO
         title="Meet Your Guides | Local Expert Tour Guides in Swakopmund | Kalahari Axarob Tours"
-        description="Learn about our experienced local guides leading City or Township Tours and Cruise Liner Shore Excursions in Swakopmund, Namibia."
+        description="Learn about our experienced local guides leading City or Township Tours, Cruise Liner Shore Excursions, and the Half Day Swakopmund Tour for Elderly in Swakopmund, Namibia."
         ogImage="/og-image.png"
       />
       <PageHero
@@ -441,7 +441,7 @@ const TourGuidePage: React.FC = () => {
                   </Link>
                   <p className="text-sm text-kalahari-charcoal/80 md:max-w-md mt-2 md:mt-0">
                     <span className="font-medium text-kalahari-darkbrown">Booking options include:</span> Half-day city or township tours, 
-                    full-day shore excursions for cruise passengers, and private customized experiences.
+                    full-day shore excursions for cruise passengers, Half Day Elderly Sightseeing Tour, and private customized experiences.
                   </p>
                 </div>
               </div>

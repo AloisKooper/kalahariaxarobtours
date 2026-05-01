@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Clock, MapPin, Car, Flag, Utensils, Users, Sun, Info, DollarSign, Calendar, AlertCircle } from "lucide-react";
 
 const TourAgenda: React.FC = () => {
-  const [selectedTour, setSelectedTour] = useState<'cruise' | 'local'>('cruise');
+  const [selectedTour, setSelectedTour] = useState<'cruise' | 'local' | 'elderly'>('cruise');
   const [showTooltip, setShowTooltip] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -65,6 +65,15 @@ const TourAgenda: React.FC = () => {
                 }`}
             >
               City or Township Tour
+            </button>
+            <button
+              onClick={() => setSelectedTour('elderly')}
+              className={`px-3 sm:px-4 py-2 font-medium text-sm sm:text-base ${selectedTour === 'elderly'
+                  ? 'text-kalahari-brown border-b-2 border-kalahari-brown'
+                  : 'text-kalahari-charcoal hover:text-kalahari-brown'
+                }`}
+            >
+              Half Day Elderly Tour
             </button>
           </div>
         </div>
@@ -385,6 +394,86 @@ const TourAgenda: React.FC = () => {
 
             {/* Rest of Historical Tour layout stays the same */}
             {/* ... */}
+          </>
+        ) : selectedTour === 'elderly' ? (
+          <>
+            {/* Elderly Tour Summary Cards */}
+            <div className="max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center">
+                  <Clock className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
+                  <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Duration</h3>
+                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">Half Day</p>
+                </div>
+                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center">
+                  <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
+                  <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Group Size</h3>
+                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">Minimum 20, Maximum 40 travelers</p>
+                </div>
+                <div className="bg-sand-custom rounded-lg p-4 sm:p-5 md:p-6 text-center sm:col-span-2 md:col-span-1">
+                  <Calendar className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-kalahari-brown mx-auto mb-2 sm:mb-3" />
+                  <h3 className="text-base sm:text-lg text-kalahari-brown font-medium mb-1 sm:mb-2">Availability</h3>
+                  <p className="text-kalahari-charcoal/90 text-sm sm:text-base">Based on Cruise Arrivals</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Itinerary Steps */}
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-xl sm:text-2xl text-kalahari-brown text-center mb-6 sm:mb-8">Tour Itinerary</h3>
+              <div className="space-y-4">
+                {[
+                  { icon: <MapPin className="w-5 h-5" />, step: "Pickup guests", detail: "Comfortable pickup at Walvis Bay Harbor as you disembark" },
+                  { icon: <Flag className="w-5 h-5" />, step: "First stop: Walvis Lagoon", detail: "Spot flamingos and enjoy the scenic beauty of the lagoon (30 min)" },
+                  { icon: <Car className="w-5 h-5" />, step: "Departure to Swakopmund", detail: "Relaxed drive north along the coast (45 min)" },
+                  { icon: <Sun className="w-5 h-5" />, step: "Swakopmund — Historical drive & craft market", detail: "Slowly drive past historical buildings, then visit the craft market (45 min)" },
+                  { icon: <Utensils className="w-5 h-5" />, step: "Lunch & cultural performance", detail: "Enjoy a sit-down lunch accompanied by a live cultural performance (60 min)" },
+                  { icon: <Car className="w-5 h-5" />, step: "Departure back to port", detail: "Comfortable return journey to Walvis Bay Harbor" },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-4 bg-white rounded-lg p-4 shadow-sm border border-kalahari-brown/10 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                    <div className="bg-kalahari-brown text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p className="font-medium text-kalahari-brown text-sm sm:text-base">{item.step}</p>
+                      <p className="text-kalahari-charcoal/80 text-xs sm:text-sm mt-0.5">{item.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* What's Included */}
+              <div className="mt-10 sm:mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <Info className="w-5 h-5 text-kalahari-brown" />
+                    What's Included
+                  </h4>
+                  <ul className="space-y-2 sm:space-y-3">
+                    {["English speaking Local Guide", "Transportation", "Lunch", "Cultural performance", "Non-Alcoholic beverages", "Pickup and drop-off at Walvis Bay Harbor"].map((item, i) => (
+                      <li key={i} className="flex items-center gap-2 text-kalahari-charcoal/90 text-sm sm:text-base">
+                        <Info className="w-4 h-4 text-kalahari-brown" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-white rounded-lg shadow-sm border border-kalahari-brown/10 p-4 sm:p-5 md:p-6 w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
+                  <h4 className="text-lg sm:text-xl text-kalahari-brown mb-3 sm:mb-4 flex items-center gap-2">
+                    <Info className="w-5 h-5 text-kalahari-brown" />
+                    Additional Information
+                  </h4>
+                  <ul className="space-y-2 sm:space-y-3">
+                    {["Designed for elderly cruise passengers", "Relaxed, comfortable pace throughout", "N$1,800 per person", "Available as an add-on to any tour for N$500", "Sunscreen recommended", "Shade hat recommended"].map((item, i) => (
+                      <li key={i} className="flex items-center gap-2 text-kalahari-charcoal/90 text-sm sm:text-base">
+                        <Sun className="w-4 h-4 text-kalahari-brown" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </>
         ) : null}
       </div>

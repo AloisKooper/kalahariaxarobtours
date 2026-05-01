@@ -78,4 +78,48 @@ This activity ends back at the meeting point.
 * This experience requires minimum travelers. If it's cancelled because the minimum isn't met, you'll be offered a different date or a full refund
 
 ## Route Map (Full Day Tour)
-Port - Lagoon - Dune 7 - Swakopmund (lunch) - Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woermann House - German War Memorial - Free time - Old Bahn Hoff - Back to the port. 
+Port - Lagoon - Dune 7 - Swakopmund (lunch) - Concentration camp mass graves - Old Military barracks - Old Hospital - Jetty - Woermann House - German War Memorial - Free time - Old Bahn Hoff - Back to the port.
+
+### 3. Half Day Swakopmund Tour for Elderly (Sightseeing)
+**Overview:**  
+A relaxed, scenic sightseeing experience specially designed for elderly cruise passengers. Covers the Walvis Bay Lagoon, a slow drive past Swakopmund's historical buildings, a craft market visit, and a sit-down lunch with a live cultural performance before returning to port.
+
+**Itinerary (no times displayed on website):**
+- Pickup guests at Walvis Bay Harbor
+- First stop: Walvis Bay Lagoon (30 min)
+- Departure to Swakopmund (45 min)
+- Arrive in Swakopmund — slowly driving past historical buildings, visit craft market (45 min)
+- Lunch and cultural performance (60 min)
+- Departure back to port
+
+**What's Included:**
+* English speaking Local Guide (descendant of the native Namaqua tribe)
+* Transportation
+* Lunch
+* Cultural performance
+* Non-Alcoholic beverages
+* Pickup and drop-off at Walvis Bay Harbor
+
+**Pricing:**
+* N$1,800 per person (standalone)
+* N$500 per person when booked as an add-on to an existing tour
+
+**Additional Information:**
+* Minimum 20, Maximum 40 travelers (same as Cruise Liner Shore Excursion)
+* Designed for elderly cruise passengers — relaxed, comfortable pace throughout
+* Not wheelchair accessible
+* Vegetarian or vegan option is available, please advise at time of booking if required
+* Sunscreen recommended
+* Shade hat recommended
+
+**Meeting and Pickup:**  
+Pickup at Walvis Bay Harbor as guests disembark.
+
+**Pickup point:**  
+Walvis Bay Harbor
+
+**Duration:**  
+About 3.75 hours (Half Day)
+
+**Route Map:**  
+Port - Walvis Bay Lagoon - Depart to Swakopmund - Drive past historical buildings - Craft market - Lunch & cultural performance - Departure back to port

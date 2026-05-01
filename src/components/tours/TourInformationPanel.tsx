@@ -7,13 +7,15 @@ interface TourInformationPanelProps {
 
 const TOUR_INFO: Record<string, { title: string; items: string[] }> = {
   cruise: {
-    title: "Cruise Liner Shore Excursion Information",
+    title: "Cruise Liner Excursion Information",
     items: [
+      "Two cruise liner options available: Full Day Shore Excursion (N$2900) and Half Day Elderly Tour (N$1800)",
       "English speaking local guide (descendant of the native Namaqua tribe)",
       "Transportation in air-conditioned vehicle",
-      "Full meal and non-alcoholic beverages",
+      "Meal and non-alcoholic beverages included in both options",
       "Pickup and drop-off at Walvis Bay Harbor",
-      "Maximum 40 travelers"
+      "Minimum 20, Maximum 40 travelers",
+      "Half Day Elderly Tour also available as an add-on for N$500"
     ]
   },
   historical: {

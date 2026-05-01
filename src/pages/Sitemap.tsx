@@ -50,7 +50,7 @@ const Sitemap: React.FC = () => {
       links: [
         { name: "Swakopmund City or Township Tour", path: "/tours#local" },
         { name: "Cruise Liner Shore Excursion", path: "/tours#cruise" },
-        { name: "Guided Township Tour", path: "/tours#township" }
+        { name: "Half Day Swakopmund Tour for Elderly", path: "/tours#cruise" }
       ]
     },
     {

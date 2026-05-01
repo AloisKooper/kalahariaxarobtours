@@ -52,10 +52,11 @@ const GalleryPage: React.FC = () => {
 
   // Define gallery categories and images
   const categories = [
-    { id: "all", name: "All Images" },
+    { id: "all", name: "All Media" },
     { id: "historical", name: "Historical Sites" },
     { id: "nature", name: "Nature & Scenery" },
-    { id: "township", name: "Township & Cultural" }
+    { id: "township", name: "Township & Cultural" },
+    { id: "sightseeing", name: "Sightseeing Tours" }
   ];
 
   interface GalleryImage {
@@ -65,6 +66,7 @@ const GalleryPage: React.FC = () => {
     category: string[];
     imageSrc: string;
     tags: string[];
+    mediaType?: 'image' | 'video';
   }
 
   const galleryImages: GalleryImage[] = [
@@ -232,6 +234,87 @@ const GalleryPage: React.FC = () => {
       category: ["township"],
       imageSrc: "/Home Images/Axarob 8.webp",
       tags: ["cultural", "township", "tour", "interaction"]
+    },
+    // ── NEW ASSETS FROM MR. MICHAEL ROOI ──────────────────────────────────
+    {
+      id: "rooi-sightseeing-1",
+      title: "Half Day Elderly Tour Experience",
+      description: "Guests enjoying the relaxed pace of the Half Day Swakopmund Tour for Elderly.",
+      category: ["sightseeing", "nature"],
+      imageSrc: "/Home Images/Elderly Tour 1.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-2",
+      title: "Swakopmund Sightseeing",
+      description: "Memorable moments from the Elderly Sightseeing Tour.",
+      category: ["sightseeing", "nature"],
+      imageSrc: "/Home Images/Elderly Tour 2.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-3",
+      title: "Tour Group",
+      description: "Happy guests on our comfortable Half Day Elderly Tour.",
+      category: ["sightseeing", "historical"],
+      imageSrc: "/Home Images/Elderly Tour 3.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-4",
+      title: "Elderly Tour Highlights",
+      description: "Exploring Swakopmund at a comfortable pace.",
+      category: ["sightseeing", "historical"],
+      imageSrc: "/Home Images/Elderly Tour 4.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-5",
+      title: "Scenic Views",
+      description: "Beautiful scenery enjoyed during the Elderly Tour.",
+      category: ["sightseeing", "nature"],
+      imageSrc: "/Home Images/Elderly Tour 5.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-6",
+      title: "Cultural Exploration",
+      description: "Cultural insights during the Half Day Elderly Tour.",
+      category: ["sightseeing", "township"],
+      imageSrc: "/Home Images/Elderly Tour 6.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-7",
+      title: "Relaxed Tour Experience",
+      description: "Comfort and sightseeing perfectly combined.",
+      category: ["sightseeing"],
+      imageSrc: "/Home Images/Elderly Tour 7.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-8",
+      title: "Swakopmund Landmarks",
+      description: "Viewing landmarks on the Half Day Elderly Tour.",
+      category: ["sightseeing", "historical"],
+      imageSrc: "/Home Images/Elderly Tour 8.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-9",
+      title: "Coastal Scenery",
+      description: "Scenic drive portions of the Elderly Tour.",
+      category: ["sightseeing", "nature"],
+      imageSrc: "/Home Images/Elderly Tour 9.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
+    },
+    {
+      id: "rooi-sightseeing-10",
+      title: "Memorable Tour Moments",
+      description: "Guests concluding their wonderful Half Day Elderly Tour.",
+      category: ["sightseeing"],
+      imageSrc: "/Home Images/Elderly Tour 10.jpg",
+      tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
     }
   ];
 
@@ -440,11 +523,20 @@ const GalleryPage: React.FC = () => {
                  onClick={(e) => e.stopPropagation()}
             >
               <div className="relative bg-sand-light h-[250px] sm:h-[350px] md:h-[450px]">
-                <img 
-                  src={selectedImage.imageSrc} 
-                  alt={selectedImage.title}
-                  className="w-full h-full object-cover" 
-                />
+                {selectedImage.mediaType === 'video' ? (
+                  <video
+                    src={selectedImage.imageSrc}
+                    controls
+                    className="w-full h-full object-cover"
+                    title={selectedImage.title}
+                  />
+                ) : (
+                  <img 
+                    src={selectedImage.imageSrc} 
+                    alt={selectedImage.title}
+                    className="w-full h-full object-cover" 
+                  />
+                )}
                 <button 
                   className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-kalahari-brown text-white rounded-full p-1 sm:p-1.5 shadow-md"
                   onClick={() => setLightboxOpen(false)}

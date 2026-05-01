@@ -6,7 +6,8 @@ const Gallery: React.FC = () => {
 
   const tabs = [
     "Historical Sites",
-    "Nature & Scenery"
+    "Nature & Scenery",
+    "Sightseeing"
   ];
 
   const galleryImages = {
@@ -85,6 +86,26 @@ const Gallery: React.FC = () => {
         price: "Full Day Tour only"
       }
     ],
+    "Sightseeing": [
+      {
+        title: "Elderly Tour Experience",
+        description: "Relaxed sightseeing around Swakopmund.",
+        imageSrc: "/Home Images/Elderly Tour 2.jpg",
+        price: "Half Day Tour"
+      },
+      {
+        title: "Swakopmund Highlights",
+        description: "Beautiful scenic stops on the Elderly Tour.",
+        imageSrc: "/Home Images/Elderly Tour 5.jpg",
+        price: "Half Day Tour"
+      },
+      {
+        title: "Comfortable Sightseeing",
+        description: "Memorable moments from the Elderly Sightseeing Tour.",
+        imageSrc: "/Home Images/Elderly Tour 9.jpg",
+        price: "Half Day Tour"
+      }
+    ]
   };
 
   return (

@@ -34,8 +34,8 @@ const Tours: React.FC = () => {
   return (
     <>
       <SEO
-        title="Tours in Swakopmund – City or Township & Cruise Liner | Kalahari Axarob Tours"
-        description="Book authentic tours in Swakopmund: City or Township Tour (N$800 per person; with own transportation N$550 per person) and Cruise Liner Shore Excursion (N$2900 per person). Led by knowledgeable local guides."
+        title="Tours in Swakopmund & Walvis Bay | City, Shore Excursion & Elderly Sightseeing Tour | Kalahari Axarob Tours"
+        description="Book authentic tours in Swakopmund: City or Township Tour, Full Day Cruise Liner Shore Excursion (N$2900), and our new Half Day Swakopmund Tour for Elderly (N$1800). Led by expert local guides."
         ogImage="/og-image.png"
         jsonLd={[
           {
@@ -79,6 +79,31 @@ const Tours: React.FC = () => {
               "validFrom": "2025-06-01",
               "priceValidUntil": "2026-06-30"
             },
+            "areaServed": "NA"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Half Day Swakopmund Tour for Elderly (Sightseeing)",
+            "description": "A relaxed half day sightseeing tour for elderly cruise passengers. Covers Walvis Bay Lagoon, a scenic drive past historical buildings, craft market visit, and lunch with a cultural performance.",
+            "image": "https://kalahariaxarobtours.com/Home Images/Elderly Tour 3.jpg",
+            "offers": [
+              {
+                "@type": "Offer",
+                "price": "1800",
+                "priceCurrency": "NAD",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2025-06-01",
+                "priceValidUntil": "2026-06-30"
+              },
+              {
+                "@type": "Offer",
+                "name": "Add-on to existing tour",
+                "price": "500",
+                "priceCurrency": "NAD",
+                "availability": "https://schema.org/InStock"
+              }
+            ],
             "areaServed": "NA"
           }
         ]}

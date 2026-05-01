@@ -79,7 +79,7 @@ const TourBookingWidget: React.FC = () => {
                   <SelectItem value="">Select Tour</SelectItem>
                   <SelectItem value="local">Swakopmund City or Township Tour (5 hours)</SelectItem>
                   <SelectItem value="cruise">Cruise Liner Shore Excursion (8 hours)</SelectItem>
-                  <SelectItem value="township">Guided Township Tour (4 hours)</SelectItem>
+                  <SelectItem value="cruise-elderly">Half Day Swakopmund Tour for Elderly (Sightseeing)</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -133,7 +133,7 @@ const TourBookingWidget: React.FC = () => {
               </Select>
             </div>
             
-            {tourType === "cruise-liner" && (
+            {(tourType === "cruise" || tourType === "cruise-elderly") && (
               <div className="space-y-2">
                 <Label htmlFor="cruise">Cruise Ship Name</Label>
                 <div className="relative">
@@ -163,7 +163,7 @@ const TourBookingWidget: React.FC = () => {
         <CardFooter className="flex flex-col items-start bg-sand-custom px-6 py-4 border-t border-kalahari-brown/10">
           <h4 className="font-medium text-kalahari-darkbrown mb-2">Tour Information:</h4>
           <ul className="space-y-2 text-sm text-kalahari-charcoal">
-            {tourType === "cruise-liner" ? (
+            {tourType === "cruise" ? (
               <>
                 <li className="flex items-start">
                   <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
@@ -184,6 +184,29 @@ const TourBookingWidget: React.FC = () => {
                 <li className="flex items-start">
                   <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
                   <span>Maximum 40 travelers</span>
+                </li>
+              </>
+            ) : tourType === "cruise-elderly" ? (
+              <>
+                <li className="flex items-start">
+                  <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
+                  <span>English speaking local guide (descendant of the native Namaqua tribe)</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
+                  <span>Transportation in air-conditioned vehicle</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
+                  <span>Buffet lunch (with drinks) & cultural performance included</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
+                  <span>Pickup and drop-off at Walvis Bay Harbor</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle size={16} className="mr-2 text-kalahari-brown mt-0.5 flex-shrink-0" />
+                  <span>N$1,800/person | N$500 as an add-on to any tour</span>
                 </li>
               </>
             ) : (

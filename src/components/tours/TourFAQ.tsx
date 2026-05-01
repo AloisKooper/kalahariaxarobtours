@@ -17,11 +17,11 @@ const TourFAQ: React.FC = () => {
     },
     {
       question: "What is the maximum number of travelers per tour?",
-      answer: "Our Swakopmund City or Township Tour accommodates a maximum of 6 travelers, while the Cruise Liner Shore Excursion can accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
+      answer: "Our Swakopmund City or Township Tour accommodates a maximum of 6 travelers, while the Cruise Liner Shore Excursion and the Half Day Swakopmund Tour for Elderly both accommodate up to 40 travelers. Minimum numbers may apply for tour operation."
     },
     {
       question: "What tours do you offer?",
-      answer: "We offer two distinct tour options: 1) Swakopmund City or Township Tour (5 hours) - focuses on Swakopmund landmarks and culture with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (Full Day - 8 hours) - designed for cruise passengers, covering Walvis Bay Lagoon, Dune 7, Swakopmund city highlights, with pickup/drop-off at Walvis Bay Harbor."
+      answer: "We offer three distinct tour options: 1) Swakopmund City or Township Tour (5 hours) - focuses on Swakopmund landmarks and culture with pickup/drop-off at your Swakopmund accommodation, includes a light meal, and has a maximum of 6 travelers. 2) Cruise Liner Shore Excursion (Full Day - 8 hours) - designed for cruise passengers, covering Walvis Bay Lagoon, Dune 7, Swakopmund city highlights, with pickup/drop-off at Walvis Bay Harbor. 3) Half Day Swakopmund Tour for Elderly (Sightseeing) - a relaxed half day tour for elderly cruise passengers covering Walvis Bay Lagoon, a scenic drive past historical buildings, a craft market visit, and lunch with a cultural performance."
     },
     {
       question: "Do you offer an option with own transportation?",
@@ -29,7 +29,7 @@ const TourFAQ: React.FC = () => {
     },
     {
       question: "What meals are included in the tours?",
-      answer: "Our Main Tour (Cruise Liner Shore Excursion) includes a full lunch with vegetarian options available. The City or Township tour includes snacks and drinks"
+      answer: "Our Cruise Liner Shore Excursion (Full Day) includes a full lunch with vegetarian options available. Our Half Day Swakopmund Tour for Elderly includes lunch and a cultural performance. The City or Township tour includes snacks and drinks."
     },
     {
       question: "What happens if my cruise ship's schedule changes?",
