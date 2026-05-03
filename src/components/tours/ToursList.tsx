@@ -34,7 +34,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
       {
         id: 1,
         title: "Cruise Liner Shore Excursion",
-        image: "/Home Images/Cruise Liner Shore Excursion.jpg",
+        image: "/Home Images/Elderly Tour 8.jpg",
         price: "N$2900",
         duration: "8 hours",
         minParticipants: 20,
@@ -195,7 +195,7 @@ const ToursList: React.FC<ToursListProps> = ({ selectedTab, setSelectedTab }) =>
                     
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-4">
                       <div>
-                        <p className="text-xs sm:text-sm text-charcoal-custom">Prices valid from June 2025 until June 2026.</p>
+                        <p className="text-xs sm:text-sm text-charcoal-custom">Prices valid from May 2026 till May 2027.</p>
                       </div>
                       
                       <div className="flex items-center gap-4 mt-3 sm:mt-0">

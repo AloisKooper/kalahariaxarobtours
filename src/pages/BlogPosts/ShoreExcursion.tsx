@@ -34,19 +34,19 @@ const ShoreExcursion: React.FC = () => {
         <meta name="keywords" content="shore excursion Namibia, Walvis Bay cruise tour, Swakopmund day trip, Namibia cruise stopover, historical tour Swakopmund, flamingos Walvis Bay, Dune 7" />
         <meta property="og:title" content="Premium Shore Excursion: Walvis Bay to Swakopmund | Cruise Day Trip" />
         <meta property="og:description" content="Make the most of your cruise stopover with our comprehensive shore excursion from Walvis Bay to Swakopmund featuring flamingos, Dune 7, and historical landmarks." />
-        <meta property="og:image" content="/Home Images/Cruise Liner Shore Excursion.jpg" />
+        <meta property="og:image" content="/Home Images/Elderly Tour 8.jpg" />
         <meta property="og:url" content="https://kalahariaxarobtours.com/blog/shore-excursion" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Premium Shore Excursion: Walvis Bay to Swakopmund | Cruise Day Trip" />
         <meta name="twitter:description" content="Make the most of your cruise stopover with our comprehensive shore excursion from Walvis Bay to Swakopmund featuring flamingos, Dune 7, and historical landmarks." />
-        <meta name="twitter:image" content="/Home Images/Cruise Liner Shore Excursion.jpg" />
+        <meta name="twitter:image" content="/Home Images/Elderly Tour 8.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             'headline': 'Walvis Bay to Swakopmund: The Perfect Shore Excursion',
-            'image': '/Home Images/Cruise Liner Shore Excursion.jpg',
+            'image': '/Home Images/Elderly Tour 8.jpg',
             'datePublished': '2024-03-03T09:00:00Z',
             'dateModified': '2024-03-25T14:30:00Z',
             'author': {
@@ -76,7 +76,7 @@ const ShoreExcursion: React.FC = () => {
       <PageHero
         title="The Perfect Shore Excursion"
         subtitle="From Walvis Bay to Swakopmund: Maximize your day ashore"
-        backgroundImage="/Home Images/Cruise Liner Shore Excursion.jpg"
+        backgroundImage="/Home Images/Elderly Tour 8.jpg"
         isMobile={isMobile}
       />
       
@@ -88,7 +88,7 @@ const ShoreExcursion: React.FC = () => {
           authorTitle="Tour Guide and Shore Excursion Specialist"
           date="March 3, 2024"
           readTime="4 min"
-          imageUrl="/Home Images/Cruise Liner Shore Excursion.jpg"
+          imageUrl="/Home Images/Elderly Tour 8.jpg"
           imageAlt="Shore excursion from Walvis Bay to Swakopmund featuring historical sites"
           sourceUrl="https://www.cruisecritic.com/port/newport/walvis-bay-namibia/shore-excursion"
           sourceName="Cruise Critic Shore Excursions"

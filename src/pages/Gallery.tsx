@@ -184,7 +184,7 @@ const GalleryPage: React.FC = () => {
       title: "Township Tour",
       description: "Guided tour through the township to learn about local life and culture",
       category: ["township"],
-      imageSrc: "/Home Images/Township Tour.jpg",
+      imageSrc: "/Home Images/Local Homes.jpg",
       tags: ["cultural", "township", "tour"]
     },
     {
@@ -241,7 +241,7 @@ const GalleryPage: React.FC = () => {
       title: "Half Day Elderly Tour Experience",
       description: "Guests enjoying the relaxed pace of the Half Day Swakopmund Tour for Elderly.",
       category: ["sightseeing", "nature"],
-      imageSrc: "/Home Images/Elderly Tour 1.jpg",
+      imageSrc: "/Home Images/Township Tour.jpg",
       tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
     },
     {
@@ -305,7 +305,7 @@ const GalleryPage: React.FC = () => {
       title: "Coastal Scenery",
       description: "Scenic drive portions of the Elderly Tour.",
       category: ["sightseeing", "nature"],
-      imageSrc: "/Home Images/Elderly Tour 9.jpg",
+      imageSrc: "/Home Images/Township Visit.png",
       tags: ["sightseeing", "elderly tour", "swakopmund", "cruise"]
     },
     {

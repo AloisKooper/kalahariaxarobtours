@@ -125,7 +125,7 @@ const BlogPage: React.FC = () => {
       id: "shore-excursion",
       title: "Walvis Bay to Swakopmund: The Perfect Shore Excursion",
       excerpt: "Discover how cruise liner passengers can maximize their day ashore with a comprehensive historical and natural tour from Walvis Bay to Swakopmund.",
-      image: "/Home Images/Cruise Liner Shore Excursion.jpg",
+      image: "/Home Images/Elderly Tour 8.jpg",
       author: "Dennis Liebenberg",
       date: "March 3, 2024",
       readTime: "6 min read",

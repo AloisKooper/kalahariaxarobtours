@@ -50,8 +50,8 @@ const Tours: React.FC = () => {
                 "price": "800",
                 "priceCurrency": "NAD",
                 "availability": "https://schema.org/InStock",
-                "validFrom": "2025-06-01",
-                "priceValidUntil": "2026-06-30"
+                "validFrom": "2026-05-01",
+                "priceValidUntil": "2027-05-31"
               },
               {
                 "@type": "Offer",
@@ -59,8 +59,8 @@ const Tours: React.FC = () => {
                 "price": "550",
                 "priceCurrency": "NAD",
                 "availability": "https://schema.org/InStock",
-                "validFrom": "2025-06-01",
-                "priceValidUntil": "2026-06-30"
+                "validFrom": "2026-05-01",
+                "priceValidUntil": "2027-05-31"
               }
             ],
             "areaServed": "NA"
@@ -70,14 +70,14 @@ const Tours: React.FC = () => {
             "@type": "TouristTrip",
             "name": "Cruise Liner Shore Excursion",
             "description": "Full-day shore excursion from Walvis Bay to Swakopmund including historical highlights and a full meal.",
-            "image": "https://kalahariaxarobtours.com/Home Images/Cruise Liner Shore Excursion.jpg",
+            "image": "https://kalahariaxarobtours.com/Home Images/Elderly Tour 8.jpg",
             "offers": {
               "@type": "Offer",
               "price": "2900",
               "priceCurrency": "NAD",
               "availability": "https://schema.org/InStock",
-              "validFrom": "2025-06-01",
-              "priceValidUntil": "2026-06-30"
+              "validFrom": "2026-05-01",
+              "priceValidUntil": "2027-05-31"
             },
             "areaServed": "NA"
           },
@@ -93,8 +93,8 @@ const Tours: React.FC = () => {
                 "price": "1800",
                 "priceCurrency": "NAD",
                 "availability": "https://schema.org/InStock",
-                "validFrom": "2025-06-01",
-                "priceValidUntil": "2026-06-30"
+                "validFrom": "2026-05-01",
+                "priceValidUntil": "2027-05-31"
               },
               {
                 "@type": "Offer",
@@ -119,7 +119,7 @@ const Tours: React.FC = () => {
       <div className="relative bg-white z-10">
         <div className="container mx-auto px-4 sm:px-6 pt-4">
           <p className="text-xs sm:text-sm text-kalahari-charcoal/80 bg-sand-custom/60 border border-kalahari-brown/10 rounded px-3 py-2 inline-block">
-            Prices valid from June 2025 until June 2026.
+            Prices valid from May 2026 till May 2027.
           </p>
         </div>
       </div>

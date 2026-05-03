@@ -12,7 +12,7 @@ const TourTypes: React.FC = () => {
     {
       title: "Cruise Liner Shore Excursion",
       description: "A full day (8 hours) tour designed for cruise ship passengers, taking you from Walvis Bay Harbor to explore the surrounding areas including the lagoon, Dune 7, and historical sites in Swakopmund.",
-      image: "/Home Images/Cruise Liner Shore Excursion.jpg",
+      image: "/Home Images/Elderly Tour 2.jpg",
       duration: "8 hours",
       maxParticipants: 40,
       highlights: [
@@ -220,7 +220,7 @@ const TourTypes: React.FC = () => {
           <p className="text-kalahari-charcoal text-base sm:text-lg font-normal leading-7 max-w-3xl mx-auto">
             Choose between our City or Township Tour and our Cruise Liner Shore Excursion. The City or Township Tour is N$800 per person, with an option with own transportation at N$550 per person. The Cruise Liner Shore Excursion is N$2900 per person. Experience Swakopmund’s unique blend of German colonial architecture and African culture with knowledgeable local guides.
           </p>
-          <p className="mt-2 text-sm text-kalahari-charcoal/80">Prices valid from June 2025 until June 2026.</p>
+          <p className="mt-2 text-sm text-kalahari-charcoal/80">Prices valid from May 2026 till May 2027.</p>
         </div>
 
         {/* Main Tour Card */}

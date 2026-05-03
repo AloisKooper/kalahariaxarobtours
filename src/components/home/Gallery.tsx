@@ -102,7 +102,7 @@ const Gallery: React.FC = () => {
       {
         title: "Comfortable Sightseeing",
         description: "Memorable moments from the Elderly Sightseeing Tour.",
-        imageSrc: "/Home Images/Elderly Tour 9.jpg",
+        imageSrc: "/Home Images/Township Visit.png",
         price: "Half Day Tour"
       }
     ]
